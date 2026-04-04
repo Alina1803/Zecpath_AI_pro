@@ -1,0 +1,26 @@
+[
+    {
+        "text": "Python Java SQL",
+        "label": "skills"
+    },
+    {
+        "text": "B.Tech in Computer Science",
+        "label": "education"
+    },
+    {
+        "text": "Worked at Google as Developer",
+        "label": "experience"
+    },
+    {
+        "text": "Built resume parser project",
+        "label": "projects"
+    },
+    {
+        "text": "AWS Certified Developer",
+        "label": "certifications"
+    },
+    {
+        "text": "Motivated software engineer",
+        "label": "summary"
+    }
+]

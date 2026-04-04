@@ -634,3 +634,27 @@ It can serve as a foundation for building real-world ATS platforms or AI-driven 
 ✅ ML pipeline awareness
 
 ✅ Production mindset
+
+DAY-8 # Resume Section Segmentation
+
+## Objective
+Automatically identify and segment resume sections using NLP.
+
+## Features
+- Rule-based + ML-based classification
+- Handles multiple formats (PDF, DOCX, TXT)
+- Accuracy evaluation
+
+## Project Structure
+- section_segmention8/ → core logic
+- data/raw → datasets
+- data/processed/output_8/outputs/ → predictions
+
+## Tech Stack
+- Python
+- spaCy
+- Scikit-learn
+
+## Run
+```bash
+python main8.py

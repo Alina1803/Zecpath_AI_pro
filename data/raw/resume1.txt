@@ -1,0 +1,16 @@
+John Doe
+
+SUMMARY
+Software Engineer with 3 years experience
+
+SKILLS
+Python, Java, SQL
+
+WORK EXPERIENCE
+Worked at ABC Company
+
+EDUCATION
+B.Tech in Computer Science
+
+PROJECTS
+Resume Parser

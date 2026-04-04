@@ -5,12 +5,10 @@ from app.utils.file_manager import ensure_directories
 from app.utils.helpers import generate_candidate_id
 from config.settings import settings
 from app.database import SessionLocal
-<<<<<<< HEAD
+
 from fastapi import FastAPI
 
 app=FastAPI()
-=======
->>>>>>> f3c0930173c3eaf45f856e918e2731922b901711
 
 def main():
 

@@ -1,0 +1,24 @@
+SECTION SEGMENTATION MODEL - EVALUATION REPORT
+=============================================
+
+Total Samples: 6
+Correct Predictions: 6
+Incorrect Predictions: 0
+
+Accuracy: 100.00%
+
+---------------------------------------------
+CLASSIFICATION DETAILS
+
+Precision: 1.00                         
+Recall:    1.00
+F1-Score:  1.00
+
+---------------------------------------------
+MODEL INFO
+
+Vectorizer: TF-IDF
+Model: Logistic Regression
+
+---------------------------------------------
+Generated On: 2026-04-04

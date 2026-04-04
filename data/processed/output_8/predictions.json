@@ -1,0 +1,20 @@
+{
+    "other": [
+        "John Doe"
+    ],
+    "summary": [
+        "Software Engineer with 3 years experience"
+    ],
+    "skills": [
+        "Python, Java, SQL"
+    ],
+    "experience": [
+        "Worked at ABC Company"
+    ],
+    "education": [
+        "B.Tech in Computer Science"
+    ],
+    "projects": [
+        "Resume Parser"
+    ]
+}
