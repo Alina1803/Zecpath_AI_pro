@@ -1,0 +1,24 @@
+{
+    "role": "Founder \u2013 Tax Consultancy Firm",
+    "matched": true,
+    "confidence": 100.0,
+    "matched_keywords": [
+        "founder \u2013 tax consultancy firm"
+    ],
+    "role_summary": "",
+    "responsibilities": "\u2022 provide income tax, corporate tax, and gst advisory services   \u2022 handle tax planning, ass essments, audits, and litigation   \u2022 manage return filings and statutory compliance   \u2022 represent clients before tax authorities and appellate forums   \u2022 build tax expertise teams and knowledge frameworks   \u2022 stay updated with tax law changes and judicial precedents",
+    "qualifications": "\u2022 ca with strong taxation specialization   \u2022 litigation and advisory experience preferred   \u2022 client advisory and documentation skills",
+    "skills": {
+        "technical_skills": [],
+        "accounting_skills": [
+            "gst",
+            "taxation"
+        ],
+        "soft_skills": []
+    },
+    "sections": {
+        "role_summary": "",
+        "responsibilities": "\u2022 provide income tax, corporate tax, and gst advisory services   \u2022 handle tax planning, ass essments, audits, and litigation   \u2022 manage return filings and statutory compliance   \u2022 represent clients before tax authorities and appellate forums   \u2022 build tax expertise teams and knowledge frameworks   \u2022 stay updated with tax law changes and judicial precedents",
+        "qualifications": "\u2022 ca with strong taxation specialization   \u2022 litigation and advisory experience preferred   \u2022 client advisory and documentation skills"
+    }
+}

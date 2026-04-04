@@ -1,0 +1,26 @@
+{
+    "role": "Finance Lecturer / Professor",
+    "matched": true,
+    "confidence": 100.0,
+    "matched_keywords": [
+        "finance lecturer / professor"
+    ],
+    "role_summary": "",
+    "responsibilities": "\u2022 deliver lectures in accounting, finance, taxation, and auditing   \u2022 design curriculum, course material, and assessment methods   \u2022 conduct exams, evaluations, and academic m entoring   \u2022 participate in research, publications, and academic development   \u2022 guide student projects and internships   \u2022 engage in academic committees and institutional activities",
+    "qualifications": "\u2022 ca / mba / phd in finance or accounting   \u2022 strong academic orien tation and communication skills   \u2022 research and teaching aptitude",
+    "skills": {
+        "technical_skills": [],
+        "accounting_skills": [
+            "auditing",
+            "taxation"
+        ],
+        "soft_skills": [
+            "communication"
+        ]
+    },
+    "sections": {
+        "role_summary": "",
+        "responsibilities": "\u2022 deliver lectures in accounting, finance, taxation, and auditing   \u2022 design curriculum, course material, and assessment methods   \u2022 conduct exams, evaluations, and academic m entoring   \u2022 participate in research, publications, and academic development   \u2022 guide student projects and internships   \u2022 engage in academic committees and institutional activities",
+        "qualifications": "\u2022 ca / mba / phd in finance or accounting   \u2022 strong academic orien tation and communication skills   \u2022 research and teaching aptitude"
+    }
+}

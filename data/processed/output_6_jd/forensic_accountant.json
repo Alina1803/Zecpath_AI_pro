@@ -1,0 +1,21 @@
+{
+    "role": "Forensic Accountant",
+    "matched": true,
+    "confidence": 100.0,
+    "matched_keywords": [
+        "forensic accountant"
+    ],
+    "role_summary": "the forensic accountant investigates financial irregularities, frauds, and disputes by  analyzing financial records and evidence.",
+    "responsibilities": "\u2022 analyze financial data to detect fraud and irregulariti es  \u2022 conduct forensic accounting investigations   \u2022 examine transactions, books, and supporting documents   \u2022 prepare forensic reports and documentation   \u2022 support legal proceedings and regulatory investigations   \u2022 coordinate with legal teams and enforcement agencies",
+    "qualifications": "\u2022 qualified chartered accountant   \u2022 strong forensic accounting and analytical skills   \u2022 attention to detail and investigative mindset",
+    "skills": {
+        "technical_skills": [],
+        "accounting_skills": [],
+        "soft_skills": []
+    },
+    "sections": {
+        "role_summary": "the forensic accountant investigates financial irregularities, frauds, and disputes by  analyzing financial records and evidence.",
+        "responsibilities": "\u2022 analyze financial data to detect fraud and irregulariti es  \u2022 conduct forensic accounting investigations   \u2022 examine transactions, books, and supporting documents   \u2022 prepare forensic reports and documentation   \u2022 support legal proceedings and regulatory investigations   \u2022 coordinate with legal teams and enforcement agencies",
+        "qualifications": "\u2022 qualified chartered accountant   \u2022 strong forensic accounting and analytical skills   \u2022 attention to detail and investigative mindset"
+    }
+}

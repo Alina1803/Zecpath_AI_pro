@@ -1,0 +1,61 @@
+# ----------------------
+# Virtual Environment
+# ----------------------
+.venv/
+venv/
+env/
+
+# ----------------------
+# Python Cache
+# ----------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyc.*
+
+# ----------------------
+# Build / Distribution
+# ----------------------
+build/
+dist/
+*.egg-info/
+
+# ----------------------
+# Logs & Temp Files
+# ----------------------
+*.log
+*.tmp
+
+# ----------------------
+# Data Files (IMPORTANT)
+# ----------------------
+*.pdf
+*.csv
+*.xlsx
+*.db
+
+# Keep JSON if needed, but ignore outputs
+data/output_jds.json
+
+# ----------------------
+# IDE / Editor
+# ----------------------
+.vscode/
+.idea/
+
+# ----------------------
+# OS Files
+# ----------------------
+.DS_Store
+Thumbs.db
+
+# ----------------------
+# Jupyter Notebooks
+# ----------------------
+.ipynb_checkpoints/
+
+# ----------------------
+# Environment Variables
+# ----------------------
+.env

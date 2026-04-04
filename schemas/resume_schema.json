@@ -1,0 +1,40 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "ResumeSchema",
+    "type": "object",
+    "required": ["full_name", "skills", "experiences"],
+    "properties": {
+        "full_name": { "type": "string" },
+        "email": { "type": "string" },
+        "phone": { "type": "string" },
+        "location": { "type": "string" },
+        "total_experience_years": { "type": "number" },
+        "skills": {
+            "type": "array",
+            "items": { "$ref": "#/definitions/Skill" }
+        },
+        "experiences": {
+            "type": "array",
+            "items": { "$ref": "#/definitions/Experience" }
+        }
+    },
+    "definitions": {
+        "Skill": {
+            "type": "object",
+            "properties": {
+                "skill_name": { "type": "string" },
+                "proficiency_level": { "type": "string" },
+                "years_of_experience": { "type": "number" }
+            }
+        },
+        "Experience": {
+            "type": "object",
+            "properties": {
+                "company": { "type": "string" },
+                "designation": { "type": "string" },
+                "start_date": { "type": "string" },
+                "end_date": { "type": "string" }
+            }
+        }
+    }
+}

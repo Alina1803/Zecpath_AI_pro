@@ -1,0 +1,20 @@
+{
+    "file_name": "test_sample.docx",
+    "sections": {
+        "GENERAL": "Test Resume John Doe john.doe@example.com 1-555-0123 Professional Experience Senior Software Engineer at TechCorp (2020-Present) 5 years of experience with Python and JavaScript Skills Python, JavaScript, SQL, Docker, REST APIs\n"
+    },
+    "entities": {
+        "emails": [
+            "john.doe@example.com"
+        ],
+        "phones": [
+            "1-555-0123"
+        ],
+        "names": [
+            "Python",
+            "Docker",
+            "JavaScript Skills Python",
+            "John Doe"
+        ]
+    }
+}

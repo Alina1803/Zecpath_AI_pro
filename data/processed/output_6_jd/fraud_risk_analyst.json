@@ -1,0 +1,21 @@
+{
+    "role": "Fraud Risk Analyst",
+    "matched": true,
+    "confidence": 100.0,
+    "matched_keywords": [
+        "fraud risk analyst"
+    ],
+    "role_summary": "the fraud risk analyst identifies, assesses, and mitigates fraud risks within business  operations.",
+    "responsibilities": "\u2022 analyze transactions and data for fraud indicators   \u2022 conduct fraud risk assessments and mo nitoring   \u2022 develop fraud detection and prevention frameworks   \u2022 investigate suspected fraud cases   \u2022 prepare fraud risk reports and dashboards   \u2022 recommend fraud control and prevention measures",
+    "qualifications": "\u2022 chartered accountant   \u2022 strong data analysis and ri sk assessment skills   \u2022 knowledge of fraud prevention techniques",
+    "skills": {
+        "technical_skills": [],
+        "accounting_skills": [],
+        "soft_skills": []
+    },
+    "sections": {
+        "role_summary": "the fraud risk analyst identifies, assesses, and mitigates fraud risks within business  operations.",
+        "responsibilities": "\u2022 analyze transactions and data for fraud indicators   \u2022 conduct fraud risk assessments and mo nitoring   \u2022 develop fraud detection and prevention frameworks   \u2022 investigate suspected fraud cases   \u2022 prepare fraud risk reports and dashboards   \u2022 recommend fraud control and prevention measures",
+        "qualifications": "\u2022 chartered accountant   \u2022 strong data analysis and ri sk assessment skills   \u2022 knowledge of fraud prevention techniques"
+    }
+}

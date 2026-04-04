@@ -1,0 +1,21 @@
+{
+    "role": "Portfolio Manager",
+    "matched": true,
+    "confidence": 100.0,
+    "matched_keywords": [
+        "portfolio manager"
+    ],
+    "role_summary": "the portf olio manager manages investment portfolios to achieve optimal returns within  defined risk parameters.",
+    "responsibilities": "\u2022 develop and implement portfolio investment strategies   \u2022 monitor portfolio performance and risk exposure   \u2022 make buy/sell/hold decisions b ased on analysis   \u2022 ensure compliance with investment guidelines   \u2022 communicate portfolio performance to stakeholders   \u2022 adjust strategies based on market conditions",
+    "qualifications": "\u2022 ca with strong investment and portfolio management experience   \u2022 deep underst anding of markets and risk management   \u2022 strategic and decision -making ability",
+    "skills": {
+        "technical_skills": [],
+        "accounting_skills": [],
+        "soft_skills": []
+    },
+    "sections": {
+        "role_summary": "the portf olio manager manages investment portfolios to achieve optimal returns within  defined risk parameters.",
+        "responsibilities": "\u2022 develop and implement portfolio investment strategies   \u2022 monitor portfolio performance and risk exposure   \u2022 make buy/sell/hold decisions b ased on analysis   \u2022 ensure compliance with investment guidelines   \u2022 communicate portfolio performance to stakeholders   \u2022 adjust strategies based on market conditions",
+        "qualifications": "\u2022 ca with strong investment and portfolio management experience   \u2022 deep underst anding of markets and risk management   \u2022 strategic and decision -making ability"
+    }
+}

@@ -1,0 +1,12 @@
+{
+  "candidate_id": "string",
+  "full_name": "string",
+  "email": "string",
+  "phone": "string",
+  "location": "string",
+  "total_experience_years": "number",
+  "skills": ["SkillObject"],
+  "experiences": ["ExperienceObject"],
+  "education": ["EducationObject"],
+  "certifications": ["CertificationObject"]
+}

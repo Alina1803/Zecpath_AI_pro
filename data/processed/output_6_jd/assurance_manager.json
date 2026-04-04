@@ -1,0 +1,25 @@
+{
+    "role": "Assurance Manager",
+    "matched": true,
+    "confidence": 100.0,
+    "matched_keywords": [
+        "assurance manager"
+    ],
+    "role_summary": "the assurance manager provides independent assura nce on financial and operational  processes to enhance reliability and stakeholder confidence.",
+    "responsibilities": "\u2022 manage assurance engagements and client relationships   \u2022 evaluate internal controls and compliance frameworks   \u2022 review financial statements and d isclosures   \u2022 ensure adherence to assurance and auditing standards   \u2022 identify control gaps and recommend improvements   \u2022 prepare assurance reports for stakeholders",
+    "qualifications": "\u2022 qualified ca   \u2022 strong understanding of assurance standards   \u2022 risk assessment an d analytical skills   \u2022 excellent reporting and communication skills",
+    "skills": {
+        "technical_skills": [],
+        "accounting_skills": [
+            "auditing"
+        ],
+        "soft_skills": [
+            "communication"
+        ]
+    },
+    "sections": {
+        "role_summary": "the assurance manager provides independent assura nce on financial and operational  processes to enhance reliability and stakeholder confidence.",
+        "responsibilities": "\u2022 manage assurance engagements and client relationships   \u2022 evaluate internal controls and compliance frameworks   \u2022 review financial statements and d isclosures   \u2022 ensure adherence to assurance and auditing standards   \u2022 identify control gaps and recommend improvements   \u2022 prepare assurance reports for stakeholders",
+        "qualifications": "\u2022 qualified ca   \u2022 strong understanding of assurance standards   \u2022 risk assessment an d analytical skills   \u2022 excellent reporting and communication skills"
+    }
+}

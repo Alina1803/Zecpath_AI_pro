@@ -1,0 +1,21 @@
+{
+    "role": "Systems Auditor",
+    "matched": true,
+    "confidence": 100.0,
+    "matched_keywords": [
+        "systems auditor"
+    ],
+    "role_summary": "the systems auditor evaluates it systems, controls,  and processes to ensure data integrity,  security, and operational effectiveness.",
+    "responsibilities": "\u2022 audit it systems and application controls   \u2022 review access controls, data security, and system integrity   \u2022 evaluate it general controls and automated process es  \u2022 assess system risks and recommend improvements   \u2022 coordinate with it teams and management   \u2022 prepare system audit reports",
+    "qualifications": "\u2022 ca with systems audit experience   \u2022 knowledge of it controls and erp systems   \u2022 analytical and technical mindset",
+    "skills": {
+        "technical_skills": [],
+        "accounting_skills": [],
+        "soft_skills": []
+    },
+    "sections": {
+        "role_summary": "the systems auditor evaluates it systems, controls,  and processes to ensure data integrity,  security, and operational effectiveness.",
+        "responsibilities": "\u2022 audit it systems and application controls   \u2022 review access controls, data security, and system integrity   \u2022 evaluate it general controls and automated process es  \u2022 assess system risks and recommend improvements   \u2022 coordinate with it teams and management   \u2022 prepare system audit reports",
+        "qualifications": "\u2022 ca with systems audit experience   \u2022 knowledge of it controls and erp systems   \u2022 analytical and technical mindset"
+    }
+}

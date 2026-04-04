@@ -1,0 +1,6 @@
+{
+  "skill_name": "string",
+  "category": "technical | soft | tool | domain",
+  "proficiency_level": "beginner | intermediate | advanced | expert",
+  "years_of_experience": "number"
+}

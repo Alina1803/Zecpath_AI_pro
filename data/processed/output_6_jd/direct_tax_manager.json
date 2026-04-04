@@ -1,0 +1,23 @@
+{
+    "role": "Direct Tax Manager",
+    "matched": true,
+    "confidence": 100.0,
+    "matched_keywords": [
+        "direct tax manager"
+    ],
+    "role_summary": "the direct tax manager oversees direct tax compliance, planning, and litigation support to  manage tax risks effectively.",
+    "responsibilities": "\u2022 manage corporate income tax compl iance and filings   \u2022 develop and implement tax planning strategies   \u2022 handle tax assessments, scrutiny, and appeals   \u2022 review advance tax and withholding tax calculations   \u2022 monitor changes in tax laws and assess impact   \u2022 coordinate with external tax advisors and audito rs",
+    "qualifications": "\u2022 qualified ca   \u2022 strong expertise in income tax act and corporate taxation   \u2022 strategic tax planning and risk management skills",
+    "skills": {
+        "technical_skills": [],
+        "accounting_skills": [
+            "taxation"
+        ],
+        "soft_skills": []
+    },
+    "sections": {
+        "role_summary": "the direct tax manager oversees direct tax compliance, planning, and litigation support to  manage tax risks effectively.",
+        "responsibilities": "\u2022 manage corporate income tax compl iance and filings   \u2022 develop and implement tax planning strategies   \u2022 handle tax assessments, scrutiny, and appeals   \u2022 review advance tax and withholding tax calculations   \u2022 monitor changes in tax laws and assess impact   \u2022 coordinate with external tax advisors and audito rs",
+        "qualifications": "\u2022 qualified ca   \u2022 strong expertise in income tax act and corporate taxation   \u2022 strategic tax planning and risk management skills"
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "role": "Chief Accounting Officer (CAO)",
+    "matched": true,
+    "confidence": 100.0,
+    "matched_keywords": [
+        "chief accounting officer (cao)"
+    ],
+    "role_summary": "the cao is responsible for all accounting policies, financial reporting accuracy, an d  compliance with accounting standards.",
+    "responsibilities": "\u2022 define and maintain accounting policies and standards   \u2022 ensure accurate financial reporting and disclosures   \u2022 oversee accounting operations and teams   \u2022 manage statutory and internal audits   \u2022 ensure comp liance with ind as / ifrs / gaap   \u2022 support cfo and board on accounting matters",
+    "qualifications": "\u2022 qualified ca   \u2022 deep expertise in accounting standards and reporting   \u2022 strong governance and control orientation         taxation roles (direct & indirect tax)",
+    "skills": {
+        "technical_skills": [],
+        "accounting_skills": [
+            "financial reporting",
+            "taxation"
+        ],
+        "soft_skills": []
+    },
+    "sections": {
+        "role_summary": "the cao is responsible for all accounting policies, financial reporting accuracy, an d  compliance with accounting standards.",
+        "responsibilities": "\u2022 define and maintain accounting policies and standards   \u2022 ensure accurate financial reporting and disclosures   \u2022 oversee accounting operations and teams   \u2022 manage statutory and internal audits   \u2022 ensure comp liance with ind as / ifrs / gaap   \u2022 support cfo and board on accounting matters",
+        "qualifications": "\u2022 qualified ca   \u2022 deep expertise in accounting standards and reporting   \u2022 strong governance and control orientation         taxation roles (direct & indirect tax)"
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "role": "Chartered Accountant (CA)",
+    "matched": true,
+    "confidence": 100.0,
+    "matched_keywords": [
+        "chartered accountant (ca)"
+    ],
+    "role_summary": "a chartered accountant is responsible for managing accounting, auditing, taxation, and  financial advisory services while ensuring compliance with statutory and regulatory  requirements.",
+    "responsibilities": "\u2022 prepar e and review financial statements as per applicable accounting standards   \u2022 manage direct and indirect tax compliance (income tax, gst, tds)   \u2022 conduct audits and provide assurance on financial records   \u2022 advise management on financial planning, budgeting, and cost  control   \u2022 ensure compliance with companies act, income tax act, and gst laws   \u2022 support business decision -making through financial analysis",
+    "qualifications": "\u2022 qualified chartered accountant (icai)   \u2022 strong knowledge of accounting standards, taxation, and a udit  \u2022 analytical and problem -solving skills   \u2022 proficiency in accounting software and excel",
+    "skills": {
+        "technical_skills": [
+            "excel"
+        ],
+        "accounting_skills": [
+            "auditing",
+            "gst",
+            "taxation"
+        ],
+        "soft_skills": []
+    },
+    "sections": {
+        "role_summary": "a chartered accountant is responsible for managing accounting, auditing, taxation, and  financial advisory services while ensuring compliance with statutory and regulatory  requirements.",
+        "responsibilities": "\u2022 prepar e and review financial statements as per applicable accounting standards   \u2022 manage direct and indirect tax compliance (income tax, gst, tds)   \u2022 conduct audits and provide assurance on financial records   \u2022 advise management on financial planning, budgeting, and cost  control   \u2022 ensure compliance with companies act, income tax act, and gst laws   \u2022 support business decision -making through financial analysis",
+        "qualifications": "\u2022 qualified chartered accountant (icai)   \u2022 strong knowledge of accounting standards, taxation, and a udit  \u2022 analytical and problem -solving skills   \u2022 proficiency in accounting software and excel"
+    }
+}

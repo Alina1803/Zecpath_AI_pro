@@ -1,0 +1,11 @@
+{
+  "job_id": "string",
+  "title": "string",
+  "company": "string",
+  "location": "string",
+  "employment_type": "full-time | part-time | contract",
+  "required_skills": ["SkillRequirement"],
+  "preferred_skills": ["SkillRequirement"],
+  "experience_required_years": "number",
+  "education_required": "string"
+}

@@ -1,0 +1,25 @@
+{
+    "role": "Head of Finance",
+    "matched": true,
+    "confidence": 100.0,
+    "matched_keywords": [
+        "head of finance"
+    ],
+    "role_summary": "the head of finance is responsible for the overall financial health, governance, and financial  strategy of the organization.",
+    "responsibilities": "\u2022 define and implement financia l strategy aligned with business goals   \u2022 oversee accounting, finance, taxation, treasury, and compliance   \u2022 lead budgeting, forecasting, and performance management   \u2022 ensure strong internal controls and governance frameworks   \u2022 support strategic initiatives such as e xpansions, investments, and funding   \u2022 report financial performance to top management and board",
+    "qualifications": "\u2022 qualified ca   \u2022 strong strategic, leadership, and decision -making capabilities   \u2022 deep understanding of corporate finance and compliance",
+    "skills": {
+        "technical_skills": [],
+        "accounting_skills": [
+            "taxation"
+        ],
+        "soft_skills": [
+            "leadership"
+        ]
+    },
+    "sections": {
+        "role_summary": "the head of finance is responsible for the overall financial health, governance, and financial  strategy of the organization.",
+        "responsibilities": "\u2022 define and implement financia l strategy aligned with business goals   \u2022 oversee accounting, finance, taxation, treasury, and compliance   \u2022 lead budgeting, forecasting, and performance management   \u2022 ensure strong internal controls and governance frameworks   \u2022 support strategic initiatives such as e xpansions, investments, and funding   \u2022 report financial performance to top management and board",
+        "qualifications": "\u2022 qualified ca   \u2022 strong strategic, leadership, and decision -making capabilities   \u2022 deep understanding of corporate finance and compliance"
+    }
+}

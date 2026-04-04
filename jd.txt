@@ -1,0 +1,21 @@
+We are looking for a Python Backend Developer with 3+ years of experience.
+
+Responsibilities:
+- Develop REST APIs using Python
+- Work with Flask or Django frameworks
+- Build scalable backend systems
+- Work with SQL and NoSQL databases
+- Deploy applications on AWS
+
+Required Skills:
+Python
+Flask
+Django
+REST API
+Microservices
+Docker
+AWS
+SQL
+
+Preferred:
+Experience with Machine Learning pipelines.

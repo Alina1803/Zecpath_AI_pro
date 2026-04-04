@@ -1,0 +1,25 @@
+{
+    "role": "Group Financial Controller",
+    "matched": true,
+    "confidence": 100.0,
+    "matched_keywords": [
+        "group financial controller"
+    ],
+    "role_summary": "the group financial controlle r manages consolidated financial reporting and controls across  multiple entities or group companies.",
+    "responsibilities": "\u2022 oversee group -level accounting and consolidation   \u2022 prepare consolidated financial statements   \u2022 ensure consistency in accounting policies across entities   \u2022 manage group audits and regulatory reporting   \u2022 strengthen group -wide internal controls and governance   \u2022 support group leadership with financial insights",
+    "qualifications": "\u2022 ca with consolidation and group reporting experience   \u2022 strong knowle dge of ind as / ifrs   \u2022 ability to manage multi -entity structures",
+    "skills": {
+        "technical_skills": [],
+        "accounting_skills": [
+            "financial reporting"
+        ],
+        "soft_skills": [
+            "leadership"
+        ]
+    },
+    "sections": {
+        "role_summary": "the group financial controlle r manages consolidated financial reporting and controls across  multiple entities or group companies.",
+        "responsibilities": "\u2022 oversee group -level accounting and consolidation   \u2022 prepare consolidated financial statements   \u2022 ensure consistency in accounting policies across entities   \u2022 manage group audits and regulatory reporting   \u2022 strengthen group -wide internal controls and governance   \u2022 support group leadership with financial insights",
+        "qualifications": "\u2022 ca with consolidation and group reporting experience   \u2022 strong knowle dge of ind as / ifrs   \u2022 ability to manage multi -entity structures"
+    }
+}

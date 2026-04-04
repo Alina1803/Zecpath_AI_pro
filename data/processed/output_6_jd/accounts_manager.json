@@ -1,0 +1,25 @@
+{
+    "role": "Accounts Manager",
+    "matched": true,
+    "confidence": 100.0,
+    "matched_keywords": [
+        "accounts manager"
+    ],
+    "role_summary": "the accounts manager manages daily accounting operations, ensuring accurate records and  timely reporting.",
+    "responsibilities": "\u2022 supervise accounting entries  and ledger maintenance   \u2022 manage accounts payable and receivable   \u2022 ensure timely bank reconciliations   \u2022 support month -end and year -end closures   \u2022 assist in statutory compliance and audits   \u2022 maintain accounting documentation and controls",
+    "qualifications": "\u2022 ca w ith hands -on accounting experience   \u2022 strong accounting principles knowledge   \u2022 erp and excel proficiency",
+    "skills": {
+        "technical_skills": [
+            "excel"
+        ],
+        "accounting_skills": [
+            "accounts payable"
+        ],
+        "soft_skills": []
+    },
+    "sections": {
+        "role_summary": "the accounts manager manages daily accounting operations, ensuring accurate records and  timely reporting.",
+        "responsibilities": "\u2022 supervise accounting entries  and ledger maintenance   \u2022 manage accounts payable and receivable   \u2022 ensure timely bank reconciliations   \u2022 support month -end and year -end closures   \u2022 assist in statutory compliance and audits   \u2022 maintain accounting documentation and controls",
+        "qualifications": "\u2022 ca w ith hands -on accounting experience   \u2022 strong accounting principles knowledge   \u2022 erp and excel proficiency"
+    }
+}

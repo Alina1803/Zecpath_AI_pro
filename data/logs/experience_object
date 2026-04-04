@@ -1,0 +1,10 @@
+{
+  "company": "string",
+  "designation": "string",
+  "start_date": "YYYY-MM",
+  "end_date": "YYYY-MM | present",
+  "duration_months": "number",
+  "technologies_used": ["string"],
+  "responsibilities": ["string"],
+  "achievements": ["string"]
+}

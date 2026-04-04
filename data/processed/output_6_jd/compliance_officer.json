@@ -1,0 +1,21 @@
+{
+    "role": "Compliance Officer",
+    "matched": true,
+    "confidence": 100.0,
+    "matched_keywords": [
+        "compliance officer"
+    ],
+    "role_summary": "the compliance officer ensures adherence to regulatory, statutory, and internal compliance  requirements.",
+    "responsibilities": "\u2022 monitor compliance with laws and regulations   \u2022 develop and update compliance policies and procedures   \u2022 conduct compliance audits and reviews   \u2022 handle regulatory filings and disclosures   \u2022 support regulatory inspections and audits   \u2022 train employees on compliance requirements",
+    "qualifications": "\u2022 chartered accountant   \u2022 strong regulatory and  compliance knowledge   \u2022 attention to detail and governance orientation",
+    "skills": {
+        "technical_skills": [],
+        "accounting_skills": [],
+        "soft_skills": []
+    },
+    "sections": {
+        "role_summary": "the compliance officer ensures adherence to regulatory, statutory, and internal compliance  requirements.",
+        "responsibilities": "\u2022 monitor compliance with laws and regulations   \u2022 develop and update compliance policies and procedures   \u2022 conduct compliance audits and reviews   \u2022 handle regulatory filings and disclosures   \u2022 support regulatory inspections and audits   \u2022 train employees on compliance requirements",
+        "qualifications": "\u2022 chartered accountant   \u2022 strong regulatory and  compliance knowledge   \u2022 attention to detail and governance orientation"
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "role": "External Auditor",
+    "matched": true,
+    "confidence": 100.0,
+    "matched_keywords": [
+        "external auditor"
+    ],
+    "role_summary": "the external auditor provides independent assurance on the accuracy and fairness of  financial statements.",
+    "responsibilities": "\u2022 conduct statutory and external audits   \u2022 verify financi al records and supporting documents   \u2022 test internal controls and compliance   \u2022 identify misstatements and audit risks   \u2022 prepare audit documentation and reports   \u2022 communicate audit findings to stakeholders",
+    "qualifications": "\u2022 qualified chartered accountant   \u2022 strong accounting and auditing standards knowledge   \u2022 professional skepticism and integrity",
+    "skills": {
+        "technical_skills": [],
+        "accounting_skills": [
+            "auditing"
+        ],
+        "soft_skills": []
+    },
+    "sections": {
+        "role_summary": "the external auditor provides independent assurance on the accuracy and fairness of  financial statements.",
+        "responsibilities": "\u2022 conduct statutory and external audits   \u2022 verify financi al records and supporting documents   \u2022 test internal controls and compliance   \u2022 identify misstatements and audit risks   \u2022 prepare audit documentation and reports   \u2022 communicate audit findings to stakeholders",
+        "qualifications": "\u2022 qualified chartered accountant   \u2022 strong accounting and auditing standards knowledge   \u2022 professional skepticism and integrity"
+    }
+}

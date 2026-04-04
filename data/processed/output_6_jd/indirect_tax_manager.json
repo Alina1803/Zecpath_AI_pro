@@ -1,0 +1,24 @@
+{
+    "role": "Indirect Tax Manager",
+    "matched": true,
+    "confidence": 100.0,
+    "matched_keywords": [
+        "indirect tax manager"
+    ],
+    "role_summary": "the indirect tax manager ensures compliance with indirect tax laws  and optimizes tax  processes and structures.",
+    "responsibilities": "\u2022 oversee gst compliance and return filings   \u2022 manage gst audits, notices, and assessments   \u2022 advise on gst implications of transactions   \u2022 ensure correct tax classification and credit utilization   \u2022 mon itor changes in indirect tax laws   \u2022 coordinate with tax authorities and consultants",
+    "qualifications": "\u2022 ca with specialization in indirect taxation   \u2022 in-depth gst and indirect tax knowledge   \u2022 strong compliance and advisory skills",
+    "skills": {
+        "technical_skills": [],
+        "accounting_skills": [
+            "gst",
+            "taxation"
+        ],
+        "soft_skills": []
+    },
+    "sections": {
+        "role_summary": "the indirect tax manager ensures compliance with indirect tax laws  and optimizes tax  processes and structures.",
+        "responsibilities": "\u2022 oversee gst compliance and return filings   \u2022 manage gst audits, notices, and assessments   \u2022 advise on gst implications of transactions   \u2022 ensure correct tax classification and credit utilization   \u2022 mon itor changes in indirect tax laws   \u2022 coordinate with tax authorities and consultants",
+        "qualifications": "\u2022 ca with specialization in indirect taxation   \u2022 in-depth gst and indirect tax knowledge   \u2022 strong compliance and advisory skills"
+    }
+}

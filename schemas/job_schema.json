@@ -1,0 +1,156 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "JobDescriptionSchema",
+  "type": "object",
+  "required": [
+    "job_id",
+    "title",
+    "company",
+    "employment_type",
+    "required_skills"
+  ],
+  "properties": {
+
+    "job_id": {
+      "type": "string",
+      "description": "Unique identifier for the job posting"
+    },
+
+    "title": {
+      "type": "string",
+      "description": "Official job title"
+    },
+
+    "department": {
+      "type": "string"
+    },
+
+    "company": {
+      "type": "string"
+    },
+
+    "location": {
+      "type": "object",
+      "properties": {
+        "city": { "type": "string" },
+        "state": { "type": "string" },
+        "country": { "type": "string" },
+        "remote": { "type": "boolean" }
+      }
+    },
+
+    "employment_type": {
+      "type": "string",
+      "enum": ["full-time", "part-time", "contract", "internship", "temporary"]
+    },
+
+    "experience_required": {
+      "type": "object",
+      "properties": {
+        "min_years": { "type": "number" },
+        "max_years": { "type": "number" }
+      }
+    },
+
+    "education_required": {
+      "type": "object",
+      "properties": {
+        "minimum_degree": {
+          "type": "string",
+          "enum": [
+            "high_school",
+            "diploma",
+            "bachelors",
+            "masters",
+            "phd"
+          ]
+        },
+        "field_of_study": {
+          "type": "string"
+        }
+      }
+    },
+
+    "required_skills": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/SkillRequirement" }
+    },
+
+    "preferred_skills": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/SkillRequirement" }
+    },
+
+    "responsibilities": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+
+    "qualifications": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+
+    "certifications_required": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+
+    "salary_range": {
+      "type": "object",
+      "properties": {
+        "currency": { "type": "string" },
+        "min": { "type": "number" },
+        "max": { "type": "number" },
+        "period": {
+          "type": "string",
+          "enum": ["hourly", "monthly", "yearly"]
+        }
+      }
+    },
+
+    "benefits": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+
+    "posted_date": {
+      "type": "string",
+      "format": "date"
+    },
+
+    "application_deadline": {
+      "type": "string",
+      "format": "date"
+    }
+
+  },
+
+  "definitions": {
+
+    "SkillRequirement": {
+      "type": "object",
+      "required": ["skill_name"],
+      "properties": {
+        "skill_name": {
+          "type": "string"
+        },
+        "category": {
+          "type": "string",
+          "enum": ["technical", "soft", "tool", "domain"]
+        },
+        "minimum_proficiency": {
+          "type": "string",
+          "enum": ["beginner", "intermediate", "advanced", "expert"]
+        },
+        "mandatory": {
+          "type": "boolean"
+        },
+        "min_years_experience": {
+          "type": "number"
+        }
+      }
+    }
+
+  }
+}

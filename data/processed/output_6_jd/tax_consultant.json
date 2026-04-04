@@ -1,0 +1,25 @@
+{
+    "role": "Tax Consultant",
+    "matched": true,
+    "confidence": 100.0,
+    "matched_keywords": [
+        "tax consultant"
+    ],
+    "role_summary": "the tax consultant provides advisory and compliance support in direct and indirect taxes,  ensuring clients or the organization remain compliant while optimizing tax positions.",
+    "responsibilities": "\u2022 prepare and review income t ax and gst returns   \u2022 handle tax computations for individuals and businesses   \u2022 assist in tax planning and advisory assignments   \u2022 support tax audits, assessments, and notices   \u2022 maintain tax documentation and working papers   \u2022 stay updated with changes in tax laws and r egulations",
+    "qualifications": "\u2022 qualified chartered accountant   \u2022 good understanding of income tax and gst laws   \u2022 strong analytical and documentation skills   \u2022 client communication and advisory ability",
+    "skills": {
+        "technical_skills": [],
+        "accounting_skills": [
+            "gst"
+        ],
+        "soft_skills": [
+            "communication"
+        ]
+    },
+    "sections": {
+        "role_summary": "the tax consultant provides advisory and compliance support in direct and indirect taxes,  ensuring clients or the organization remain compliant while optimizing tax positions.",
+        "responsibilities": "\u2022 prepare and review income t ax and gst returns   \u2022 handle tax computations for individuals and businesses   \u2022 assist in tax planning and advisory assignments   \u2022 support tax audits, assessments, and notices   \u2022 maintain tax documentation and working papers   \u2022 stay updated with changes in tax laws and r egulations",
+        "qualifications": "\u2022 qualified chartered accountant   \u2022 good understanding of income tax and gst laws   \u2022 strong analytical and documentation skills   \u2022 client communication and advisory ability"
+    }
+}

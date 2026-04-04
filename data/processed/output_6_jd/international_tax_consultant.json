@@ -1,0 +1,23 @@
+{
+    "role": "International Tax Consultant",
+    "matched": true,
+    "confidence": 100.0,
+    "matched_keywords": [
+        "international tax consultant"
+    ],
+    "role_summary": "the international tax consultant advises on cross -border taxation, double taxation  avoidance, and global tax compliance.",
+    "responsibilities": "\u2022 advise on international tax structures and transactions   \u2022 analyze dtaa, pe exposure, and withholding taxes   \u2022 support cross -border tax compliance and reporting   \u2022 assist in international tax audits and assessments   \u2022 coordinate with global tax teams and advisors   \u2022 monitor global tax law developments",
+    "qualifications": "\u2022 ca with international tax exposure   \u2022 strong knowledge of dtaa, oecd guidelines, beps   \u2022 analytical and research -oriented mindset",
+    "skills": {
+        "technical_skills": [],
+        "accounting_skills": [
+            "taxation"
+        ],
+        "soft_skills": []
+    },
+    "sections": {
+        "role_summary": "the international tax consultant advises on cross -border taxation, double taxation  avoidance, and global tax compliance.",
+        "responsibilities": "\u2022 advise on international tax structures and transactions   \u2022 analyze dtaa, pe exposure, and withholding taxes   \u2022 support cross -border tax compliance and reporting   \u2022 assist in international tax audits and assessments   \u2022 coordinate with global tax teams and advisors   \u2022 monitor global tax law developments",
+        "qualifications": "\u2022 ca with international tax exposure   \u2022 strong knowledge of dtaa, oecd guidelines, beps   \u2022 analytical and research -oriented mindset"
+    }
+}

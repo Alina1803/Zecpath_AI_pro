@@ -1,0 +1,23 @@
+{
+    "role": "Business Consultant",
+    "matched": true,
+    "confidence": 100.0,
+    "matched_keywords": [
+        "business consultant"
+    ],
+    "role_summary": "",
+    "responsibilities": "\u2022 evaluate existing business opera tions and financial performance   \u2022 identify gaps in processes, controls, and compliance   \u2022 recommend solutions for cost optimization and revenue enhancement   \u2022 assist in business planning, budgeting, and forecasting   \u2022 support implementation of systems, policies, and sops   \u2022 advise startups and smes on scaling and operational efficiency",
+    "qualifications": "\u2022 ca with strong business and financial understanding   \u2022 knowledge of operations, finance, and compliance   \u2022 client -handling and communication skills",
+    "skills": {
+        "technical_skills": [],
+        "accounting_skills": [],
+        "soft_skills": [
+            "communication"
+        ]
+    },
+    "sections": {
+        "role_summary": "",
+        "responsibilities": "\u2022 evaluate existing business opera tions and financial performance   \u2022 identify gaps in processes, controls, and compliance   \u2022 recommend solutions for cost optimization and revenue enhancement   \u2022 assist in business planning, budgeting, and forecasting   \u2022 support implementation of systems, policies, and sops   \u2022 advise startups and smes on scaling and operational efficiency",
+        "qualifications": "\u2022 ca with strong business and financial understanding   \u2022 knowledge of operations, finance, and compliance   \u2022 client -handling and communication skills"
+    }
+}

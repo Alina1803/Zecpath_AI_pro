@@ -1,0 +1,12 @@
+{
+    "candidate_id": "86eaeed1-d9be-43ac-ba48-3e32db882ea8",
+    "parsed_data": {
+        "name": "John Doe",
+        "skills": [
+            "Python",
+            "Machine Learning"
+        ],
+        "experience": 3
+    },
+    "score": 35
+}

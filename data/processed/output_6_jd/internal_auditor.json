@@ -1,0 +1,23 @@
+{
+    "role": "Internal Auditor",
+    "matched": true,
+    "confidence": 100.0,
+    "matched_keywords": [
+        "internal auditor"
+    ],
+    "role_summary": "the internal auditor evaluates internal controls, processes, and risk management to improve  operational efficiency and governance.",
+    "responsibilities": "\u2022 conduct internal audits across departmen ts  \u2022 evaluate internal control effectiveness   \u2022 identify operational and financial risks   \u2022 recommend process improvements   \u2022 prepare audit reports and follow -up actions   \u2022 support management in strengthening controls",
+    "qualifications": "\u2022 ca qualification   \u2022 strong int ernal audit and process review skills   \u2022 analytical and investigative mindset   \u2022 good communication and reporting skills",
+    "skills": {
+        "technical_skills": [],
+        "accounting_skills": [],
+        "soft_skills": [
+            "communication"
+        ]
+    },
+    "sections": {
+        "role_summary": "the internal auditor evaluates internal controls, processes, and risk management to improve  operational efficiency and governance.",
+        "responsibilities": "\u2022 conduct internal audits across departmen ts  \u2022 evaluate internal control effectiveness   \u2022 identify operational and financial risks   \u2022 recommend process improvements   \u2022 prepare audit reports and follow -up actions   \u2022 support management in strengthening controls",
+        "qualifications": "\u2022 ca qualification   \u2022 strong int ernal audit and process review skills   \u2022 analytical and investigative mindset   \u2022 good communication and reporting skills"
+    }
+}

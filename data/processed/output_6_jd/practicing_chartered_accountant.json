@@ -1,0 +1,24 @@
+{
+    "role": "Practicing Chartered Accountant",
+    "matched": true,
+    "confidence": 100.0,
+    "matched_keywords": [
+        "practicing chartered accountant"
+    ],
+    "role_summary": "",
+    "responsibilities": "\u2022 provide audit, taxation, accounti ng, and advisory services   \u2022 conduct statutory audits, tax audits, and internal audits   \u2022 handle income tax, gst, and other statutory filings   \u2022 advise clients on financial planning, compliance, and risk management   \u2022 represent clients before tax authorities and regul atory bodies   \u2022 maintain ethical standards and professional compliance as per icai   \u2022 build and manage long -term client relationships",
+    "qualifications": "\u2022 qualified ca with certificate of practice (cop)   \u2022 strong technical and client -handling skills   \u2022 knowledge of applicable laws and regulations",
+    "skills": {
+        "technical_skills": [],
+        "accounting_skills": [
+            "gst",
+            "taxation"
+        ],
+        "soft_skills": []
+    },
+    "sections": {
+        "role_summary": "",
+        "responsibilities": "\u2022 provide audit, taxation, accounti ng, and advisory services   \u2022 conduct statutory audits, tax audits, and internal audits   \u2022 handle income tax, gst, and other statutory filings   \u2022 advise clients on financial planning, compliance, and risk management   \u2022 represent clients before tax authorities and regul atory bodies   \u2022 maintain ethical standards and professional compliance as per icai   \u2022 build and manage long -term client relationships",
+        "qualifications": "\u2022 qualified ca with certificate of practice (cop)   \u2022 strong technical and client -handling skills   \u2022 knowledge of applicable laws and regulations"
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "role": "Income Tax Advisor",
+    "matched": true,
+    "confidence": 100.0,
+    "matched_keywords": [
+        "income tax advisor"
+    ],
+    "role_summary": "the income tax advisor provides advisory and comp liance support related to income tax  laws for individuals, businesses, or government bodies.",
+    "responsibilities": "\u2022 advise on income tax compliance and planning   \u2022 prepare and review income tax returns   \u2022 support assessments, appeals, and representations   \u2022 interpre t tax laws and circulars   \u2022 assist in litigation and dispute resolution   \u2022 maintain accurate tax documentation",
+    "qualifications": "\u2022 chartered accountant   \u2022 strong expertise in income tax act and procedures   \u2022 advisory and representation skills",
+    "skills": {
+        "technical_skills": [],
+        "accounting_skills": [],
+        "soft_skills": []
+    },
+    "sections": {
+        "role_summary": "the income tax advisor provides advisory and comp liance support related to income tax  laws for individuals, businesses, or government bodies.",
+        "responsibilities": "\u2022 advise on income tax compliance and planning   \u2022 prepare and review income tax returns   \u2022 support assessments, appeals, and representations   \u2022 interpre t tax laws and circulars   \u2022 assist in litigation and dispute resolution   \u2022 maintain accurate tax documentation",
+        "qualifications": "\u2022 chartered accountant   \u2022 strong expertise in income tax act and procedures   \u2022 advisory and representation skills"
+    }
+}

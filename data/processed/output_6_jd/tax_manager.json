@@ -1,0 +1,24 @@
+{
+    "role": "Tax Manager",
+    "matched": true,
+    "confidence": 100.0,
+    "matched_keywords": [
+        "tax manager"
+    ],
+    "role_summary": "the tax manager oversees direct and indirect tax planning, compliance, and litigation  support to minimize tax risk and ensure regulatory adherence.",
+    "responsibilities": "\u2022 manage income tax, gst, and other statutory tax filings   \u2022 develop tax plannin g strategies to optimize tax liability   \u2022 handle tax assessments, audits, and notices   \u2022 monitor changes in tax laws and ensure compliance   \u2022 coordinate with consultants and tax authorities   \u2022 maintain accurate tax documentation and reports",
+    "qualifications": "\u2022 ca qualification with specialization in taxation   \u2022 strong understanding of tax laws and procedures   \u2022 analytical and strategic thinking   \u2022 attention to detail and compliance focus",
+    "skills": {
+        "technical_skills": [],
+        "accounting_skills": [
+            "gst",
+            "taxation"
+        ],
+        "soft_skills": []
+    },
+    "sections": {
+        "role_summary": "the tax manager oversees direct and indirect tax planning, compliance, and litigation  support to minimize tax risk and ensure regulatory adherence.",
+        "responsibilities": "\u2022 manage income tax, gst, and other statutory tax filings   \u2022 develop tax plannin g strategies to optimize tax liability   \u2022 handle tax assessments, audits, and notices   \u2022 monitor changes in tax laws and ensure compliance   \u2022 coordinate with consultants and tax authorities   \u2022 maintain accurate tax documentation and reports",
+        "qualifications": "\u2022 ca qualification with specialization in taxation   \u2022 strong understanding of tax laws and procedures   \u2022 analytical and strategic thinking   \u2022 attention to detail and compliance focus"
+    }
+}
