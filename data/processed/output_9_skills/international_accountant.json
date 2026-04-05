@@ -1,0 +1,22 @@
+{
+    "role": "International  Accountant",
+    "matched": true,
+    "confidence": 100.0,
+    "matched_keywords": [
+        "international  accountant"
+    ],
+    "role_summary": "",
+    "responsibilities": "\u2022 prepare and maintain financial statements for international entities   \u2022 handle multi -currency accounting and foreign exchange adjustments   \u2022 ensure compliance with ifrs and local country accounting regulations   \u2022 coordinate with overseas subsidiaries and finance teams   \u2022 manage intercompany transactions and reconciliations   \u2022 support international audits and regulatory reporting   \u2022 monitor international tax implications and transfer pricing basics",
+    "qualifications": "\u2022 chartered accountant (ca) or equivalent   \u2022 strong knowledge of ifrs   \u2022 experience with global erp systems (sap, oracle, netsuite)   \u2022 excellent communication and cross -cultural coordination skills",
+    "skills": [
+        {
+            "skill": "taxation",
+            "confidence": 0.7
+        }
+    ],
+    "sections": {
+        "role_summary": "",
+        "responsibilities": "\u2022 prepare and maintain financial statements for international entities   \u2022 handle multi -currency accounting and foreign exchange adjustments   \u2022 ensure compliance with ifrs and local country accounting regulations   \u2022 coordinate with overseas subsidiaries and finance teams   \u2022 manage intercompany transactions and reconciliations   \u2022 support international audits and regulatory reporting   \u2022 monitor international tax implications and transfer pricing basics",
+        "qualifications": "\u2022 chartered accountant (ca) or equivalent   \u2022 strong knowledge of ifrs   \u2022 experience with global erp systems (sap, oracle, netsuite)   \u2022 excellent communication and cross -cultural coordination skills"
+    }
+}

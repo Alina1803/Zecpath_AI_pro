@@ -1,0 +1,26 @@
+{
+    "role": "Freelance Accountant",
+    "matched": true,
+    "confidence": 100.0,
+    "matched_keywords": [
+        "freelance accountant"
+    ],
+    "role_summary": "",
+    "responsibilities": "\u2022 maintain books of accounts for clients   \u2022 handle monthly accounting, reconciliations, and closures   \u2022 prepare financial statements and mis rep orts  \u2022 manage invoicing, payables, and receivables   \u2022 coordinate with tax consultants and auditors   \u2022 use accounting software and cloud -based tools",
+    "qualifications": "\u2022 ca / cma / experienced accounting professional   \u2022 strong accounting software and excel skills   \u2022 attention to detail and accuracy",
+    "skills": [
+        {
+            "skill": "taxation",
+            "confidence": 0.7
+        },
+        {
+            "skill": "excel",
+            "confidence": 0.9
+        }
+    ],
+    "sections": {
+        "role_summary": "",
+        "responsibilities": "\u2022 maintain books of accounts for clients   \u2022 handle monthly accounting, reconciliations, and closures   \u2022 prepare financial statements and mis rep orts  \u2022 manage invoicing, payables, and receivables   \u2022 coordinate with tax consultants and auditors   \u2022 use accounting software and cloud -based tools",
+        "qualifications": "\u2022 ca / cma / experienced accounting professional   \u2022 strong accounting software and excel skills   \u2022 attention to detail and accuracy"
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "role": "Compliance Consultant",
+    "matched": true,
+    "confidence": 100.0,
+    "matched_keywords": [
+        "compliance consultant"
+    ],
+    "role_summary": "",
+    "responsibilities": "\u2022 manage roc, mca, labor law, and tax compliances   \u2022 develop compliance calendars and tracking syst ems  \u2022 assist clients during audits and due diligence   \u2022 ensure timely filings and documentation   \u2022 advise on regulatory changes and impact   \u2022 coordinate with legal, hr, and finance teams",
+    "qualifications": "\u2022 ca / cs with compliance expertise   \u2022 strong regulatory and documentation skills   \u2022 ability to manage multiple clients",
+    "skills": [
+        {
+            "skill": "taxation",
+            "confidence": 0.7
+        }
+    ],
+    "sections": {
+        "role_summary": "",
+        "responsibilities": "\u2022 manage roc, mca, labor law, and tax compliances   \u2022 develop compliance calendars and tracking syst ems  \u2022 assist clients during audits and due diligence   \u2022 ensure timely filings and documentation   \u2022 advise on regulatory changes and impact   \u2022 coordinate with legal, hr, and finance teams",
+        "qualifications": "\u2022 ca / cs with compliance expertise   \u2022 strong regulatory and documentation skills   \u2022 ability to manage multiple clients"
+    }
+}

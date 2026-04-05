@@ -1,0 +1,22 @@
+{
+    "role": "Internal Audit Manager",
+    "matched": true,
+    "confidence": 100.0,
+    "matched_keywords": [
+        "internal audit manager"
+    ],
+    "role_summary": "the internal audit manager evaluates inte rnal controls, risk management, and governance  processes to improve operational efficiency.",
+    "responsibilities": "\u2022 develop and execute internal audit plans   \u2022 lead internal audit assignments across functions   \u2022 evaluate internal controls and risk management syste ms  \u2022 identify process gaps and recommend improvements   \u2022 prepare internal audit reports and follow -up actions   \u2022 coordinate with management and audit committees",
+    "qualifications": "\u2022 ca with strong internal audit experience   \u2022 knowledge of risk -based auditing   \u2022 strong analytical and communication skills",
+    "skills": [
+        {
+            "skill": "auditing",
+            "confidence": 0.9
+        }
+    ],
+    "sections": {
+        "role_summary": "the internal audit manager evaluates inte rnal controls, risk management, and governance  processes to improve operational efficiency.",
+        "responsibilities": "\u2022 develop and execute internal audit plans   \u2022 lead internal audit assignments across functions   \u2022 evaluate internal controls and risk management syste ms  \u2022 identify process gaps and recommend improvements   \u2022 prepare internal audit reports and follow -up actions   \u2022 coordinate with management and audit committees",
+        "qualifications": "\u2022 ca with strong internal audit experience   \u2022 knowledge of risk -based auditing   \u2022 strong analytical and communication skills"
+    }
+}

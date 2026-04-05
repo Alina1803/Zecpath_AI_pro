@@ -1,0 +1,22 @@
+{
+    "role": "Internal Auditor \u2013 Government Bodies",
+    "matched": true,
+    "confidence": 100.0,
+    "matched_keywords": [
+        "internal auditor \u2013 government bodies"
+    ],
+    "role_summary": "the internal auditor evaluates internal controls and processes in government departments to  enhance accountability and efficiency.",
+    "responsibilities": "\u2022 conduct i nternal audits of government departments and schemes   \u2022 review compliance with financial rules and procedures   \u2022 assess internal controls and risk management   \u2022 identify control gaps and process improvements   \u2022 prepare internal audit reports and recommendations   \u2022 follow  up on audit observations and corrective actions",
+    "qualifications": "\u2022 chartered accountant   \u2022 knowledge of government auditing and internal control systems   \u2022 strong analytical and reporting skills",
+    "skills": [
+        {
+            "skill": "auditing",
+            "confidence": 0.9
+        }
+    ],
+    "sections": {
+        "role_summary": "the internal auditor evaluates internal controls and processes in government departments to  enhance accountability and efficiency.",
+        "responsibilities": "\u2022 conduct i nternal audits of government departments and schemes   \u2022 review compliance with financial rules and procedures   \u2022 assess internal controls and risk management   \u2022 identify control gaps and process improvements   \u2022 prepare internal audit reports and recommendations   \u2022 follow  up on audit observations and corrective actions",
+        "qualifications": "\u2022 chartered accountant   \u2022 knowledge of government auditing and internal control systems   \u2022 strong analytical and reporting skills"
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "role": "Financial Analyst",
+    "matched": true,
+    "confidence": 100.0,
+    "matched_keywords": [
+        "financial analyst"
+    ],
+    "role_summary": "the financial analyst provides financial insights, analysis, and forecasts to support  management decision -making.",
+    "responsibilities": "\u2022 analyze financial statements and performance trends   \u2022 prepare budgets, forecasts, and variance analysis   \u2022 build financial models and scenario analysis   \u2022 support strategic planning and investment evaluation   \u2022 prepare mis and management reports   \u2022 assist in cost control  and profitability analysis",
+    "qualifications": "\u2022 qualified ca   \u2022 strong financial analysis and modeling skills   \u2022 advanced excel and reporting proficiency",
+    "skills": [
+        {
+            "skill": "excel",
+            "confidence": 0.9
+        }
+    ],
+    "sections": {
+        "role_summary": "the financial analyst provides financial insights, analysis, and forecasts to support  management decision -making.",
+        "responsibilities": "\u2022 analyze financial statements and performance trends   \u2022 prepare budgets, forecasts, and variance analysis   \u2022 build financial models and scenario analysis   \u2022 support strategic planning and investment evaluation   \u2022 prepare mis and management reports   \u2022 assist in cost control  and profitability analysis",
+        "qualifications": "\u2022 qualified ca   \u2022 strong financial analysis and modeling skills   \u2022 advanced excel and reporting proficiency"
+    }
+}

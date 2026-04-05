@@ -1,0 +1,22 @@
+{
+    "role": "Statutory Audit Manager",
+    "matched": true,
+    "confidence": 100.0,
+    "matched_keywords": [
+        "statutory audit manager"
+    ],
+    "role_summary": "the statutory audit manager leads statutory audit engagements and ensures that financial  statements comply with applicable laws and accounting standards.",
+    "responsibilities": "\u2022 plan and manage statutory au dits under companies act and other laws   \u2022 supervise audit teams and review audit working papers   \u2022 ensure compliance with ind as / ifrs and auditing standards   \u2022 identify audit risks and control weaknesses   \u2022 finalize audit reports and audit opinions   \u2022 liaise with clie nts, management, and auditors",
+    "qualifications": "\u2022 qualified chartered accountant   \u2022 strong statutory audit and reporting experience   \u2022 leadership and client -handling skills",
+    "skills": [
+        {
+            "skill": "auditing",
+            "confidence": 0.9
+        }
+    ],
+    "sections": {
+        "role_summary": "the statutory audit manager leads statutory audit engagements and ensures that financial  statements comply with applicable laws and accounting standards.",
+        "responsibilities": "\u2022 plan and manage statutory au dits under companies act and other laws   \u2022 supervise audit teams and review audit working papers   \u2022 ensure compliance with ind as / ifrs and auditing standards   \u2022 identify audit risks and control weaknesses   \u2022 finalize audit reports and audit opinions   \u2022 liaise with clie nts, management, and auditors",
+        "qualifications": "\u2022 qualified chartered accountant   \u2022 strong statutory audit and reporting experience   \u2022 leadership and client -handling skills"
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "role": "Virtual Accountant",
+    "matched": true,
+    "confidence": 100.0,
+    "matched_keywords": [
+        "virtual accountant"
+    ],
+    "role_summary": "",
+    "responsibilities": "\u2022 maintain real -time books of accounts remotely   \u2022 handle bank, gst, and vendor reconciliations   \u2022 prepare monthly financial statements and dashboards   \u2022 support compliance and audit requirements   \u2022 manage accounting via cloud tools (zoho, quickbooks, xero)   \u2022 communicate with clients through digital channels",
+    "qualifications": "\u2022 ca or experienced accounting professional   \u2022 expertise in cloud accounting tools   \u2022 strong remote client communication skills",
+    "skills": [
+        {
+            "skill": "quickbooks",
+            "confidence": 0.9
+        },
+        {
+            "skill": "gst",
+            "confidence": 0.9
+        },
+        {
+            "skill": "auditing",
+            "confidence": 0.7
+        }
+    ],
+    "sections": {
+        "role_summary": "",
+        "responsibilities": "\u2022 maintain real -time books of accounts remotely   \u2022 handle bank, gst, and vendor reconciliations   \u2022 prepare monthly financial statements and dashboards   \u2022 support compliance and audit requirements   \u2022 manage accounting via cloud tools (zoho, quickbooks, xero)   \u2022 communicate with clients through digital channels",
+        "qualifications": "\u2022 ca or experienced accounting professional   \u2022 expertise in cloud accounting tools   \u2022 strong remote client communication skills"
+    }
+}

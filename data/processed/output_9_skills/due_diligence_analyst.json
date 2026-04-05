@@ -1,0 +1,22 @@
+{
+    "role": "Due Diligence Analyst",
+    "matched": true,
+    "confidence": 100.0,
+    "matched_keywords": [
+        "due diligence analyst"
+    ],
+    "role_summary": "the due diligence analyst evaluates financial, tax, and operational aspects of target  companies during transactions.",
+    "responsibilities": "\u2022 conduct financial and tax due diligence   \u2022 analyze historical financ ial performance and risks   \u2022 identify deal risks and red flags   \u2022 prepare due diligence reports and summaries   \u2022 support transaction decision -making   \u2022 coordinate with clients and advisors",
+    "qualifications": "\u2022 ca with due diligence experience   \u2022 strong analytical and  investigative skills   \u2022 attention to detail and reporting expertise",
+    "skills": [
+        {
+            "skill": "taxation",
+            "confidence": 0.7
+        }
+    ],
+    "sections": {
+        "role_summary": "the due diligence analyst evaluates financial, tax, and operational aspects of target  companies during transactions.",
+        "responsibilities": "\u2022 conduct financial and tax due diligence   \u2022 analyze historical financ ial performance and risks   \u2022 identify deal risks and red flags   \u2022 prepare due diligence reports and summaries   \u2022 support transaction decision -making   \u2022 coordinate with clients and advisors",
+        "qualifications": "\u2022 ca with due diligence experience   \u2022 strong analytical and  investigative skills   \u2022 attention to detail and reporting expertise"
+    }
+}

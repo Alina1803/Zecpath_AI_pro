@@ -1,0 +1,22 @@
+{
+    "role": "SOX Auditor",
+    "matched": true,
+    "confidence": 100.0,
+    "matched_keywords": [
+        "sox auditor"
+    ],
+    "role_summary": "the sox auditor ensures compliance with the sarbanes -oxley act by evaluating internal  controls over financial reporting.",
+    "responsibilities": "\u2022 test internal controls under sox framework   \u2022 document control design and operating effec tiveness   \u2022 identify control deficiencies and remediation plans   \u2022 coordinate with process owners and management   \u2022 support internal and external sox audits   \u2022 maintain sox documentation and compliance reports",
+    "qualifications": "\u2022 qualified ca   \u2022 strong understanding  of sox and icfr   \u2022 process documentation and testing expertise",
+    "skills": [
+        {
+            "skill": "financial reporting",
+            "confidence": 0.9
+        }
+    ],
+    "sections": {
+        "role_summary": "the sox auditor ensures compliance with the sarbanes -oxley act by evaluating internal  controls over financial reporting.",
+        "responsibilities": "\u2022 test internal controls under sox framework   \u2022 document control design and operating effec tiveness   \u2022 identify control deficiencies and remediation plans   \u2022 coordinate with process owners and management   \u2022 support internal and external sox audits   \u2022 maintain sox documentation and compliance reports",
+        "qualifications": "\u2022 qualified ca   \u2022 strong understanding  of sox and icfr   \u2022 process documentation and testing expertise"
+    }
+}

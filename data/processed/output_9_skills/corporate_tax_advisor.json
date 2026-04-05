@@ -1,0 +1,22 @@
+{
+    "role": "Corporate Tax Advisor",
+    "matched": true,
+    "confidence": 100.0,
+    "matched_keywords": [
+        "corporate tax advisor"
+    ],
+    "role_summary": "the corporate tax advisor provides strategic tax advice to optimize tax structures and  ensure compliance.",
+    "responsibilities": "\u2022 advise on corporate tax structuring and planning   \u2022 support mergers, acquisitions, and restructuring from a tax perspective   \u2022 evaluate tax risks and compliance gaps   \u2022 provide opinions on complex tax issues   \u2022 coordinate with internal teams and external advisors   \u2022 support management in strategic tax decisions   skills & qualif ications:   \u2022 ca with strong corporate tax advisory experience   \u2022 strategic thinking and risk assessment skills   \u2022 strong business understanding",
+    "qualifications": "",
+    "skills": [
+        {
+            "skill": "taxation",
+            "confidence": 0.7
+        }
+    ],
+    "sections": {
+        "role_summary": "the corporate tax advisor provides strategic tax advice to optimize tax structures and  ensure compliance.",
+        "responsibilities": "\u2022 advise on corporate tax structuring and planning   \u2022 support mergers, acquisitions, and restructuring from a tax perspective   \u2022 evaluate tax risks and compliance gaps   \u2022 provide opinions on complex tax issues   \u2022 coordinate with internal teams and external advisors   \u2022 support management in strategic tax decisions   skills & qualif ications:   \u2022 ca with strong corporate tax advisory experience   \u2022 strategic thinking and risk assessment skills   \u2022 strong business understanding",
+        "qualifications": ""
+    }
+}

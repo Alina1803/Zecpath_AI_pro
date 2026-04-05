@@ -1,0 +1,22 @@
+{
+    "role": "Forensic Auditor",
+    "matched": true,
+    "confidence": 100.0,
+    "matched_keywords": [
+        "forensic auditor"
+    ],
+    "role_summary": "a forensic audi tor investigates financial frauds, disputes, and irregularities using  accounting, auditing, and investigative techniques.",
+    "responsibilities": "\u2022 investigate financial frauds and misconduct   \u2022 analyze complex financial data and transactions   \u2022 collect and document  audit evidence   \u2022 prepare forensic reports for legal proceedings   \u2022 support litigation and regulatory investigations   \u2022 coordinate with legal and enforcement agencies",
+    "qualifications": "\u2022 ca qualification   \u2022 expertise in forensic accounting and investigation   \u2022 strong analytical and investigative skills   \u2022 knowledge of legal and regulatory processes       finance & accounts roles",
+    "skills": [
+        {
+            "skill": "auditing",
+            "confidence": 0.9
+        }
+    ],
+    "sections": {
+        "role_summary": "a forensic audi tor investigates financial frauds, disputes, and irregularities using  accounting, auditing, and investigative techniques.",
+        "responsibilities": "\u2022 investigate financial frauds and misconduct   \u2022 analyze complex financial data and transactions   \u2022 collect and document  audit evidence   \u2022 prepare forensic reports for legal proceedings   \u2022 support litigation and regulatory investigations   \u2022 coordinate with legal and enforcement agencies",
+        "qualifications": "\u2022 ca qualification   \u2022 expertise in forensic accounting and investigation   \u2022 strong analytical and investigative skills   \u2022 knowledge of legal and regulatory processes       finance & accounts roles"
+    }
+}

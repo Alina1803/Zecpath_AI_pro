@@ -1,0 +1,17 @@
+{
+    "role": "Credit Analyst",
+    "matched": true,
+    "confidence": 100.0,
+    "matched_keywords": [
+        "credit analyst"
+    ],
+    "role_summary": "the cre dit analyst evaluates creditworthiness of borrowers and supports lending decisions  through financial and risk analysis.",
+    "responsibilities": "\u2022 analyze financial statements and cash flows of borrowers   \u2022 assess credit risk and repayment capacity   \u2022 prepare credit appraisal and sanction notes   \u2022 monitor loan accounts and covenant compliance   \u2022 conduct industry and borrower risk analysis   \u2022 support credit committees and management",
+    "qualifications": "\u2022 ca with strong financial analysis skills   \u2022 knowledge of lending products and credit risk   \u2022 analytical and decision -support capability",
+    "skills": [],
+    "sections": {
+        "role_summary": "the cre dit analyst evaluates creditworthiness of borrowers and supports lending decisions  through financial and risk analysis.",
+        "responsibilities": "\u2022 analyze financial statements and cash flows of borrowers   \u2022 assess credit risk and repayment capacity   \u2022 prepare credit appraisal and sanction notes   \u2022 monitor loan accounts and covenant compliance   \u2022 conduct industry and borrower risk analysis   \u2022 support credit committees and management",
+        "qualifications": "\u2022 ca with strong financial analysis skills   \u2022 knowledge of lending products and credit risk   \u2022 analytical and decision -support capability"
+    }
+}

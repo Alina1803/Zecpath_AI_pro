@@ -1,0 +1,22 @@
+{
+    "role": "Statutory Auditor",
+    "matched": true,
+    "confidence": 100.0,
+    "matched_keywords": [
+        "statutory auditor"
+    ],
+    "role_summary": "a statutory auditor examines financia l statements to provide an independent opinion on their  accuracy and legal compliance.",
+    "responsibilities": "\u2022 conduct statutory audits under applicable laws   \u2022 verify financial records and supporting documents   \u2022 assess compliance with accounting standards and re gulations   \u2022 identify misstatements and control weaknesses   \u2022 prepare audit reports and certifications   \u2022 communicate audit findings to stakeholders",
+    "qualifications": "\u2022 qualified ca   \u2022 in-depth auditing and accounting knowledge   \u2022 strong professional judgment   \u2022 ethica l and independent mindset",
+    "skills": [
+        {
+            "skill": "auditing",
+            "confidence": 0.9
+        }
+    ],
+    "sections": {
+        "role_summary": "a statutory auditor examines financia l statements to provide an independent opinion on their  accuracy and legal compliance.",
+        "responsibilities": "\u2022 conduct statutory audits under applicable laws   \u2022 verify financial records and supporting documents   \u2022 assess compliance with accounting standards and re gulations   \u2022 identify misstatements and control weaknesses   \u2022 prepare audit reports and certifications   \u2022 communicate audit findings to stakeholders",
+        "qualifications": "\u2022 qualified ca   \u2022 in-depth auditing and accounting knowledge   \u2022 strong professional judgment   \u2022 ethica l and independent mindset"
+    }
+}

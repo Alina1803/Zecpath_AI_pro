@@ -1,0 +1,26 @@
+{
+    "role": "Financial Reporting Manager",
+    "matched": true,
+    "confidence": 100.0,
+    "matched_keywords": [
+        "financial reporting manager"
+    ],
+    "role_summary": "responsible for accurate, timely, and compliant financial reporting in line with statutory and  accounting standards.",
+    "responsibilities": "\u2022 prepare financial  statements as per ind as / ifrs   \u2022 ensure accurate consolidation and disclosures   \u2022 coordinate with auditors during audits   \u2022 maintain reporting calendars and compliance timelines   \u2022 analyze financial performance and trends   \u2022 support management reporting and decision -making",
+    "qualifications": "\u2022 ca qualification   \u2022 strong financial reporting and accounting standards knowledge   \u2022 high attention to detail   \u2022 advanced excel and reporting tools proficiency",
+    "skills": [
+        {
+            "skill": "financial reporting",
+            "confidence": 0.9
+        },
+        {
+            "skill": "excel",
+            "confidence": 0.9
+        }
+    ],
+    "sections": {
+        "role_summary": "responsible for accurate, timely, and compliant financial reporting in line with statutory and  accounting standards.",
+        "responsibilities": "\u2022 prepare financial  statements as per ind as / ifrs   \u2022 ensure accurate consolidation and disclosures   \u2022 coordinate with auditors during audits   \u2022 maintain reporting calendars and compliance timelines   \u2022 analyze financial performance and trends   \u2022 support management reporting and decision -making",
+        "qualifications": "\u2022 ca qualification   \u2022 strong financial reporting and accounting standards knowledge   \u2022 high attention to detail   \u2022 advanced excel and reporting tools proficiency"
+    }
+}

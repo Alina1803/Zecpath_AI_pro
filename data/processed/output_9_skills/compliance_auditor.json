@@ -1,0 +1,22 @@
+{
+    "role": "Compliance Auditor",
+    "matched": true,
+    "confidence": 100.0,
+    "matched_keywords": [
+        "compliance auditor"
+    ],
+    "role_summary": "the compliance auditor ensures adherence to regulatory, statutory, and internal compliance  requirements.",
+    "responsibilities": "\u2022 conduct complian ce audits and reviews   \u2022 verify adherence to laws, regulations, and internal policies   \u2022 identify compliance risks and violations   \u2022 prepare compliance audit reports   \u2022 support regulatory inspections and audits   \u2022 advise management on compliance improvements   skills & qua lifications:   \u2022 qualified ca   \u2022 strong regulatory and compliance knowledge   \u2022 attention to detail and governance focus",
+    "qualifications": "",
+    "skills": [
+        {
+            "skill": "auditing",
+            "confidence": 0.7
+        }
+    ],
+    "sections": {
+        "role_summary": "the compliance auditor ensures adherence to regulatory, statutory, and internal compliance  requirements.",
+        "responsibilities": "\u2022 conduct complian ce audits and reviews   \u2022 verify adherence to laws, regulations, and internal policies   \u2022 identify compliance risks and violations   \u2022 prepare compliance audit reports   \u2022 support regulatory inspections and audits   \u2022 advise management on compliance improvements   skills & qua lifications:   \u2022 qualified ca   \u2022 strong regulatory and compliance knowledge   \u2022 attention to detail and governance focus",
+        "qualifications": ""
+    }
+}

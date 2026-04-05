@@ -1,0 +1,26 @@
+{
+    "role": "Finance Manager",
+    "matched": true,
+    "confidence": 100.0,
+    "matched_keywords": [
+        "finance manager"
+    ],
+    "role_summary": "the finance manager is responsible for managing the organization\u2019s financial planning,  accounting operations, reporting, and compliance to support business objectives.",
+    "responsibilities": "\u2022 oversee day -to-day finance and accounting operations   \u2022 prepare budgets, forecasts, and variance analysis   \u2022 ensure accurate monthly, quarterly, and annual financial reports   \u2022 manage s tatutory compliance (gst, income tax, tds, roc)   \u2022 coordinate with auditors, bankers, and consultants   \u2022 support management with financial analysis and decision support",
+    "qualifications": "\u2022 qualified chartered accountant   \u2022 strong knowledge of accounting, taxat ion, and reporting   \u2022 experience with erp systems and mis reporting   \u2022 analytical and communication skills",
+    "skills": [
+        {
+            "skill": "taxation",
+            "confidence": 0.7
+        },
+        {
+            "skill": "gst",
+            "confidence": 0.9
+        }
+    ],
+    "sections": {
+        "role_summary": "the finance manager is responsible for managing the organization\u2019s financial planning,  accounting operations, reporting, and compliance to support business objectives.",
+        "responsibilities": "\u2022 oversee day -to-day finance and accounting operations   \u2022 prepare budgets, forecasts, and variance analysis   \u2022 ensure accurate monthly, quarterly, and annual financial reports   \u2022 manage s tatutory compliance (gst, income tax, tds, roc)   \u2022 coordinate with auditors, bankers, and consultants   \u2022 support management with financial analysis and decision support",
+        "qualifications": "\u2022 qualified chartered accountant   \u2022 strong knowledge of accounting, taxat ion, and reporting   \u2022 experience with erp systems and mis reporting   \u2022 analytical and communication skills"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "role": "GST Practitioner",
+    "matched": true,
+    "confidence": 100.0,
+    "matched_keywords": [
+        "gst practitioner"
+    ],
+    "role_summary": "",
+    "responsibilities": "\u2022 prepare and file gst returns (gstr -1, 3b, annual returns)   \u2022 manage g st reconciliations and input tax credit   \u2022 advise clients on gst classification and compliance   \u2022 handle gst notices and departmental communication   \u2022 support gst audits and assessments   \u2022 maintain accurate gst records",
+    "qualifications": "\u2022 ca / gst practitioner reg istered under gst law   \u2022 strong understanding of gst rules and compliance   \u2022 detail -oriented approach",
+    "skills": [
+        {
+            "skill": "taxation",
+            "confidence": 0.7
+        },
+        {
+            "skill": "gst",
+            "confidence": 0.9
+        }
+    ],
+    "sections": {
+        "role_summary": "",
+        "responsibilities": "\u2022 prepare and file gst returns (gstr -1, 3b, annual returns)   \u2022 manage g st reconciliations and input tax credit   \u2022 advise clients on gst classification and compliance   \u2022 handle gst notices and departmental communication   \u2022 support gst audits and assessments   \u2022 maintain accurate gst records",
+        "qualifications": "\u2022 ca / gst practitioner reg istered under gst law   \u2022 strong understanding of gst rules and compliance   \u2022 detail -oriented approach"
+    }
+}

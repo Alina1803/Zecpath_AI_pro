@@ -1,0 +1,22 @@
+{
+    "role": "Quality Review Auditor",
+    "matched": true,
+    "confidence": 100.0,
+    "matched_keywords": [
+        "quality review auditor"
+    ],
+    "role_summary": "the quality review auditor evaluates audit quality, methodologies, and compliance with  professional sta ndards.",
+    "responsibilities": "\u2022 review audit files for quality and standard compliance   \u2022 assess adherence to auditing standards and firm policies   \u2022 identify gaps in audit execution and documentation   \u2022 provide feedback and recommendations to audit teams   \u2022 support aud it quality improvement initiatives   \u2022 assist in regulatory and peer reviews",
+    "qualifications": "\u2022 ca with strong audit and quality review experience   \u2022 in-depth knowledge of auditing standards   \u2022 strong evaluation and reporting skills         forensic, risk & complia nce roles",
+    "skills": [
+        {
+            "skill": "auditing",
+            "confidence": 0.9
+        }
+    ],
+    "sections": {
+        "role_summary": "the quality review auditor evaluates audit quality, methodologies, and compliance with  professional sta ndards.",
+        "responsibilities": "\u2022 review audit files for quality and standard compliance   \u2022 assess adherence to auditing standards and firm policies   \u2022 identify gaps in audit execution and documentation   \u2022 provide feedback and recommendations to audit teams   \u2022 support aud it quality improvement initiatives   \u2022 assist in regulatory and peer reviews",
+        "qualifications": "\u2022 ca with strong audit and quality review experience   \u2022 in-depth knowledge of auditing standards   \u2022 strong evaluation and reporting skills         forensic, risk & complia nce roles"
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "role": "Accounts Officer (PSU)",
+    "matched": true,
+    "confidence": 100.0,
+    "matched_keywords": [
+        "accounts officer (psu)"
+    ],
+    "role_summary": "the accounts officer manages accounting operations, financial records, and statutory  comp liance in a public sector undertaking.",
+    "responsibilities": "\u2022 maintain books of accounts and financial records   \u2022 prepare financial statements as per government and psu norms   \u2022 ensure compliance with accounting standards and regulations   \u2022 manage payments, receipts , and reconciliations   \u2022 coordinate with statutory and cag auditors   \u2022 support budget preparation and financial reporting",
+    "qualifications": "\u2022 ca qualification   \u2022 knowledge of psu accounting and government financial rules   \u2022 erp and financial systems proficiency",
+    "skills": [
+        {
+            "skill": "financial reporting",
+            "confidence": 0.9
+        }
+    ],
+    "sections": {
+        "role_summary": "the accounts officer manages accounting operations, financial records, and statutory  comp liance in a public sector undertaking.",
+        "responsibilities": "\u2022 maintain books of accounts and financial records   \u2022 prepare financial statements as per government and psu norms   \u2022 ensure compliance with accounting standards and regulations   \u2022 manage payments, receipts , and reconciliations   \u2022 coordinate with statutory and cag auditors   \u2022 support budget preparation and financial reporting",
+        "qualifications": "\u2022 ca qualification   \u2022 knowledge of psu accounting and government financial rules   \u2022 erp and financial systems proficiency"
+    }
+}

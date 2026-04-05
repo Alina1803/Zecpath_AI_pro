@@ -1,0 +1,26 @@
+{
+    "role": "GST Officer / Consultant",
+    "matched": true,
+    "confidence": 100.0,
+    "matched_keywords": [
+        "gst officer / consultant"
+    ],
+    "role_summary": "the gst officer / consultant ensures compliance with gst laws and supports assessment,  audit, and advisory functions.",
+    "responsibilities": "\u2022 assess gst returns and filings   \u2022 conduct gst audits and inspections   \u2022 handle gst assessments, notices, and disputes   \u2022 advise on gst compliance and interpretation   \u2022 support enforcement and revenue functions   \u2022 ensure  adherence to gst laws and procedures",
+    "qualifications": "\u2022 qualified ca   \u2022 strong knowledge of gst laws and procedures   \u2022 analytical and regulatory interpretation skills",
+    "skills": [
+        {
+            "skill": "gst",
+            "confidence": 0.9
+        },
+        {
+            "skill": "auditing",
+            "confidence": 0.7
+        }
+    ],
+    "sections": {
+        "role_summary": "the gst officer / consultant ensures compliance with gst laws and supports assessment,  audit, and advisory functions.",
+        "responsibilities": "\u2022 assess gst returns and filings   \u2022 conduct gst audits and inspections   \u2022 handle gst assessments, notices, and disputes   \u2022 advise on gst compliance and interpretation   \u2022 support enforcement and revenue functions   \u2022 ensure  adherence to gst laws and procedures",
+        "qualifications": "\u2022 qualified ca   \u2022 strong knowledge of gst laws and procedures   \u2022 analytical and regulatory interpretation skills"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "role": "CA Faculty / Trainer",
+    "matched": true,
+    "confidence": 100.0,
+    "matched_keywords": [
+        "ca faculty / trainer"
+    ],
+    "role_summary": "",
+    "responsibilities": "\u2022 teach ca foundation, inter, and final subjects  (as per specialization)   \u2022 develop structured lesson plans, notes, and revision material   \u2022 conduct regular tests, mock exams, and doubt -clearing sessions   \u2022 simplify complex accounting, taxation, and audit concepts   \u2022 stay updated with icai syllabus, amendments, and  notifications   \u2022 mentor students for exam strategy and career guidance   \u2022 support online and offline teaching modes",
+    "qualifications": "\u2022 qualified chartered accountant   \u2022 strong subject expertise and presentation skills   \u2022 teaching or industry experience preferred",
+    "skills": [
+        {
+            "skill": "taxation",
+            "confidence": 0.9
+        },
+        {
+            "skill": "auditing",
+            "confidence": 0.7
+        }
+    ],
+    "sections": {
+        "role_summary": "",
+        "responsibilities": "\u2022 teach ca foundation, inter, and final subjects  (as per specialization)   \u2022 develop structured lesson plans, notes, and revision material   \u2022 conduct regular tests, mock exams, and doubt -clearing sessions   \u2022 simplify complex accounting, taxation, and audit concepts   \u2022 stay updated with icai syllabus, amendments, and  notifications   \u2022 mentor students for exam strategy and career guidance   \u2022 support online and offline teaching modes",
+        "qualifications": "\u2022 qualified chartered accountant   \u2022 strong subject expertise and presentation skills   \u2022 teaching or industry experience preferred"
+    }
+}

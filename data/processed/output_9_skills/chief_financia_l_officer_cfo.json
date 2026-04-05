@@ -1,0 +1,22 @@
+{
+    "role": "Chief Financia l Officer (CFO)",
+    "matched": true,
+    "confidence": 100.0,
+    "matched_keywords": [
+        "chief financia l officer (cfo)"
+    ],
+    "role_summary": "the cfo is responsible for the overall financial strategy, performance, governance, and long - term financial sustainability of the organization.",
+    "responsibilities": "\u2022 lead financial strategy and planning   \u2022 oversee finance, accoun ting, taxation, treasury, and compliance   \u2022 manage capital structure, funding, and investor relations   \u2022 drive profitability, cost management, and cash flow optimization   \u2022 support m&a, strategic investments, and growth initiatives   \u2022 present financial performance to board and stakeholders",
+    "qualifications": "\u2022 qualified ca with extensive leadership experience   \u2022 strong strategic, financial, and business acumen   \u2022 excellent stakeholder and board -level communication skills",
+    "skills": [
+        {
+            "skill": "taxation",
+            "confidence": 0.9
+        }
+    ],
+    "sections": {
+        "role_summary": "the cfo is responsible for the overall financial strategy, performance, governance, and long - term financial sustainability of the organization.",
+        "responsibilities": "\u2022 lead financial strategy and planning   \u2022 oversee finance, accoun ting, taxation, treasury, and compliance   \u2022 manage capital structure, funding, and investor relations   \u2022 drive profitability, cost management, and cash flow optimization   \u2022 support m&a, strategic investments, and growth initiatives   \u2022 present financial performance to board and stakeholders",
+        "qualifications": "\u2022 qualified ca with extensive leadership experience   \u2022 strong strategic, financial, and business acumen   \u2022 excellent stakeholder and board -level communication skills"
+    }
+}

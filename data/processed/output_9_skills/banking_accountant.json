@@ -1,0 +1,17 @@
+{
+    "role": "Banking Accountant",
+    "matched": true,
+    "confidence": 100.0,
+    "matched_keywords": [
+        "banking accountant"
+    ],
+    "role_summary": "the banking accountant manages accounting, reconciliation, and regulatory reporting for  banking and financial operations.",
+    "responsibilities": "\u2022 maintain accurate accounting records for banking transactions   \u2022 perform daily bank reconciliations and ledger reviews   \u2022 prepare financial statements and regulatory reports   \u2022 ensure compliance with rbi guidelines and banking regulations   \u2022 support statutory, internal, and co ncurrent audits   \u2022 coordinate with branches and operations teams",
+    "qualifications": "\u2022 qualified chartered accountant   \u2022 strong knowledge of banking accounting and regulations   \u2022 attention to detail and compliance focus",
+    "skills": [],
+    "sections": {
+        "role_summary": "the banking accountant manages accounting, reconciliation, and regulatory reporting for  banking and financial operations.",
+        "responsibilities": "\u2022 maintain accurate accounting records for banking transactions   \u2022 perform daily bank reconciliations and ledger reviews   \u2022 prepare financial statements and regulatory reports   \u2022 ensure compliance with rbi guidelines and banking regulations   \u2022 support statutory, internal, and co ncurrent audits   \u2022 coordinate with branches and operations teams",
+        "qualifications": "\u2022 qualified chartered accountant   \u2022 strong knowledge of banking accounting and regulations   \u2022 attention to detail and compliance focus"
+    }
+}

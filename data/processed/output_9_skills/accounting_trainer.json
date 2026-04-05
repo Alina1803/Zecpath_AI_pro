@@ -1,0 +1,30 @@
+{
+    "role": "Accounting Trainer",
+    "matched": true,
+    "confidence": 100.0,
+    "matched_keywords": [
+        "accounting trainer"
+    ],
+    "role_summary": "",
+    "responsibilities": "\u2022 train l earners in accounting principles and real -world accounting practices   \u2022 teach accounting software (tally, erp, excel, cloud accounting tools)   \u2022 provide hands -on gst, tds, payroll, and compliance training   \u2022 develop practical case studies and exercises   \u2022 conduct work shops, corporate training, and certification programs   \u2022 assess trainee performance and provide feedback",
+    "qualifications": "\u2022 ca / cma / experienced accounting professional   \u2022 strong practical accounting and software knowledge   \u2022 training and mentoring ability",
+    "skills": [
+        {
+            "skill": "excel",
+            "confidence": 0.9
+        },
+        {
+            "skill": "gst",
+            "confidence": 0.9
+        },
+        {
+            "skill": "tally",
+            "confidence": 0.9
+        }
+    ],
+    "sections": {
+        "role_summary": "",
+        "responsibilities": "\u2022 train l earners in accounting principles and real -world accounting practices   \u2022 teach accounting software (tally, erp, excel, cloud accounting tools)   \u2022 provide hands -on gst, tds, payroll, and compliance training   \u2022 develop practical case studies and exercises   \u2022 conduct work shops, corporate training, and certification programs   \u2022 assess trainee performance and provide feedback",
+        "qualifications": "\u2022 ca / cma / experienced accounting professional   \u2022 strong practical accounting and software knowledge   \u2022 training and mentoring ability"
+    }
+}

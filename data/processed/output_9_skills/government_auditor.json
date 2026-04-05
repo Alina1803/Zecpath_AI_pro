@@ -1,0 +1,22 @@
+{
+    "role": "Government Auditor",
+    "matched": true,
+    "confidence": 100.0,
+    "matched_keywords": [
+        "government auditor"
+    ],
+    "role_summary": "the government auditor examines public acc ounts to ensure proper utilization of  government funds and compliance with financial rules and regulations.",
+    "responsibilities": "\u2022 conduct audits of government departments and public bodies   \u2022 verify expenditure against sanctioned budgets and grants   \u2022 ensure com pliance with government financial rules and manuals   \u2022 identify irregularities, inefficiencies, and misuse of funds   \u2022 prepare audit reports and observations for authorities   \u2022 support legislative and parliamentary audit processes",
+    "qualifications": "\u2022 qualified  chartered accountant   \u2022 strong knowledge of government accounting and audit procedures   \u2022 high integrity and attention to detail",
+    "skills": [
+        {
+            "skill": "auditing",
+            "confidence": 0.7
+        }
+    ],
+    "sections": {
+        "role_summary": "the government auditor examines public acc ounts to ensure proper utilization of  government funds and compliance with financial rules and regulations.",
+        "responsibilities": "\u2022 conduct audits of government departments and public bodies   \u2022 verify expenditure against sanctioned budgets and grants   \u2022 ensure com pliance with government financial rules and manuals   \u2022 identify irregularities, inefficiencies, and misuse of funds   \u2022 prepare audit reports and observations for authorities   \u2022 support legislative and parliamentary audit processes",
+        "qualifications": "\u2022 qualified  chartered accountant   \u2022 strong knowledge of government accounting and audit procedures   \u2022 high integrity and attention to detail"
+    }
+}

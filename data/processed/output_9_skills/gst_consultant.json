@@ -1,0 +1,22 @@
+{
+    "role": "GST Consultant",
+    "matched": true,
+    "confidence": 100.0,
+    "matched_keywords": [
+        "gst consultant"
+    ],
+    "role_summary": "",
+    "responsibilities": "\u2022 prepare and file gst returns and reconciliations   \u2022 advise on gst applicability and classification   \u2022 handle gst notice s, audits, and assessments   \u2022 assist in gst registrations and amendments   \u2022 reconcile gst data with books and returns   \u2022 ensure compliance with gst laws and timelines",
+    "qualifications": "\u2022 chartered accountant   \u2022 strong gst law and compliance knowledge   \u2022 attention to  detail and analytical skills",
+    "skills": [
+        {
+            "skill": "gst",
+            "confidence": 0.9
+        }
+    ],
+    "sections": {
+        "role_summary": "",
+        "responsibilities": "\u2022 prepare and file gst returns and reconciliations   \u2022 advise on gst applicability and classification   \u2022 handle gst notice s, audits, and assessments   \u2022 assist in gst registrations and amendments   \u2022 reconcile gst data with books and returns   \u2022 ensure compliance with gst laws and timelines",
+        "qualifications": "\u2022 chartered accountant   \u2022 strong gst law and compliance knowledge   \u2022 attention to  detail and analytical skills"
+    }
+}

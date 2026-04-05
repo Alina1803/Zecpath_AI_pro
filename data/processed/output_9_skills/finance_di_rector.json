@@ -1,0 +1,22 @@
+{
+    "role": "Finance Di rector",
+    "matched": true,
+    "confidence": 100.0,
+    "matched_keywords": [
+        "finance di rector"
+    ],
+    "role_summary": "the finance director focuses on governance, compliance, and financial leadership at the  board level.",
+    "responsibilities": "\u2022 provide strategic financial guidance to the board   \u2022 ensure corporate governance and regulatory compliance   \u2022 oversee financial reporting and audits   \u2022 evaluate major investments and strategic decisions   \u2022 strengthen risk management and control frameworks   \u2022 represent finance function at executive level",
+    "qualifications": "\u2022 qualified ca   \u2022 board -level finance and governance exper ience",
+    "skills": [
+        {
+            "skill": "financial reporting",
+            "confidence": 0.9
+        }
+    ],
+    "sections": {
+        "role_summary": "the finance director focuses on governance, compliance, and financial leadership at the  board level.",
+        "responsibilities": "\u2022 provide strategic financial guidance to the board   \u2022 ensure corporate governance and regulatory compliance   \u2022 oversee financial reporting and audits   \u2022 evaluate major investments and strategic decisions   \u2022 strengthen risk management and control frameworks   \u2022 represent finance function at executive level",
+        "qualifications": "\u2022 qualified ca   \u2022 board -level finance and governance exper ience"
+    }
+}

@@ -658,3 +658,66 @@ Automatically identify and segment resume sections using NLP.
 ## Run
 ```bash
 python main8.py
+
+Day 9 – Skill Extraction Engine
+
+📌 Overview
+
+This module is responsible for extracting technical, business, and soft skills from parsed resume JSON files. It is part of the Zecpath AI hiring pipeline and powers downstream modules such as:
+
+ATS scoring
+
+Resume ↔ JD matching
+
+Semantic ranking
+
+Candidate shortlisting
+
+
+The engine uses spaCy PhraseMatcher for production-grade NLP-based skill detection.
+
+🎯 Objective
+
+Accurately extract:
+
+Technical skills
+
+Business/domain skills
+
+Soft skills
+
+Multi-word phrases
+
+Skill stacks (MERN, MEAN, etc.)
+
+Synonyms
+
+Spelling variants
+
+Confidence score per skill
+
+🏗️ Project Structure
+
+app/
+ └── services/
+      └── skill_engine/
+           ├── __init__.py
+           ├── skill_dictionary.py
+           ├── synonym_mapper.py
+           ├── stack_resolver.py
+           ├── confidence_engine.py
+           ├── skill_extractor.py
+           └── run_skill_pipeline.py
+
+
+⚙️ Installation
+
+Install spaCy and the English model:
+
+pip install spacy
+python -m spacy download en_core_web_sm
+
+🚀 Features
+
+✅ NLP-based phrase matching
+✅ Case

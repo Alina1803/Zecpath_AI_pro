@@ -1,0 +1,26 @@
+{
+    "role": "Founder / Partner \u2013 Audit & Assurance Firm",
+    "matched": true,
+    "confidence": 100.0,
+    "matched_keywords": [
+        "founder / partner \u2013 audit & assurance firm"
+    ],
+    "role_summary": "",
+    "responsibilities": "\u2022 conduct statutory, tax, internal, and concurrent audits   \u2022 lead audit planning, execution, and repor ting  \u2022 ensure compliance with auditing standards and icai guidelines   \u2022 build sector -specific audit expertise (banking, manufacturing, ngos)   \u2022 maintain audit quality, documentation, and peer review readiness   \u2022 develop long -term assurance relationships with clients",
+    "qualifications": "\u2022 ca with audit and assurance experience   \u2022 strong understanding of auditing standards and risk assessment   \u2022 high ethical standards and professional judgment",
+    "skills": [
+        {
+            "skill": "taxation",
+            "confidence": 0.7
+        },
+        {
+            "skill": "auditing",
+            "confidence": 0.9
+        }
+    ],
+    "sections": {
+        "role_summary": "",
+        "responsibilities": "\u2022 conduct statutory, tax, internal, and concurrent audits   \u2022 lead audit planning, execution, and repor ting  \u2022 ensure compliance with auditing standards and icai guidelines   \u2022 build sector -specific audit expertise (banking, manufacturing, ngos)   \u2022 maintain audit quality, documentation, and peer review readiness   \u2022 develop long -term assurance relationships with clients",
+        "qualifications": "\u2022 ca with audit and assurance experience   \u2022 strong understanding of auditing standards and risk assessment   \u2022 high ethical standards and professional judgment"
+    }
+}

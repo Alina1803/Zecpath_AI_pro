@@ -1,0 +1,22 @@
+{
+    "role": "Transaction Advisory Manager",
+    "matched": true,
+    "confidence": 100.0,
+    "matched_keywords": [
+        "transaction advisory manager"
+    ],
+    "role_summary": "the transaction advisory manager leads transaction advisory engagements and manages  teams supporting complex deals.",
+    "responsibilities": "\u2022 lead financial due diligence  and advisory assignments   \u2022 manage transaction teams and timelines   \u2022 review valuation, diligence, and deal outputs   \u2022 advise clients on deal risks and structure   \u2022 coordinate with legal, tax, and regulatory advisors   \u2022 support senior leadership in transaction execution",
+    "qualifications": "\u2022 ca with strong transaction advisory experience   \u2022 leadership and client management skills   \u2022 deep understanding of deal lifecycle       government & psu roles",
+    "skills": [
+        {
+            "skill": "taxation",
+            "confidence": 0.7
+        }
+    ],
+    "sections": {
+        "role_summary": "the transaction advisory manager leads transaction advisory engagements and manages  teams supporting complex deals.",
+        "responsibilities": "\u2022 lead financial due diligence  and advisory assignments   \u2022 manage transaction teams and timelines   \u2022 review valuation, diligence, and deal outputs   \u2022 advise clients on deal risks and structure   \u2022 coordinate with legal, tax, and regulatory advisors   \u2022 support senior leadership in transaction execution",
+        "qualifications": "\u2022 ca with strong transaction advisory experience   \u2022 leadership and client management skills   \u2022 deep understanding of deal lifecycle       government & psu roles"
+    }
+}
