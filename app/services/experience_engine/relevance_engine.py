@@ -1,57 +1,35 @@
-from datetime import datetime
-
-def months_between(start, end):
-
-    start_date = datetime.strptime(start, "%b %Y")
-
-    # handle Present / Current
-    if end.lower() in ["present", "current", "now"]:
-        end_date = datetime.now()
-    else:
-        end_date = datetime.strptime(end, "%b %Y")
-
-    months = (end_date.year - start_date.year) * 12 + (end_date.month - start_date.month)
-
-    return months
-
-def calculate_total_experience(experiences):
-
-    total_months = 0
-
-    for role in experiences:
-
-        duration = months_between(role["start"], role["end"])
-
-        role["duration_months"] = duration
-
-        total_months += duration
-
-    return round(total_months / 12, 2)
-
-def detect_gaps_and_overlaps(experiences):
-
-    gaps = []
-    overlaps = []
-
-    durations = [e.get("duration_months", 0) for e in experiences]
-
-    if not durations:
-        return gaps, overlaps
-
-    for i in range(len(durations) - 1):
-
-        if durations[i] == 0:
-            gaps.append(i)
-
-        if durations[i] < durations[i + 1]:
-            overlaps.append((i, i + 1))
-
-    return gaps, overlaps
+from app.services.experience_engine.similarity_engine import compute_similarity
 
 
-def relevance_score(experiences, target_role):
-    score = 0
+def experience_relevance(experience_data, job_description):
+    experiences = experience_data["experiences"]
+
+    total_score = 0
+    detailed_scores = []
+
     for exp in experiences:
-        if "cyber" in target_role.lower():
-            score += 10
-    return min(score, 100)
+        role_text = exp["role"]
+
+        score = compute_similarity(role_text, job_description)
+
+        weighted_score = score * exp["duration_months"]
+
+        total_score += weighted_score
+
+        detailed_scores.append({
+            "role": role_text,
+            "company": exp["company"],
+            "score": round(score * 100, 2)
+        })
+
+    total_exp = experience_data["total_experience_months"]
+
+    if total_exp == 0:
+        return {"relevance_score": 0, "details": []}
+
+    final_score = (total_score / total_exp) * 100
+
+    return {
+        "relevance_score": round(final_score, 2),
+        "details": detailed_scores
+    }

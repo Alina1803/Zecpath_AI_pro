@@ -721,3 +721,155 @@ python -m spacy download en_core_web_sm
 
 ✅ NLP-based phrase matching
 ✅ Case
+
+📘 Day 10 – Experience Parsing & Relevance Engine
+
+🎯 Objective
+
+Build a system to:
+
+- Extract professional experience from resumes
+- Calculate total experience duration
+- Detect gaps and overlapping roles
+- Evaluate relevance of experience for a given job description
+
+🧠 Overview
+
+This module is a core part of the AI Resume Screening System.
+
+It transforms raw resume text → structured experience data → relevance score
+
+⚙️ Features
+
+✅ Experience Extraction
+
+- Company names
+- Job roles
+- Start & end dates
+- Duration (in months)
+
+✅ Experience Analysis
+
+- Total experience calculation
+- Gap detection
+- Overlapping roles detection
+
+✅ Relevance Engine
+
+- Compares experience with job description
+- Uses similarity logic (TF-IDF / cosine similarity)
+- Generates relevance score (0–100)
+
+✅ Multi-format Resume Support
+
+- TXT
+- DOCX
+- PDF (text-based)
+- Scanned PDFs (OCR enabled)
+
+---
+
+📁 Project Structure
+
+app/
+ ├── services/
+ │    ├── experience_engine/
+ │    │    ├── experience_parser.py
+ │    │    ├── relevance_engine.py
+ │    │
+ │    ├── skill_engine9/
+ │    │    ├── skill_extractor.py
+ │    │    ├── synonym_mapper.py
+ │
+ ├── utils/
+ │    ├── text_cleaner.py
+ │    ├── date_utils.py
+ │    ├── constants.py
+ │    ├── file_loader.py
+
+
+🔄 Pipeline Flow
+
+Resume File (TXT / PDF / DOCX)
+        ↓
+File Loader (with OCR fallback)
+        ↓
+Text Cleaning
+        ↓
+Skill Extraction
+        ↓
+Experience Parsing
+        ↓
+Gap & Overlap Detection
+        ↓
+Relevance Scoring
+        ↓
+Structured JSON Output
+
+📥 Input
+
+Resume files placed in:
+
+data/raw/
+
+📤 Output
+
+Processed results saved in:
+
+data/processed/output_10/
+
+Example output:
+
+{
+  "skills": ["audit", "taxation"],
+  "experience": {
+    "experiences": [
+      {
+        "company": "EY",
+        "role": "Audit Associate",
+        "duration_months": 24
+      }
+    ],
+    "total_experience_months": 36
+  },
+  "relevance": {
+    "relevance_score": 82.5
+  }
+}
+
+🚀 How to Run
+
+python -m app.services.experience_engine.main_pipeline10
+
+---
+
+📦 Dependencies
+
+Install required libraries:
+
+pip install pdfplumber python-docx pytesseract pillow pdf2image scikit-learn
+
+⚠️ OCR Setup (Important)
+
+To process scanned PDFs, install:
+
+- Tesseract OCR
+- Poppler (for PDF image conversion)
+
+🧠 Key Learnings
+
+- Resume parsing is unstructured data problem
+- Regex alone is not enough → needs flexible logic
+- OCR is essential for real-world resumes
+- Relevance scoring enables intelligent filtering
+
+🎯 Conclusion
+
+Day 10 builds the core intelligence layer of the resume screening system:
+
+✔ Converts raw resumes into structured experience data
+✔ Detects inconsistencies
+✔ Scores candidate-job fit
+
+This module is essential for building a real-world ATS (Applicant Tracking System).
+

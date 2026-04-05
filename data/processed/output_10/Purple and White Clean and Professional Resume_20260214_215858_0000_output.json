@@ -1,0 +1,27 @@
+{
+    "skills": [
+        "excel"
+    ],
+    "experience": {
+        "experiences": [
+            {
+                "company": "unknown",
+                "role": "NCE Engineering Executive , Borcelle Technologies ",
+                "start_date": "2023-01",
+                "end_date": "2026-04",
+                "duration_months": 39
+            }
+        ],
+        "total_experience_months": 39
+    },
+    "relevance": {
+        "relevance_score": 0.0,
+        "details": [
+            {
+                "role": "NCE Engineering Executive , Borcelle Technologies ",
+                "company": "unknown",
+                "score": 0.0
+            }
+        ]
+    }
+}

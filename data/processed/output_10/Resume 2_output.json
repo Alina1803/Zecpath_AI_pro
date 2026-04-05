@@ -1,0 +1,25 @@
+{
+    "skills": [],
+    "experience": {
+        "experiences": [
+            {
+                "company": "unknown",
+                "role": "ER WORK EXPERIENCE Project Manager Westheon FGW | ",
+                "start_date": "2017-10",
+                "end_date": "2026-04",
+                "duration_months": 102
+            }
+        ],
+        "total_experience_months": 102
+    },
+    "relevance": {
+        "relevance_score": 7.78,
+        "details": [
+            {
+                "role": "ER WORK EXPERIENCE Project Manager Westheon FGW | ",
+                "company": "unknown",
+                "score": 7.78
+            }
+        ]
+    }
+}
