@@ -1,5 +1,15 @@
-from .embedding_model import get_embedding
-from .similarity import compute_similarity
+from .embedder import get_embedding
+from .similarity_engine import compute_similarity
+
+def semantic_match(resume_text, job_description):
+    resume_vec = get_embedding(resume_text)
+    jd_vec = get_embedding(job_description)
+
+    similarity = compute_similarity(resume_vec, jd_vec)
+
+    return {
+        "semantic_similarity": similarity
+    }
 
 def match_skills(resume_skills, jd_skills):
     return compute_similarity(

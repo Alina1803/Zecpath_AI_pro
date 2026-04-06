@@ -16,10 +16,14 @@ def load_txt(file_path):
         return f.read()
 
 
-def load_docx(file_path):
-    doc = docx.Document(file_path)
-    return "\n".join([para.text for para in doc.paragraphs])
-
+def load_docx(path):
+    try:
+        import docx
+        doc = docx.Document(path)
+        return "\n".join([p.text for p in doc.paragraphs])
+    except Exception as e:
+        print(f"⚠️ DOCX read failed: {path} → {e}")
+        return ""
 
 # 🔥 NORMAL PDF EXTRACTION
 def load_pdf_text(file_path):

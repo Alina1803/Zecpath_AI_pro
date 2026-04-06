@@ -1,0 +1,23 @@
+{
+    "skills": [
+        "sql",
+        "python"
+    ],
+    "experience": {
+        "experiences": [],
+        "total_experience_months": 0
+    },
+    "education": [
+        {
+            "degree": "John Doe SUMMARY Software Engineer with 3 years experience SKILLS Python, Java, SQL WORK EXPERIENCE Worked at ABC Company EDUCATION B.Tech in Computer Science PROJECTS Resume Parser",
+            "year": null
+        }
+    ],
+    "certifications": [],
+    "education_relevance": {
+        "education_score": 50
+    },
+    "semantic_match": {
+        "semantic_similarity": 0.3609
+    }
+}

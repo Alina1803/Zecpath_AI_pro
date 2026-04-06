@@ -872,7 +872,7 @@ Day 10 builds the core intelligence layer of the resume screening system:
 ✔ Scores candidate-job fit
 
 
-📘  Day 11 – Implementation Guide
+📘 # Day 11 – Implementation Guide
 
  create:
 
@@ -914,3 +914,191 @@ app/services/education_engine/
 ✔ Extracts certifications
 ✔ Scores relevance
 ✔ Integrates into pipeline
+
+# 🚀 Day 12 – Semantic Matching Engine
+
+## 🎯 Objective
+To move beyond keyword matching and enable deep **semantic resume-to-job matching** using AI embeddings.
+
+## 🔥 Features
+
+- 📄 Resume parsing (TXT, PDF, DOCX)
+- 🧹 Text cleaning pipeline
+- 🧠 Skill extraction (NLP-based)
+- 💼 Experience parsing
+- 🎓 Education & certification extraction
+- 🤖 Semantic similarity scoring (AI-based)
+- 📊 Structured JSON output
+- 📁 Batch processing support
+
+## 🏗️ Project Structure
+
+app/ 
+│ 
+├── services/ 
+│   ├── skill_engine9/ 
+│   
+├── experience_engine/ 
+│   ├── education_engine11/ 
+│   ├── semantic_engine/ 
+│       ├── embedder.py 
+│       ├── similarity_engine.py 
+│       ├── semantic_matcher.py 
+│ ├── utils/ 
+│   ├── text_cleaner.py 
+│   ├── file_loader.py 
+│ data/ 
+├── raw/ 
+├── processed/ 
+│   ├── output_12/
+
+---
+
+## ⚙️ Installation
+
+### 1️⃣ Install dependencies
+
+```bash
+pip install spacy
+pip install sentence-transformers
+pip install scikit-learn
+pip install pdfplumber python-docx pytesseract pillow pdf2image
+
+2️⃣ Download spaCy model
+
+python -m spacy download en_core_web_sm
+
+
+🔥 Semantic Matching Engine
+
+📌 Embedding Model
+
+Uses:
+
+all-MiniLM-L6-v2 (lightweight & fast)
+
+
+📌 Process
+
+1. Convert resume → embedding
+
+2. Convert job description → embedding
+
+3. Compute cosine similarity
+
+📊 Similarity Score Meaning
+
+Score	Interpretation
+
+0.8+	Excellent match 🔥
+0.6–0.8	Good match
+0.4–0.6	Average
+<0.4	Poor match ❌
+
+
+▶️ Run Pipeline
+
+python -m app.services.education_engine11.main_pipeline12
+
+📁 Input
+
+Place resumes in:
+
+data/raw/
+
+Supported formats:
+
+.txt
+
+.pdf (with OCR fallback)
+
+.docx
+
+
+📤 Output
+
+Generated in:
+
+data/processed/output_12/
+
+
+📄 Sample Output
+
+{
+  "skills": ["audit", "taxation"],
+  "experience": {
+    "total_experience_months": 36
+  },
+  "education": [
+    {
+      "degree": "B.Com",
+      "year": "2020"
+    }
+  ],
+  "semantic_match": {
+    "semantic_similarity": 0.82
+  }
+}
+
+
+🔍 OCR Support
+
+If PDF text extraction fails, OCR is used.
+
+Install Tesseract:
+
+Download and install Tesseract OCR
+
+Set path in code:
+
+
+pytesseract.pytesseract.tesseract_cmd = r"D:\tesseract\tesseract.exe"
+
+🚀 Future Improvements
+
+🔥 Final scoring system (skills + experience + semantic)
+
+📊 Candidate ranking system
+
+🌐 FastAPI backend
+
+🧠 Custom ML model for scoring
+
+📈 Dashboard UI
+
+
+🧠 Tech Stack
+
+Python
+
+spaCy
+
+Sentence Transformers
+
+scikit-learn
+
+pdfplumber
+
+pytesseract
+
+
+🎯 Outcome
+
+This system provides:
+
+✔ Deep semantic resume matching
+✔ AI-based similarity scoring
+✔ End-to-end resume analysis pipeline
+
+👉 Ready for real-world ATS systems
+
+ Author
+
+Developed as part of AI Resume Screening System (Day 12)
+
+# Deliverables
+
+✔ Professional documentation  
+✔ Clear architecture  
+✔ Industry-style README  
+✔ Ready for GitHub
