@@ -1,0 +1,33 @@
+{
+    "skills": [],
+    "experience": {
+        "experiences": [],
+        "total_experience_months": 0
+    },
+    "education": [
+        {
+            "degree": "Sed leo nisl, semper ac hendrerit a, sollicitudin EDUCATION in arcu.",
+            "institution": "unknown",
+            "year": null
+        },
+        {
+            "degree": "Bachelor of Business Management Marketing Manager 2019 - 2020 Wardiere University Arowwai Industries l 123 Anywhere St., Any City 2016 - 2020 Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "institution": "Bachelor of Business Management Marketing",
+            "year": "2019"
+        },
+        {
+            "degree": "In enim nunc, tincidunt ut quam eget, Bachelor of Business Management luctus sollicitudin neque.",
+            "institution": "Bachelor of Business Management",
+            "year": null
+        },
+        {
+            "degree": "Nunc sit amet Critical Thinking sem nec risus egestas accumsan.",
+            "institution": "Critical Thinking",
+            "year": null
+        }
+    ],
+    "certifications": [],
+    "education_relevance": {
+        "education_score": 100
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "skills": [],
+    "experience": {
+        "experiences": [],
+        "total_experience_months": 0
+    },
+    "education": [
+        {
+            "degree": "Q Kottayam DETAILS \u00ab DOB - 14/6/1986 e Father's Name - Joy Jacob \u00a2 Gender - Female e Martial status - Married e Religion - Christian e Nationality - Indian EDUCATION Predegree - Amalambika college of Arts , Kottayam Kerala SKILLS e",
+            "institution": "DOB",
+            "year": "1986"
+        },
+        {
+            "degree": "Active Listening e Public Relations \u00a2 Teamwork e\u00a2 Time Management Leadership Effective Communication Adaptability LANGUAGES e English e",
+            "institution": "Time Management Leadership Effective Communication Adaptability LANGUAGES",
+            "year": null
+        },
+        {
+            "degree": "Tamil PROFILE Dynamic Sales Executive with strong communication and persuasion skills.",
+            "institution": "unknown",
+            "year": null
+        },
+        {
+            "degree": "Skills_: Sales techniques, cash handling, customer engagement, stock management.",
+            "institution": "unknown",
+            "year": null
+        },
+        {
+            "degree": "Telecalling -(1 year) Role_: Outbound telemarketing or customer calls.",
+            "institution": "unknown",
+            "year": null
+        },
+        {
+            "degree": "Communication, sales pitch delivery.",
+            "institution": "unknown",
+            "year": null
+        }
+    ],
+    "certifications": [],
+    "education_relevance": {
+        "education_score": 100
+    }
+}

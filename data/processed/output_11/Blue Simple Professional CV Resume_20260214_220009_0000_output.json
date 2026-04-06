@@ -1,0 +1,33 @@
+{
+    "skills": [],
+    "experience": {
+        "experiences": [],
+        "total_experience_months": 0
+    },
+    "education": [
+        {
+            "degree": "I hello@reallygreatsite.com am seeking a challenging role where I can contribute my skills in 123 Anywhere St., Any City strategic planning, team leadership, and creative problem-solving to www.reallygreatsite.com achieve business objectives.",
+            "institution": "unknown",
+            "year": null
+        },
+        {
+            "degree": "EDUCATION WORK EXPERIENCE 2029 - 2030 Borcelle Studio 2030 - PRESENT BORCELLE UNIVERSITY Marketing Manager & Specialist Master of Business Management Led the development and implementation of comprehensive marketing strategies that resulted in a 20% increase in brand 2025 - 2029 visibility and a 15% growth in sales within the first year.",
+            "institution": "UNIVERSITY Marketing Manager & Specialist",
+            "year": "2029"
+        },
+        {
+            "degree": "BORCELLE UNIVERSITY Successfully launched and managed multiple cross-channel campaigns, including digital marketing, social media, and Bachelor of Business Management traditional advertising, resulting in improved customer acquisition GPA: 3.8 / 4.0 and retention rates.",
+            "institution": "BORCELLE UNIVERSITY Successfully",
+            "year": null
+        },
+        {
+            "degree": "Effective Communication Critical Thinking Studio Shodwe 2024 - 2025 Marketing Manager & Specialist LANGUAGES Developed and executed targeted marketing campaigns, resulting in a 25% increase in lead generation.",
+            "institution": "Effective Communication Critical Thinking Studio",
+            "year": "2024"
+        }
+    ],
+    "certifications": [],
+    "education_relevance": {
+        "education_score": 100
+    }
+}

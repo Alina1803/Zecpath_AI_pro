@@ -871,5 +871,46 @@ Day 10 builds the core intelligence layer of the resume screening system:
 ✔ Detects inconsistencies
 ✔ Scores candidate-job fit
 
-This module is essential for building a real-world ATS (Applicant Tracking System).
 
+📘  Day 11 – Implementation Guide
+
+ create:
+
+✔ Education parser
+✔ Certification extractor
+✔ Structured output
+✔ Relevance logic
+
+📁 📦 FOLDER STRUCTURE
+
+Add this:
+
+app/services/education_engine/
+    ├── education_parser.py
+    ├── certification_parser.py
+    ├── education_relevance.py
+
+
+📤 ✅ OUTPUT FORMAT
+
+{
+  "education": [
+    {
+      "degree": "B.Com from XYZ University",
+      "year": "2020"
+    }
+  ],
+  "certifications": [
+    "Certified Financial Analyst"
+  ],
+  "education_relevance": {
+    "education_score": 70
+  }
+}
+
+🧠 SUMMARY
+
+✔ Extracts education
+✔ Extracts certifications
+✔ Scores relevance
+✔ Integrates into pipeline

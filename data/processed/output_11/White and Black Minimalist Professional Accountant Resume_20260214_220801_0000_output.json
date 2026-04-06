@@ -1,0 +1,31 @@
+{
+    "skills": [
+        "financial reporting",
+        "audit"
+    ],
+    "experience": {
+        "experiences": [],
+        "total_experience_months": 0
+    },
+    "education": [
+        {
+            "degree": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "institution": "unknown",
+            "year": null
+        },
+        {
+            "degree": "EDUCATION Borcelle University Master of Business Administration 2026-2029 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "institution": "Borcelle University Master of Business Administration 2026-",
+            "year": "2026"
+        },
+        {
+            "degree": "Ut enim ad minim veniam Borcelle University Bachelor of Arts in Accounting 2023-2026 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "institution": "Borcelle University Bachelor of Arts in Accounting",
+            "year": "2023"
+        }
+    ],
+    "certifications": [],
+    "education_relevance": {
+        "education_score": 100
+    }
+}

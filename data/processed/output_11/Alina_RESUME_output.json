@@ -1,0 +1,42 @@
+{
+    "skills": [
+        "python",
+        "sql",
+        "power bi"
+    ],
+    "experience": {
+        "experiences": [],
+        "total_experience_months": 0
+    },
+    "education": [
+        {
+            "degree": "Contact: - Phone: +91 7356978223 - Email: ansarialina654@gmail.com - Location: Kottayam - LinkedIn: www.linkedin.com/in/alina-ansari654 3.Profile: Motivated IT professional with skills in troubleshooting, system support, software installation, and customer service.",
+            "institution": "unknown",
+            "year": null
+        },
+        {
+            "degree": "4. Soft Skills: - Hardware & software troubleshooting - Network Basics (LAN, Wi-Fi, Router) - MS Office / Google Workspace - Customer Support / Helpdesk - Public Relations - Analytical Thinking - Leadership - Effective Communication - Critical Thinking - Time Management / Teamwork - Problem-Solving 5.",
+            "institution": "LAN",
+            "year": null
+        },
+        {
+            "degree": "Technical Skills: - Big Data: Apache Hadoop, Apache Hive - Programming: Python, SQL - Project Management:",
+            "institution": "Apache Hive - Programming: Python",
+            "year": null
+        },
+        {
+            "degree": "Education: - BCA (2016), 62%, Bishop Speechly College, Kottayam - 12th CBSE (2015), 60%, M.S.T Public School, Changanacherry - 10th CBSE (2013), 70%, M.S.T Public School, Changanacherry 8.",
+            "institution": "BCA",
+            "year": "2016"
+        },
+        {
+            "degree": "Projects: - Hadoop with MapReduce Job: Analyzed sales data (SalesJan2009.csv); developed MapReduce jobs using Hadoop & Java to calculate products sold per country.",
+            "institution": "MapReduce Job: Analyzed",
+            "year": "2009"
+        }
+    ],
+    "certifications": [],
+    "education_relevance": {
+        "education_score": 100
+    }
+}

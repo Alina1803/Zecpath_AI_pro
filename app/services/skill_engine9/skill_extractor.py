@@ -26,7 +26,7 @@ class SkillExtractor:
 
         self.matcher.add("SKILLS", patterns)
 
-    def extract(self, text):
+    def extract_skills(self, text):
         doc = self.nlp(text)
 
         matches = self.matcher(doc)
