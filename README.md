@@ -1160,3 +1160,66 @@ Calculated using extracted skill count.
 ```python
 skill_score = min(len(skills) * 10, 100)
 
+# Day 14 – Candidate Ranking & Shortlisting Engine
+
+## Objective
+Build a cross-candidate ranking engine that reads Day 13 ATS outputs and converts them into:
+
+- ranked candidate lists
+- shortlist decisions
+- review queue
+- reject queue
+- recruiter summaries
+- hiring-ready outputs
+
+This module acts as the **decision backbone layer** for Day 15 interview recommendations.
+
+---
+
+## Folder Structure
+ranking_engine14/
+│
+├── rank_candidates.py
+├── shortlist_engine.py
+├── recruiter_summary.py
+└── run_day14_pipeline.py
+
+---
+
+## Pipeline Role
+Day 13 generates **individual candidate ATS intelligence**.
+
+Day 14 transforms that into **cross-candidate hiring intelligence**.
+
+### Flow
+Day 13 Output JSONs
+   ↓
+Load All Candidates
+   ↓
+Sort by Final Score
+   ↓
+Assign Rank
+   ↓
+Apply Shortlist Rules
+   ↓
+Generate Recruiter Summary
+   ↓
+Save Ranked Output JSON
+
+---
+
+## Module Details
+
+### `rank_candidates.py`
+Responsible for:
+- sorting candidates by `final_score`
+- assigning rank positions
+- preserving recruiter-ready order
+
+### Logic
+```python
+ranked = sorted(
+    candidates,
+    key=lambda x: x["scores"]["final_score"],
+    reverse=True
+)
