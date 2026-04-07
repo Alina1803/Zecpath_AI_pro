@@ -1,0 +1,26 @@
+{
+    "skills": [
+        "audit",
+        "financial reporting"
+    ],
+    "experience": {
+        "experiences": [],
+        "total_experience_months": 0
+    },
+    "education": [
+        {
+            "degree": "SEBASTIAN BENNETT Professional Accountant +123-456-7890 hello@reallygreatsite.com 123 Anywhere St., Any City PROFILE Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. EDUCATION Borcelle University Master of Business Administration 2026-2029 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Borcelle University Bachelor of Arts in Accounting 2023-2026 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam WORK EXPERIENCE Salford & Co. Senior Accountant 2033 - 2035 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Salford & Co. Financial Accountant 2031 - 2033 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Salford & Co. Junior Accountant 2029 - 2031 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. SKILLS Professional Personal Auditing Expense Reporting Leadership Financial Accounting Managerial Accounting Management Skills Financial Reporting Accounts Receivable Time Management",
+            "year": "2026"
+        }
+    ],
+    "certifications": [],
+    "scores": {
+        "final_score": 14.97,
+        "breakdown": {
+            "skills": 20,
+            "experience": 0,
+            "education": 0,
+            "semantic": 35.9
+        }
+    }
+}

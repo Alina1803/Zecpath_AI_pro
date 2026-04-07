@@ -1003,7 +1003,7 @@ python -m app.services.education_engine11.main_pipeline12
 📁 Input
 
 Place resumes in:
-
+ 
 data/raw/
 
 Supported formats:
@@ -1102,3 +1102,61 @@ Developed as part of AI Resume Screening System (Day 12)
 ✔ Clear architecture  
 ✔ Industry-style README  
 ✔ Ready for GitHub
+
+# Day 13 – Unified ATS Scoring Pipeline
+
+## Objective
+Build a unified ATS scoring pipeline that combines:
+
+- Skill extraction
+- Experience relevance
+- Education relevance
+- Certification extraction
+- Semantic similarity
+- Final ATS scoring
+- Recruiter-friendly score breakdown
+
+This pipeline processes resumes from `data/raw/` and generates structured candidate intelligence JSON files for downstream ranking.
+
+## Folder Structure
+app/
+└── services/
+    └── ats_engine13/
+        ├── ats_scorer.py
+        └── run_pipeline.py
+
+data/
+├── raw/
+└── processed/
+    └── output_13/
+
+
+## Pipeline Flow
+Resume File
+   ↓
+File Loader
+   ↓
+Text Cleaner
+   ↓
+Skill Extractor
+   ↓
+Experience Parser + Relevance
+   ↓
+Education Parser + Relevance
+   ↓
+Certification Parser
+   ↓
+Semantic Similarity
+   ↓
+ATS Final Score
+   ↓
+JSON Output
+
+## Scoring Components
+
+### 1) Skill Score
+Calculated using extracted skill count.
+
+```python
+skill_score = min(len(skills) * 10, 100)
+

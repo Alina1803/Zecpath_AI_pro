@@ -9,13 +9,10 @@ from .stack_resolver import expand_stack
 class SkillExtractor:
     def __init__(self):
         self.nlp = spacy.load("en_core_web_sm")
-
-        # LOWER = case-insensitive matching
         self.matcher = PhraseMatcher(self.nlp.vocab, attr="LOWER")
 
-        self.skill_map = {}
-
         patterns = []
+        self.skill_map = {}
 
         for category, skills in MASTER_SKILLS.items():
             for canonical, aliases in skills.items():
@@ -26,21 +23,25 @@ class SkillExtractor:
 
         self.matcher.add("SKILLS", patterns)
 
-    def extract_skills(self, text):
+    def extract(self, text):
         doc = self.nlp(text)
-
         matches = self.matcher(doc)
 
-        found = []
+        found_skills = set()
 
         for match_id, start, end in matches:
-            phrase = doc[start:end].text.lower()
-
-            canonical = self.skill_map.get(phrase, phrase)
-
-            expanded = expand_stack(canonical)
+            span = doc[start:end].text.lower()
+            canonical = self.skill_map.get(span, span)
+            normalized = normalize_skill(canonical)
+            expanded = expand_stack(normalized)
 
             for skill in expanded:
-                found.append(normalize_skill(skill))
+                found_skills.add(skill)
 
-        return list(set(found))
+        return list(found_skills)
+
+
+# ✅ ADD THIS FUNCTION (IMPORTANT FIX)
+def extract_skills(text):
+    extractor = SkillExtractor()
+    return extractor.extract(text)

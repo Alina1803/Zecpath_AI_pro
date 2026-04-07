@@ -1,0 +1,23 @@
+{
+    "skills": [],
+    "experience": {
+        "experiences": [],
+        "total_experience_months": 0
+    },
+    "education": [
+        {
+            "degree": "LORNA ALVARADO MarketingManager ABOUT ME +123-456-7890 www.reallygreatsite.com Lorem ipsum dolor sit amet, hello@reallygreatsite.com 123 Anywhere St., Any consectetur adipiscing elit, sed City, ST 12345 do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut EXPERIENCE enim ad minim veniam, quis nostrud exercitation ullamco Product Design Manager 2020 - 2023 laboris nisi ut aliquip ex ea Arowwai Industries l 123 Anywhere St., Any City commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet sem nec risus egestas accumsan. In enim nunc, tincidunt ut quam eget, luctus sollicitudin neque. Sed leo nisl, semper ac hendrerit a, sollicitudin EDUCATION in arcu. Bachelor of Business Management Marketing Manager 2019 - 2020 Wardiere University Arowwai Industries l 123 Anywhere St., Any City 2016 - 2020 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet sem nec risus egestas accumsan. In enim nunc, tincidunt ut quam eget, Bachelor of Business Management luctus sollicitudin neque. Sed leo nisl, semper ac hendrerit a, sollicitudin Wardiere University in arcu. 2020 - 2023 Marketing Manager 2017- 2019 Arowwai Industries l 123 Anywhere St., Any City SKILLS Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet Management Skills sem nec risus egestas accumsan. In enim nunc, tincidunt ut quam eget, luctus sollicitudin neque. Sed leo nisl, semper ac hendrerit a, sollicitudin Creativity in arcu. Digital Marketing Marketing Manager 2016- 2017 Negotiation Arowwai Industries l 123 Anywhere St., Any City Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet Critical Thinking sem nec risus egestas accumsan. In enim nunc, tincidunt ut quam eget, Leadership luctus sollicitudin neque. LANGUAGE REFERENCES English Harumi Kobayashi Bailey Dupont Wardiere Inc. / CEO Wardiere Inc. / CEO Spain Phone: 123-456-7890 Phone: 123-456-7890 Email : hello@reallygreatsite.com Email : hello@reallygreatsite.com",
+            "year": "2020"
+        }
+    ],
+    "certifications": [],
+    "scores": {
+        "final_score": 5.17,
+        "breakdown": {
+            "skills": 0,
+            "experience": 0,
+            "education": 0,
+            "semantic": 20.7
+        }
+    }
+}
