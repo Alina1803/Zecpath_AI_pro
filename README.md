@@ -1223,3 +1223,51 @@ ranked = sorted(
     key=lambda x: x["scores"]["final_score"],
     reverse=True
 )
+
+# Day 15 – Fairness, Normalization & Bias Reduction
+
+## Objective
+Improve fairness, reduce hidden bias, and standardize candidate evaluation after Day 14 ranking.
+
+This module ensures:
+- resume format neutrality
+- score normalization
+- sensitive field masking
+- recruiter-safe candidate outputs
+- fairness audit reporting
+
+This acts as the **ethical AI decision layer** before recruiter review.
+
+---
+
+## Folder Structure
+
+fairness_engine15/
+│
+├── resume_normalizer.py
+├── score_normalizer.py
+├── bias_masking.py
+├── fairness_audit.py
+└── run_fairness_pipeline.py
+
+---
+
+## Pipeline Flow
+Day 14 Ranked Output
+   ↓
+Resume Standardization
+   ↓
+Sensitive Attribute Masking
+   ↓
+Score Normalization
+   ↓
+Fairness Audit
+   ↓
+Bias-Safe Recruiter Output
+
+## Input
+Reads from:
+data/processed/output_14/ranked_candidates.json
+
+## Output 
+Python -m app.services.fairness_engine15.run_fairness_pipeline15
