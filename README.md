@@ -1223,7 +1223,7 @@ ranked = sorted(
     key=lambda x: x["scores"]["final_score"],
     reverse=True
 )
-
+--------------------------------------------------------------------------------------
 # Day 15 – Fairness, Normalization & Bias Reduction
 
 ## Objective
@@ -1271,3 +1271,50 @@ data/processed/output_14/ranked_candidates.json
 
 ## Output 
 Python -m app.services.fairness_engine15.run_fairness_pipeline15
+----------------------------------------------------------------------------
+
+# Day 16 – Recruiter Dashboard, Explainability & Fairness Analytics
+
+## Objective
+Build a recruiter-facing analytics dashboard that converts Day 15 fair candidate outputs into:
+
+- ranked recruiter tables
+- fairness metrics
+- explainable candidate scores
+- recruiter decision actions
+- shortlist visibility
+- top candidate insights
+
+This module transforms backend ATS intelligence into **product-ready recruiter workflows**.
+
+---
+
+## Folder Structure
+dashboard_engine16/
+│
+├── dashboard_data.py
+├── explainability_engine.py
+├── fairness_dashboard.py
+├── recruiter_actions.py
+└── run_dashboard_pipeline.py
+
+---
+
+## Pipeline Flow
+Day 15 Fair Candidates
+   ↓
+Dashboard Data Preparation
+   ↓
+Fairness Analytics
+   ↓
+Candidate Explainability
+   ↓
+Recruiter Action Suggestions
+   ↓
+Dashboard JSON Output
+
+---
+
+## Input
+Reads from:
+data/processed/output_15/fair_candidates.json
