@@ -1318,3 +1318,56 @@ Dashboard JSON Output
 ## Input
 Reads from:
 data/processed/output_15/fair_candidates.json
+------------------------------------------------------------------------------
+
+# Day 17 – ATS System Testing
+
+## Objective
+Validate ATS accuracy, reliability, fairness stability, and role adaptability.
+
+This module benchmarks the full ATS pipeline by comparing AI-generated decisions against expected recruiter decisions.
+
+The testing framework supports:
+- tech role validation
+- non-tech role validation
+- fresher resume testing
+- senior profile testing
+- recruiter truth comparison
+- mismatch backlog generation
+
+This is the **quality assurance and benchmark layer** of the ATS.
+
+---
+## Folder Structure
+
+testing_engine17/
+│
+├── test_dataset_loader.py
+├── prediction_validator.py
+├── metrics_engine.py
+├── mismatch_tracker.py
+├── improvement_backlog.py
+└── run_testing_pipeline.py
+
+---
+
+## Pipeline Flow
+Test Candidate Dataset
+   ↓
+Load Test Cases
+   ↓
+Validate Predictions
+   ↓
+Accuracy Metrics
+   ↓
+Mismatch Detection
+   ↓
+Improvement Backlog
+   ↓
+Testing Report Output
+
+---
+
+## Input
+Reads test cases from:
+data/test_cases/
