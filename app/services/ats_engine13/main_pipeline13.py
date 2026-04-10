@@ -3,7 +3,6 @@ import json
 
 from app.utils.file_loader import load_file
 from app.utils.text_cleaner import clean_text
-from app.utils.ats_constants import WEIGHTS
 
 # Engines
 from app.services.skill_engine9.skill_extractor import extract_skills
@@ -16,12 +15,8 @@ from app.services.education_engine11.education_relevance import education_releva
 
 from app.services.semantic_engine12.similarity_engine import semantic_similarity
 
-# ATS
-from app.services.ats_engine13.ats_scorer import (
-    safe_score,
-    generate_breakdown,
-    compute_ats_score
-)
+# ATS (UPDATED)
+from app.services.ats_engine13.ats_scorer import calculate_score
 
 
 def run_pipeline(resume_text, job_description):
@@ -31,41 +26,41 @@ def run_pipeline(resume_text, job_description):
 
     # -------- Extraction --------
     skills = extract_skills(cleaned_text)
+
+    print("SKILLS SAMPLE:",skills[:2])
     experience = extract_experience(cleaned_text)
     education = extract_education(cleaned_text)
     certifications = extract_certifications(cleaned_text)
 
-    # -------- Scoring --------
+    # ✅ Extract JD skills also (IMPORTANT)
+    jd_skills = extract_skills(cleaned_jd)
 
-    # ✅ Skill score (limit to 100)
-    skill_score = min(len(skills) * 10, 100)
-
-    # ✅ Experience score (FIXED)
-    exp_data = experience_relevance(experience, cleaned_jd)  # CALL function
-    exp_score = safe_score(exp_data)
-
-    # ✅ Education score (SAFE)
+    # -------- Experience + Education relevance --------
+    exp_data = experience_relevance(experience, cleaned_jd)
     edu_data = education_relevance(education, cleaned_jd)
-    edu_score = safe_score(edu_data)
 
-    # ✅ Semantic score (SAFE + normalized)
+    # -------- Semantic --------
     semantic_raw = semantic_similarity(cleaned_text, cleaned_jd)
-    semantic_score = safe_score(semantic_raw) * 100
 
-    # -------- ATS FINAL --------
-    final_score = compute_ats_score(
-        skill_score,
-        exp_score,
-        edu_score,
-        semantic_score
-    )
+    # -------- Prepare structured data --------
+    resume_data = {
+        "skills": skills,
+        "experience": safe_number(experience),
+        "education": education,
+        "certifications": certifications
+    }
 
-    # -------- Breakdown --------
-    breakdown = generate_breakdown(
-        skill_score,
-        exp_score,
-        edu_score,
-        semantic_score
+    jd_data = {
+        "skills": jd_skills,
+        "experience": safe_number(exp_data),
+        "education": []
+    }
+
+    # -------- FINAL ATS SCORING --------
+    ats_result = calculate_score(
+        resume_data,
+        jd_data,
+        semantic_raw
     )
 
     return {
@@ -73,11 +68,19 @@ def run_pipeline(resume_text, job_description):
         "experience": experience,
         "education": education,
         "certifications": certifications,
-        "scores": {
-            "final_score": final_score,
-            "breakdown": breakdown
-        }
+        "scores": ats_result
     }
+
+
+# ----------------------------------------
+# 🔧 SAFE NUMBER HANDLER
+# ----------------------------------------
+def safe_number(value):
+    if isinstance(value, dict):
+        return value.get("relevance_score", 0)
+    if value is None:
+        return 0
+    return value
 
 
 def main():

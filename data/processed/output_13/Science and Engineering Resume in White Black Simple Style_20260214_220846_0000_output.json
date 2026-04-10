@@ -1,5 +1,10 @@
 {
-    "skills": [],
+    "skills": [
+        "power bi",
+        "advanced excel",
+        "financial modeling",
+        "data analysis"
+    ],
     "experience": {
         "experiences": [],
         "total_experience_months": 0
@@ -12,12 +17,21 @@
     ],
     "certifications": [],
     "scores": {
-        "final_score": 1.88,
+        "final_score": 47.22,
         "breakdown": {
-            "skills": 0,
-            "experience": 0,
-            "education": 0,
-            "semantic": 7.5
+            "skills_score": 1.15,
+            "experience_score": 100,
+            "education_score": 100,
+            "semantic_score": 7.5,
+            "matched_skills": [],
+            "missing_skills": [
+                "taxation",
+                "bookkeeping",
+                "accounting",
+                "gst",
+                "auditing",
+                "financial reporting"
+            ]
         }
     }
 }

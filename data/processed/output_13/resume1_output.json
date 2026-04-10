@@ -1,5 +1,9 @@
 {
     "skills": [
+        "automation",
+        "uipath",
+        "excel vba",
+        "rpa",
         "python",
         "sql"
     ],
@@ -15,12 +19,21 @@
     ],
     "certifications": [],
     "scores": {
-        "final_score": 15.0,
+        "final_score": 54.0,
         "breakdown": {
-            "skills": 20,
-            "experience": 0,
-            "education": 0,
-            "semantic": 36.0
+            "skills_score": 0.0,
+            "experience_score": 100,
+            "education_score": 100,
+            "semantic_score": 36.0,
+            "matched_skills": [],
+            "missing_skills": [
+                "taxation",
+                "bookkeeping",
+                "accounting",
+                "gst",
+                "auditing",
+                "financial reporting"
+            ]
         }
     }
 }

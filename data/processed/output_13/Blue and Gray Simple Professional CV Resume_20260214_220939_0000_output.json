@@ -1,5 +1,11 @@
 {
-    "skills": [],
+    "skills": [
+        "chartered accountant",
+        "power bi",
+        "advanced excel",
+        "data analysis",
+        "financial modeling"
+    ],
     "experience": {
         "experiences": [],
         "total_experience_months": 0
@@ -12,12 +18,21 @@
     ],
     "certifications": [],
     "scores": {
-        "final_score": 5.25,
+        "final_score": 50.59,
         "breakdown": {
-            "skills": 0,
-            "experience": 0,
-            "education": 0,
-            "semantic": 21.0
+            "skills_score": 1.15,
+            "experience_score": 100,
+            "education_score": 100,
+            "semantic_score": 21.0,
+            "matched_skills": [],
+            "missing_skills": [
+                "taxation",
+                "bookkeeping",
+                "accounting",
+                "gst",
+                "auditing",
+                "financial reporting"
+            ]
         }
     }
 }

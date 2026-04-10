@@ -6,6 +6,26 @@ ROLE_KEYWORDS = [
     "finance analyst",
     "software engineer",
     "data analyst"
+    "Chartered Accountant",
+    "Senior Chartered Accountant",
+    "Tax Consultant",
+    "Tax Manager",
+    "Audit Manager",
+    "Internal Auditor",
+    "Financial Controller",
+    "Finance Manager",
+    "MIS Analyst",
+    "FP&A Analyst",
+    "Accounts Manager",
+    "Cost Accountant",
+    "Forensic Auditor",
+    "Compliance Manager",
+    "Treasury Manager",
+    "Risk Analyst",
+    "Financial Reporting Manager",
+    "Business Finance Manager",
+    "Virtual CFO",
+    "Chief Financial Officer"
 ]
 
 # Skills (expand later)
@@ -16,6 +36,13 @@ SKILL_KEYWORDS = [
     "excel",
     "python",
     "sql"
+    "gst"
+    "tds"
+    "sap fico"
+    "ifrs"
+    "gaap"
+    "fp&a"
+    "mis reporting"
 ]
 
 # Experience-related patterns

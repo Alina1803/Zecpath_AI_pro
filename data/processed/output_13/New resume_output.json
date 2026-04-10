@@ -12,12 +12,21 @@
     ],
     "certifications": [],
     "scores": {
-        "final_score": 3.02,
+        "final_score": 48.02,
         "breakdown": {
-            "skills": 0,
-            "experience": 0,
-            "education": 0,
-            "semantic": 12.1
+            "skills_score": 0.0,
+            "experience_score": 100,
+            "education_score": 100,
+            "semantic_score": 12.1,
+            "matched_skills": [],
+            "missing_skills": [
+                "taxation",
+                "bookkeeping",
+                "gst",
+                "accounting",
+                "auditing",
+                "financial reporting"
+            ]
         }
     }
 }

@@ -1,6 +1,18 @@
 {
     "skills": [
-        "audit",
+        "taxation",
+        "sox",
+        "bookkeeping",
+        "risk management",
+        "accounts receivable",
+        "accounting",
+        "compliance",
+        "internal audit",
+        "gst",
+        "leadership",
+        "statutory audit",
+        "time management",
+        "auditing",
         "financial reporting"
     ],
     "experience": {
@@ -15,12 +27,21 @@
     ],
     "certifications": [],
     "scores": {
-        "final_score": 14.97,
+        "final_score": 77.4,
         "breakdown": {
-            "skills": 20,
-            "experience": 0,
-            "education": 0,
-            "semantic": 35.9
+            "skills_score": 78.08,
+            "experience_score": 100,
+            "education_score": 100,
+            "semantic_score": 35.9,
+            "matched_skills": [
+                "taxation",
+                "bookkeeping",
+                "accounting",
+                "gst",
+                "auditing",
+                "financial reporting"
+            ],
+            "missing_skills": []
         }
     }
 }

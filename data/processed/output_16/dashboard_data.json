@@ -3,131 +3,145 @@
         {
             "file_name": "Chartered Accountant_output.json",
             "rank": 1,
-            "decision": "REJECT",
-            "final_score": 42.38,
+            "decision": "SHORTLIST",
+            "final_score": 90.61,
             "normalized_score": 100.0
         },
         {
-            "file_name": "resume1_output.json",
+            "file_name": "Ahammad_cv_output.json",
             "rank": 2,
-            "decision": "REJECT",
-            "final_score": 15.0,
-            "normalized_score": 32.4
+            "decision": "SHORTLIST",
+            "final_score": 87.52,
+            "normalized_score": 92.93
+        },
+        {
+            "file_name": "CA resume_output.json",
+            "rank": 3,
+            "decision": "SHORTLIST",
+            "final_score": 82.05,
+            "normalized_score": 80.43
         },
         {
             "file_name": "White and Black Minimalist Professional Accountant Resume_20260214_220801_0000_output.json",
-            "rank": 3,
-            "decision": "REJECT",
-            "final_score": 14.97,
-            "normalized_score": 32.32
+            "rank": 4,
+            "decision": "REVIEW",
+            "final_score": 77.4,
+            "normalized_score": 69.79
         },
         {
             "file_name": "Joby CV_output.json",
-            "rank": 4,
+            "rank": 5,
             "decision": "REJECT",
-            "final_score": 9.05,
-            "normalized_score": 17.7
+            "final_score": 58.59,
+            "normalized_score": 26.78
+        },
+        {
+            "file_name": "resume1_output.json",
+            "rank": 6,
+            "decision": "REJECT",
+            "final_score": 54.0,
+            "normalized_score": 16.28
         },
         {
             "file_name": "White Black Minimalist Professional Resume_20260214_215934_0000_output.json",
-            "rank": 5,
-            "decision": "REJECT",
-            "final_score": 7.7,
-            "normalized_score": 14.37
-        },
-        {
-            "file_name": "Abhi resume_20250809_103728_0000_output.json",
-            "rank": 6,
-            "decision": "REJECT",
-            "final_score": 5.3,
-            "normalized_score": 8.44
-        },
-        {
-            "file_name": "Blue and Gray Simple Professional CV Resume_20260214_220939_0000_output.json",
             "rank": 7,
             "decision": "REJECT",
-            "final_score": 5.25,
-            "normalized_score": 8.32
-        },
-        {
-            "file_name": "Resume 3_output.json",
-            "rank": 8,
-            "decision": "REJECT",
-            "final_score": 5.17,
-            "normalized_score": 8.12
+            "final_score": 52.7,
+            "normalized_score": 13.31
         },
         {
             "file_name": "Resume 2_output.json",
+            "rank": 8,
+            "decision": "REJECT",
+            "final_score": 50.94,
+            "normalized_score": 9.28
+        },
+        {
+            "file_name": "Blue and Gray Simple Professional CV Resume_20260214_220939_0000_output.json",
             "rank": 9,
             "decision": "REJECT",
-            "final_score": 4.55,
-            "normalized_score": 6.59
+            "final_score": 50.59,
+            "normalized_score": 8.48
+        },
+        {
+            "file_name": "Abhi resume_20250809_103728_0000_output.json",
+            "rank": 10,
+            "decision": "REJECT",
+            "final_score": 50.3,
+            "normalized_score": 7.82
+        },
+        {
+            "file_name": "Resume 3_output.json",
+            "rank": 11,
+            "decision": "REJECT",
+            "final_score": 50.17,
+            "normalized_score": 7.52
         },
         {
             "file_name": "Blue Simple Professional CV Resume_20260214_220009_0000_output.json",
-            "rank": 10,
+            "rank": 12,
             "decision": "REJECT",
-            "final_score": 4.23,
-            "normalized_score": 5.8
+            "final_score": 49.23,
+            "normalized_score": 5.37
         },
         {
             "file_name": "New resume_output.json",
-            "rank": 11,
+            "rank": 13,
             "decision": "REJECT",
-            "final_score": 3.02,
-            "normalized_score": 2.81
-        },
-        {
-            "file_name": "Purple and White Clean and Professional Resume_20260214_215858_0000_output.json",
-            "rank": 12,
-            "decision": "REJECT",
-            "final_score": 1.88,
-            "normalized_score": 0.0
+            "final_score": 48.02,
+            "normalized_score": 2.61
         },
         {
             "file_name": "sample_resume_output.json",
-            "rank": 13,
+            "rank": 14,
             "decision": "REJECT",
-            "final_score": 1.88,
-            "normalized_score": 0.0
+            "final_score": 47.22,
+            "normalized_score": 0.78
         },
         {
             "file_name": "Science and Engineering Resume in White Black Simple Style_20260214_220846_0000_output.json",
-            "rank": 14,
+            "rank": 15,
             "decision": "REJECT",
-            "final_score": 1.88,
+            "final_score": 47.22,
+            "normalized_score": 0.78
+        },
+        {
+            "file_name": "Purple and White Clean and Professional Resume_20260214_215858_0000_output.json",
+            "rank": 16,
+            "decision": "REJECT",
+            "final_score": 46.88,
             "normalized_score": 0.0
         }
     ],
     "fairness_metrics": {
-        "average_fair_score": 16.92,
+        "average_fair_score": 27.63,
         "highest_score": 100.0,
         "lowest_score": 0.0
     },
     "top_5_explanations": [
         {
-            "final_score": 42.38,
+            "final_score": 90.61,
             "normalized_score": 100.0,
             "explanation": "Candidate ranked based on ATS, experience, education, and semantic relevance."
         },
         {
-            "final_score": 15.0,
-            "normalized_score": 32.4,
+            "final_score": 87.52,
+            "normalized_score": 92.93,
             "explanation": "Candidate ranked based on ATS, experience, education, and semantic relevance."
         },
         {
-            "final_score": 14.97,
-            "normalized_score": 32.32,
+            "final_score": 82.05,
+            "normalized_score": 80.43,
             "explanation": "Candidate ranked based on ATS, experience, education, and semantic relevance."
         },
         {
-            "final_score": 9.05,
-            "normalized_score": 17.7,
+            "final_score": 77.4,
+            "normalized_score": 69.79,
             "explanation": "Candidate ranked based on ATS, experience, education, and semantic relevance."
         },
         {
-            "final_score": 7.7,
-            "normalized_score": 14.37,
+            "final_score": 58.59,
+            "normalized_score": 26.78,
             "explanation": "Candidate ranked based on ATS, experience, education, and semantic relevance."
         }
     ]

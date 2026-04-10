@@ -2,7 +2,12 @@ import re
 
 DEGREES = [
     "bachelor", "master", "b.com", "m.com", "bsc", "msc",
-    "mba", "bba", "ca", "chartered accountant"
+    "mba", "bba", "ca", "chartered accountant",
+    "ca inter","ca intermediate","ca final","icai",
+    "b.com","bachelor of commerce","m.com","master of commerce",
+    "bba","mba finance""mba","bms","cfa",
+    "cpa","cma","acca","frm","financial modeling"
+
 ]
 
 

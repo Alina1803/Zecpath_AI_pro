@@ -1,20 +1,58 @@
 {
     "summary": {
-        "total_candidates": 14,
-        "shortlisted": 0,
-        "review": 0,
-        "rejected": 14
+        "total_candidates": 16,
+        "shortlisted": 3,
+        "review": 1,
+        "rejected": 12
     },
     "ranked_candidates": [
         {
             "skills": [
-                "bookkeeping",
-                "tally",
+                "erp systems",
+                "excel advanced",
+                "budgeting",
+                "sap fico",
+                "netsuite",
+                "statutory audit",
+                "data analysis",
+                "python",
+                "sql",
                 "financial reporting",
-                "quickbooks",
-                "gst",
+                "sox",
+                "chartered accountant",
+                "gaap",
+                "power bi",
+                "indirect tax",
+                "rpa",
+                "filing",
+                "tally",
                 "taxation",
-                "audit",
+                "income tax",
+                "risk management",
+                "attention to detail",
+                "oracle erp",
+                "automation",
+                "uipath",
+                "accounts payable",
+                "gst",
+                "tax compliance",
+                "financial analysis",
+                "forecasting",
+                "management accounting",
+                "financial modeling",
+                "ifrs",
+                "cost accounting",
+                "direct tax",
+                "bookkeeping",
+                "accounting",
+                "compliance",
+                "internal audit",
+                "sap",
+                "advanced excel",
+                "excel vba",
+                "leadership",
+                "quickbooks",
+                "auditing",
                 "excel"
             ],
             "experience": {
@@ -31,20 +69,245 @@
                 "1. Chartered Accountant (CA) Role Summary: A Chartered Accountant is responsible for managing accounting, auditing, taxation, and financial advisory services while ensuring compliance with statutory and regulatory requirements. Key Responsibilities: \u2022 Prepare and review financial statements as per applicable accounting standards \u2022 Manage direct and indirect tax compliance (Income Tax, GST, TDS) \u2022 Conduct audits and provide assurance on financial records \u2022 Advise management on financial planning, budgeting, and cost control \u2022 Ensure compliance with Companies Act, Income Tax Act, and GST laws \u2022 Support business decision-making through financial analysis Skills & Qualifications: \u2022 Qualified Chartered Accountant (ICAI) \u2022 Strong knowledge of accounting standards, taxation, and audit \u2022 Analytical and problem-solving skills \u2022 Proficiency in accounting software and Excel 2. Practicing Chartered Accountant Role Summary: A Practicing CA provides professional services independently or through a firm, offering audit, taxation, compliance, and advisory services to multiple clients. Key Responsibilities: \u2022 Handle statutory, tax, and internal audits for clients \u2022 File income tax and GST returns for individuals and businesses \u2022 Provide business, financial, and compliance advisory services \u2022 Represent clients before tax authorities and regulators \u2022 Manage client relationships and ensure service quality \u2022 Stay updated with regulatory and legal changes Skills & Qualifications: \u2022 CA qualification with Certificate of Practice (COP) \u2022 Client handling and communication skills \u2022 Strong knowledge of laws and regulations \u2022 Business development and advisory capability 3. Audit Manager Role Summary: The Audit Manager leads audit engagements, ensuring accuracy, compliance, and risk mitigation in financial reporting. Key Responsibilities: \u2022 Plan and manage statutory, internal, and special audits \u2022 Supervise audit teams and review audit work papers \u2022 Identify financial and operational risks \u2022 Ensure compliance with auditing standards and laws \u2022 Prepare audit reports and present findings to management \u2022 Coordinate with clients and senior leadership Skills & Qualifications: \u2022 Qualified CA \u2022 Strong audit and risk assessment expertise \u2022 Leadership and team management skills \u2022 Knowledge of auditing standards and regulatory frameworks 4. Tax Manager Role Summary: The Tax Manager oversees direct and indirect tax planning, compliance, and litigation support to minimize tax risk and ensure regulatory adherence. Key Responsibilities: \u2022 Manage income tax, GST, and other statutory tax filings \u2022 Develop tax planning strategies to optimize tax liability \u2022 Handle tax assessments, audits, and notices \u2022 Monitor changes in tax laws and ensure compliance \u2022 Coordinate with consultants and tax authorities \u2022 Maintain accurate tax documentation and reports Skills & Qualifications: \u2022 CA qualification with specialization in taxation \u2022 Strong understanding of tax laws and procedures \u2022 Analytical and strategic thinking \u2022 Attention to detail and compliance focus 5. Assurance Manager Role Summary: The Assurance Manager provides independent assurance on financial and operational processes to enhance reliability and stakeholder confidence. Key Responsibilities: \u2022 Manage assurance engagements and client relationships \u2022 Evaluate internal controls and compliance frameworks \u2022 Review financial statements and disclosures \u2022 Ensure adherence to assurance and auditing standards \u2022 Identify control gaps and recommend improvements \u2022 Prepare assurance reports for stakeholders Skills & Qualifications: \u2022 Qualified CA \u2022 Strong understanding of assurance standards \u2022 Risk assessment and analytical skills \u2022 Excellent reporting and communication skills 6. Accounting & Compliance Manager Role Summary: Responsible for managing end-to-end accounting operations and ensuring statutory and regulatory compliance. Key Responsibilities: \u2022 Oversee accounting processes and monthly closures \u2022 Ensure compliance with Companies Act, GST, Income Tax, and other laws \u2022 Prepare financial statements and MIS reports \u2022 Coordinate with auditors and regulators \u2022 Maintain accounting controls and documentation \u2022 Lead compliance audits and reviews Skills & Qualifications: \u2022 CA qualification \u2022 Strong accounting and compliance knowledge \u2022 Experience with ERP/accounting systems \u2022 Process management and coordination skills 7. Risk & Compliance Manager Role Summary: The Risk & Compliance Manager identifies, assesses, and mitigates financial and regulatory risks within the organization. Key Responsibilities: \u2022 Develop and implement risk management frameworks \u2022 Monitor regulatory compliance across functions \u2022 Conduct compliance audits and risk assessments \u2022 Report risk exposure to senior management \u2022 Ensure internal controls and governance standards \u2022 Support regulatory inspections and audits Skills & Qualifications: \u2022 Qualified CA \u2022 Knowledge of risk management and compliance frameworks \u2022 Strong analytical and governance skills \u2022 Stakeholder management capability 8. Financial Reporting Manager Role Summary: Responsible for accurate, timely, and compliant financial reporting in line with statutory and accounting standards. Key Responsibilities: \u2022 Prepare financial statements as per Ind AS / IFRS \u2022 Ensure accurate consolidation and disclosures \u2022 Coordinate with auditors during audits \u2022 Maintain reporting calendars and compliance timelines \u2022 Analyze financial performance and trends \u2022 Support management reporting and decision-making Skills & Qualifications: \u2022 CA qualification \u2022 Strong financial reporting and accounting standards knowledge \u2022 High attention to detail \u2022 Advanced Excel and reporting tools proficiency 9. Statutory Auditor Role Summary: A Statutory Auditor examines financial statements to provide an independent opinion on their accuracy and legal compliance. Key Responsibilities: \u2022 Conduct statutory audits under applicable laws \u2022 Verify financial records and supporting documents \u2022 Assess compliance with accounting standards and regulations \u2022 Identify misstatements and control weaknesses \u2022 Prepare audit reports and certifications \u2022 Communicate audit findings to stakeholders Skills & Qualifications: \u2022 Qualified CA \u2022 In-depth auditing and accounting knowledge \u2022 Strong professional judgment \u2022 Ethical and independent mindset 10. Internal Auditor Role Summary: The Internal Auditor evaluates internal controls, processes, and risk management to improve operational efficiency and governance. Key Responsibilities: \u2022 Conduct internal audits across departments \u2022 Evaluate internal control effectiveness \u2022 Identify operational and financial risks \u2022 Recommend process improvements \u2022 Prepare audit reports and follow-up actions \u2022 Support management in strengthening controls Skills & Qualifications: \u2022 CA qualification \u2022 Strong internal audit and process review skills \u2022 Analytical and investigative mindset \u2022 Good communication and reporting skills 11. Concurrent Auditor Role Summary: The Concurrent Auditor performs real-time audits, primarily in banks and financial institutions, to ensure ongoing compliance and accuracy. Key Responsibilities: \u2022 Review daily transactions and banking operations \u2022 Ensure adherence to RBI and internal guidelines \u2022 Detect irregularities and fraud risks \u2022 Report exceptions on a timely basis \u2022 Support regulatory inspections and audits \u2022 Maintain detailed audit documentation Skills & Qualifications: \u2022 Qualified CA \u2022 Knowledge of banking operations and RBI norms \u2022 High attention to detail \u2022 Strong reporting and observation skills 12. Forensic Auditor Role Summary: A Forensic Auditor investigates financial frauds, disputes, and irregularities using accounting, auditing, and investigative techniques. Key Responsibilities: \u2022 Investigate financial frauds and misconduct \u2022 Analyze complex financial data and transactions \u2022 Collect and document audit evidence \u2022 Prepare forensic reports for legal proceedings \u2022 Support litigation and regulatory investigations \u2022 Coordinate with legal and enforcement agencies Skills & Qualifications: \u2022 CA qualification \u2022 Expertise in forensic accounting and investigation \u2022 Strong analytical and investigative skills \u2022 Knowledge of legal and regulatory processes FINANCE & ACCOUNTS ROLES 13. Finance Manager Role Summary: The Finance Manager is responsible for managing the organization\u2019s financial planning, accounting operations, reporting, and compliance to support business objectives. Key Responsibilities: \u2022 Oversee day-to-day finance and accounting operations \u2022 Prepare budgets, forecasts, and variance analysis \u2022 Ensure accurate monthly, quarterly, and annual financial reports \u2022 Manage statutory compliance (GST, Income Tax, TDS, ROC) \u2022 Coordinate with auditors, bankers, and consultants \u2022 Support management with financial analysis and decision support Skills & Qualifications: \u2022 Qualified Chartered Accountant \u2022 Strong knowledge of accounting, taxation, and reporting \u2022 Experience with ERP systems and MIS reporting \u2022 Analytical and communication skills 14. Senior Finance Manager Role Summary: The Senior Finance Manager leads finance strategy execution, complex reporting, and team management while partnering with senior leadership. Key Responsibilities: \u2022 Lead finance team and oversee financial operations \u2022 Drive budgeting, forecasting, and long-term financial planning \u2022 Review financial statements and management reports \u2022 Monitor cash flow, working capital, and cost optimization \u2022 Ensure regulatory and statutory compliance \u2022 Act as a key business partner to senior management Skills & Qualifications: \u2022 CA with significant post-qualification experience \u2022 Strong leadership and stakeholder management skills \u2022 Advanced financial analysis and strategic planning expertise 15. Head of Finance Role Summary: The Head of Finance is responsible for the overall financial health, governance, and financial strategy of the organization. Key Responsibilities: \u2022 Define and implement financial strategy aligned with business goals \u2022 Oversee accounting, finance, taxation, treasury, and compliance \u2022 Lead budgeting, forecasting, and performance management \u2022 Ensure strong internal controls and governance frameworks \u2022 Support strategic initiatives such as expansions, investments, and funding \u2022 Report financial performance to top management and board Skills & Qualifications: \u2022 Qualified CA \u2022 Strong strategic, leadership, and decision-making capabilities \u2022 Deep understanding of corporate finance and compliance 16. Financial Controller (FC) Role Summary: The Financial Controller ensures accurate financial reporting, robust internal controls, and compliance with accounting standards and laws. Key Responsibilities: \u2022 Oversee accounting records and financial statements \u2022 Ensure compliance with Ind AS / IFRS and statutory requirements \u2022 Manage audits and liaison with statutory auditors \u2022 Implement and monitor internal financial controls \u2022 Oversee closing processes and reporting timelines \u2022 Support management with financial insights and risk analysis Skills & Qualifications: \u2022 CA with strong financial reporting background \u2022 Expertise in accounting standards and controls \u2022 High attention to detail and governance focus 17. Group Financial Controller Role Summary: The Group Financial Controller manages consolidated financial reporting and controls across multiple entities or group companies. Key Responsibilities: \u2022 Oversee group-level accounting and consolidation \u2022 Prepare consolidated financial statements \u2022 Ensure consistency in accounting policies across entities \u2022 Manage group audits and regulatory reporting \u2022 Strengthen group-wide internal controls and governance \u2022 Support group leadership with financial insights Skills & Qualifications: \u2022 CA with consolidation and group reporting experience \u2022 Strong knowledge of Ind AS / IFRS \u2022 Ability to manage multi-entity structures 18. Accounts Manager Role Summary: The Accounts Manager manages daily accounting operations, ensuring accurate records and timely reporting. Key Responsibilities: \u2022 Supervise accounting entries and ledger maintenance \u2022 Manage accounts payable and receivable \u2022 Ensure timely bank reconciliations \u2022 Support month-end and year-end closures \u2022 Assist in statutory compliance and audits \u2022 Maintain accounting documentation and controls Skills & Qualifications: \u2022 CA with hands-on accounting experience \u2022 Strong accounting principles knowledge \u2022 ERP and Excel proficiency 19. Senior Accounts Manager Role Summary: The Senior Accounts Manager oversees accounting teams and complex accounting issues while ensuring compliance and accuracy. Key Responsibilities: \u2022 Lead accounting team and review accounting records \u2022 Handle complex accounting transactions \u2022 Ensure compliance with accounting standards and laws \u2022 Coordinate with auditors and tax consultants \u2022 Prepare MIS and management reports \u2022 Strengthen accounting controls and processes Skills & Qualifications: \u2022 Qualified CA \u2022 Strong technical accounting and team leadership skills 20. Chief Accountant Role Summary: The Chief Accountant is responsible for maintaining accurate financial records and ensuring compliance with accounting standards and internal policies. Key Responsibilities: \u2022 Oversee general ledger and financial records \u2022 Ensure compliance with accounting standards and company policies \u2022 Supervise accounting staff and processes \u2022 Support financial reporting and audits \u2022 Maintain internal controls over accounting activities \u2022 Assist senior management in financial reviews Skills & Qualifications: \u2022 CA qualification \u2022 Strong accounting and control background LEADERSHIP & CXO ROLES 21. Chief Financial Officer (CFO) Role Summary: The CFO is responsible for the overall financial strategy, performance, governance, and long\ufffeterm financial sustainability of the organization. Key Responsibilities: \u2022 Lead financial strategy and planning \u2022 Oversee finance, accounting, taxation, treasury, and compliance \u2022 Manage capital structure, funding, and investor relations \u2022 Drive profitability, cost management, and cash flow optimization \u2022 Support M&A, strategic investments, and growth initiatives \u2022 Present financial performance to board and stakeholders Skills & Qualifications: \u2022 Qualified CA with extensive leadership experience \u2022 Strong strategic, financial, and business acumen \u2022 Excellent stakeholder and board-level communication skills 22. Deputy CFO Role Summary: The Deputy CFO supports the CFO in managing finance functions and ensures smooth execution of financial strategies. Key Responsibilities: \u2022 Assist CFO in financial planning and strategy execution \u2022 Oversee financial operations and reporting \u2022 Manage finance teams and cross-functional coordination \u2022 Ensure compliance and internal controls \u2022 Step in as acting CFO when required \u2022 Support board and investor reporting Skills & Qualifications: \u2022 CA with senior leadership experience \u2022 Strong operational and strategic finance skills 23. Finance Director Role Summary: The Finance Director focuses on governance, compliance, and financial leadership at the board level. Key Responsibilities: \u2022 Provide strategic financial guidance to the board \u2022 Ensure corporate governance and regulatory compliance \u2022 Oversee financial reporting and audits \u2022 Evaluate major investments and strategic decisions \u2022 Strengthen risk management and control frameworks \u2022 Represent finance function at executive level Skills & Qualifications: \u2022 Qualified CA \u2022 Board-level finance and governance experience 24. Executive Director - Finance Role Summary: The Executive Director - Finance oversees finance operations at the highest executive level and contributes to organizational strategy. Key Responsibilities: \u2022 Lead finance function across the organization \u2022 Drive financial strategy and performance management \u2022 Oversee compliance, reporting, and governance \u2022 Support corporate restructuring, M&A, and growth plans \u2022 Work closely with board and top leadership Skills & Qualifications: \u2022 CA with extensive executive experience \u2022 Strong leadership and strategic thinking 25. Vice President - Finance Role Summary: The VP - Finance bridges strategic planning and operational execution, supporting organizational growth and financial discipline. Key Responsibilities: \u2022 Lead financial planning and performance management \u2022 Oversee finance teams and reporting processes \u2022 Support fundraising, investor relations, and strategic initiatives \u2022 Ensure robust financial controls and compliance \u2022 Partner with business heads for financial decision-making Skills & Qualifications: \u2022 CA with senior management experience \u2022 Strong analytical, leadership, and communication skills 26. Chief Accounting Officer (CAO) Role Summary: The CAO is responsible for all accounting policies, financial reporting accuracy, and compliance with accounting standards. Key Responsibilities: \u2022 Define and maintain accounting policies and standards \u2022 Ensure accurate financial reporting and disclosures \u2022 Oversee accounting operations and teams \u2022 Manage statutory and internal audits \u2022 Ensure compliance with Ind AS / IFRS / GAAP \u2022 Support CFO and board on accounting matters Skills & Qualifications: \u2022 Qualified CA \u2022 Deep expertise in accounting standards and reporting \u2022 Strong governance and control orientation TAXATION ROLES (DIRECT & INDIRECT TAX) 27. Tax Consultant Role Summary: The Tax Consultant provides advisory and compliance support in direct and indirect taxes, ensuring clients or the organization remain compliant while optimizing tax positions. Key Responsibilities: \u2022 Prepare and review Income Tax and GST returns \u2022 Handle tax computations for individuals and businesses \u2022 Assist in tax planning and advisory assignments \u2022 Support tax audits, assessments, and notices \u2022 Maintain tax documentation and working papers \u2022 Stay updated with changes in tax laws and regulations Skills & Qualifications: \u2022 Qualified Chartered Accountant \u2022 Good understanding of Income Tax and GST laws \u2022 Strong analytical and documentation skills \u2022 Client communication and advisory ability 28. Senior Tax Consultant Role Summary: The Senior Tax Consultant manages complex tax matters, supervises junior consultants, and provides advanced tax advisory support. Key Responsibilities: \u2022 Review tax computations and filings \u2022 Handle complex tax planning and advisory cases \u2022 Manage tax assessments, appeals, and notices \u2022 Supervise and mentor junior tax team members \u2022 Coordinate with clients and tax authorities \u2022 Ensure high-quality tax deliverables Skills & Qualifications: \u2022 CA with strong post-qualification tax experience \u2022 In-depth knowledge of tax laws and interpretations \u2022 Leadership and client-handling skills 29. Direct Tax Manager Role Summary: The Direct Tax Manager oversees direct tax compliance, planning, and litigation support to manage tax risks effectively. Key Responsibilities: \u2022 Manage corporate income tax compliance and filings \u2022 Develop and implement tax planning strategies \u2022 Handle tax assessments, scrutiny, and appeals \u2022 Review advance tax and withholding tax calculations \u2022 Monitor changes in tax laws and assess impact \u2022 Coordinate with external tax advisors and auditors Skills & Qualifications: \u2022 Qualified CA \u2022 Strong expertise in Income Tax Act and corporate taxation \u2022 Strategic tax planning and risk management skills 30. Indirect Tax Manager Role Summary: The Indirect Tax Manager ensures compliance with indirect tax laws and optimizes tax processes and structures. Key Responsibilities: \u2022 Oversee GST compliance and return filings \u2022 Manage GST audits, notices, and assessments \u2022 Advise on GST implications of transactions \u2022 Ensure correct tax classification and credit utilization \u2022 Monitor changes in indirect tax laws \u2022 Coordinate with tax authorities and consultants Skills & Qualifications: \u2022 CA with specialization in indirect taxation \u2022 In-depth GST and indirect tax knowledge \u2022 Strong compliance and advisory skills 31. GST Consultant Role Summary: The GST Consultant provides compliance, advisory, and representation services related to Goods and Services Tax. Key Responsibilities: \u2022 Prepare and file GST returns and reconciliations \u2022 Advise on GST applicability and classification \u2022 Handle GST notices, audits, and assessments \u2022 Assist in GST registrations and amendments \u2022 Reconcile GST data with books and returns \u2022 Ensure compliance with GST laws and timelines Skills & Qualifications: \u2022 Chartered Accountant \u2022 Strong GST law and compliance knowledge \u2022 Attention to detail and analytical skills 32. GST Manager Role Summary: The GST Manager leads GST compliance and advisory functions while managing teams and complex GST matters. Key Responsibilities: \u2022 Oversee end-to-end GST compliance \u2022 Review GST returns, reconciliations, and reports \u2022 Handle complex GST advisory and structuring \u2022 Manage GST audits and litigation support \u2022 Lead and mentor GST compliance teams \u2022 Liaise with tax authorities and senior management Skills & Qualifications: \u2022 Qualified CA \u2022 Advanced expertise in GST and indirect taxes \u2022 Team leadership and stakeholder management skills 33. International Tax Consultant Role Summary: The International Tax Consultant advises on cross-border taxation, double taxation avoidance, and global tax compliance. Key Responsibilities: \u2022 Advise on international tax structures and transactions \u2022 Analyze DTAA, PE exposure, and withholding taxes \u2022 Support cross-border tax compliance and reporting \u2022 Assist in international tax audits and assessments \u2022 Coordinate with global tax teams and advisors \u2022 Monitor global tax law developments Skills & Qualifications: \u2022 CA with international tax exposure \u2022 Strong knowledge of DTAA, OECD guidelines, BEPS \u2022 Analytical and research-oriented mindset 34. Transfer Pricing Consultant Role Summary: The Transfer Pricing Consultant ensures compliance with transfer pricing regulations for related-party transactions. Key Responsibilities: \u2022 Prepare transfer pricing documentation and reports \u2022 Conduct benchmarking and economic analysis \u2022 Advise on pricing policies for intercompany transactions \u2022 Handle transfer pricing audits and disputes \u2022 Coordinate with international teams and advisors \u2022 Monitor changes in transfer pricing regulations Skills & Qualifications: \u2022 Qualified CA \u2022 Strong understanding of transfer pricing laws and methods \u2022 Data analysis and documentation skills 35. Corporate Tax Advisor Role Summary: The Corporate Tax Advisor provides strategic tax advice to optimize tax structures and ensure compliance. Key Responsibilities: \u2022 Advise on corporate tax structuring and planning \u2022 Support mergers, acquisitions, and restructuring from a tax perspective \u2022 Evaluate tax risks and compliance gaps \u2022 Provide opinions on complex tax issues \u2022 Coordinate with internal teams and external advisors \u2022 Support management in strategic tax decisions Skills & Qualifications: \u2022 CA with strong corporate tax advisory experience \u2022 Strategic thinking and risk assessment skills \u2022 Strong business understanding 36. Tax Litigation Manager Role Summary: The Tax Litigation Manager manages tax disputes, appeals, and legal proceedings before tax authorities and tribunals. Key Responsibilities: \u2022 Handle tax litigation and dispute resolution \u2022 Prepare submissions, appeals, and legal documentation \u2022 Represent organization before tax authorities and tribunals \u2022 Coordinate with legal counsels and consultants \u2022 Track litigation status and risk exposure \u2022 Advise management on litigation strategy and outcomes Skills & Qualifications: \u2022 Qualified CA \u2022 Strong experience in tax litigation and representation \u2022 Legal drafting and analytical skills AUDIT & ASSURANCE ROLES 37. Statutory Audit Manager Role Summary: The Statutory Audit Manager leads statutory audit engagements and ensures that financial statements comply with applicable laws and accounting standards. Key Responsibilities: \u2022 Plan and manage statutory audits under Companies Act and other laws \u2022 Supervise audit teams and review audit working papers \u2022 Ensure compliance with Ind AS / IFRS and auditing standards \u2022 Identify audit risks and control weaknesses \u2022 Finalize audit reports and audit opinions \u2022 Liaise with clients, management, and auditors Skills & Qualifications: \u2022 Qualified Chartered Accountant \u2022 Strong statutory audit and reporting experience \u2022 Leadership and client-handling skills 38. Internal Audit Manager Role Summary: The Internal Audit Manager evaluates internal controls, risk management, and governance processes to improve operational efficiency. Key Responsibilities: \u2022 Develop and execute internal audit plans \u2022 Lead internal audit assignments across functions \u2022 Evaluate internal controls and risk management systems \u2022 Identify process gaps and recommend improvements \u2022 Prepare internal audit reports and follow-up actions \u2022 Coordinate with management and audit committees Skills & Qualifications: \u2022 CA with strong internal audit experience \u2022 Knowledge of risk-based auditing \u2022 Strong analytical and communication skills 39. External Auditor Role Summary: The External Auditor provides independent assurance on the accuracy and fairness of financial statements. Key Responsibilities: \u2022 Conduct statutory and external audits \u2022 Verify financial records and supporting documents \u2022 Test internal controls and compliance \u2022 Identify misstatements and audit risks \u2022 Prepare audit documentation and reports \u2022 Communicate audit findings to stakeholders Skills & Qualifications: \u2022 Qualified Chartered Accountant \u2022 Strong accounting and auditing standards knowledge \u2022 Professional skepticism and integrity 40. Concurrent Auditor (Banking) Role Summary: The Concurrent Auditor performs real-time audits of banking operations to ensure compliance with RBI guidelines and internal policies. Key Responsibilities: \u2022 Review daily banking transactions and operations \u2022 Ensure adherence to RBI norms and bank policies \u2022 Identify irregularities, frauds, and control lapses \u2022 Report exceptions on a timely basis \u2022 Support RBI inspections and statutory audits \u2022 Maintain detailed audit documentation Skills & Qualifications: \u2022 Qualified CA \u2022 Strong knowledge of banking operations and RBI regulations \u2022 High attention to detail 41. Systems Auditor Role Summary: The Systems Auditor evaluates IT systems, controls, and processes to ensure data integrity, security, and operational effectiveness. Key Responsibilities: \u2022 Audit IT systems and application controls \u2022 Review access controls, data security, and system integrity \u2022 Evaluate IT general controls and automated processes \u2022 Assess system risks and recommend improvements \u2022 Coordinate with IT teams and management \u2022 Prepare system audit reports Skills & Qualifications: \u2022 CA with systems audit experience \u2022 Knowledge of IT controls and ERP systems \u2022 Analytical and technical mindset 42. SOX Auditor Role Summary: The SOX Auditor ensures compliance with the Sarbanes-Oxley Act by evaluating internal controls over financial reporting. Key Responsibilities: \u2022 Test internal controls under SOX framework \u2022 Document control design and operating effectiveness \u2022 Identify control deficiencies and remediation plans \u2022 Coordinate with process owners and management \u2022 Support internal and external SOX audits \u2022 Maintain SOX documentation and compliance reports Skills & Qualifications: \u2022 Qualified CA \u2022 Strong understanding of SOX and ICFR \u2022 Process documentation and testing expertise 43. Process Auditor Role Summary: The Process Auditor reviews business processes to identify inefficiencies, risks, and control gaps. Key Responsibilities: \u2022 Conduct process audits across departments \u2022 Map processes and identify improvement areas \u2022 Evaluate operational controls and SOP adherence \u2022 Recommend process enhancements and efficiencies \u2022 Prepare process audit reports \u2022 Follow up on implementation of recommendations Skills & Qualifications: \u2022 CA with process audit experience \u2022 Strong process analysis and documentation skills 44. Compliance Auditor Role Summary: The Compliance Auditor ensures adherence to regulatory, statutory, and internal compliance requirements. Key Responsibilities: \u2022 Conduct compliance audits and reviews \u2022 Verify adherence to laws, regulations, and internal policies \u2022 Identify compliance risks and violations \u2022 Prepare compliance audit reports \u2022 Support regulatory inspections and audits \u2022 Advise management on compliance improvements Skills & Qualifications: \u2022 Qualified CA \u2022 Strong regulatory and compliance knowledge \u2022 Attention to detail and governance focus 45. Quality Review Auditor Role Summary: The Quality Review Auditor evaluates audit quality, methodologies, and compliance with professional standards. Key Responsibilities: \u2022 Review audit files for quality and standard compliance \u2022 Assess adherence to auditing standards and firm policies \u2022 Identify gaps in audit execution and documentation \u2022 Provide feedback and recommendations to audit teams \u2022 Support audit quality improvement initiatives \u2022 Assist in regulatory and peer reviews Skills & Qualifications: \u2022 CA with strong audit and quality review experience \u2022 In-depth knowledge of auditing standards \u2022 Strong evaluation and reporting skills FORENSIC, RISK & COMPLIANCE ROLES 46. Forensic Accountant Role Summary: The Forensic Accountant investigates financial irregularities, frauds, and disputes by analyzing financial records and evidence. Key Responsibilities: \u2022 Analyze financial data to detect fraud and irregularities \u2022 Conduct forensic accounting investigations \u2022 Examine transactions, books, and supporting documents \u2022 Prepare forensic reports and documentation \u2022 Support legal proceedings and regulatory investigations \u2022 Coordinate with legal teams and enforcement agencies Skills & Qualifications: \u2022 Qualified Chartered Accountant \u2022 Strong forensic accounting and analytical skills \u2022 Attention to detail and investigative mindset 47. Forensic Audit Manager Role Summary: The Forensic Audit Manager leads forensic investigations and manages teams handling complex fraud cases. Key Responsibilities: \u2022 Lead forensic audit assignments and investigations \u2022 Design investigation approach and scope \u2022 Supervise forensic audit teams and review findings \u2022 Identify fraud risks and control weaknesses \u2022 Prepare forensic reports for management and legal use \u2022 Liaise with legal counsels, regulators, and senior management Skills & Qualifications: \u2022 CA with strong forensic audit experience \u2022 Leadership and investigation management skills \u2022 Knowledge of legal and regulatory processes 48. Fraud Risk Analyst Role Summary: The Fraud Risk Analyst identifies, assesses, and mitigates fraud risks within business operations. Key Responsibilities: \u2022 Analyze transactions and data for fraud indicators \u2022 Conduct fraud risk assessments and monitoring \u2022 Develop fraud detection and prevention frameworks \u2022 Investigate suspected fraud cases \u2022 Prepare fraud risk reports and dashboards \u2022 Recommend fraud control and prevention measures Skills & Qualifications: \u2022 Chartered Accountant \u2022 Strong data analysis and risk assessment skills \u2022 Knowledge of fraud prevention techniques 49. Risk Advisory Consultant Role Summary: The Risk Advisory Consultant provides advisory services on risk management, internal controls, and governance frameworks. Key Responsibilities: \u2022 Assess business, financial, and operational risks \u2022 Evaluate internal control systems and processes \u2022 Advise clients on risk mitigation strategies \u2022 Support risk transformation and compliance projects \u2022 Prepare risk assessment reports and presentations \u2022 Coordinate with clients and stakeholders Skills & Qualifications: \u2022 CA with risk advisory experience \u2022 Strong analytical and consulting skills \u2022 Knowledge of enterprise risk frameworks 50. Enterprise Risk Manager (ERM) Role Summary: The Enterprise Risk Manager designs and implements enterprise-wide risk management frameworks to support organizational objectives. Key Responsibilities: \u2022 Develop and maintain ERM frameworks \u2022 Identify and assess strategic, operational, and financial risks \u2022 Monitor risk exposure and mitigation plans \u2022 Report risk metrics to senior management and board \u2022 Integrate risk management into business strategy \u2022 Support regulatory and governance requirements Skills & Qualifications: \u2022 Qualified CA \u2022 Strong knowledge of ERM frameworks (COSO, ISO) \u2022 Strategic thinking and governance skills 51. Compliance Officer Role Summary: The Compliance Officer ensures adherence to regulatory, statutory, and internal compliance requirements. Key Responsibilities: \u2022 Monitor compliance with laws and regulations \u2022 Develop and update compliance policies and procedures \u2022 Conduct compliance audits and reviews \u2022 Handle regulatory filings and disclosures \u2022 Support regulatory inspections and audits \u2022 Train employees on compliance requirements Skills & Qualifications: \u2022 Chartered Accountant \u2022 Strong regulatory and compliance knowledge \u2022 Attention to detail and governance orientation 52. Corporate Governance Manager Role Summary: The Corporate Governance Manager ensures effective governance practices, board compliance, and ethical standards within the organization. Key Responsibilities: \u2022 Ensure compliance with corporate governance requirements \u2022 Support board and committee operations \u2022 Monitor adherence to Companies Act and SEBI regulations \u2022 Develop governance policies and frameworks \u2022 Coordinate board reporting and disclosures \u2022 Advise management on governance best practices Skills & Qualifications: \u2022 CA with strong governance and compliance experience \u2022 Knowledge of corporate laws and regulations \u2022 Strong coordination and communication skills 53. AML / KYC Specialist Role Summary: The AML / KYC Specialist ensures compliance with anti-money laundering and know-your\ufffecustomer regulations. Key Responsibilities: \u2022 Conduct customer due diligence and KYC reviews \u2022 Monitor transactions for AML red flags \u2022 Investigate suspicious transactions and activities \u2022 File regulatory reports (STR, CTR) \u2022 Ensure compliance with RBI and AML regulations \u2022 Support AML audits and regulatory inspections Skills & Qualifications: \u2022 Qualified Chartered Accountant \u2022 Knowledge of AML / KYC laws and frameworks \u2022 Strong analytical and investigative skills BANKING & FINANCIAL SERVICES ROLES 54. Banking Accountant Role Summary: The Banking Accountant manages accounting, reconciliation, and regulatory reporting for banking and financial operations. Key Responsibilities: \u2022 Maintain accurate accounting records for banking transactions \u2022 Perform daily bank reconciliations and ledger reviews \u2022 Prepare financial statements and regulatory reports \u2022 Ensure compliance with RBI guidelines and banking regulations \u2022 Support statutory, internal, and concurrent audits \u2022 Coordinate with branches and operations teams Skills & Qualifications: \u2022 Qualified Chartered Accountant \u2022 Strong knowledge of banking accounting and regulations \u2022 Attention to detail and compliance focus 55. Credit Analyst Role Summary: The Credit Analyst evaluates creditworthiness of borrowers and supports lending decisions through financial and risk analysis. Key Responsibilities: \u2022 Analyze financial statements and cash flows of borrowers \u2022 Assess credit risk and repayment capacity \u2022 Prepare credit appraisal and sanction notes \u2022 Monitor loan accounts and covenant compliance \u2022 Conduct industry and borrower risk analysis \u2022 Support credit committees and management Skills & Qualifications: \u2022 CA with strong financial analysis skills \u2022 Knowledge of lending products and credit risk \u2022 Analytical and decision-support capability 56. Loan Audit Officer Role Summary: The Loan Audit Officer audits loan portfolios to ensure compliance with lending policies, RBI norms, and internal controls. Key Responsibilities: \u2022 Audit loan documentation and sanction processes \u2022 Verify compliance with RBI and internal credit policies \u2022 Review asset classification and provisioning \u2022 Identify irregularities and control gaps \u2022 Prepare audit reports and follow-up actions \u2022 Support regulatory inspections and reviews Skills & Qualifications: \u2022 Qualified CA \u2022 Knowledge of banking audits and loan operations \u2022 Strong observation and reporting skills 57. Treasury Manager Role Summary: The Treasury Manager manages liquidity, investments, and financial risk to optimize returns and ensure funding stability. Key Responsibilities: \u2022 Manage cash flow, liquidity, and funding requirements \u2022 Oversee investments, borrowings, and interest rate risk \u2022 Monitor forex exposure and hedging strategies \u2022 Ensure compliance with RBI and treasury regulations \u2022 Prepare treasury MIS and risk reports \u2022 Coordinate with banks, investors, and regulators Skills & Qualifications: \u2022 CA with treasury and financial markets exposure \u2022 Strong understanding of risk management and derivatives \u2022 Analytical and strategic thinking skills 58. Investment Analyst Role Summary: The Investment Analyst evaluates investment opportunities and supports portfolio decisions through research and financial modeling. Key Responsibilities: \u2022 Analyze financial performance of companies and sectors \u2022 Build financial models and valuation reports \u2022 Conduct market, industry, and risk analysis \u2022 Support investment decisions and recommendations \u2022 Track portfolio performance and market trends \u2022 Prepare investment presentations and reports Skills & Qualifications: \u2022 Qualified CA \u2022 Strong financial modeling and valuation skills \u2022 Knowledge of capital markets and investments 59. Fund Accountant Role Summary: The Fund Accountant manages accounting and reporting for investment funds, ensuring accuracy and regulatory compliance. Key Responsibilities: \u2022 Maintain books of accounts for mutual funds / AIFs \u2022 Calculate NAV and fund performance metrics \u2022 Prepare investor reports and regulatory filings \u2022 Coordinate with custodians, fund managers, and auditors \u2022 Ensure compliance with SEBI and regulatory requirements \u2022 Support fund audits and reviews Skills & Qualifications: \u2022 CA with fund accounting experience \u2022 Knowledge of fund structures and regulations \u2022 Strong accounting and reconciliation skills 60. Portfolio Manager Role Summary: The Portfolio Manager manages investment portfolios to achieve optimal returns within defined risk parameters. Key Responsibilities: \u2022 Develop and implement portfolio investment strategies \u2022 Monitor portfolio performance and risk exposure \u2022 Make buy/sell/hold decisions based on analysis \u2022 Ensure compliance with investment guidelines \u2022 Communicate portfolio performance to stakeholders \u2022 Adjust strategies based on market conditions Skills & Qualifications: \u2022 CA with strong investment and portfolio management experience \u2022 Deep understanding of markets and risk management \u2022 Strategic and decision-making ability 61. Relationship Manager (Corporate Banking) Role Summary: The Relationship Manager manages corporate client relationships and drives banking solutions and business growth. Key Responsibilities: \u2022 Manage relationships with corporate clients \u2022 Identify and cross-sell banking products and services \u2022 Coordinate credit appraisal and loan processing \u2022 Monitor client accounts and credit exposure \u2022 Ensure customer satisfaction and retention \u2022 Act as liaison between clients and internal teams Skills & Qualifications: \u2022 CA with strong finance and client-handling skills \u2022 Knowledge of corporate banking products \u2022 Communication and relationship-building skills 62. Risk Analyst (Banking & NBFC) Role Summary: The Risk Analyst identifies, measures, and monitors financial and operational risks in banking and NBFC environments. Key Responsibilities: \u2022 Analyze credit, market, and operational risks \u2022 Develop risk models and monitoring tools \u2022 Track portfolio risk and early warning indicators \u2022 Prepare risk dashboards and reports \u2022 Support stress testing and risk assessments \u2022 Ensure compliance with RBI risk management norms Skills & Qualifications: \u2022 Qualified CA \u2022 Strong risk analysis and data interpretation skills \u2022 Knowledge of banking and NBFC regulations INVESTMENT, VALUATION & ADVISORY ROLES 63. Valuation Analyst Role Summary: The Valuation Analyst supports valuation engagements by analyzing financial data and applying valuation methodologies for businesses, assets, and securities. Key Responsibilities: \u2022 Perform business and asset valuations \u2022 Build financial models and forecasts \u2022 Apply valuation techniques (DCF, Comparable, Precedent Transactions) \u2022 Analyze financial statements and market data \u2022 Prepare valuation reports and presentations \u2022 Support transaction and advisory engagements Skills & Qualifications: \u2022 Qualified Chartered Accountant \u2022 Strong financial modeling and valuation skills \u2022 Analytical and detail-oriented mindset 64. Business Valuation Consultant Role Summary: The Business Valuation Consultant provides independent valuation opinions for strategic, regulatory, and transaction purposes. Key Responsibilities: \u2022 Lead valuation engagements for businesses and shares \u2022 Determine valuation approach and assumptions \u2022 Review financial projections and business plans \u2022 Prepare valuation reports for regulatory and transaction use \u2022 Support M&A, restructuring, and fundraising activities \u2022 Liaise with clients, auditors, and regulators Skills & Qualifications: \u2022 CA with strong valuation experience \u2022 In-depth knowledge of valuation standards and methods \u2022 Client-facing and advisory skills 65. Financial Analyst Role Summary: The Financial Analyst provides financial insights, analysis, and forecasts to support management decision-making. Key Responsibilities: \u2022 Analyze financial statements and performance trends \u2022 Prepare budgets, forecasts, and variance analysis \u2022 Build financial models and scenario analysis \u2022 Support strategic planning and investment evaluation \u2022 Prepare MIS and management reports \u2022 Assist in cost control and profitability analysis Skills & Qualifications: \u2022 Qualified CA \u2022 Strong financial analysis and modeling skills \u2022 Advanced Excel and reporting proficiency 66. Equity Research Analyst Role Summary: The Equity Research Analyst analyzes listed companies and industries to provide investment recommendations. Key Responsibilities: \u2022 Conduct company and industry research \u2022 Analyze financial statements and earnings performance \u2022 Build valuation and forecasting models \u2022 Prepare research reports and investment recommendations \u2022 Track market trends and corporate actions \u2022 Present insights to investors and fund managers Skills & Qualifications: \u2022 CA with strong capital markets knowledge \u2022 Financial modeling and valuation expertise \u2022 Strong research and communication skills 67. M&A Consultant Role Summary: The M&A Consultant advises clients on mergers, acquisitions, divestments, and restructuring transactions. Key Responsibilities: \u2022 Support M&A transactions end-to-end \u2022 Perform financial analysis and valuation \u2022 Assist in deal structuring and negotiations \u2022 Coordinate due diligence activities \u2022 Prepare pitch decks and transaction documents \u2022 Liaise with clients, legal, and regulatory teams Skills & Qualifications: \u2022 Qualified CA \u2022 Strong M&A and transaction advisory experience \u2022 Strategic and deal execution skills 68. Due Diligence Analyst Role Summary: The Due Diligence Analyst evaluates financial, tax, and operational aspects of target companies during transactions. Key Responsibilities: \u2022 Conduct financial and tax due diligence \u2022 Analyze historical financial performance and risks \u2022 Identify deal risks and red flags \u2022 Prepare due diligence reports and summaries \u2022 Support transaction decision-making \u2022 Coordinate with clients and advisors Skills & Qualifications: \u2022 CA with due diligence experience \u2022 Strong analytical and investigative skills \u2022 Attention to detail and reporting expertise 69. Corporate Finance Advisor Role Summary: The Corporate Finance Advisor provides strategic financial advice on capital raising, restructuring, and growth initiatives. Key Responsibilities: \u2022 Advise on fundraising, debt, and equity transactions \u2022 Evaluate strategic investment and expansion opportunities \u2022 Support financial restructuring and turnaround projects \u2022 Prepare financial models and investor presentations \u2022 Liaise with investors, banks, and stakeholders \u2022 Support board-level financial decision-making Skills & Qualifications: \u2022 Qualified CA \u2022 Strong corporate finance and advisory expertise \u2022 Strategic thinking and communication skills 70. Investment Banking Analyst Role Summary: The Investment Banking Analyst supports investment banking transactions including M&A, capital raising, and advisory mandates. Key Responsibilities: \u2022 Build financial models and valuation analyses \u2022 Prepare pitch books and transaction presentations \u2022 Support deal execution and documentation \u2022 Conduct industry and company research \u2022 Assist senior bankers in client engagements \u2022 Support regulatory and transaction compliance Skills & Qualifications: \u2022 CA with strong financial modeling skills \u2022 Knowledge of capital markets and deal processes \u2022 High attention to detail and work discipline 71. Transaction Advisory Manager Role Summary: The Transaction Advisory Manager leads transaction advisory engagements and manages teams supporting complex deals. Key Responsibilities: \u2022 Lead financial due diligence and advisory assignments \u2022 Manage transaction teams and timelines \u2022 Review valuation, diligence, and deal outputs \u2022 Advise clients on deal risks and structure \u2022 Coordinate with legal, tax, and regulatory advisors \u2022 Support senior leadership in transaction execution Skills & Qualifications: \u2022 CA with strong transaction advisory experience \u2022 Leadership and client management skills \u2022 Deep understanding of deal lifecycle GOVERNMENT & PSU ROLES 72. Government Auditor Role Summary: The Government Auditor examines public accounts to ensure proper utilization of government funds and compliance with financial rules and regulations. Key Responsibilities: \u2022 Conduct audits of government departments and public bodies \u2022 Verify expenditure against sanctioned budgets and grants \u2022 Ensure compliance with government financial rules and manuals \u2022 Identify irregularities, inefficiencies, and misuse of funds \u2022 Prepare audit reports and observations for authorities \u2022 Support legislative and parliamentary audit processes Skills & Qualifications: \u2022 Qualified Chartered Accountant \u2022 Strong knowledge of government accounting and audit procedures \u2022 High integrity and attention to detail 73. Accounts Officer (PSU) Role Summary: The Accounts Officer manages accounting operations, financial records, and statutory compliance in a Public Sector Undertaking. Key Responsibilities: \u2022 Maintain books of accounts and financial records \u2022 Prepare financial statements as per government and PSU norms \u2022 Ensure compliance with accounting standards and regulations \u2022 Manage payments, receipts, and reconciliations \u2022 Coordinate with statutory and CAG auditors \u2022 Support budget preparation and financial reporting Skills & Qualifications: \u2022 CA qualification \u2022 Knowledge of PSU accounting and government financial rules \u2022 ERP and financial systems proficiency 74. Finance Officer (PSU) Role Summary: The Finance Officer oversees financial planning, budgeting, and financial control in a PSU. Key Responsibilities: \u2022 Prepare budgets, forecasts, and financial plans \u2022 Monitor expenditure and financial performance \u2022 Support investment, procurement, and contract decisions \u2022 Ensure financial discipline and cost control \u2022 Prepare MIS and management reports \u2022 Advise management on financial matters Skills & Qualifications: \u2022 Qualified CA \u2022 Strong financial planning and analysis skills \u2022 Knowledge of PSU finance and regulations 75. Internal Auditor - Government Bodies Role Summary: The Internal Auditor evaluates internal controls and processes in government departments to enhance accountability and efficiency. Key Responsibilities: \u2022 Conduct internal audits of government departments and schemes \u2022 Review compliance with financial rules and procedures \u2022 Assess internal controls and risk management \u2022 Identify control gaps and process improvements \u2022 Prepare internal audit reports and recommendations \u2022 Follow up on audit observations and corrective actions Skills & Qualifications: \u2022 Chartered Accountant \u2022 Knowledge of government auditing and internal control systems \u2022 Strong analytical and reporting skills 76. Comptroller & Auditor General (through exams) Role Summary: Officers under the Comptroller & Auditor General (CAG) audit government accounts and public sector entities to ensure transparency and accountability. Key Responsibilities: \u2022 Audit accounts of central and state governments \u2022 Review public expenditure, revenue, and receipts \u2022 Conduct performance and compliance audits \u2022 Report audit findings to Parliament and Legislatures \u2022 Support constitutional audit functions \u2022 Ensure public financial accountability Skills & Qualifications: \u2022 CA qualification (through relevant competitive exams and services) \u2022 Strong understanding of public finance and governance \u2022 High ethical standards and independence 77. GST Officer / Consultant Role Summary: The GST Officer / Consultant ensures compliance with GST laws and supports assessment, audit, and advisory functions. Key Responsibilities: \u2022 Assess GST returns and filings \u2022 Conduct GST audits and inspections \u2022 Handle GST assessments, notices, and disputes \u2022 Advise on GST compliance and interpretation \u2022 Support enforcement and revenue functions \u2022 Ensure adherence to GST laws and procedures Skills & Qualifications: \u2022 Qualified CA \u2022 Strong knowledge of GST laws and procedures \u2022 Analytical and regulatory interpretation skills 78. Income Tax Advisor Role Summary: The Income Tax Advisor provides advisory and compliance support related to income tax laws for individuals, businesses, or government bodies. Key Responsibilities: \u2022 Advise on income tax compliance and planning \u2022 Prepare and review income tax returns \u2022 Support assessments, appeals, and representations \u2022 Interpret tax laws and circulars \u2022 Assist in litigation and dispute resolution \u2022 Maintain accurate tax documentation Skills & Qualifications: \u2022 Chartered Accountant \u2022 Strong expertise in Income Tax Act and procedures \u2022 Advisory and representation skills 79. International Accountant Role Overview An International Accountant manages accounting operations for multinational businesses, ensuring compliance with international accounting standards, cross-border transactions, and multi-currency reporting. Key Responsibilities \u2022 Prepare and maintain financial statements for international entities \u2022 Handle multi-currency accounting and foreign exchange adjustments \u2022 Ensure compliance with IFRS and local country accounting regulations \u2022 Coordinate with overseas subsidiaries and finance teams \u2022 Manage intercompany transactions and reconciliations \u2022 Support international audits and regulatory reporting \u2022 Monitor international tax implications and transfer pricing basics Skills & Qualifications \u2022 Chartered Accountant (CA) or equivalent \u2022 Strong knowledge of IFRS \u2022 Experience with global ERP systems (SAP, Oracle, NetSuite) \u2022 Excellent communication and cross-cultural coordination skills Career Scope \u2022 Global Finance Lead \u2022 Regional Controller \u2022 International Finance Manager 80. Global Finance Manager Role Overview A Global Finance Manager oversees financial strategy, reporting, and performance across multiple countries and business units. Key Responsibilities \u2022 Manage global budgeting, forecasting, and financial planning \u2022 Consolidate financial statements of global entities \u2022 Analyze financial performance across regions \u2022 Ensure compliance with international accounting and tax laws \u2022 Oversee treasury, cash flow, and global funding structures \u2022 Lead and mentor international finance teams \u2022 Support strategic decisions, expansion, and investments Skills & Qualifications \u2022 CA with 8-15 years of global finance experience \u2022 Expertise in consolidation and international compliance \u2022 Strong leadership and stakeholder management skills Career Scope \u2022 Chief Financial Officer (Global) \u2022 Regional Finance Director 81. IFRS Consultant Role Overview An IFRS Consultant advises organizations on adoption, implementation, and interpretation of International Financial Reporting Standards. Key Responsibilities \u2022 Guide companies in IFRS transition and implementation \u2022 Interpret complex IFRS standards and provide advisory notes \u2022 Convert financial statements from local GAAP to IFRS \u2022 Support audits, disclosures, and regulatory filings \u2022 Train internal finance teams on IFRS updates \u2022 Assist in IFRS impact assessments and policy documentation Skills & Qualifications \u2022 CA with strong IFRS expertise \u2022 Experience in advisory or Big 4 consulting preferred \u2022 Analytical and documentation skills Career Scope \u2022 Technical Accounting Head \u2022 Global Accounting Policy Manager 82. US GAAP Specialist Role Overview A US GAAP Specialist ensures accurate financial reporting and compliance with US accounting standards, primarily for US-based or listed companies. Key Responsibilities \u2022 Prepare and review financial statements under US GAAP \u2022 Handle SEC reporting (10-K, 10-Q) support \u2022 Manage GAAP conversions from IFRS or Indian GAAP \u2022 Assist in SOX compliance and internal controls \u2022 Coordinate with US auditors and regulatory teams \u2022 Interpret complex accounting topics (revenue, leases, equity) Skills & Qualifications \u2022 CA with strong US GAAP knowledge \u2022 Experience with US clients or MNCs \u2022 Familiarity with SOX and SEC requirements Career Scope \u2022 US Accounting Manager \u2022 Financial Reporting Director 83. Overseas Audit Manager Role Overview An Overseas Audit Manager leads audits for international clients, ensuring compliance with global auditing standards and regulatory frameworks. Key Responsibilities \u2022 Plan and manage international audit engagements \u2022 Lead audit teams across multiple locations \u2022 Ensure compliance with ISA and local regulations \u2022 Review audit reports and working papers \u2022 Coordinate with overseas clients and regulators \u2022 Support cross-border group audits and consolidations Skills & Qualifications \u2022 CA with audit leadership experience \u2022 Strong knowledge of international auditing standards \u2022 Team management and client-handling skills Career Scope \u2022 Audit Partner \u2022 Global Assurance Leader 84. Global Tax Consultant Role Overview A Global Tax Consultant advises multinational organizations on international taxation, cross\ufffeborder structuring, and compliance. Key Responsibilities \u2022 Advise on international tax planning and structuring \u2022 Handle transfer pricing documentation and compliance \u2022 Manage cross-border tax filings and reporting \u2022 Support double taxation avoidance and treaty benefits \u2022 Assist in global tax audits and disputes \u2022 Monitor global tax law changes (BEPS, OECD guidelines) Skills & Qualifications \u2022 CA with specialization in international taxation \u2022 Strong understanding of DTAA, transfer pricing, and BEPS \u2022 Research and advisory skills Career Scope \u2022 Global Tax Head \u2022 International Tax Partner 85. Management Consultant Role Overview A Management Consultant works with organizations to improve overall business performance by analyzing operations, identifying problems, and implementing strategic and operational solutions. Key Responsibilities \u2022 Analyze business models, organizational structure, and management processes \u2022 Identify operational inefficiencies and recommend improvement strategies \u2022 Support leadership in decision-making and change management \u2022 Conduct market research, benchmarking, and performance analysis \u2022 Prepare business cases, reports, and presentations for senior management \u2022 Assist in transformation projects such as restructuring and turnaround \u2022 Coordinate with cross-functional teams and stakeholders Skills & Qualifications \u2022 CA / MBA / equivalent professional qualification \u2022 Strong analytical, problem-solving, and presentation skills \u2022 Experience in consulting or corporate strategy preferred Career Scope \u2022 Senior Management Consultant \u2022 Engagement Manager \u2022 Partner / Director 86. Business Consultant Role Overview A Business Consultant advises organizations on improving business processes, profitability, compliance, and growth strategies across various functions. Key Responsibilities \u2022 Evaluate existing business operations and financial performance \u2022 Identify gaps in processes, controls, and compliance \u2022 Recommend solutions for cost optimization and revenue enhancement \u2022 Assist in business planning, budgeting, and forecasting \u2022 Support implementation of systems, policies, and SOPs \u2022 Advise startups and SMEs on scaling and operational efficiency Skills & Qualifications \u2022 CA with strong business and financial understanding \u2022 Knowledge of operations, finance, and compliance \u2022 Client-handling and communication skills Career Scope \u2022 Senior Business Consultant \u2022 Practice Head - Advisory \u2022 Independent Consultant 87. Financial Advisory Consultant Role Overview A Financial Advisory Consultant provides expert advice on financial management, restructuring, transactions, and risk mitigation. Key Responsibilities \u2022 Advise clients on financial restructuring and turnaround strategies \u2022 Perform financial analysis, valuation, and modeling \u2022 Support mergers, acquisitions, and investment decisions \u2022 Assist in debt advisory, fundraising, and capital structuring \u2022 Conduct due diligence and financial risk assessments \u2022 Prepare advisory reports for stakeholders and investors Skills & Qualifications \u2022 CA with expertise in corporate finance and advisory \u2022 Strong financial modeling and analytical skills \u2022 Experience in advisory or transaction services preferred Career Scope \u2022 Transaction Advisory Manager \u2022 Corporate Finance Director 88. Strategy & Finance Consultant Role Overview A Strategy & Finance Consultant integrates financial expertise with strategic thinking to support long-term business planning and growth. Key Responsibilities \u2022 Develop corporate and business-level strategies \u2022 Perform strategic financial planning and scenario analysis \u2022 Evaluate investment opportunities and expansion plans \u2022 Support leadership with data-driven strategic insights \u2022 Analyze market trends, competition, and industry dynamics \u2022 Assist in performance management and KPI frameworks Skills & Qualifications \u2022 CA / MBA (Strategy / Finance) \u2022 Strong strategic thinking and financial acumen \u2022 Advanced Excel and presentation skills Career Scope \u2022 Strategy Manager \u2022 Corporate Strategy Head 89. Process Improvement Consultant Role Overview A Process Improvement Consultant focuses on enhancing efficiency, reducing costs, and optimizing workflows through structured process analysis and redesign. Key Responsibilities \u2022 Map and document existing business processes \u2022 Identify inefficiencies, bottlenecks, and control gaps \u2022 Design improved processes and SOPs \u2022 Implement process automation and best practices \u2022 Support ERP and system implementation projects \u2022 Monitor performance and continuous improvement initiatives Skills & Qualifications \u2022 CA with strong process and control understanding \u2022 Knowledge of Lean, Six Sigma, or process frameworks preferred \u2022 Change management and implementation skills Career Scope \u2022 Operational Excellence Manager \u2022 Process Transformation Lead 90. Startup CFO Role Overview The Startup CFO is a strategic finance leader responsible for managing financial planning, fundraising support, cash flow, compliance, and investor communication in a fast-growing startup environment. Key Responsibilities \u2022 Lead financial strategy, budgeting, and long-term financial planning \u2022 Manage cash flow, burn rate, and runway optimization \u2022 Support fundraising, investor pitches, and due diligence \u2022 Oversee accounting, taxation, payroll, and statutory compliance \u2022 Design internal controls, MIS, and financial reporting systems \u2022 Work closely with founders on pricing, unit economics, and growth decisions \u2022 Liaise with auditors, bankers, investors, and legal advisors Skills & Qualifications \u2022 Chartered Accountant with startup or SME experience \u2022 Strong understanding of fundraising, VC expectations, and startup metrics \u2022 Strategic mindset with hands-on execution capability Career Scope \u2022 CFO - Growth Stage / IPO Stage \u2022 Fractional CFO Practice 91. Virtual CFO Role Overview A Virtual CFO provides CFO-level financial leadership to startups and SMEs on a part-time or retainer basis without being a full-time employee. Key Responsibilities \u2022 Prepare financial forecasts, budgets, and cash flow projections \u2022 Monitor monthly MIS, KPIs, and financial health \u2022 Advise founders on financial decisions and growth strategy \u2022 Ensure accounting accuracy and statutory compliance \u2022 Assist in fundraising, bank financing, and investor reporting \u2022 Improve financial discipline and internal controls Skills & Qualifications \u2022 CA with strong advisory and client management skills \u2022 Experience working with multiple startups or SMEs \u2022 Proficiency in cloud accounting tools and dashboards Career Scope \u2022 Independent Virtual CFO \u2022 CFO Advisory Firm Partner 92. Finance Head - Startup Role Overview The Finance Head manages day-to-day finance operations while supporting strategic decision-making in a growing startup. Key Responsibilities \u2022 Oversee accounting, bookkeeping, and monthly closures \u2022 Prepare budgets, forecasts, and MIS reports \u2022 Manage cash flow, vendor payments, and receivables \u2022 Ensure tax compliance (GST, TDS, Income Tax) \u2022 Support audits and regulatory filings \u2022 Coordinate with founders and functional heads on financial planning Skills & Qualifications \u2022 CA / CMA with startup operations experience \u2022 Strong knowledge of accounting systems and compliance \u2022 Detail-oriented with execution focus Career Scope \u2022 Startup CFO \u2022 Finance Director 93. Compliance Manager - Startup Role Overview The Compliance Manager ensures that the startup meets all statutory, regulatory, and governance requirements while supporting scalable compliance processes. Key Responsibilities \u2022 Manage ROC, MCA, GST, TDS, PF, ESI, and Income Tax compliances \u2022 Track and ensure timely statutory filings and renewals \u2022 Coordinate with auditors, consultants, and legal teams \u2022 Implement compliance calendars and internal checklists \u2022 Support due diligence and investor compliance requirements \u2022 Educate internal teams on compliance best practices Skills & Qualifications \u2022 CA / CS with strong regulatory knowledge \u2022 Experience in startup or SME compliance \u2022 Strong documentation and coordination skills Career Scope \u2022 Compliance Head \u2022 Governance & Risk Manager 94. Business Finance Partner Role Overview A Business Finance Partner works closely with founders and business teams to support strategic decision-making using financial insights and analysis. Key Responsibilities \u2022 Act as finance liaison for business and growth teams \u2022 Analyze unit economics, pricing, and profitability \u2022 Support budgeting and performance tracking \u2022 Provide financial insights for expansion and scaling decisions \u2022 Assist in scenario planning and investment evaluation \u2022 Drive cost control and margin improvement initiatives Skills & Qualifications \u2022 CA with strong business and analytical mindset \u2022 Experience in FP&A or business finance roles \u2022 Excellent stakeholder management skills Career Scope \u2022 Strategic Finance Manager \u2022 Startup CFO 95. CA Faculty / Trainer Role Overview A CA Faculty / Trainer is responsible for delivering high-quality academic and practical training to CA students, focusing on conceptual clarity, exam readiness, and real-world application. Key Responsibilities \u2022 Teach CA Foundation, Inter, and Final subjects (as per specialization) \u2022 Develop structured lesson plans, notes, and revision material \u2022 Conduct regular tests, mock exams, and doubt-clearing sessions \u2022 Simplify complex accounting, taxation, and audit concepts \u2022 Stay updated with ICAI syllabus, amendments, and notifications \u2022 Mentor students for exam strategy and career guidance \u2022 Support online and offline teaching modes Skills & Qualifications \u2022 Qualified Chartered Accountant \u2022 Strong subject expertise and presentation skills \u2022 Teaching or industry experience preferred Career Scope \u2022 Senior Faculty \u2022 Academic Director \u2022 Independent CA Educator 96. Finance Lecturer / Professor Role Overview A Finance Lecturer or Professor teaches finance and accounting subjects at colleges, universities, and business schools, combining academic theory with practical insights. Key Responsibilities \u2022 Deliver lectures in accounting, finance, taxation, and auditing \u2022 Design curriculum, course material, and assessment methods \u2022 Conduct exams, evaluations, and academic mentoring \u2022 Participate in research, publications, and academic development \u2022 Guide student projects and internships \u2022 Engage in academic committees and institutional activities Skills & Qualifications \u2022 CA / MBA / PhD in Finance or Accounting \u2022 Strong academic orientation and communication skills \u2022 Research and teaching aptitude Career Scope \u2022 Associate Professor \u2022 Professor \u2022 Dean - Finance / Academics 97. Accounting Trainer Role Overview An Accounting Trainer focuses on practical accounting skills, software training, and job\ufffeoriented finance education for students and working professionals. Key Responsibilities \u2022 Train learners in accounting principles and real-world accounting practices \u2022 Teach accounting software (Tally, ERP, Excel, cloud accounting tools) \u2022 Provide hands-on GST, TDS, payroll, and compliance training \u2022 Develop practical case studies and exercises \u2022 Conduct workshops, corporate training, and certification programs \u2022 Assess trainee performance and provide feedback Skills & Qualifications \u2022 CA / CMA / experienced accounting professional \u2022 Strong practical accounting and software knowledge \u2022 Training and mentoring ability Career Scope \u2022 Senior Accounting Trainer \u2022 Training Program Head \u2022 Independent Skill Trainer 98. Content Developer - Finance Role Overview A Content Developer - Finance creates high-quality educational content for finance learners across digital platforms, textbooks, courses, and assessment tools. Key Responsibilities \u2022 Develop written, video, and presentation-based finance content \u2022 Create study material, practice questions, and case studies \u2022 Simplify technical finance topics for different learning levels \u2022 Update content based on regulatory and syllabus changes \u2022 Collaborate with trainers, designers, and video teams \u2022 Ensure accuracy, clarity, and learner engagement Skills & Qualifications \u2022 CA or finance professional with strong writing skills \u2022 Deep conceptual knowledge and clarity of expression \u2022 Experience in EdTech or content creation preferred Career Scope \u2022 Lead Content Strategist \u2022 Academic Product Manager 99. Finance YouTuber / Educator Role Overview A Finance YouTuber / Educator creates digital finance education content for public platforms, helping learners understand finance, accounting, taxation, and career guidance. Key Responsibilities \u2022 Create educational videos on finance and accounting topics \u2022 Explain concepts, exam preparation, and career guidance \u2022 Research trending finance topics and audience needs \u2022 Maintain content quality, accuracy, and compliance \u2022 Engage with audience through comments, live sessions, and Q&A \u2022 Collaborate with EdTech platforms, brands, and institutions Skills & Qualifications \u2022 CA or strong finance expertise \u2022 Camera confidence and communication skills \u2022 Basic video production and digital marketing knowledge Career Scope \u2022 Full-time Digital Educator \u2022 Personal Brand & EdTech Founder 100. Practicing Chartered Accountant Role Overview A Practicing Chartered Accountant provides professional accounting, audit, taxation, and advisory services to individuals, startups, SMEs, and corporates in compliance with ICAI regulations. Key Responsibilities \u2022 Provide audit, taxation, accounting, and advisory services \u2022 Conduct statutory audits, tax audits, and internal audits \u2022 Handle income tax, GST, and other statutory filings \u2022 Advise clients on financial planning, compliance, and risk management \u2022 Represent clients before tax authorities and regulatory bodies \u2022 Maintain ethical standards and professional compliance as per ICAI \u2022 Build and manage long-term client relationships Skills & Qualifications \u2022 Qualified CA with Certificate of Practice (COP) \u2022 Strong technical and client-handling skills \u2022 Knowledge of applicable laws and regulations Career Scope \u2022 Sole Proprietor / Partner in CA Firm \u2022 Specialized Advisory Practice 101. Freelance Accountant Role Overview A Freelance Accountant provides accounting and bookkeeping services to multiple clients on a project or retainer basis without being a full-time employee. Key Responsibilities \u2022 Maintain books of accounts for clients \u2022 Handle monthly accounting, reconciliations, and closures \u2022 Prepare financial statements and MIS reports \u2022 Manage invoicing, payables, and receivables \u2022 Coordinate with tax consultants and auditors \u2022 Use accounting software and cloud-based tools Skills & Qualifications \u2022 CA / CMA / experienced accounting professional \u2022 Strong accounting software and Excel skills \u2022 Attention to detail and accuracy Career Scope \u2022 Virtual Accounting Practice \u2022 Accounting Services Firm 102. Virtual Accountant Role Overview A Virtual Accountant delivers end-to-end accounting services remotely using cloud accounting platforms for startups, SMEs, and global clients. Key Responsibilities \u2022 Maintain real-time books of accounts remotely \u2022 Handle bank, GST, and vendor reconciliations \u2022 Prepare monthly financial statements and dashboards \u2022 Support compliance and audit requirements \u2022 Manage accounting via cloud tools (Zoho, QuickBooks, Xero) \u2022 Communicate with clients through digital channels Skills & Qualifications \u2022 CA or experienced accounting professional \u2022 Expertise in cloud accounting tools \u2022 Strong remote client communication skills Career Scope \u2022 Global Virtual Accounting Consultant \u2022 Accounting Outsourcing Firm Owner 103. Outsourced CFO Role Overview An Outsourced CFO provides strategic financial leadership to companies on a part-time or contract basis without hiring a full-time CFO. Key Responsibilities \u2022 Lead financial planning, budgeting, and forecasting \u2022 Monitor cash flow, burn rate, and profitability \u2022 Support fundraising, debt structuring, and investor relations \u2022 Design financial controls, MIS, and reporting frameworks \u2022 Advise founders and CEOs on financial strategy \u2022 Oversee compliance and financial governance Skills & Qualifications \u2022 CA with strong corporate finance and leadership experience \u2022 Strategic mindset with hands-on execution ability \u2022 Experience with startups or SMEs preferred Career Scope \u2022 Fractional CFO Practice \u2022 Finance Advisory Partner 104. Freelance Tax Consultant Role Overview A Freelance Tax Consultant advises individuals and businesses on tax planning, compliance, and representation while working independently. Key Responsibilities \u2022 Prepare and file income tax returns \u2022 Advise on tax planning and savings strategies \u2022 Handle tax audits and assessments \u2022 Respond to tax notices and represent clients \u2022 Stay updated with tax law changes \u2022 Maintain client confidentiality and compliance Skills & Qualifications \u2022 CA or qualified tax professional \u2022 Strong knowledge of direct and indirect tax laws \u2022 Client advisory and documentation skills Career Scope \u2022 Independent Tax Practice \u2022 Specialized Tax Advisory Firm 105. GST Practitioner Role Overview A GST Practitioner manages GST compliance, advisory, and filings for businesses under the GST law. Key Responsibilities \u2022 Prepare and file GST returns (GSTR-1, 3B, annual returns) \u2022 Manage GST reconciliations and input tax credit \u2022 Advise clients on GST classification and compliance \u2022 Handle GST notices and departmental communication \u2022 Support GST audits and assessments \u2022 Maintain accurate GST records Skills & Qualifications \u2022 CA / GST Practitioner registered under GST law \u2022 Strong understanding of GST rules and compliance \u2022 Detail-oriented approach Career Scope \u2022 GST Advisory Specialist \u2022 Indirect Tax Consultant 106. Compliance Consultant Role Overview A Compliance Consultant ensures businesses meet statutory, regulatory, and governance requirements through structured compliance management. Key Responsibilities \u2022 Manage ROC, MCA, labor law, and tax compliances \u2022 Develop compliance calendars and tracking systems \u2022 Assist clients during audits and due diligence \u2022 Ensure timely filings and documentation \u2022 Advise on regulatory changes and impact \u2022 Coordinate with legal, HR, and finance teams Skills & Qualifications \u2022 CA / CS with compliance expertise \u2022 Strong regulatory and documentation skills \u2022 Ability to manage multiple clients Career Scope \u2022 Compliance Practice Owner \u2022 Risk & Governance Consultant 107. Owner / Managing Partner - CA Firm Role Overview The Owner / Managing Partner of a CA Firm is responsible for leading a full-service professional practice delivering audit, taxation, compliance, and advisory services while ensuring regulatory compliance and business growth. Key Responsibilities \u2022 Establish and manage CA practice in line with ICAI regulations \u2022 Deliver services including audit, taxation, accounting, and advisory \u2022 Build and manage a diversified client portfolio \u2022 Oversee firm operations, staffing, training, and quality control \u2022 Ensure ethical standards, peer review, and compliance requirements \u2022 Develop business development strategies and partnerships \u2022 Represent clients before tax and regulatory authorities Skills & Qualifications \u2022 Qualified CA with Certificate of Practice (COP) \u2022 Strong technical knowledge and leadership skills \u2022 Client acquisition and relationship management capability Business Scope \u2022 Sole proprietorship or partnership firm \u2022 Multi-disciplinary professional services firm 108. Founder - Tax Consultancy Firm Role Overview The Founder of a Tax Consultancy Firm specializes in direct and indirect tax advisory, compliance, and litigation services for individuals, SMEs, and corporates. Key Responsibilities \u2022 Provide income tax, corporate tax, and GST advisory services \u2022 Handle tax planning, assessments, audits, and litigation \u2022 Manage return filings and statutory compliance \u2022 Represent clients before tax authorities and appellate forums \u2022 Build tax expertise teams and knowledge frameworks \u2022 Stay updated with tax law changes and judicial precedents Skills & Qualifications \u2022 CA with strong taxation specialization \u2022 Litigation and advisory experience preferred \u2022 Client advisory and documentation skills Business Scope \u2022 Individual & corporate tax advisory \u2022 High-value tax planning & representation services 109. Founder / Partner - Audit & Assurance Firm Role Overview The Founder / Partner of an Audit & Assurance Firm provides independent audit and assurance services to ensure financial transparency, governance, and regulatory compliance. Key Responsibilities \u2022 Conduct statutory, tax, internal, and concurrent audits \u2022 Lead audit planning, execution, and reporting \u2022 Ensure compliance with auditing standards and ICAI guidelines \u2022 Build sector-specific audit expertise (banking, manufacturing, NGOs) \u2022 Maintain audit quality, documentation, and peer review readiness \u2022 Develop long-term assurance relationships with clients Skills & Qualifications \u2022 CA with audit and assurance experience \u2022 Strong understanding of auditing standards and risk assessment \u2022 High ethical standards and professional judgment Business Scope \u2022 Statutory & internal audit services \u2022 Specialized audits (bank, forensic, system audits) 110. Founder - GST & Compliance Firm Role Overview The Founder of a GST & Compliance Firm focuses on managing indirect tax compliance and regulatory obligations for businesses across industries. Key Responsibilities \u2022 Provide GST registration, return filing, and advisory services \u2022 Handle GST reconciliations, audits, and departmental notices \u2022 Manage ROC, MCA, labor law, and other statutory compliances \u2022 Develop compliance calendars and automation processes \u2022 Support startups and SMEs with end-to-end compliance solutions \u2022 Train clients and internal teams on compliance best practices Skills & Qualifications \u2022 CA with strong GST and regulatory knowledge \u2022 Process orientation and compliance management expertise Business Scope \u2022 Retainer-based compliance services \u2022 Compliance outsourcing for startups and MSMEs 111. Founder / Director - Financial Advisory Firm Role Overview The Founder / Director of a Financial Advisory Firm provides strategic financial, transaction, and restructuring advisory to growing businesses and corporates. Key Responsibilities \u2022 Advise clients on corporate finance, valuation, and restructuring \u2022 Support M&A, due diligence, and fundraising transactions \u2022 Prepare financial models, projections, and investor decks \u2022 Assist businesses with capital structuring and debt advisory \u2022 Lead client engagements and advisory teams \u2022 Build credibility with investors, banks, and stakeholders Skills & Qualifications \u2022 CA with strong corporate finance and advisory experience \u2022 Financial modeling and transaction execution skills Business Scope \u2022 Transaction advisory & investment consulting \u2022 High-value strategic finance engagements 112. Founder - Virtual CFO Services Company Role Overview The Founder of a Virtual CFO Services Company delivers CFO-level strategic and operational finance services to startups and SMEs on a fractional or retainer basis. Key Responsibilities \u2022 Provide budgeting, forecasting, and cash flow management \u2022 Monitor burn rate, runway, and unit economics \u2022 Support fundraising, investor reporting, and board discussions \u2022 Implement MIS, dashboards, and financial controls \u2022 Oversee accounting, taxation, and compliance teams \u2022 Act as strategic finance partner to founders and CEOs Skills & Qualifications \u2022 CA with startup, SME, or corporate finance experience \u2022 Strong strategic thinking and communication skills Business Scope \u2022 Retainer-based Virtual CFO engagements \u2022 Scalable finance outsourcing model"
             ],
             "scores": {
-                "final_score": 42.38,
+                "final_score": 90.61,
                 "breakdown": {
-                    "skills": 80,
-                    "experience": 0,
-                    "education": 0,
-                    "semantic": 73.5
+                    "skills_score": 90.77,
+                    "experience_score": 100,
+                    "education_score": 100,
+                    "semantic_score": 73.5,
+                    "matched_skills": [
+                        "taxation",
+                        "bookkeeping",
+                        "accounting",
+                        "gst",
+                        "auditing",
+                        "financial reporting"
+                    ],
+                    "missing_skills": []
                 }
             },
             "file_name": "Chartered Accountant_output.json",
             "rank": 1,
+            "decision": "SHORTLIST"
+        },
+        {
+            "skills": [
+                "budgeting",
+                "statutory audit",
+                "financial reporting",
+                "sox",
+                "chartered accountant",
+                "gaap",
+                "indirect tax",
+                "filing",
+                "taxation",
+                "income tax",
+                "risk management",
+                "gst",
+                "tax compliance",
+                "financial analysis",
+                "ifrs",
+                "forecasting",
+                "management accounting",
+                "cost accounting",
+                "direct tax",
+                "bookkeeping",
+                "accounting",
+                "compliance",
+                "internal audit",
+                "auditing",
+                "excel"
+            ],
+            "experience": {
+                "experiences": [],
+                "total_experience_months": 0
+            },
+            "education": [
+                {
+                    "degree": "AHAMMAD ANSARY CHARTERED ACCOUNTANT *Summary* To obtain a senior level position & develop a challenging career where I can make a meaningful contribution with deep credence & grow professionally Analytical Chartered Accountant known for high productivity and efficient task completion. Specialize in financial reporting, tax planning, and risk management. Excel in communication, problem-solving, and strategic planning. Ready to leverage skills to drive financial accuracy and business success. Hardworking cpa offering several years of experience working with private and public customers. Expertly manages accounting needs following optimal practices and current regulations. Brings wide-ranging knowledge of business and personal finances. *Skills* gst, taxation, tds, income tax, corporate tax, audit, statutory audit, internal audit, orensic audit, financial reporting, ifrs, gaap, accounts, transfer pricing *Experience* - *Tele Barta Ltd.* - Chartered Accountant - 12/2006 - Current - Income Tax & VAT related matters - Audit related matters - Compliance of RISC matters - Compliance of legal & regulatory issues - All types of reporting and correspondence - A largest PSTN company in Bangladesh - Collaborated with senior accountants to ensure compliance with accounting standards. - Supported audit processes by organizing documentation and responding to inquiries. - Communicated with clients regarding their financial statements and queries. - Assisted senior accountants in preparing financial statements and reports. - *Wbs company* - Chartered Accountant Assistant 9/2005 - 04/200 - Preparation of business plan - Monthly, quarterly and yearly forecasting - Budgeting - Financial and statistical analysis - Monthly, quarterly and yearly financial reporting - Adhoc reporting to Board and Management - A pioneer telecommunication company in Bangladesh - Prepared monthly bank reconciliations for multiple accounts. - Coordinated with external auditors during the annual audit process. - Verified accuracy of documents such as invoices, purchase orders. *Education and Training* Mhs Chartered Accounting *Job Experiences* - Manager, Corporate Affairs & Legal, Tele Barta Ltd., (a largest PSTN company in Bangladesh), Income Tax & VAT related matters, Audit related matters, Compliance of RISC matters, Compliance of legal & regulatory issues, All types of reporting and correspondence, 12/01/06, present - Manager - Finance, Data Edge Limited, (a leading ICT company in Bangladesh), Accounting system development, Development & testing of accounting software, Compliance of regulatory and company affairs, All types of financial reporting, 07/01/06, 09/30/06 - Deputy Manager - Finance, Grameenphone Limited, (a pioneer telecommunication company in Bangladesh), Preparation of business plan, Monthly, quarterly and yearly forecasting, Budgeting, Financial and statistical analysis, Monthly, quarterly and yearly financial reporting, Adhoc reporting to Board and Management, 09/01/05, 04/30/06",
+                    "year": "2006"
+                }
+            ],
+            "certifications": [
+                "AHAMMAD ANSARY CHARTERED ACCOUNTANT *Summary* To obtain a senior level position & develop a challenging career where I can make a meaningful contribution with deep credence & grow professionally Analytical Chartered Accountant known for high productivity and efficient task completion. Specialize in financial reporting, tax planning, and risk management. Excel in communication, problem-solving, and strategic planning. Ready to leverage skills to drive financial accuracy and business success. Hardworking cpa offering several years of experience working with private and public customers. Expertly manages accounting needs following optimal practices and current regulations. Brings wide-ranging knowledge of business and personal finances. *Skills* gst, taxation, tds, income tax, corporate tax, audit, statutory audit, internal audit, orensic audit, financial reporting, ifrs, gaap, accounts, transfer pricing *Experience* - *Tele Barta Ltd.* - Chartered Accountant - 12/2006 - Current - Income Tax & VAT related matters - Audit related matters - Compliance of RISC matters - Compliance of legal & regulatory issues - All types of reporting and correspondence - A largest PSTN company in Bangladesh - Collaborated with senior accountants to ensure compliance with accounting standards. - Supported audit processes by organizing documentation and responding to inquiries. - Communicated with clients regarding their financial statements and queries. - Assisted senior accountants in preparing financial statements and reports. - *Wbs company* - Chartered Accountant Assistant 9/2005 - 04/200 - Preparation of business plan - Monthly, quarterly and yearly forecasting - Budgeting - Financial and statistical analysis - Monthly, quarterly and yearly financial reporting - Adhoc reporting to Board and Management - A pioneer telecommunication company in Bangladesh - Prepared monthly bank reconciliations for multiple accounts. - Coordinated with external auditors during the annual audit process. - Verified accuracy of documents such as invoices, purchase orders. *Education and Training* Mhs Chartered Accounting *Job Experiences* - Manager, Corporate Affairs & Legal, Tele Barta Ltd., (a largest PSTN company in Bangladesh), Income Tax & VAT related matters, Audit related matters, Compliance of RISC matters, Compliance of legal & regulatory issues, All types of reporting and correspondence, 12/01/06, present - Manager - Finance, Data Edge Limited, (a leading ICT company in Bangladesh), Accounting system development, Development & testing of accounting software, Compliance of regulatory and company affairs, All types of financial reporting, 07/01/06, 09/30/06 - Deputy Manager - Finance, Grameenphone Limited, (a pioneer telecommunication company in Bangladesh), Preparation of business plan, Monthly, quarterly and yearly forecasting, Budgeting, Financial and statistical analysis, Monthly, quarterly and yearly financial reporting, Adhoc reporting to Board and Management, 09/01/05, 04/30/06"
+            ],
+            "scores": {
+                "final_score": 87.52,
+                "breakdown": {
+                    "skills_score": 86.15,
+                    "experience_score": 100,
+                    "education_score": 100,
+                    "semantic_score": 66.7,
+                    "matched_skills": [
+                        "taxation",
+                        "bookkeeping",
+                        "accounting",
+                        "gst",
+                        "auditing",
+                        "financial reporting"
+                    ],
+                    "missing_skills": []
+                }
+            },
+            "file_name": "Ahammad_cv_output.json",
+            "rank": 2,
+            "decision": "SHORTLIST"
+        },
+        {
+            "skills": [
+                "taxation",
+                "sox",
+                "bookkeeping",
+                "risk management",
+                "direct tax",
+                "accounting",
+                "compliance",
+                "income tax",
+                "internal audit",
+                "indirect tax",
+                "gst",
+                "tax compliance",
+                "statutory audit",
+                "filing",
+                "auditing",
+                "financial reporting"
+            ],
+            "experience": {
+                "experiences": [],
+                "total_experience_months": 0
+            },
+            "education": [
+                {
+                    "degree": "James Brandon CHARTERED ACCOUNTANT ~ SUMMARY e An enthusiastic CA with the execution skills having bachelors of commerce degree from Delhi University. \u00a9 Self-motivated for completion of each step of project/assignment. \u00a2 Eager to learn new law/regulation and technology. EXPERIENCE Article Assistant Price Water & Associates Mar 2017 - Mar 2020 Insurance Sector :- Statutory Audit of Oriental Insurance Company, Hisar. Government Sector :- @ GST returns and Audit of Dakshin Haryana Bijli Vitran Nigam Limited, Hisar. e TDS returns of Haryana Roadways Charitable Sector :- @ Internal Audit of Sewak Sabha Charitable Trust Hospital, Hisar. @ Internal Audit of Shri Rani Sati Mangaliwala Trust, Hisar. Corporate Sector :- Statutory Audit and Tax Audit of Various assignments. Other Areas:- @ Preparation of Annual Financial Statements including Balance Sheet, P&L, Cash Flow Statement & other notes to A/c\u2019s. Filling of Income tax & Tax Audit returns (Individual & Corporates). Filling of GST Audit and Returns (Individual & Corporates). Annual Fillings of Companies with ROC. Handled income tax assessment procedures & Scrutiny Cases. Preparation of Audit Plan & ensure completion of the same within the time. EDUCATION Chartered Accountant San Jose State University Jun 2015 - Nov 2019 \u00ae@ Cleared all groups without any Break. Got exemption in IDT and SCMPE and Secured 434 marks in CA Final. Got exemption in all subjects in IPCC Group | and Group Il. Secured 154 marks in CPT. BCom Northeastern University Jun 2016 - Jun 2018 @ Secured 80% marks in BCom. Higher Secondary (12th) Arizona State University Apr 2014 - Mar 2015 @ Secured 94.8% marks. CONTACT DJ 0 9g in info@resumekraft.com 202-555-0120 Chicago, Illinois, US linkedin.com/resumekraft EXTRA CURRICULAR ACTIVITIES Held the position of House Captain at School Level Participated as a Volunteer in Talent Hunt Lokhit Munch. Participated in various Olympiad competitions and activities organised by the school. ASSIGNMENTS HANDLED Haryana State Application Centre Sheela Stainless Private Limited Autotronics Industries Private Limited Pragmatix Research And Advisory Services Private Limited Balaji Software Private Limited",
+                    "year": "2017"
+                }
+            ],
+            "certifications": [],
+            "scores": {
+                "final_score": 82.05,
+                "breakdown": {
+                    "skills_score": 78.08,
+                    "experience_score": 100,
+                    "education_score": 100,
+                    "semantic_score": 54.5,
+                    "matched_skills": [
+                        "taxation",
+                        "bookkeeping",
+                        "accounting",
+                        "gst",
+                        "auditing",
+                        "financial reporting"
+                    ],
+                    "missing_skills": []
+                }
+            },
+            "file_name": "CA resume_output.json",
+            "rank": 3,
+            "decision": "SHORTLIST"
+        },
+        {
+            "skills": [
+                "taxation",
+                "sox",
+                "bookkeeping",
+                "risk management",
+                "accounts receivable",
+                "accounting",
+                "compliance",
+                "internal audit",
+                "gst",
+                "leadership",
+                "statutory audit",
+                "time management",
+                "auditing",
+                "financial reporting"
+            ],
+            "experience": {
+                "experiences": [],
+                "total_experience_months": 0
+            },
+            "education": [
+                {
+                    "degree": "SEBASTIAN BENNETT Professional Accountant +123-456-7890 hello@reallygreatsite.com 123 Anywhere St., Any City PROFILE Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. EDUCATION Borcelle University Master of Business Administration 2026-2029 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Borcelle University Bachelor of Arts in Accounting 2023-2026 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam WORK EXPERIENCE Salford & Co. Senior Accountant 2033 - 2035 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Salford & Co. Financial Accountant 2031 - 2033 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Salford & Co. Junior Accountant 2029 - 2031 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. SKILLS Professional Personal Auditing Expense Reporting Leadership Financial Accounting Managerial Accounting Management Skills Financial Reporting Accounts Receivable Time Management",
+                    "year": "2026"
+                }
+            ],
+            "certifications": [],
+            "scores": {
+                "final_score": 77.4,
+                "breakdown": {
+                    "skills_score": 78.08,
+                    "experience_score": 100,
+                    "education_score": 100,
+                    "semantic_score": 35.9,
+                    "matched_skills": [
+                        "taxation",
+                        "bookkeeping",
+                        "accounting",
+                        "gst",
+                        "auditing",
+                        "financial reporting"
+                    ],
+                    "missing_skills": []
+                }
+            },
+            "file_name": "White and Black Minimalist Professional Accountant Resume_20260214_220801_0000_output.json",
+            "rank": 4,
+            "decision": "REVIEW"
+        },
+        {
+            "skills": [
+                "sox",
+                "risk management",
+                "chartered accountant",
+                "compliance",
+                "internal audit",
+                "teamwork",
+                "auditing",
+                "leadership",
+                "statutory audit",
+                "time management"
+            ],
+            "experience": {
+                "experiences": [],
+                "total_experience_months": 0
+            },
+            "education": [
+                {
+                    "degree": "JOBY K JACOB SALES EXECUTIVE CONTACT & +91. 98950 65706 \u2122 _jobinajoby171@gmail.com Q Kottayam DETAILS \u00ab DOB - 14/6/1986 e Father's Name - Joy Jacob \u00a2 Gender - Female e Martial status - Married e Religion - Christian e Nationality - Indian EDUCATION Predegree - Amalambika college of Arts , Kottayam Kerala SKILLS e Active Listening e Public Relations \u00a2 Teamwork e\u00a2 Time Management Leadership Effective Communication Adaptability LANGUAGES e English e Malayalam \u00a2 Tamil PROFILE Dynamic Sales Executive with strong communication and persuasion skills. Experienced in developing new business opportunities, managing key accounts, and maintaining long-term client relationships. Consistently recognized for meeting sales targets and contributing to team success. WORK EXPERIENCE 1. Ethnic Boutique - (2 years) Role_: Likely retail sales or boutique management. Skills_: Customer service, visual merchandising, inventory handling, fashion trends. 2.99 Cloth Store Role_: Retail sales associate or store assistant. - (3 years) Skills_: Sales techniques, cash handling, customer engagement, stock management. 3. ICICI Prudential - (2 years) Role_: Financial services (insurance or investments). Skills_: Client advisory, financial product knowledge, compliance, relationship management. 4. Studio Photoshop -( 1 year) Role_: Graphic design or photo editing. Skills_: Photoshop, creative marketing. 5. Intimate Matrimony -(2 years) Role_: Likely customer service or sales in a matrimony service. Skills_: Client counseling, relationship building, event coordination, personalized service. 6. Sevana Product Role_: Sales or marketing for Sevana products. Skills_: Product promotion, market analysis, customer outreach, sales strategies. - (2 years) 7. Telecalling -(1 year) Role_: Outbound telemarketing or customer calls. Skills_: Communication, sales pitch delivery.",
+                    "year": "1986"
+                }
+            ],
+            "certifications": [],
+            "scores": {
+                "final_score": 58.59,
+                "breakdown": {
+                    "skills_score": 15.13,
+                    "experience_score": 100,
+                    "education_score": 100,
+                    "semantic_score": 36.2,
+                    "matched_skills": [
+                        "auditing"
+                    ],
+                    "missing_skills": [
+                        "bookkeeping",
+                        "accounting",
+                        "gst",
+                        "taxation",
+                        "financial reporting"
+                    ]
+                }
+            },
+            "file_name": "Joby CV_output.json",
+            "rank": 5,
             "decision": "REJECT"
         },
         {
             "skills": [
+                "automation",
+                "uipath",
+                "excel vba",
+                "rpa",
                 "python",
                 "sql"
             ],
@@ -60,75 +323,32 @@
             ],
             "certifications": [],
             "scores": {
-                "final_score": 15.0,
+                "final_score": 54.0,
                 "breakdown": {
-                    "skills": 20,
-                    "experience": 0,
-                    "education": 0,
-                    "semantic": 36.0
+                    "skills_score": 0.0,
+                    "experience_score": 100,
+                    "education_score": 100,
+                    "semantic_score": 36.0,
+                    "matched_skills": [],
+                    "missing_skills": [
+                        "taxation",
+                        "bookkeeping",
+                        "accounting",
+                        "gst",
+                        "auditing",
+                        "financial reporting"
+                    ]
                 }
             },
             "file_name": "resume1_output.json",
-            "rank": 2,
+            "rank": 6,
             "decision": "REJECT"
         },
         {
             "skills": [
-                "audit",
-                "financial reporting"
+                "time management",
+                "chartered accountant"
             ],
-            "experience": {
-                "experiences": [],
-                "total_experience_months": 0
-            },
-            "education": [
-                {
-                    "degree": "SEBASTIAN BENNETT Professional Accountant +123-456-7890 hello@reallygreatsite.com 123 Anywhere St., Any City PROFILE Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. EDUCATION Borcelle University Master of Business Administration 2026-2029 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Borcelle University Bachelor of Arts in Accounting 2023-2026 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam WORK EXPERIENCE Salford & Co. Senior Accountant 2033 - 2035 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Salford & Co. Financial Accountant 2031 - 2033 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Salford & Co. Junior Accountant 2029 - 2031 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. SKILLS Professional Personal Auditing Expense Reporting Leadership Financial Accounting Managerial Accounting Management Skills Financial Reporting Accounts Receivable Time Management",
-                    "year": "2026"
-                }
-            ],
-            "certifications": [],
-            "scores": {
-                "final_score": 14.97,
-                "breakdown": {
-                    "skills": 20,
-                    "experience": 0,
-                    "education": 0,
-                    "semantic": 35.9
-                }
-            },
-            "file_name": "White and Black Minimalist Professional Accountant Resume_20260214_220801_0000_output.json",
-            "rank": 3,
-            "decision": "REJECT"
-        },
-        {
-            "skills": [],
-            "experience": {
-                "experiences": [],
-                "total_experience_months": 0
-            },
-            "education": [
-                {
-                    "degree": "JOBY K JACOB SALES EXECUTIVE CONTACT & +91. 98950 65706 \u2122 _jobinajoby171@gmail.com Q Kottayam DETAILS \u00ab DOB - 14/6/1986 e Father's Name - Joy Jacob \u00a2 Gender - Female e Martial status - Married e Religion - Christian e Nationality - Indian EDUCATION Predegree - Amalambika college of Arts , Kottayam Kerala SKILLS e Active Listening e Public Relations \u00a2 Teamwork e\u00a2 Time Management Leadership Effective Communication Adaptability LANGUAGES e English e Malayalam \u00a2 Tamil PROFILE Dynamic Sales Executive with strong communication and persuasion skills. Experienced in developing new business opportunities, managing key accounts, and maintaining long-term client relationships. Consistently recognized for meeting sales targets and contributing to team success. WORK EXPERIENCE 1. Ethnic Boutique - (2 years) Role_: Likely retail sales or boutique management. Skills_: Customer service, visual merchandising, inventory handling, fashion trends. 2.99 Cloth Store Role_: Retail sales associate or store assistant. - (3 years) Skills_: Sales techniques, cash handling, customer engagement, stock management. 3. ICICI Prudential - (2 years) Role_: Financial services (insurance or investments). Skills_: Client advisory, financial product knowledge, compliance, relationship management. 4. Studio Photoshop -( 1 year) Role_: Graphic design or photo editing. Skills_: Photoshop, creative marketing. 5. Intimate Matrimony -(2 years) Role_: Likely customer service or sales in a matrimony service. Skills_: Client counseling, relationship building, event coordination, personalized service. 6. Sevana Product Role_: Sales or marketing for Sevana products. Skills_: Product promotion, market analysis, customer outreach, sales strategies. - (2 years) 7. Telecalling -(1 year) Role_: Outbound telemarketing or customer calls. Skills_: Communication, sales pitch delivery.",
-                    "year": "1986"
-                }
-            ],
-            "certifications": [],
-            "scores": {
-                "final_score": 9.05,
-                "breakdown": {
-                    "skills": 0,
-                    "experience": 0,
-                    "education": 0,
-                    "semantic": 36.2
-                }
-            },
-            "file_name": "Joby CV_output.json",
-            "rank": 4,
-            "decision": "REJECT"
-        },
-        {
-            "skills": [],
             "experience": {
                 "experiences": [],
                 "total_experience_months": 0
@@ -141,100 +361,35 @@
             ],
             "certifications": [],
             "scores": {
-                "final_score": 7.7,
+                "final_score": 52.7,
                 "breakdown": {
-                    "skills": 0,
-                    "experience": 0,
-                    "education": 0,
-                    "semantic": 30.8
+                    "skills_score": 0.0,
+                    "experience_score": 100,
+                    "education_score": 100,
+                    "semantic_score": 30.8,
+                    "matched_skills": [],
+                    "missing_skills": [
+                        "taxation",
+                        "bookkeeping",
+                        "accounting",
+                        "gst",
+                        "auditing",
+                        "financial reporting"
+                    ]
                 }
             },
             "file_name": "White Black Minimalist Professional Resume_20260214_215934_0000_output.json",
-            "rank": 5,
-            "decision": "REJECT"
-        },
-        {
-            "skills": [],
-            "experience": {
-                "experiences": [],
-                "total_experience_months": 0
-            },
-            "education": [
-                {
-                    "degree": "ABHINESH MK Department Manager / Head Cashier / Inventory PROFILE Dynamic and results-driven retail manager with over 5 years of experience in high-volume fashion retail environments, currently serving as Head Cashier and Department Manager at Max Fashion. Demonstrated success in driving sales performance, optimizing store operations, and leading cross-functional teams to exceed business objectives. Expert in visual merchandising, inventory control, cash management, and team development. WORK EXPERIENCE EDUCATION MAX FASHION ETTUMANOOR STORE BISHOP SPEECHLY COLLEGE Department Manager and Head Cashier 2023 MG UNIVERSITY Bachelor of Business Administration Keeping track of inventory levels. 2016 - Not completed Making sure every product is stocked. Planning purchases. MT SEMINARY HIGHER Staying in touch with suppliers to keep product stock from running out. SECONDARY SCHOOL Ensuring customer service needs are met. Overseeing daily operations, leading a team, managing inventory and ensuring 12th percentage : 62% customer satisfaction within their designated department. 2015 10th percentage : 75% key responsibilities: 2013 Team Leadership: Hiring, training and supervising staff members, conducting performance reviews and addressing employee issues. 2024 - 2025 Inventory Management: SKILLS Monitoring inventory levels, planning purchases and maintaining stock to prevent shortages, ensuring optimal product availability, Sales and Revenue. Point-Of-Sale (POS) system Store operations: Inventory Management Organizing product displays and ensuring a positive shopping experience for Cash Handling customers. Customer Service Financial Management Leadership Tracking department sales performance, Managing expenses and contributing to Communication overall departmental profitability Team Leadership Communication and collaboration Performance Management Communicating effectively with other department managers, store leader Supervising and Training cashiers Managing checkout Operations Financial Tasks LANGUAGES Responsible for resolving cash tills at the end of each shift, generating accurate reports, ensuring the safety of cash and change. English Maintaining Accuracy and Efficiency Malayalam The Head Cashier ensures all transactions are processed accurately and efficiently, Hindi using point-of-sale systems and adhering to company procedures. Responding to Price Check Requests Respond to customer requests for price checks and provide other forms of customer service. CONTACT FINCH CAFE AND CAKES KOTTAYAM +91 9746003765 Store Manager 2019-2022 KOTTAYAM mkabhinesh56@gm,ail.com Manage day-to-day operations of the cafe. Coordinate with vendors and order supplies Maintain updated records of daily, weekly ,monthly revenues and expenses REFERENCE Advise staff on the best ways to resolve issues with clients and deliver excellent customer service Adharsh G Mohammed Ijas Nurture friendly relationships with customers to increase loyalty and Department Manager [R&B] Store Manager [BATA] boost our reputation 8921278286 9645890796 adharshgpk45@gmail.com ijasjunaid23@gmail.com",
-                    "year": "2023"
-                }
-            ],
-            "certifications": [
-                "ABHINESH MK Department Manager / Head Cashier / Inventory PROFILE Dynamic and results-driven retail manager with over 5 years of experience in high-volume fashion retail environments, currently serving as Head Cashier and Department Manager at Max Fashion. Demonstrated success in driving sales performance, optimizing store operations, and leading cross-functional teams to exceed business objectives. Expert in visual merchandising, inventory control, cash management, and team development. WORK EXPERIENCE EDUCATION MAX FASHION ETTUMANOOR STORE BISHOP SPEECHLY COLLEGE Department Manager and Head Cashier 2023 MG UNIVERSITY Bachelor of Business Administration Keeping track of inventory levels. 2016 - Not completed Making sure every product is stocked. Planning purchases. MT SEMINARY HIGHER Staying in touch with suppliers to keep product stock from running out. SECONDARY SCHOOL Ensuring customer service needs are met. Overseeing daily operations, leading a team, managing inventory and ensuring 12th percentage : 62% customer satisfaction within their designated department. 2015 10th percentage : 75% key responsibilities: 2013 Team Leadership: Hiring, training and supervising staff members, conducting performance reviews and addressing employee issues. 2024 - 2025 Inventory Management: SKILLS Monitoring inventory levels, planning purchases and maintaining stock to prevent shortages, ensuring optimal product availability, Sales and Revenue. Point-Of-Sale (POS) system Store operations: Inventory Management Organizing product displays and ensuring a positive shopping experience for Cash Handling customers. Customer Service Financial Management Leadership Tracking department sales performance, Managing expenses and contributing to Communication overall departmental profitability Team Leadership Communication and collaboration Performance Management Communicating effectively with other department managers, store leader Supervising and Training cashiers Managing checkout Operations Financial Tasks LANGUAGES Responsible for resolving cash tills at the end of each shift, generating accurate reports, ensuring the safety of cash and change. English Maintaining Accuracy and Efficiency Malayalam The Head Cashier ensures all transactions are processed accurately and efficiently, Hindi using point-of-sale systems and adhering to company procedures. Responding to Price Check Requests Respond to customer requests for price checks and provide other forms of customer service. CONTACT FINCH CAFE AND CAKES KOTTAYAM +91 9746003765 Store Manager 2019-2022 KOTTAYAM mkabhinesh56@gm,ail.com Manage day-to-day operations of the cafe. Coordinate with vendors and order supplies Maintain updated records of daily, weekly ,monthly revenues and expenses REFERENCE Advise staff on the best ways to resolve issues with clients and deliver excellent customer service Adharsh G Mohammed Ijas Nurture friendly relationships with customers to increase loyalty and Department Manager [R&B] Store Manager [BATA] boost our reputation 8921278286 9645890796 adharshgpk45@gmail.com ijasjunaid23@gmail.com"
-            ],
-            "scores": {
-                "final_score": 5.3,
-                "breakdown": {
-                    "skills": 0,
-                    "experience": 0,
-                    "education": 0,
-                    "semantic": 21.2
-                }
-            },
-            "file_name": "Abhi resume_20250809_103728_0000_output.json",
-            "rank": 6,
-            "decision": "REJECT"
-        },
-        {
-            "skills": [],
-            "experience": {
-                "experiences": [],
-                "total_experience_months": 0
-            },
-            "education": [
-                {
-                    "degree": "AHMDD SAAH MARKETING MANAGER CONTACT PROFILE \"Neimo ensiont est atem Aham ipsum, finifam imbo sido. Intum lumina +124-4236-7894 parco regia Aham extra mola idis. Commodo Aham antepor yumo finiam carius, domus serim lacur Aham. Mauris solitudo Aham in albaidis, ceras hello@ahmedd saaahh.com vita Aham elit exidio leo, adipisci sector elit.\" 123fdfdgdg., Any City www.ahmedd saaahh WORK EXPERIENCE com Borcelle Studio 2030 - PRESENT SKILLS Marketing Manager & Specialist Strategic Planning Formulate and implement detailed marketing strategies and initiatives that support the company's mission and objectives. Problem Solving Guide, inspire, and oversee a dynamic marketing team, promoting a Crisis Management collaborative and performance-oriented culture. Ensure uniformity of the brand across all marketing platforms and Creative Thinking materials. Data Analysis Fauget Studio 2025 - 2029 Brand Development Marketing Manager & Specialist Negotiation \"Neimo ensiont est atem Aham ipsum, finifam imbo sido. Intum lumina parco regia Aham extra mola idis. Commodo Aham antepor yumo Customer Orientation finiam carius, domus serim lacur Aham. Mauris solitudo Aham in Adaptability to Change albaidis, ceras vita Aham elit exidio leo, adipisci sector elit.\" LANGUAGES Studio Shodwe 2024 - 2025 Marketing Manager & Specialist English (Fluent) Formulate and implement detailed marketing strategies and initiatives that support the company's mission and objectives. Guide, inspire, and oversee a dynamic marketing team, promoting a collaborative and performance-oriented culture. Ensure uniformity of the brand across all marketing platforms and materials. REFERENCE EDUCATION Estelle Darcy Wardiere Inc. / CTO Master of Business Management 2029 - 2031 School of business | Wardiere University Phone: +124-4236-7894 Email : hello@ahmedd saaahh.com",
-                    "year": "2030"
-                }
-            ],
-            "certifications": [],
-            "scores": {
-                "final_score": 5.25,
-                "breakdown": {
-                    "skills": 0,
-                    "experience": 0,
-                    "education": 0,
-                    "semantic": 21.0
-                }
-            },
-            "file_name": "Blue and Gray Simple Professional CV Resume_20260214_220939_0000_output.json",
             "rank": 7,
             "decision": "REJECT"
         },
         {
-            "skills": [],
-            "experience": {
-                "experiences": [],
-                "total_experience_months": 0
-            },
-            "education": [
-                {
-                    "degree": "LORNA ALVARADO MarketingManager ABOUT ME +123-456-7890 www.reallygreatsite.com Lorem ipsum dolor sit amet, hello@reallygreatsite.com 123 Anywhere St., Any consectetur adipiscing elit, sed City, ST 12345 do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut EXPERIENCE enim ad minim veniam, quis nostrud exercitation ullamco Product Design Manager 2020 - 2023 laboris nisi ut aliquip ex ea Arowwai Industries l 123 Anywhere St., Any City commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet sem nec risus egestas accumsan. In enim nunc, tincidunt ut quam eget, luctus sollicitudin neque. Sed leo nisl, semper ac hendrerit a, sollicitudin EDUCATION in arcu. Bachelor of Business Management Marketing Manager 2019 - 2020 Wardiere University Arowwai Industries l 123 Anywhere St., Any City 2016 - 2020 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet sem nec risus egestas accumsan. In enim nunc, tincidunt ut quam eget, Bachelor of Business Management luctus sollicitudin neque. Sed leo nisl, semper ac hendrerit a, sollicitudin Wardiere University in arcu. 2020 - 2023 Marketing Manager 2017- 2019 Arowwai Industries l 123 Anywhere St., Any City SKILLS Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet Management Skills sem nec risus egestas accumsan. In enim nunc, tincidunt ut quam eget, luctus sollicitudin neque. Sed leo nisl, semper ac hendrerit a, sollicitudin Creativity in arcu. Digital Marketing Marketing Manager 2016- 2017 Negotiation Arowwai Industries l 123 Anywhere St., Any City Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet Critical Thinking sem nec risus egestas accumsan. In enim nunc, tincidunt ut quam eget, Leadership luctus sollicitudin neque. LANGUAGE REFERENCES English Harumi Kobayashi Bailey Dupont Wardiere Inc. / CEO Wardiere Inc. / CEO Spain Phone: 123-456-7890 Phone: 123-456-7890 Email : hello@reallygreatsite.com Email : hello@reallygreatsite.com",
-                    "year": "2020"
-                }
+            "skills": [
+                "cost accounting",
+                "budgeting",
+                "financial analysis",
+                "forecasting",
+                "management accounting"
             ],
-            "certifications": [],
-            "scores": {
-                "final_score": 5.17,
-                "breakdown": {
-                    "skills": 0,
-                    "experience": 0,
-                    "education": 0,
-                    "semantic": 20.7
-                }
-            },
-            "file_name": "Resume 3_output.json",
-            "rank": 8,
-            "decision": "REJECT"
-        },
-        {
-            "skills": [],
             "experience": {
                 "experiences": [
                     {
@@ -257,20 +412,153 @@
                 "Catrine Ziv IT PROJECT MANAGER WORK EXPERIENCE Project Manager Westheon FGW | Oct 2017 - present Conduct day-to-day project coordination, planning, and implementation across multiple teams PROFILE Senior UX Designer I am an IT project manager with holistic knowledge of software Pixelpoint Hive | Jan 2014 - Sept 2017 development and design. I am also Managed complex projects from start to experienced in coordinating with finish stakeholders. Collaborated with other designers SKILLS EDUCATIONAL HISTORY Project Management HGFZ Graduate Center Software Development Masters in Project Management | Jan 2013 - Budgeting and Cost Analysis Dec 2014 Enterprise Resource Planning Staff and User Training Studied project planning, coordination, and ethics Process Improvement Worked with various startups on launching new apps and services AWARDS Cliffmoor College BA Product Design | Dec 2008 - Dec 2012 Most Outstanding Employee of the Year, Pixelpoint Hive (2015) GPA: 3.26 Minor in Management Best Mobile App Design, HGFZ Thesis involved studying several technology Graduate Center (2014) companies and optimizing their product +123-456-7890 hello@reallygreatsite.com reallygreatsite.com"
             ],
             "scores": {
-                "final_score": 4.55,
+                "final_score": 50.94,
                 "breakdown": {
-                    "skills": 0,
-                    "experience": 0.0,
-                    "education": 0,
-                    "semantic": 18.2
+                    "skills_score": 4.62,
+                    "experience_score": 100,
+                    "education_score": 100,
+                    "semantic_score": 18.2,
+                    "matched_skills": [],
+                    "missing_skills": [
+                        "taxation",
+                        "bookkeeping",
+                        "accounting",
+                        "gst",
+                        "auditing",
+                        "financial reporting"
+                    ]
                 }
             },
             "file_name": "Resume 2_output.json",
+            "rank": 8,
+            "decision": "REJECT"
+        },
+        {
+            "skills": [
+                "chartered accountant",
+                "power bi",
+                "advanced excel",
+                "data analysis",
+                "financial modeling"
+            ],
+            "experience": {
+                "experiences": [],
+                "total_experience_months": 0
+            },
+            "education": [
+                {
+                    "degree": "AHMDD SAAH MARKETING MANAGER CONTACT PROFILE \"Neimo ensiont est atem Aham ipsum, finifam imbo sido. Intum lumina +124-4236-7894 parco regia Aham extra mola idis. Commodo Aham antepor yumo finiam carius, domus serim lacur Aham. Mauris solitudo Aham in albaidis, ceras hello@ahmedd saaahh.com vita Aham elit exidio leo, adipisci sector elit.\" 123fdfdgdg., Any City www.ahmedd saaahh WORK EXPERIENCE com Borcelle Studio 2030 - PRESENT SKILLS Marketing Manager & Specialist Strategic Planning Formulate and implement detailed marketing strategies and initiatives that support the company's mission and objectives. Problem Solving Guide, inspire, and oversee a dynamic marketing team, promoting a Crisis Management collaborative and performance-oriented culture. Ensure uniformity of the brand across all marketing platforms and Creative Thinking materials. Data Analysis Fauget Studio 2025 - 2029 Brand Development Marketing Manager & Specialist Negotiation \"Neimo ensiont est atem Aham ipsum, finifam imbo sido. Intum lumina parco regia Aham extra mola idis. Commodo Aham antepor yumo Customer Orientation finiam carius, domus serim lacur Aham. Mauris solitudo Aham in Adaptability to Change albaidis, ceras vita Aham elit exidio leo, adipisci sector elit.\" LANGUAGES Studio Shodwe 2024 - 2025 Marketing Manager & Specialist English (Fluent) Formulate and implement detailed marketing strategies and initiatives that support the company's mission and objectives. Guide, inspire, and oversee a dynamic marketing team, promoting a collaborative and performance-oriented culture. Ensure uniformity of the brand across all marketing platforms and materials. REFERENCE EDUCATION Estelle Darcy Wardiere Inc. / CTO Master of Business Management 2029 - 2031 School of business | Wardiere University Phone: +124-4236-7894 Email : hello@ahmedd saaahh.com",
+                    "year": "2030"
+                }
+            ],
+            "certifications": [],
+            "scores": {
+                "final_score": 50.59,
+                "breakdown": {
+                    "skills_score": 1.15,
+                    "experience_score": 100,
+                    "education_score": 100,
+                    "semantic_score": 21.0,
+                    "matched_skills": [],
+                    "missing_skills": [
+                        "taxation",
+                        "bookkeeping",
+                        "accounting",
+                        "gst",
+                        "auditing",
+                        "financial reporting"
+                    ]
+                }
+            },
+            "file_name": "Blue and Gray Simple Professional CV Resume_20260214_220939_0000_output.json",
             "rank": 9,
             "decision": "REJECT"
         },
         {
-            "skills": [],
+            "skills": [
+                "leadership",
+                "chartered accountant",
+                "teamwork"
+            ],
+            "experience": {
+                "experiences": [],
+                "total_experience_months": 0
+            },
+            "education": [
+                {
+                    "degree": "ABHINESH MK Department Manager / Head Cashier / Inventory PROFILE Dynamic and results-driven retail manager with over 5 years of experience in high-volume fashion retail environments, currently serving as Head Cashier and Department Manager at Max Fashion. Demonstrated success in driving sales performance, optimizing store operations, and leading cross-functional teams to exceed business objectives. Expert in visual merchandising, inventory control, cash management, and team development. WORK EXPERIENCE EDUCATION MAX FASHION ETTUMANOOR STORE BISHOP SPEECHLY COLLEGE Department Manager and Head Cashier 2023 MG UNIVERSITY Bachelor of Business Administration Keeping track of inventory levels. 2016 - Not completed Making sure every product is stocked. Planning purchases. MT SEMINARY HIGHER Staying in touch with suppliers to keep product stock from running out. SECONDARY SCHOOL Ensuring customer service needs are met. Overseeing daily operations, leading a team, managing inventory and ensuring 12th percentage : 62% customer satisfaction within their designated department. 2015 10th percentage : 75% key responsibilities: 2013 Team Leadership: Hiring, training and supervising staff members, conducting performance reviews and addressing employee issues. 2024 - 2025 Inventory Management: SKILLS Monitoring inventory levels, planning purchases and maintaining stock to prevent shortages, ensuring optimal product availability, Sales and Revenue. Point-Of-Sale (POS) system Store operations: Inventory Management Organizing product displays and ensuring a positive shopping experience for Cash Handling customers. Customer Service Financial Management Leadership Tracking department sales performance, Managing expenses and contributing to Communication overall departmental profitability Team Leadership Communication and collaboration Performance Management Communicating effectively with other department managers, store leader Supervising and Training cashiers Managing checkout Operations Financial Tasks LANGUAGES Responsible for resolving cash tills at the end of each shift, generating accurate reports, ensuring the safety of cash and change. English Maintaining Accuracy and Efficiency Malayalam The Head Cashier ensures all transactions are processed accurately and efficiently, Hindi using point-of-sale systems and adhering to company procedures. Responding to Price Check Requests Respond to customer requests for price checks and provide other forms of customer service. CONTACT FINCH CAFE AND CAKES KOTTAYAM +91 9746003765 Store Manager 2019-2022 KOTTAYAM mkabhinesh56@gm,ail.com Manage day-to-day operations of the cafe. Coordinate with vendors and order supplies Maintain updated records of daily, weekly ,monthly revenues and expenses REFERENCE Advise staff on the best ways to resolve issues with clients and deliver excellent customer service Adharsh G Mohammed Ijas Nurture friendly relationships with customers to increase loyalty and Department Manager [R&B] Store Manager [BATA] boost our reputation 8921278286 9645890796 adharshgpk45@gmail.com ijasjunaid23@gmail.com",
+                    "year": "2023"
+                }
+            ],
+            "certifications": [
+                "ABHINESH MK Department Manager / Head Cashier / Inventory PROFILE Dynamic and results-driven retail manager with over 5 years of experience in high-volume fashion retail environments, currently serving as Head Cashier and Department Manager at Max Fashion. Demonstrated success in driving sales performance, optimizing store operations, and leading cross-functional teams to exceed business objectives. Expert in visual merchandising, inventory control, cash management, and team development. WORK EXPERIENCE EDUCATION MAX FASHION ETTUMANOOR STORE BISHOP SPEECHLY COLLEGE Department Manager and Head Cashier 2023 MG UNIVERSITY Bachelor of Business Administration Keeping track of inventory levels. 2016 - Not completed Making sure every product is stocked. Planning purchases. MT SEMINARY HIGHER Staying in touch with suppliers to keep product stock from running out. SECONDARY SCHOOL Ensuring customer service needs are met. Overseeing daily operations, leading a team, managing inventory and ensuring 12th percentage : 62% customer satisfaction within their designated department. 2015 10th percentage : 75% key responsibilities: 2013 Team Leadership: Hiring, training and supervising staff members, conducting performance reviews and addressing employee issues. 2024 - 2025 Inventory Management: SKILLS Monitoring inventory levels, planning purchases and maintaining stock to prevent shortages, ensuring optimal product availability, Sales and Revenue. Point-Of-Sale (POS) system Store operations: Inventory Management Organizing product displays and ensuring a positive shopping experience for Cash Handling customers. Customer Service Financial Management Leadership Tracking department sales performance, Managing expenses and contributing to Communication overall departmental profitability Team Leadership Communication and collaboration Performance Management Communicating effectively with other department managers, store leader Supervising and Training cashiers Managing checkout Operations Financial Tasks LANGUAGES Responsible for resolving cash tills at the end of each shift, generating accurate reports, ensuring the safety of cash and change. English Maintaining Accuracy and Efficiency Malayalam The Head Cashier ensures all transactions are processed accurately and efficiently, Hindi using point-of-sale systems and adhering to company procedures. Responding to Price Check Requests Respond to customer requests for price checks and provide other forms of customer service. CONTACT FINCH CAFE AND CAKES KOTTAYAM +91 9746003765 Store Manager 2019-2022 KOTTAYAM mkabhinesh56@gm,ail.com Manage day-to-day operations of the cafe. Coordinate with vendors and order supplies Maintain updated records of daily, weekly ,monthly revenues and expenses REFERENCE Advise staff on the best ways to resolve issues with clients and deliver excellent customer service Adharsh G Mohammed Ijas Nurture friendly relationships with customers to increase loyalty and Department Manager [R&B] Store Manager [BATA] boost our reputation 8921278286 9645890796 adharshgpk45@gmail.com ijasjunaid23@gmail.com"
+            ],
+            "scores": {
+                "final_score": 50.3,
+                "breakdown": {
+                    "skills_score": 0.0,
+                    "experience_score": 100,
+                    "education_score": 100,
+                    "semantic_score": 21.2,
+                    "matched_skills": [],
+                    "missing_skills": [
+                        "taxation",
+                        "bookkeeping",
+                        "accounting",
+                        "gst",
+                        "auditing",
+                        "financial reporting"
+                    ]
+                }
+            },
+            "file_name": "Abhi resume_20250809_103728_0000_output.json",
+            "rank": 10,
+            "decision": "REJECT"
+        },
+        {
+            "skills": [
+                "leadership"
+            ],
+            "experience": {
+                "experiences": [],
+                "total_experience_months": 0
+            },
+            "education": [
+                {
+                    "degree": "LORNA ALVARADO MarketingManager ABOUT ME +123-456-7890 www.reallygreatsite.com Lorem ipsum dolor sit amet, hello@reallygreatsite.com 123 Anywhere St., Any consectetur adipiscing elit, sed City, ST 12345 do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut EXPERIENCE enim ad minim veniam, quis nostrud exercitation ullamco Product Design Manager 2020 - 2023 laboris nisi ut aliquip ex ea Arowwai Industries l 123 Anywhere St., Any City commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet sem nec risus egestas accumsan. In enim nunc, tincidunt ut quam eget, luctus sollicitudin neque. Sed leo nisl, semper ac hendrerit a, sollicitudin EDUCATION in arcu. Bachelor of Business Management Marketing Manager 2019 - 2020 Wardiere University Arowwai Industries l 123 Anywhere St., Any City 2016 - 2020 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet sem nec risus egestas accumsan. In enim nunc, tincidunt ut quam eget, Bachelor of Business Management luctus sollicitudin neque. Sed leo nisl, semper ac hendrerit a, sollicitudin Wardiere University in arcu. 2020 - 2023 Marketing Manager 2017- 2019 Arowwai Industries l 123 Anywhere St., Any City SKILLS Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet Management Skills sem nec risus egestas accumsan. In enim nunc, tincidunt ut quam eget, luctus sollicitudin neque. Sed leo nisl, semper ac hendrerit a, sollicitudin Creativity in arcu. Digital Marketing Marketing Manager 2016- 2017 Negotiation Arowwai Industries l 123 Anywhere St., Any City Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet Critical Thinking sem nec risus egestas accumsan. In enim nunc, tincidunt ut quam eget, Leadership luctus sollicitudin neque. LANGUAGE REFERENCES English Harumi Kobayashi Bailey Dupont Wardiere Inc. / CEO Wardiere Inc. / CEO Spain Phone: 123-456-7890 Phone: 123-456-7890 Email : hello@reallygreatsite.com Email : hello@reallygreatsite.com",
+                    "year": "2020"
+                }
+            ],
+            "certifications": [],
+            "scores": {
+                "final_score": 50.17,
+                "breakdown": {
+                    "skills_score": 0.0,
+                    "experience_score": 100,
+                    "education_score": 100,
+                    "semantic_score": 20.7,
+                    "matched_skills": [],
+                    "missing_skills": [
+                        "taxation",
+                        "bookkeeping",
+                        "accounting",
+                        "gst",
+                        "auditing",
+                        "financial reporting"
+                    ]
+                }
+            },
+            "file_name": "Resume 3_output.json",
+            "rank": 11,
+            "decision": "REJECT"
+        },
+        {
+            "skills": [
+                "time management",
+                "leadership",
+                "chartered accountant",
+                "teamwork"
+            ],
             "experience": {
                 "experiences": [],
                 "total_experience_months": 0
@@ -283,16 +571,25 @@
             ],
             "certifications": [],
             "scores": {
-                "final_score": 4.23,
+                "final_score": 49.23,
                 "breakdown": {
-                    "skills": 0,
-                    "experience": 0,
-                    "education": 0,
-                    "semantic": 16.9
+                    "skills_score": 0.0,
+                    "experience_score": 100,
+                    "education_score": 100,
+                    "semantic_score": 16.9,
+                    "matched_skills": [],
+                    "missing_skills": [
+                        "taxation",
+                        "bookkeeping",
+                        "accounting",
+                        "gst",
+                        "auditing",
+                        "financial reporting"
+                    ]
                 }
             },
             "file_name": "Blue Simple Professional CV Resume_20260214_220009_0000_output.json",
-            "rank": 10,
+            "rank": 12,
             "decision": "REJECT"
         },
         {
@@ -309,20 +606,117 @@
             ],
             "certifications": [],
             "scores": {
-                "final_score": 3.02,
+                "final_score": 48.02,
                 "breakdown": {
-                    "skills": 0,
-                    "experience": 0,
-                    "education": 0,
-                    "semantic": 12.1
+                    "skills_score": 0.0,
+                    "experience_score": 100,
+                    "education_score": 100,
+                    "semantic_score": 12.1,
+                    "matched_skills": [],
+                    "missing_skills": [
+                        "taxation",
+                        "bookkeeping",
+                        "gst",
+                        "accounting",
+                        "auditing",
+                        "financial reporting"
+                    ]
                 }
             },
             "file_name": "New resume_output.json",
-            "rank": 11,
+            "rank": 13,
             "decision": "REJECT"
         },
         {
-            "skills": [],
+            "skills": [
+                "power bi",
+                "advanced excel",
+                "financial modeling",
+                "data analysis"
+            ],
+            "experience": {
+                "experiences": [],
+                "total_experience_months": 0
+            },
+            "education": [
+                {
+                    "degree": "Samira Alcaraz Mechanical Engineer CONTACT Phone: +123-456-7890 Address: 123 Anywhere St., Any City, ST 12345 Email: hello@reallygreatsite.com Portfolio: www.reallygreatsite.com PROFESSIONAL Research and Development Engineer | 2030-2035 EXPERIENCE The Innovation Lab Spearheaded the development of advanced materials, resulting in a 15% increase in product efficiency Conducted comprehensive experiments and data analysis, leading to three published journal papers Collaborated with cross-functional teams to ideate and prototype innovative solutions for industry-specific challenges Mechanical Engineer | 2027-2030 Science and Tech Co. Assisted in optimizing mechanical systems for manufacturing processes, improving production speed by 20% Drafted and implemented quality control procedures, reducing defects and inconsistencies by 30% Supported the creation of detailed project reports and documentation for senior stakeholders EDUCATION North State University | 2025-2027 Master of Science in Mechanical Engineering GPA: 3.8 Best Thesis Awardee Recognition for Extended Research Paper South City College | 2021-2025 Bachelor of Science in Mechanical Engineering GPA: 3.8 Editor-in-Chief, SCC Newsletter President, The Innovation Society CERTIFICATES Project Management | 2027 System Optimization | 2028 The Project Management Institute Scrum Learning Society Risk Management and Mitigation | 2028 Vendor Relations | 2030 Internal Auditors Team South City College",
+                    "year": "2030"
+                }
+            ],
+            "certifications": [],
+            "scores": {
+                "final_score": 47.22,
+                "breakdown": {
+                    "skills_score": 1.15,
+                    "experience_score": 100,
+                    "education_score": 100,
+                    "semantic_score": 7.5,
+                    "matched_skills": [],
+                    "missing_skills": [
+                        "taxation",
+                        "bookkeeping",
+                        "accounting",
+                        "gst",
+                        "auditing",
+                        "financial reporting"
+                    ]
+                }
+            },
+            "file_name": "sample_resume_output.json",
+            "rank": 14,
+            "decision": "REJECT"
+        },
+        {
+            "skills": [
+                "power bi",
+                "advanced excel",
+                "financial modeling",
+                "data analysis"
+            ],
+            "experience": {
+                "experiences": [],
+                "total_experience_months": 0
+            },
+            "education": [
+                {
+                    "degree": "Samira Alcaraz Mechanical Engineer CONTACT Phone: +123-456-7890 Address: 123 Anywhere St., Any City, ST 12345 Email: hello@reallygreatsite.com Portfolio: www.reallygreatsite.com PROFESSIONAL Research and Development Engineer | 2030-2035 EXPERIENCE The Innovation Lab Spearheaded the development of advanced materials, resulting in a 15% increase in product efficiency Conducted comprehensive experiments and data analysis, leading to three published journal papers Collaborated with cross-functional teams to ideate and prototype innovative solutions for industry-specific challenges Mechanical Engineer | 2027-2030 Science and Tech Co. Assisted in optimizing mechanical systems for manufacturing processes, improving production speed by 20% Drafted and implemented quality control procedures, reducing defects and inconsistencies by 30% Supported the creation of detailed project reports and documentation for senior stakeholders EDUCATION North State University | 2025-2027 Master of Science in Mechanical Engineering GPA: 3.8 Best Thesis Awardee Recognition for Extended Research Paper South City College | 2021-2025 Bachelor of Science in Mechanical Engineering GPA: 3.8 Editor-in-Chief, SCC Newsletter President, The Innovation Society CERTIFICATES Project Management | 2027 System Optimization | 2028 The Project Management Institute Scrum Learning Society Risk Management and Mitigation | 2028 Vendor Relations | 2030 Internal Auditors Team South City College",
+                    "year": "2030"
+                }
+            ],
+            "certifications": [],
+            "scores": {
+                "final_score": 47.22,
+                "breakdown": {
+                    "skills_score": 1.15,
+                    "experience_score": 100,
+                    "education_score": 100,
+                    "semantic_score": 7.5,
+                    "matched_skills": [],
+                    "missing_skills": [
+                        "taxation",
+                        "bookkeeping",
+                        "accounting",
+                        "gst",
+                        "auditing",
+                        "financial reporting"
+                    ]
+                }
+            },
+            "file_name": "Science and Engineering Resume in White Black Simple Style_20260214_220846_0000_output.json",
+            "rank": 15,
+            "decision": "REJECT"
+        },
+        {
+            "skills": [
+                "automation",
+                "uipath",
+                "excel vba",
+                "leadership",
+                "rpa",
+                "python",
+                "sql"
+            ],
             "experience": {
                 "experiences": [
                     {
@@ -345,68 +739,25 @@
                 "JACQUELINE THOMPSON 123 Anywhere St., Any City \u2022 123-456-7890 \u2022 hello@reallygreatsite.com www.reallygreatsite.com SUMMARY Results-oriented Engineering Executive with a proven track record of optimizing project outcomes. Skilled in strategic project management and team leadership. Seeking a challenging executive role to leverage technical expertise and drive engineering excellence. WORK EXPERIENCE Engineering Executive , Borcelle Technologies Jan 2023 - Present Implemented cost-effective solutions, resulting in a 20% reduction in project expenses. Streamlined project workflows, enhancing overall efficiency by 25%. Led a team in successfully delivering a complex engineering project on time and within allocated budget. Project Engineer, Salford & Co Mar 2021 - Dec 2022 Managed project timelines, reducing delivery times by 30%. Spearheaded the adoption of cutting-edge engineering software, improving project accuracy by 15%. Collaborated with cross-functional teams, enhancing project success rates by 10%. Graduate Engineer, Arowwai Industries Feb 2020 - Jan 2021 Coordinated project tasks, ensuring adherence to engineering standards and regulations. Conducted comprehensive project analyses, identifying and rectifying discrepancies in engineering designs. EDUCATION Master of Science in Mechanical Engineering Sep 2019 - Oct 2020 University of Engineering and Technology Specialization in Advanced Manufacturing. Thesis on \"Innovations in Sustainable Engineering Practices\". Bachelor of Science in Civil Engineering Aug 2015 - Aug 2019 City College of Engineering Relevant coursework in Structural Design and Project Management. ADDITIONAL INFORMATION Technical Skills: Project Management, Structural Analysis, Robotics and Automation, CAD Languages: English, Malay, German Certifications: Professional Engineer (PE) License, Project Management Professional (PMP) Awards/Activities: Received the \"Engineering Excellence\" Award for outstanding contributions to project innovation, Borcelle Technologies"
             ],
             "scores": {
-                "final_score": 1.88,
+                "final_score": 46.88,
                 "breakdown": {
-                    "skills": 0,
-                    "experience": 0.0,
-                    "education": 0,
-                    "semantic": 7.5
+                    "skills_score": 0.0,
+                    "experience_score": 100,
+                    "education_score": 100,
+                    "semantic_score": 7.5,
+                    "matched_skills": [],
+                    "missing_skills": [
+                        "taxation",
+                        "bookkeeping",
+                        "accounting",
+                        "gst",
+                        "auditing",
+                        "financial reporting"
+                    ]
                 }
             },
             "file_name": "Purple and White Clean and Professional Resume_20260214_215858_0000_output.json",
-            "rank": 12,
-            "decision": "REJECT"
-        },
-        {
-            "skills": [],
-            "experience": {
-                "experiences": [],
-                "total_experience_months": 0
-            },
-            "education": [
-                {
-                    "degree": "Samira Alcaraz Mechanical Engineer CONTACT Phone: +123-456-7890 Address: 123 Anywhere St., Any City, ST 12345 Email: hello@reallygreatsite.com Portfolio: www.reallygreatsite.com PROFESSIONAL Research and Development Engineer | 2030-2035 EXPERIENCE The Innovation Lab Spearheaded the development of advanced materials, resulting in a 15% increase in product efficiency Conducted comprehensive experiments and data analysis, leading to three published journal papers Collaborated with cross-functional teams to ideate and prototype innovative solutions for industry-specific challenges Mechanical Engineer | 2027-2030 Science and Tech Co. Assisted in optimizing mechanical systems for manufacturing processes, improving production speed by 20% Drafted and implemented quality control procedures, reducing defects and inconsistencies by 30% Supported the creation of detailed project reports and documentation for senior stakeholders EDUCATION North State University | 2025-2027 Master of Science in Mechanical Engineering GPA: 3.8 Best Thesis Awardee Recognition for Extended Research Paper South City College | 2021-2025 Bachelor of Science in Mechanical Engineering GPA: 3.8 Editor-in-Chief, SCC Newsletter President, The Innovation Society CERTIFICATES Project Management | 2027 System Optimization | 2028 The Project Management Institute Scrum Learning Society Risk Management and Mitigation | 2028 Vendor Relations | 2030 Internal Auditors Team South City College",
-                    "year": "2030"
-                }
-            ],
-            "certifications": [],
-            "scores": {
-                "final_score": 1.88,
-                "breakdown": {
-                    "skills": 0,
-                    "experience": 0,
-                    "education": 0,
-                    "semantic": 7.5
-                }
-            },
-            "file_name": "sample_resume_output.json",
-            "rank": 13,
-            "decision": "REJECT"
-        },
-        {
-            "skills": [],
-            "experience": {
-                "experiences": [],
-                "total_experience_months": 0
-            },
-            "education": [
-                {
-                    "degree": "Samira Alcaraz Mechanical Engineer CONTACT Phone: +123-456-7890 Address: 123 Anywhere St., Any City, ST 12345 Email: hello@reallygreatsite.com Portfolio: www.reallygreatsite.com PROFESSIONAL Research and Development Engineer | 2030-2035 EXPERIENCE The Innovation Lab Spearheaded the development of advanced materials, resulting in a 15% increase in product efficiency Conducted comprehensive experiments and data analysis, leading to three published journal papers Collaborated with cross-functional teams to ideate and prototype innovative solutions for industry-specific challenges Mechanical Engineer | 2027-2030 Science and Tech Co. Assisted in optimizing mechanical systems for manufacturing processes, improving production speed by 20% Drafted and implemented quality control procedures, reducing defects and inconsistencies by 30% Supported the creation of detailed project reports and documentation for senior stakeholders EDUCATION North State University | 2025-2027 Master of Science in Mechanical Engineering GPA: 3.8 Best Thesis Awardee Recognition for Extended Research Paper South City College | 2021-2025 Bachelor of Science in Mechanical Engineering GPA: 3.8 Editor-in-Chief, SCC Newsletter President, The Innovation Society CERTIFICATES Project Management | 2027 System Optimization | 2028 The Project Management Institute Scrum Learning Society Risk Management and Mitigation | 2028 Vendor Relations | 2030 Internal Auditors Team South City College",
-                    "year": "2030"
-                }
-            ],
-            "certifications": [],
-            "scores": {
-                "final_score": 1.88,
-                "breakdown": {
-                    "skills": 0,
-                    "experience": 0,
-                    "education": 0,
-                    "semantic": 7.5
-                }
-            },
-            "file_name": "Science and Engineering Resume in White Black Simple Style_20260214_220846_0000_output.json",
-            "rank": 14,
+            "rank": 16,
             "decision": "REJECT"
         }
     ]

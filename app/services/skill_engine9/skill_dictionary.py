@@ -1,19 +1,46 @@
 MASTER_SKILLS = {
     "finance": {
-        "tally": ["tally"],
+        "accounting": ["accounting", "financial accounting"],
+        "tally": ["tally", "tally erp"],
         "gst": ["gst", "goods and services tax"],
-        "taxation": ["taxation", "tax"],
-        "auditing": ["auditing", "audit"],
-        "financial reporting": ["financial reporting"],
+        "taxation": ["taxation", "direct tax", "indirect tax", "income tax"],
+        "auditing": ["auditing", "internal audit", "statutory audit"],
+        "financial reporting": ["financial reporting", "financial statements"],
         "bookkeeping": ["bookkeeping"],
-        "quickbooks": ["quickbooks"],
+        "accounts payable": ["accounts payable", "ap"],
+        "accounts receivable": ["accounts receivable", "ar"],
+        "budgeting": ["budgeting", "budget planning"],
+        "forecasting": ["forecasting", "financial forecasting"],
+        "cost accounting": ["cost accounting", "cost analysis"],
+        "management accounting": ["management accounting"],
+        "bank reconciliation": ["bank reconciliation", "brs"],
+        "compliance": ["compliance", "regulatory compliance"],
+        "payroll": ["payroll processing"],
+        "ifrs": ["ifrs", "international financial reporting standards"],
+        "gaap": ["gaap", "generally accepted accounting principles"],
         "sap fico": ["sap fico"],
-        "excel": ["excel", "ms excel"]
+        "quickbooks": ["quickbooks"],
+        "excel": ["excel", "ms excel", "advanced excel"]
     },
 
     "technical": {
-        "python": ["python"],
+        "excel advanced": ["advanced excel", "pivot tables", "vlookup", "hlookup"],
+        "power bi": ["power bi", "power bi dashboard"],
         "sql": ["sql"],
-        "power bi": ["power bi"]
+        "python": ["python"],
+        "data analysis": ["data analysis", "financial analysis"],
+        "erp systems": ["erp", "erp systems"],
+        "sap": ["sap"],
+        "automation": ["automation", "process automation"]
+    },
+
+    "soft_skills": {
+        "communication": ["communication", "verbal communication"],
+        "analytical thinking": ["analytical thinking", "problem solving"],
+        "attention to detail": ["attention to detail"],
+        "time management": ["time management"],
+        "teamwork": ["teamwork", "collaboration"],
+        "leadership": ["leadership"],
+        "decision making": ["decision making"]
     }
 }

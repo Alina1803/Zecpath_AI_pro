@@ -1,5 +1,16 @@
 {
-    "skills": [],
+    "skills": [
+        "sox",
+        "risk management",
+        "chartered accountant",
+        "compliance",
+        "internal audit",
+        "teamwork",
+        "auditing",
+        "leadership",
+        "statutory audit",
+        "time management"
+    ],
     "experience": {
         "experiences": [],
         "total_experience_months": 0
@@ -12,12 +23,22 @@
     ],
     "certifications": [],
     "scores": {
-        "final_score": 9.05,
+        "final_score": 58.59,
         "breakdown": {
-            "skills": 0,
-            "experience": 0,
-            "education": 0,
-            "semantic": 36.2
+            "skills_score": 15.13,
+            "experience_score": 100,
+            "education_score": 100,
+            "semantic_score": 36.2,
+            "matched_skills": [
+                "auditing"
+            ],
+            "missing_skills": [
+                "bookkeeping",
+                "accounting",
+                "gst",
+                "taxation",
+                "financial reporting"
+            ]
         }
     }
 }

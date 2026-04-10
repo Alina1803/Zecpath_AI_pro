@@ -1,5 +1,11 @@
 {
-    "skills": [],
+    "skills": [
+        "cost accounting",
+        "budgeting",
+        "financial analysis",
+        "forecasting",
+        "management accounting"
+    ],
     "experience": {
         "experiences": [
             {
@@ -22,12 +28,21 @@
         "Catrine Ziv IT PROJECT MANAGER WORK EXPERIENCE Project Manager Westheon FGW | Oct 2017 - present Conduct day-to-day project coordination, planning, and implementation across multiple teams PROFILE Senior UX Designer I am an IT project manager with holistic knowledge of software Pixelpoint Hive | Jan 2014 - Sept 2017 development and design. I am also Managed complex projects from start to experienced in coordinating with finish stakeholders. Collaborated with other designers SKILLS EDUCATIONAL HISTORY Project Management HGFZ Graduate Center Software Development Masters in Project Management | Jan 2013 - Budgeting and Cost Analysis Dec 2014 Enterprise Resource Planning Staff and User Training Studied project planning, coordination, and ethics Process Improvement Worked with various startups on launching new apps and services AWARDS Cliffmoor College BA Product Design | Dec 2008 - Dec 2012 Most Outstanding Employee of the Year, Pixelpoint Hive (2015) GPA: 3.26 Minor in Management Best Mobile App Design, HGFZ Thesis involved studying several technology Graduate Center (2014) companies and optimizing their product +123-456-7890 hello@reallygreatsite.com reallygreatsite.com"
     ],
     "scores": {
-        "final_score": 4.55,
+        "final_score": 50.94,
         "breakdown": {
-            "skills": 0,
-            "experience": 0.0,
-            "education": 0,
-            "semantic": 18.2
+            "skills_score": 4.62,
+            "experience_score": 100,
+            "education_score": 100,
+            "semantic_score": 18.2,
+            "matched_skills": [],
+            "missing_skills": [
+                "taxation",
+                "bookkeeping",
+                "accounting",
+                "gst",
+                "auditing",
+                "financial reporting"
+            ]
         }
     }
 }

@@ -1,5 +1,7 @@
 {
-    "skills": [],
+    "skills": [
+        "leadership"
+    ],
     "experience": {
         "experiences": [],
         "total_experience_months": 0
@@ -12,12 +14,21 @@
     ],
     "certifications": [],
     "scores": {
-        "final_score": 5.17,
+        "final_score": 50.17,
         "breakdown": {
-            "skills": 0,
-            "experience": 0,
-            "education": 0,
-            "semantic": 20.7
+            "skills_score": 0.0,
+            "experience_score": 100,
+            "education_score": 100,
+            "semantic_score": 20.7,
+            "matched_skills": [],
+            "missing_skills": [
+                "taxation",
+                "bookkeeping",
+                "accounting",
+                "gst",
+                "auditing",
+                "financial reporting"
+            ]
         }
     }
 }

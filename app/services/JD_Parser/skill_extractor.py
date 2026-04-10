@@ -6,21 +6,49 @@ from typing import List, Dict
 # -------------------------------
 
 TECH_SKILLS = {
-    "python", "java", "c++", "sql", "excel", "power bi", "tableau",
-    "machine learning", "deep learning", "nlp", "pandas", "numpy",
-    "tensorflow", "pytorch", "fastapi", "django", "flask"
+        "tally",
+    "sap fico",
+    "oracle financials",
+    "quickbooks",
+    "zoho books",
+    "excel",
+    "advanced excel",
+    "power bi",
+    "tableau",
+    "sql",
+    "erp systems",
+    "ms office",
+    "google sheets",
+    "automation tools",
+    "data analysis tools"
+
 }
 
 ACCOUNTING_SKILLS = {
-    "financial reporting", "taxation", "gst", "auditing",
-    "accounts payable", "accounts receivable",
-    "balance sheet", "tally", "sap", "quickbooks"
+    "gst","taxation","tds","income tax","corporate tax",
+    "audit","statutory audit","internal audit","forensic audit",
+    "financial reporting","ifrs","gaap","accounts payable",
+    "accounts receivable","bank reconciliation","general ledger",
+    "finalization of accounts","cost accounting","variance analysis",
+    "budgeting","forecasting","cash flow management","financial analysis",
+    "compliance","roc filing","transfer pricing"
 }
 
 SOFT_SKILLS = {
-    "communication", "leadership", "teamwork",
-    "problem solving", "analytical thinking",
-    "time management", "adaptability"
+    "communication",
+    "analytical thinking",
+    "problem solving",
+    "attention to detail",
+    "time management",
+    "leadership",
+    "team management",
+    "decision making",
+    "critical thinking",
+    "adaptability",
+    "client handling",
+    "presentation skills",
+    "negotiation",
+    "organizational skills"
 }
 
 # Combine all skills

@@ -1,10 +1,25 @@
 from typing import Dict
 from textblob import TextBlob
 
-CONFIDENCE_KEYWORDS = [
-    "confident", "led", "managed", "developed",
-    "achieved", "improved", "optimized", "designed"
-]
+CONFIDENCE_KEYWORDS = {
+    "high": [
+        "led", "managed", "owned", "delivered", "achieved",
+        "improved", "optimized", "increased", "reduced",
+        "implemented", "developed", "executed", "driven",
+        "spearheaded", "resolved", "handled independently"
+    ],
+
+    "medium": [
+        "worked on", "assisted", "supported", "participated",
+        "contributed", "involved in", "helped",
+        "collaborated", "coordinated"
+    ],
+
+    "low": [
+        "learned", "familiar with", "basic knowledge",
+        "exposed to", "observed", "theoretical knowledge"
+    ]
+}
 
 
 def calculate_sentiment_score(transcript: str) -> float:
