@@ -1,0 +1,103 @@
+ [
+    {
+        "resume": "resumes1.txt",
+        "extracted": {
+            "skills": {
+                "technical_skills": [
+                    "backend development",
+                    "fastapi",
+                    "java",
+                    "machine learning",
+                    "python",
+                    "sql"
+                ],
+                "accounting_skills": [],
+                "soft_skills": []
+            },
+            "experience": 6,
+            "education": [
+                "ca"
+            ]
+        },
+        "scores": {
+            "skill_score": 100.0,
+            "experience_score": 83.6,
+            "education_score": 0.0,
+            "semantic_score": 64.8,
+            "final_score": 60
+        }
+    },
+    {
+        "resume": "resume2.pdf",
+        "extracted": {
+            "skills": {
+                "technical_skills": [
+                    "java"
+                ],
+                "accounting_skills": [],
+                "soft_skills": []
+            },
+            "experience": 5,
+            "education": [
+                "ca"
+            ]
+        },
+        "scores": {
+            "skill_score": 0.0,
+            "experience_score": 83.4,
+            "education_score": 0.0,
+            "semantic_score": 39.8,
+            "final_score": 55
+        }
+    },
+    {
+        "resume": "resumes2.txt",
+        "extracted": {
+            "skills": {
+                "technical_skills": [
+                    "java"
+                ],
+                "accounting_skills": [],
+                "soft_skills": []
+            },
+            "experience": 5,
+            "education": [
+                "ca"
+            ]
+        },
+        "scores": {
+            "skill_score": 0.0,
+            "experience_score": 83.4,
+            "education_score": 0.0,
+            "semantic_score": 40.9,
+            "final_score": 55
+        }
+    },
+    {
+        "resume": "resume1.pdf",
+        "extracted": {
+            "skills": {
+                "technical_skills": [
+                    "backend development",
+                    "fastapi",
+                    "machine learning",
+                    "python",
+                    "sql"
+                ],
+                "accounting_skills": [],
+                "soft_skills": []
+            },
+            "experience": 3,
+            "education": [
+                "ca"
+            ]
+        },
+        "scores": {
+            "skill_score": 100.0,
+            "experience_score": 89.5,
+            "education_score": 0.0,
+            "semantic_score": 65.2,
+            "final_score": 45
+        }
+    }
+]

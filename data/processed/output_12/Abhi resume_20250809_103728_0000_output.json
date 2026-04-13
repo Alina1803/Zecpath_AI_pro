@@ -1,5 +1,9 @@
 {
-    "skills": [],
+    "skills": [
+        "chartered accountant",
+        "leadership",
+        "teamwork"
+    ],
     "experience": {
         "experiences": [],
         "total_experience_months": 0
@@ -17,6 +21,6 @@
         "education_score": 50
     },
     "semantic_match": {
-        "semantic_similarity": 0.1926
+        "semantic_similarity": 0.193
     }
 }

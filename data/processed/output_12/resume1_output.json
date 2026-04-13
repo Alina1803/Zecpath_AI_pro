@@ -1,7 +1,11 @@
 {
     "skills": [
+        "automation",
+        "excel vba",
+        "python",
+        "rpa",
         "sql",
-        "python"
+        "uipath"
     ],
     "experience": {
         "experiences": [],
@@ -18,6 +22,6 @@
         "education_score": 50
     },
     "semantic_match": {
-        "semantic_similarity": 0.3609
+        "semantic_similarity": 0.361
     }
 }

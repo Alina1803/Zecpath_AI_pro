@@ -1,13 +1,51 @@
 {
     "skills": [
-        "taxation",
-        "excel",
+        "accounting",
+        "accounts payable",
+        "advanced excel",
+        "attention to detail",
+        "auditing",
+        "automation",
         "bookkeeping",
-        "gst",
+        "budgeting",
+        "chartered accountant",
+        "compliance",
+        "cost accounting",
+        "data analysis",
+        "direct tax",
+        "erp systems",
+        "excel",
+        "excel advanced",
+        "excel vba",
+        "filing",
+        "financial analysis",
+        "financial modeling",
         "financial reporting",
+        "forecasting",
+        "gaap",
+        "gst",
+        "ifrs",
+        "income tax",
+        "indirect tax",
+        "internal audit",
+        "leadership",
+        "management accounting",
+        "netsuite",
+        "oracle erp",
+        "power bi",
+        "python",
+        "quickbooks",
+        "risk management",
+        "rpa",
+        "sap",
+        "sap fico",
+        "sox",
+        "sql",
+        "statutory audit",
         "tally",
-        "audit",
-        "quickbooks"
+        "tax compliance",
+        "taxation",
+        "uipath"
     ],
     "experience": {
         "experiences": [],
@@ -26,6 +64,6 @@
         "education_score": 50
     },
     "semantic_match": {
-        "semantic_similarity": 0.6793
+        "semantic_similarity": 0.679
     }
 }

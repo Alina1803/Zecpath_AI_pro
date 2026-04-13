@@ -1,0 +1,4 @@
+Zeit A M
+Skills: Python, FastAPI, Machine Learning, SQL ,JAVA
+Experience: 6 years in backend development
+Education: B.Tech Computer Science

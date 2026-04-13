@@ -1,5 +1,16 @@
 {
-    "skills": [],
+    "skills": [
+        "auditing",
+        "chartered accountant",
+        "compliance",
+        "internal audit",
+        "leadership",
+        "risk management",
+        "sox",
+        "statutory audit",
+        "teamwork",
+        "time management"
+    ],
     "experience": {
         "experiences": [],
         "total_experience_months": 0
@@ -15,6 +26,6 @@
         "education_score": 50
     },
     "semantic_match": {
-        "semantic_similarity": 0.3511
+        "semantic_similarity": 0.351
     }
 }

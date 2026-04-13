@@ -1,6 +1,6 @@
 import os
 import json
-from .skill_extractor import SkillExtractor
+from .skill_extractor import extract_skills
 from .confidence_engine import score_skill_confidence
 
 
@@ -18,8 +18,8 @@ def run_skill_pipeline(input_json, output_json):
             or json.dumps(data)
             )
 
-    extractor = SkillExtractor()
-    skills = extractor.extract(text)
+    
+    skills = extract_skills(text)
 
     scored = []
     for skill in skills:

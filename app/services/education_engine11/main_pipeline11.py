@@ -4,7 +4,7 @@ import json
 from app.utils.text_cleaner import clean_text
 from app.utils.file_loader import load_file
 
-from app.services.skill_engine9.skill_extractor import  SkillExtractor
+from app.services.skill_engine9.skill_extractor import  extract_skills
 from app.services.experience_engine.experience_parser import extract_experience
 
 from app.services.education_engine11.education_parser import extract_education
@@ -22,8 +22,8 @@ def run_pipeline(resume_text, job_description):
     cleaned_jd = clean_text(job_description)
 
     # 🔹 Extraction
-    extractor = SkillExtractor()
-    skills = extractor.extract_skills(cleaned_text)
+
+    skills = extract_skills(cleaned_text)
     experience = extract_experience(cleaned_text)
 
     education = extract_education(cleaned_text)

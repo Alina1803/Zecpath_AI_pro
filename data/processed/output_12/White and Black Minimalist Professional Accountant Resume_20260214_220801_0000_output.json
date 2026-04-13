@@ -1,7 +1,19 @@
 {
     "skills": [
+        "accounting",
+        "accounts receivable",
+        "auditing",
+        "bookkeeping",
+        "compliance",
         "financial reporting",
-        "audit"
+        "gst",
+        "internal audit",
+        "leadership",
+        "risk management",
+        "sox",
+        "statutory audit",
+        "taxation",
+        "time management"
     ],
     "experience": {
         "experiences": [],
@@ -18,6 +30,6 @@
         "education_score": 50
     },
     "semantic_match": {
-        "semantic_similarity": 0.3538
+        "semantic_similarity": 0.354
     }
 }

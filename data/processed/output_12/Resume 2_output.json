@@ -1,5 +1,11 @@
 {
-    "skills": [],
+    "skills": [
+        "budgeting",
+        "cost accounting",
+        "financial analysis",
+        "forecasting",
+        "management accounting"
+    ],
     "experience": {
         "experiences": [
             {
@@ -25,6 +31,6 @@
         "education_score": 50
     },
     "semantic_match": {
-        "semantic_similarity": 0.1734
+        "semantic_similarity": 0.173
     }
 }
