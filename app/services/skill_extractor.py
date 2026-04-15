@@ -1,7 +1,6 @@
 import json
 import re
 import os
-import pypdf
 import pdfplumber
 from collections import defaultdict
 import warnings

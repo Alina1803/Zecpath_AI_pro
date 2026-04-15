@@ -1507,3 +1507,131 @@ This optimization layer ensures that the ATS system is:
 - Reliable 🔒
 
 Ready for real-world usage.
+
+---
+
+Task 21: Eligibility Engine 
+
+📌 Overview
+
+The eligibility_engine21 module is responsible for evaluating candidate eligibility based on predefined rules, configurations, and decision logic. It acts as a core component in the processing pipeline, determining whether a candidate meets specific criteria.
+
+---
+
+🗂️ Project Structure
+
+eligibility_engine21/
+│── __init__.py
+│── config_loader.py
+│── decision_engine.py
+│── main_pipeline21.py
+│── rules_engine.py
+│── __pycache__/
+
+---
+
+⚙️ Components
+
+1. "config_loader.py"
+
+- Loads configuration files (JSON/YAML/ENV).
+- Provides dynamic rule settings and thresholds.
+- Central place to manage eligibility parameters.
+
+---
+
+2. "rules_engine.py"
+
+- Contains all eligibility rules.
+- Handles rule definitions such as:
+  - Minimum qualifications
+  - Experience requirements
+  - Skill matching
+- Easily extendable for adding new rules.
+
+---
+
+3. "decision_engine.py"
+
+- Core logic processor.
+- Evaluates rules against candidate data.
+- Produces final eligibility decision:
+  - ✅ Eligible
+  - ❌ Not Eligible
+  - ⚠️ Conditional
+
+---
+
+4. "main_pipeline21.py"
+
+- Entry point of the eligibility engine.
+- Integrates:
+  - Config Loader
+  - Rules Engine
+  - Decision Engine
+- Executes full evaluation pipeline.
+
+---
+
+🔄 Workflow
+
+1. Load configuration using "config_loader"
+2. Parse candidate data
+3. Apply rules via "rules_engine"
+4. Evaluate results using "decision_engine"
+5. Return final eligibility status
+
+---
+
+🚀 Usage
+
+from eligibility_engine21.main_pipeline21 import run_pipeline
+
+candidate_data = {
+    "education": "BCA",
+    "experience": 2,
+    "skills": ["Python", "SQL"]
+}
+
+result = run_pipeline(candidate_data)
+print(result)
+
+---
+
+📦 Requirements
+
+- Python 3.8+
+- Required libraries (if any):
+  pip install -r requirements.txt
+
+---
+
+🧪 Testing
+
+- Unit tests should be written for:
+  - Rules validation
+  - Decision outcomes
+  - Config loading
+
+Run tests:
+
+pytest
+
+---
+
+🔧 Customization
+
+- Add new rules in "rules_engine.py"
+- Modify thresholds in config files
+- Extend decision logic in "decision_engine.py"
+
+---
+
+📈 Future Improvements
+
+- Add ML-based eligibility scoring
+- Improve rule weighting system
+- Integrate with external APIs
+- Logging & monitoring support
+
+---

@@ -1,0 +1,31 @@
+{
+  "default": {
+    "min_score": 60,
+    "mandatory_skills": [],
+    "min_experience": 0
+  },
+
+  "chartered_accountant": {
+    "min_score": 75,
+    "mandatory_skills": ["accounting", "taxation", "audit"],
+    "min_experience": 2
+  },
+
+  "accounts_officer": {
+    "min_score": 65,
+    "mandatory_skills": ["tally", "gst", "accounting"],
+    "min_experience": 1
+  },
+
+  "auditor": {
+    "min_score": 70,
+    "mandatory_skills": ["audit", "financial statements", "compliance"],
+    "min_experience": 2
+  },
+
+  "tax_consultant": {
+    "min_score": 70,
+    "mandatory_skills": ["taxation", "gst", "income tax"],
+    "min_experience": 1
+  }
+}

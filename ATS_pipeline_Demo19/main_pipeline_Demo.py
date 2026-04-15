@@ -33,7 +33,7 @@ def process_pipeline(resume_path, jd_path):
 
     resume_clean = clean_text(resume_raw)
 
-    # ✅ DEBUG BLOCK (ADD HERE)
+    # ✅ DEBUG BLOCK 
     print("\n==============================")
     print(f" Processing: {os.path.basename(resume_path)}")
     print(" Resume Text Sample:\n", resume_clean[:300])
