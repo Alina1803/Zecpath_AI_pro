@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Rahul Sharma",
+    "is_ca": true,
+    "experience": 5,
+    "gst_experience": true,
+    "itr_experience": true,
+    "tools": ["Tally", "SAP"],
+    "notice_period": 30
+  },
+  {
+    "name": "Priya Verma",
+    "is_ca": true,
+    "experience": 3,
+    "gst_experience": true,
+    "itr_experience": true,
+    "tools": ["Tally", "Excel"],
+    "notice_period": 20
+  }
+]

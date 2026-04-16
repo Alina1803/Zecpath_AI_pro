@@ -1,0 +1,27 @@
+{
+    "ats_score": 20,
+    "decision": {
+        "candidate_id": "resume1.txt",
+        "role": "chartered_accountant",
+        "final_status": "Review",
+        "confidence": 50.0,
+        "score": 20,
+        "missing_skills": [
+            "gst",
+            "income tax"
+        ],
+        "checks": {
+            "score_ok": false,
+            "experience_ok": true,
+            "skills_ok": false,
+            "certification_ok": true
+        },
+        "role_detected": "chartered_accountant"
+    },
+    "skills": [],
+    "experience": 3,
+    "is_valid": false,
+    "generated_questions": [],
+    "ai_questions": [],
+    "message": "Candidate REVIEW"
+}

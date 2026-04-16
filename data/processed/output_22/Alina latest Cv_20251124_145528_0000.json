@@ -1,0 +1,27 @@
+{
+    "ats_score": 0,
+    "decision": {
+        "candidate_id": "Alina latest Cv_20251124_145528_0000.docx",
+        "role": "chartered_accountant",
+        "final_status": "Rejected",
+        "confidence": 25.0,
+        "score": 0,
+        "missing_skills": [
+            "gst",
+            "income tax"
+        ],
+        "checks": {
+            "score_ok": false,
+            "experience_ok": false,
+            "skills_ok": false,
+            "certification_ok": true
+        },
+        "role_detected": "chartered_accountant"
+    },
+    "skills": [],
+    "experience": 0,
+    "is_valid": false,
+    "generated_questions": [],
+    "ai_questions": [],
+    "message": "Candidate REJECTED"
+}

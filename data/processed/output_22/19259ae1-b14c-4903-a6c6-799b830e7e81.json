@@ -1,0 +1,28 @@
+{
+    "ats_score": 30,
+    "decision": {
+        "candidate_id": "19259ae1-b14c-4903-a6c6-799b830e7e81.pdf",
+        "role": "chartered_accountant",
+        "final_status": "Review",
+        "confidence": 25.0,
+        "score": 25,
+        "missing_skills": [
+            "income tax"
+        ],
+        "checks": {
+            "score_ok": false,
+            "experience_ok": false,
+            "skills_ok": false,
+            "certification_ok": true
+        },
+        "role_detected": "chartered_accountant"
+    },
+    "skills": [
+        "gst"
+    ],
+    "experience": 0,
+    "is_valid": false,
+    "generated_questions": [],
+    "ai_questions": [],
+    "message": "Candidate REVIEW"
+}

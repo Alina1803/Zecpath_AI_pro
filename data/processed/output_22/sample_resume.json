@@ -1,0 +1,29 @@
+{
+    "ats_score": 35,
+    "decision": {
+        "candidate_id": "sample_resume.pdf",
+        "role": "chartered_accountant",
+        "final_status": "Review",
+        "confidence": 25.0,
+        "score": 25,
+        "missing_skills": [
+            "income tax"
+        ],
+        "checks": {
+            "score_ok": false,
+            "experience_ok": false,
+            "skills_ok": false,
+            "certification_ok": true
+        },
+        "role_detected": "chartered_accountant"
+    },
+    "skills": [
+        "audit",
+        "gst"
+    ],
+    "experience": 0,
+    "is_valid": false,
+    "generated_questions": [],
+    "ai_questions": [],
+    "message": "Candidate REVIEW"
+}

@@ -1,0 +1,42 @@
+[
+    {
+        "question_id": "CA001",
+        "question": "Are you a qualified Chartered Accountant?",
+        "category": "Education",
+        "answer_type": "boolean",
+        "mandatory": true,
+        "score_weight": 5
+    },
+    {
+        "question_id": "CA002",
+        "question": "How many years of experience do you have in accounting/audit?",
+        "category": "Experience",
+        "answer_type": "number",
+        "mandatory": true,
+        "score_weight": 4
+    },
+    {
+        "question_id": "CA003",
+        "question": "Do you have GST filing experience?",
+        "category": "Skills",
+        "answer_type": "boolean",
+        "mandatory": true,
+        "score_weight": 4
+    },
+    {
+        "question_id": "CA004",
+        "question": "Have you handled Income Tax returns?",
+        "category": "Skills",
+        "answer_type": "boolean",
+        "mandatory": true,
+        "score_weight": 4
+    },
+    {
+        "question_id": "CA005",
+        "question": "Which tools do you know (Tally, SAP, Excel)?",
+        "category": "Skills",
+        "answer_type": "list",
+        "mandatory": true,
+        "score_weight": 3
+    }
+]

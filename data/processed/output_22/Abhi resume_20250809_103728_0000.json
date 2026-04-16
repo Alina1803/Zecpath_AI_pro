@@ -1,0 +1,64 @@
+{
+    "ats_score": 80,
+    "decision": {
+        "candidate_id": "Abhi resume_20250809_103728_0000.pdf",
+        "role": "chartered_accountant",
+        "final_status": "Highly Eligible",
+        "confidence": 75.0,
+        "score": 75,
+        "missing_skills": [
+            "income tax"
+        ],
+        "checks": {
+            "score_ok": true,
+            "experience_ok": true,
+            "skills_ok": false,
+            "certification_ok": true
+        },
+        "role_detected": "chartered_accountant"
+    },
+    "skills": [
+        "excel",
+        "gst"
+    ],
+    "experience": 5,
+    "is_valid": false,
+    "generated_questions": [
+        "Do you have experience in GST?",
+        "Do you have experience in Income Tax?",
+        "Do you have experience in Audit?"
+    ],
+    "ai_questions": [
+        {
+            "id": "CA001",
+            "text": "Are you a qualified Chartered Accountant?",
+            "type": "boolean",
+            "mandatory": true
+        },
+        {
+            "id": "CA002",
+            "text": "How many years of experience do you have in accounting/audit?",
+            "type": "number",
+            "mandatory": true
+        },
+        {
+            "id": "CA003",
+            "text": "Do you have GST filing experience?",
+            "type": "boolean",
+            "mandatory": true
+        },
+        {
+            "id": "CA004",
+            "text": "Have you handled Income Tax returns?",
+            "type": "boolean",
+            "mandatory": true
+        },
+        {
+            "id": "CA005",
+            "text": "Which tools do you know (Tally, SAP, Excel)?",
+            "type": "list",
+            "mandatory": true
+        }
+    ],
+    "message": "Candidate shortlisted for interview"
+}

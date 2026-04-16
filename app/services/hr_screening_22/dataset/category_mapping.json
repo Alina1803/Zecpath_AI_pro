@@ -1,0 +1,65 @@
+{
+    "chartered_accountant": {
+        "keywords": [
+            "chartered accountant",
+            "ca",
+            "aca",
+            "icai"
+        ],
+        "category": "finance",
+        "skills": [
+            "gst",
+            "income tax",
+            "audit",
+            "accounting",
+            "financial statements"
+        ]
+    },
+    "accounts_officer": {
+        "keywords": [
+            "accounts officer",
+            "account executive",
+            "accountant"
+        ],
+        "category": "finance",
+        "skills": [
+            "tally",
+            "gst",
+            "accounting",
+            "bookkeeping"
+        ]
+    },
+    "auditor": {
+        "keywords": [
+            "auditor",
+            "internal auditor",
+            "external auditor"
+        ],
+        "category": "finance",
+        "skills": [
+            "audit",
+            "compliance",
+            "risk assessment",
+            "financial statements"
+        ]
+    },
+    "tax_consultant": {
+        "keywords": [
+            "tax consultant",
+            "tax advisor",
+            "tax specialist"
+        ],
+        "category": "finance",
+        "skills": [
+            "gst",
+            "income tax",
+            "taxation",
+            "returns filing"
+        ]
+    },
+    "default": {
+        "keywords": [],
+        "category": "general",
+        "skills": []
+    }
+}

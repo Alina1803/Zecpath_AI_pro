@@ -1,7 +1,7 @@
 from datetime import datetime
 from sqlalchemy.orm import Session
 
-from app.services.resume_parser import parse_resume
+from app.services.parsers.resume_parser import parse_resume
 from app.services.ats_scoring import calculate_ats_score
 from app.services.interview_scoring import score_interview
 

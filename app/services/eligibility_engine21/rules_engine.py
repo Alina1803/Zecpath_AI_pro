@@ -27,8 +27,9 @@ def check_mandatory_skills(candidate_skills, mandatory_skills):
     mandatory_skills = normalize_text_list(mandatory_skills)
 
     missing_skills = [
-        skill for skill in mandatory_skills if skill not in candidate_skills
-    ]
+    skill for skill in mandatory_skills
+    if not any(skill in c for c in candidate_skills)
+]
 
     return len(missing_skills) == 0, missing_skills
 

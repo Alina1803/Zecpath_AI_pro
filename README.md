@@ -1635,3 +1635,140 @@ pytest
 - Logging & monitoring support
 
 ---
+
+Task 22  HR Screening System – CA Domain
+
+📌 Overview
+
+The HR Screening System  is a rule-based candidate evaluation system designed specifically for Chartered Accountant (CA) roles.
+
+It enables automated screening using:
+
+- Structured HR question datasets
+- Rule-based eligibility scoring
+- AI-ready interview question objects
+
+This project simulates a mini Applicant Tracking System (ATS) for finance and accounting roles.
+
+---
+
+🎯 Objective
+
+To build a structured, AI-ready question bank and evaluation engine for automated HR screening of CA candidates.
+
+---
+
+📁 Project Structure
+
+hr_screening_22/
+│
+├── data/
+│   ├── ca_questions.json          # HR question dataset
+│   ├── category_mapping.json      # Question categories mapping
+│   └── sample_candidates.json     # Sample candidate data
+│
+├── eligibility_engine21/
+│   ├── config_loader.py           # Load datasets
+│   ├── rules_engine.py            # Scoring logic
+│   ├── decision_engine.py         # Final decision logic
+│   └── main_pipeline21.py         # Pipeline runner
+│
+├── ai_layer/
+│   ├── question_objects.py        # AI-ready question format
+│   └── conversation_engine.py     # Interview simulation
+│
+├── utils/
+│   ├── question_generator.py      # Dynamic question creation
+│   └── validator.py               # Input validation
+│
+├── app.py                         # Main execution file
+├── requirements.txt
+└── README.md
+
+---
+
+📦 Features
+
+✅ HR Question Dataset
+
+- CA-specific screening questions
+- Categorized into:
+  - Education
+  - Experience
+  - Skills
+  - Salary
+  - Notice Period
+
+---
+
+🧠 Rule-Based Eligibility Engine
+
+Evaluates candidates based on:
+
+- CA qualification
+- Experience (≥ 3 years)
+- GST & Income Tax experience
+- Tools (Tally / SAP)
+- Notice period
+
+---
+
+🤖 AI-Ready Question Objects
+
+- Structured format for chatbot/interview systems
+- Supports automation and NLP pipelines
+
+---
+
+📊 Scoring System
+
+Criteria| Score
+CA Qualification| +5
+Experience ≥ 3 yrs| +4
+GST Experience| +4
+ITR Experience| +4
+Tools (Tally/SAP)| +3
+Notice ≤ 30 days| +2
+
+---
+
+🧾 Decision Logic
+
+Score Range| Result
+≥ 15| Highly Eligible
+10–14| Eligible
+< 10| Not Eligible
+
+---
+
+🚀 How to Run
+
+1️⃣ Clone the Repository
+
+git clone <your-repo-url>
+cd hr_screening_ca
+
+2️⃣ Run the Application
+
+python app.py
+
+---
+
+📌 Example Output
+
+{
+  "name": "Rahul Sharma",
+  "score": 22,
+  "decision": "Highly Eligible"
+}
+
+---
+
+🧪 Testing
+
+Run tests using:
+
+pytest
+
+---
+
