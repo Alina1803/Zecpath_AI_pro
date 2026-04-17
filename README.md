@@ -1770,5 +1770,86 @@ Run tests using:
 
 pytest
 
+__________________________________________________________________________________________________
+
+
+
+ Day 23 – Transcript Data Architecture
+ Overview
+
+This module is responsible for converting raw voice-based candidate interactions into structured, AI-ready transcript data.
+
+It acts as a bridge between:
+- 🎤 Voice input (interviews, screening calls)
+- 🤖 AI processing (evaluation, scoring, insights)
+
 ---
+
+## 🎯 Objective
+
+To define and implement a scalable architecture for handling transcript data, including:
+- Transcript structure design
+- Metadata standardization
+- Text normalization
+- Storage and retrieval
+
+---
+
+## 🧱 Architecture Components
+
+### 1. Transcript Schema
+Defines how transcript data is structured:
+- Metadata (Candidate ID, Job ID, Question ID)
+- Segments (speaker, text, timestamp, confidence)
+- Full normalized text
+
+---
+
+### 2. Normalization Layer
+Cleans and standardizes transcript text:
+- Lowercasing
+- Removing noise/special characters
+- Formatting consistency
+
+---
+
+### 3. Processing Engine
+- Combines transcript segments
+- Applies normalization
+- Generates AI-ready text
+
+---
+
+### 4. Storage Layer
+- Saves processed transcripts as JSON
+- Supports database integration (SQL/NoSQL)
+
+---
+
+## 📁 Folder Structure
+
+app/
+ └── services/
+      └── transcript_engine_23/
+           ├── __init__.py
+           ├── main_transcript23.py          # FastAPI entry
+           ├── processor.py               # core logic
+           ├── normalizer.py              # cleaning rules
+           ├── schema.py                  # data models
+           ├── storage.py                 # save/load
+           ├──finance_extractor.py
+           ├──scoring.py
+           ├──repository.py
+data/
+ └── transcripts/
+      ├── raw/
+      └── processed/
+
+RUN:
+
+uvicorn app.services.transcript_engine_23.main_transcript:app --reload
+
+Conclusion:
+
+The Transcript Data Architecture successfully transforms unstructured voice data into structured, high-quality datasets suitable for AI processing.
 
