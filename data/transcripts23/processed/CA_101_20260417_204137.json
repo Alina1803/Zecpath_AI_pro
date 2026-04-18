@@ -1,0 +1,25 @@
+{
+    "metadata": {
+        "candidate_id": "CA_101",
+        "job_id": "FIN_001",
+        "question_id": "GST_01"
+    },
+    "segments": [
+        {
+            "speaker": "candidate",
+            "text": "i handled gst filing and sap fico reconciliation.",
+            "timestamp": 1.1,
+            "confidence": 0.96,
+            "finance_skill_tags": [
+                "gst",
+                "sap_fico"
+            ]
+        }
+    ],
+    "full_text": "i handled gst filing and sap fico reconciliation.",
+    "detected_topics": [
+        "sap_fico",
+        "gst"
+    ],
+    "answer_score": 6
+}
