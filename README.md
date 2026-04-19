@@ -1853,3 +1853,172 @@ Conclusion:
 
 The Transcript Data Architecture successfully transforms unstructured voice data into structured, high-quality datasets suitable for AI processing.
 
+📘 Day 24 – Speech-to-Text Integration & Cleaning (CA Domain)
+
+📌 Overview
+
+This module converts raw audio input (candidate interview responses) into clean, structured, AI-ready text. It is a critical step in the Zecpath AI pipeline, enabling downstream systems like ATS scoring, semantic matching, and candidate ranking.
+
+---
+
+🎯 Objective
+
+To transform unstructured voice data into high-quality textual data by:
+
+- Converting speech to text using an STT engine
+- Cleaning filler words and noise
+- Structuring responses for AI analysis
+- Enhancing accuracy for CA (Chartered Accountant) domain-specific terms
+
+---
+
+🔗 Pipeline Position (Day 23 → Day 24)
+
+Stage| Description
+Day 23| Audio capture, segmentation, silence detection
+Day 24| Speech-to-text + transcript cleaning
+Day 25| Topic extraction & domain intelligence
+
+---
+
+🏗️ Project Structure
+
+speech_module/
+│
+├── stt_engine.py              # Speech-to-text conversion
+├── text_cleaner.py            # Text cleaning & normalization
+├── transcript_processor.py    # Handling segments & interruptions
+├── accuracy_test.py           # WER accuracy evaluation
+└── run_pipeline24.py      # Main execution pipeline
+
+---
+
+⚙️ Features
+
+🎙️ Speech-to-Text
+
+- Converts audio into raw transcript
+- Supports multiple accents and noise conditions
+- Segment-level transcription
+
+🧹 Text Cleaning
+
+- Removes filler words (um, uh, like, etc.)
+- Normalizes case (lowercase)
+- Fixes spacing and punctuation
+
+🧠 Transcript Processing
+
+- Handles interruptions and silence
+- Merges segmented speech
+- Detects incomplete answers
+
+📊 Accuracy Evaluation
+
+- Calculates Word Error Rate (WER)
+- Provides transcription accuracy %
+
+🧾 CA Domain Optimization
+
+- Corrects domain-specific terms:
+  - GST
+  - TDS
+  - Input Tax Credit
+  - Balance Sheet
+  - Profit & Loss
+
+---
+
+🚀 Installation
+
+1. Install dependencies
+
+pip install openai-whisper
+pip install jiwer
+pip install torch
+
+---
+
+▶️ Usage
+
+Run the pipeline
+
+python run_pipeline24.py
+
+Example
+
+result = run_pipeline("sample_audio.wav")
+
+print(result["clean_text"])
+
+---
+
+📤 Output Format
+
+{
+  "raw_text": "...",
+  "processed_text": "...",
+  "clean_text": "...",
+  "accuracy": {
+    "wer_score": 0.12,
+    "accuracy": 88.0
+  }
+}
+
+---
+
+🧪 Example
+
+Input Audio:
+
+«"uh I worked on gst filing and um taxation compliance"»
+
+Output:
+
+«"i worked on gst filing and taxation compliance."»
+
+---
+
+🧩 Integration Points
+
+This module feeds into:
+
+- ATS Engine (Day 10–11)
+- Semantic Matching Engine (Day 12)
+- Candidate Ranking (Day 14)
+- Recruiter Summary (Day 14)
+
+---
+
+📈 Importance for CA Domain
+
+Accurate transcription is crucial because:
+
+- Financial terminology must be precise
+- Errors impact skill extraction
+- Recruiter insights depend on clean responses
+
+---
+
+⚠️ Limitations
+
+- Accuracy depends on audio quality
+- Heavy accents may reduce performance
+- Basic punctuation correction (not advanced NLP)
+
+---
+
+🔮 Future Improvements
+
+- Real-time transcription (streaming)
+- Advanced punctuation using NLP models
+- Speaker diarization (multi-speaker detection)
+- Integration with live interview systems
+
+---
+
+✅ Conclusion
+
+Day 24 enables the transformation of raw audio into structured, high-quality text, forming the foundation for intelligent AI-driven hiring decisions in the CA domain.
+
+---

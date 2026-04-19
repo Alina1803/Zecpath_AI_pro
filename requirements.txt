@@ -2,6 +2,9 @@ spacy
 dateparser
 sentence-transformers
 streamlit
+openai-whisper
+jiwer
+torch
 fastapi
 uvicorn
 sqlalchemy
