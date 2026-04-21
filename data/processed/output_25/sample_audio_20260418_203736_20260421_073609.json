@@ -1,0 +1,17 @@
+{
+    "audio_file": "E:\\Zecpath_AI_pro\\data\\raw\\Audios\\sample_audio.wav",
+    "clean_text": "i worked on gst filing, taxation compliance, and audit reporting.",
+    "analysis": {
+        "intent": "technical",
+        "skills": [
+            "gst",
+            "taxation",
+            "audit"
+        ],
+        "experience": null,
+        "salary": null,
+        "availability": null,
+        "off_topic": false,
+        "is_vague": false
+    }
+}

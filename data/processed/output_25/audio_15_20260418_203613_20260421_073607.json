@@ -1,0 +1,13 @@
+{
+    "audio_file": "E:\\Zecpath_AI_pro\\data\\raw\\Audios\\audio_15.wav",
+    "clean_text": "i worked on cost accounting techniques.",
+    "analysis": {
+        "intent": "experience",
+        "skills": [],
+        "experience": null,
+        "salary": null,
+        "availability": null,
+        "off_topic": false,
+        "is_vague": false
+    }
+}

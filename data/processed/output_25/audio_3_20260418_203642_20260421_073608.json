@@ -1,0 +1,15 @@
+{
+    "audio_file": "E:\\Zecpath_AI_pro\\data\\raw\\Audios\\audio_3.wav",
+    "clean_text": "i assisted in statutory audits and internal audits, ensuring compliance with accounting standards and identifying financial discrepancies.",
+    "analysis": {
+        "intent": "technical",
+        "skills": [
+            "audit"
+        ],
+        "experience": null,
+        "salary": null,
+        "availability": null,
+        "off_topic": false,
+        "is_vague": false
+    }
+}

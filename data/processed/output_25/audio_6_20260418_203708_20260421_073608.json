@@ -1,0 +1,15 @@
+{
+    "audio_file": "E:\\Zecpath_AI_pro\\data\\raw\\Audios\\audio_6.wav",
+    "clean_text": "i performed financial analysis to evaluate business performance and provided insights for cost optimization.",
+    "analysis": {
+        "intent": "general",
+        "skills": [
+            "financial analysis"
+        ],
+        "experience": null,
+        "salary": null,
+        "availability": null,
+        "off_topic": true,
+        "is_vague": false
+    }
+}

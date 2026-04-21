@@ -1,0 +1,15 @@
+{
+    "audio_file": "E:\\Zecpath_AI_pro\\data\\raw\\Audios\\audio_5.wav",
+    "clean_text": "i manage tds calculations, deductions, and return filings while ensuring compliance with government regulations.",
+    "analysis": {
+        "intent": "technical",
+        "skills": [
+            "tds"
+        ],
+        "experience": null,
+        "salary": null,
+        "availability": null,
+        "off_topic": true,
+        "is_vague": false
+    }
+}

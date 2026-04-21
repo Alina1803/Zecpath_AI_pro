@@ -1,0 +1,16 @@
+{
+    "audio_file": "E:\\Zecpath_AI_pro\\data\\raw\\Audios\\audio_12.wav",
+    "clean_text": "i participated in gst audits.",
+    "analysis": {
+        "intent": "technical",
+        "skills": [
+            "gst",
+            "audit"
+        ],
+        "experience": null,
+        "salary": null,
+        "availability": null,
+        "off_topic": false,
+        "is_vague": false
+    }
+}

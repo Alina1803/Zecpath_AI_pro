@@ -1,0 +1,13 @@
+{
+    "audio_file": "E:\\Zecpath_AI_pro\\data\\raw\\Audios\\audio_10.wav",
+    "clean_text": "i worked on budgeting and forecasting.",
+    "analysis": {
+        "intent": "experience",
+        "skills": [],
+        "experience": null,
+        "salary": null,
+        "availability": null,
+        "off_topic": true,
+        "is_vague": false
+    }
+}

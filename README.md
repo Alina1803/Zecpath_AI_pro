@@ -2022,3 +2022,131 @@ Accurate transcription is crucial because:
 Day 24 enables the transformation of raw audio into structured, high-quality text, forming the foundation for intelligent AI-driven hiring decisions in the CA domain.
 
 ---
+
+📘 Day 25 – Answer Evaluation Engine
+
+🎯 Objective
+
+To intelligently process and evaluate candidate responses by extracting intent, identifying key entities, and analyzing answer quality in the context of domain-specific expectations (Chartered Accounting).
+
+---
+
+🧠 Overview
+
+The Answer Evaluation Engine is a core component of the Zecpath AI Pro pipeline. It transforms raw candidate responses into structured insights by applying NLP techniques such as intent classification, entity extraction, and response analysis.
+
+This module enables downstream systems (like scoring and ranking engines) to make accurate and explainable hiring decisions.
+
+---
+
+⚙️ Key Components
+
+1. Intent Classifier ("intent_classifier.py")
+
+- Identifies the purpose of the candidate's response
+- Categories:
+  - Concept Explanation
+  - Process Description
+  - Practical Experience
+  - Definition-Based Answers
+
+---
+
+2. Entity Extractor ("entity_extractor.py")
+
+- Extracts domain-specific terms related to CA field:
+  - GST (Input Tax Credit, GSTR)
+  - Audit (Compliance, Verification)
+  - Taxation (Deductions, Filing)
+- Helps measure domain relevance
+
+---
+
+3. Response Analyzer ("response_analyzer.py")
+
+Evaluates:
+
+- Depth of explanation
+- Sentence structure
+- Technical coverage
+- Keyword richness
+
+---
+
+4. Answer Engine ("answer_engine.py")
+
+- Orchestrates the full evaluation pipeline
+- Combines:
+  - Intent classification
+  - Entity extraction
+  - Response analysis
+
+---
+
+5. Pipeline Runner ("run_engine25.py")
+
+- Executes the full flow
+- Reads processed transcript input (from Day 24)
+- Outputs structured evaluation JSON
+
+---
+
+🔄 Workflow
+
+Candidate Answer
+        ↓
+Intent Classification
+        ↓
+Entity Extraction
+        ↓
+Response Analysis
+        ↓
+Structured Evaluation Output
+
+---
+
+📂 Input Format
+
+{
+    "question": "Explain GST filing",
+    "answer": "GST filing involves calculating tax, ITC claims, and submitting returns."
+}
+
+---
+
+📤 Output Format
+
+{
+    "question": "Explain GST filing",
+    "intent": "Process Explanation",
+    "entities": ["GST", "ITC", "returns"],
+    "analysis": {
+        "length_score": 8,
+        "technical_score": 7,
+        "quality": "Good"
+    }
+}
+
+---
+
+🚀 How to Run
+
+python -m  app.services.answer_engine_25.run_engine25
+
+---
+
+
+💡 Industry-Level Features
+
+- Modular architecture (microservice-ready)
+- Domain-aware processing (CA-specific logic)
+- Explainable outputs for recruiters
+- Easily extendable to LLM-based evaluation
+
+---
+
+✅ Conclusion
+
+The Answer Evaluation Engine converts unstructured candidate responses into structured, meaningful insights. By combining NLP techniques with domain knowledge, it creates a strong foundation for objective and scalable candidate assessment in the Chartered Accounting domain.
+
+---

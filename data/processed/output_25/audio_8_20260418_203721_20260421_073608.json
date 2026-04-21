@@ -1,0 +1,15 @@
+{
+    "audio_file": "E:\\Zecpath_AI_pro\\data\\raw\\Audios\\audio_8.wav",
+    "clean_text": "i maintained bookkeeping using tally.",
+    "analysis": {
+        "intent": "general",
+        "skills": [
+            "tally"
+        ],
+        "experience": null,
+        "salary": null,
+        "availability": null,
+        "off_topic": true,
+        "is_vague": false
+    }
+}

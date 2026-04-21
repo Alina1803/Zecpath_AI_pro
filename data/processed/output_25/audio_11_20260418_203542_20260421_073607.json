@@ -1,0 +1,15 @@
+{
+    "audio_file": "E:\\Zecpath_AI_pro\\data\\raw\\Audios\\audio_11.wav",
+    "clean_text": "i interacted with clients to understand their financial needs and provided solutions for taxation and compliance.",
+    "analysis": {
+        "intent": "technical",
+        "skills": [
+            "taxation"
+        ],
+        "experience": null,
+        "salary": null,
+        "availability": null,
+        "off_topic": false,
+        "is_vague": false
+    }
+}

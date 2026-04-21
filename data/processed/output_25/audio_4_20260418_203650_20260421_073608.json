@@ -1,0 +1,15 @@
+{
+    "audio_file": "E:\\Zecpath_AI_pro\\data\\raw\\Audios\\audio_4.wav",
+    "clean_text": "i prepared balance sheets and profit and loss statements.",
+    "analysis": {
+        "intent": "general",
+        "skills": [
+            "balance sheet"
+        ],
+        "experience": null,
+        "salary": null,
+        "availability": null,
+        "off_topic": true,
+        "is_vague": false
+    }
+}

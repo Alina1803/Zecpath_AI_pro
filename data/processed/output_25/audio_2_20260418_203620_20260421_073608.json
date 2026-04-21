@@ -1,0 +1,15 @@
+{
+    "audio_file": "E:\\Zecpath_AI_pro\\data\\raw\\Audios\\audio_2.wav",
+    "clean_text": "i worked on direct and indirect taxation including income tax return filing and tax planning for clients.",
+    "analysis": {
+        "intent": "technical",
+        "skills": [
+            "taxation"
+        ],
+        "experience": null,
+        "salary": null,
+        "availability": null,
+        "off_topic": false,
+        "is_vague": false
+    }
+}

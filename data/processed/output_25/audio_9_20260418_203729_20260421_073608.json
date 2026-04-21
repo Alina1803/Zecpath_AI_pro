@@ -1,0 +1,13 @@
+{
+    "audio_file": "E:\\Zecpath_AI_pro\\data\\raw\\Audios\\audio_9.wav",
+    "clean_text": "i insured statutory compliance and rock filings.",
+    "analysis": {
+        "intent": "general",
+        "skills": [],
+        "experience": null,
+        "salary": null,
+        "availability": null,
+        "off_topic": true,
+        "is_vague": false
+    }
+}

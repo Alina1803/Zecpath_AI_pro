@@ -1,0 +1,15 @@
+{
+    "audio_file": "E:\\Zecpath_AI_pro\\data\\raw\\Audios\\audio_1.wav",
+    "clean_text": "i have handled gst return filing including gst r1 and gst r3b. i ensure timely compliance and reconciled input tax credit regularly.",
+    "analysis": {
+        "intent": "technical",
+        "skills": [
+            "gst"
+        ],
+        "experience": null,
+        "salary": null,
+        "availability": null,
+        "off_topic": false,
+        "is_vague": false
+    }
+}
