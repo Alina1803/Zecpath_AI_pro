@@ -1,0 +1,35 @@
+{
+    "gst": {
+        "keywords": [
+            "gst",
+            "input tax credit",
+            "itc",
+            "gstr",
+            "returns",
+            "output tax",
+            "invoice matching"
+        ],
+        "weight": 1.2
+    },
+    "audit": {
+        "keywords": [
+            "audit",
+            "internal audit",
+            "statutory audit",
+            "verification",
+            "compliance",
+            "financial statements"
+        ],
+        "weight": 1.1
+    },
+    "taxation": {
+        "keywords": [
+            "income tax",
+            "deductions",
+            "exemptions",
+            "filing",
+            "tax liability"
+        ],
+        "weight": 1.0
+    }
+}

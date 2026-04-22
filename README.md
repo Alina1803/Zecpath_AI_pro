@@ -2150,3 +2150,201 @@ python -m  app.services.answer_engine_25.run_engine25
 The Answer Evaluation Engine converts unstructured candidate responses into structured, meaningful insights. By combining NLP techniques with domain knowledge, it creates a strong foundation for objective and scalable candidate assessment in the Chartered Accounting domain.
 
 ---
+
+📊 Day 26 – Screening Scoring Engine (CA Domain)
+
+🧠 Overview
+
+The Screening Scoring Engine is an AI-powered evaluation system designed to objectively assess candidate responses in screening interviews for the Chartered Accountant (CA) domain.
+
+It combines:
+
+- LLM-based evaluation (clarity, relevance, completeness, consistency)
+- Semantic similarity scoring
+- Domain-specific knowledge validation
+
+The engine produces explainable, structured, and production-ready scoring outputs.
+
+---
+
+🎯 Objective
+
+To objectively evaluate candidate screening responses and generate:
+
+- Per-question score breakdown
+- Final aggregated screening score
+- Explainable evaluation metrics
+
+---
+
+⚙️ Key Features
+
+- ✅ Multi-factor scoring (LLM + semantic + domain)
+- ✅ Weighted scoring system
+- ✅ Explainable outputs (per-question insights)
+- ✅ Fallback mechanism (LLM unavailable)
+- ✅ Config-driven architecture
+- ✅ Production-ready pipeline
+- ✅ Structured JSON output
+- ✅ Error handling & logging
+
+---
+
+🏗️ Architecture
+
+Input (Day 25 Output)
+        ↓
+Text Preprocessing
+        ↓
+LLM Evaluator (Clarity, Relevance, Completeness, Consistency)
+        ↓
+Semantic Matcher (BERT similarity)
+        ↓
+Domain Evaluator (CA knowledge)
+        ↓
+Score Aggregation (Weighted)
+        ↓
+Calibration Layer
+        ↓
+Final Screening Score
+        ↓
+JSON Output + Metadata
+
+---
+
+📁 Folder Structure
+
+app/
+ └── services/
+     └── screening_engine_26/
+         ├── __init__.py
+         ├── scoring_engine.py
+         ├── llm_evaluator.py
+         ├── semantic_matcher.py
+         ├── domain_evaluator.py
+         ├── calibration.py
+         ├── weights_config.py
+         └── run_pipeline26.py
+
+app/
+ └── utils/
+     ├── text_preprocessor.py
+     └── logger.py
+
+data/
+ ├── ca_domain_knowledge26.json
+ ├── scoring_prompts26.txt
+ └── processed/
+     └── output_26/
+
+---
+
+🔢 Scoring Logic
+
+Final score is computed using weighted aggregation:
+
+Final Score = (
+    clarity * w1 +
+    relevance * w2 +
+    completeness * w3 +
+    consistency * w4 +
+    semantic_similarity * w5 +
+    domain_score * w6
+) * 10
+
+Example Weights
+
+WEIGHTS = {
+    "clarity": 0.2,
+    "relevance": 0.2,
+    "completeness": 0.2,
+    "consistency": 0.1,
+    "semantic": 0.2,
+    "domain": 0.1
+}
+
+---
+
+📥 Input Format
+
+{
+  "candidate_id": "CAND_001",
+  "question": "Explain GST filing",
+  "answer": "GST filing involves invoice tracking...",
+  "expected_answer": "GST filing includes calculating tax..."
+}
+
+---
+
+📤 Output Format
+
+{
+  "meta": {
+    "run_id": "RUN_20260421_124451",
+    "run_time": "2026-04-21T12:44:51",
+    "total_candidates": 1,
+    "processed": 1,
+    "failed": 0,
+    "engine_version": "v2.2",
+    "domain": "Chartered Accountant"
+  },
+  "results": [
+    {
+      "candidate_id": "CAND_001",
+      "question": "Explain GST filing",
+      "answer": "...",
+      "llm_scores": {
+        "clarity": 7,
+        "relevance": 7,
+        "completeness": 6,
+        "consistency": 7
+      },
+      "semantic_score": 0.82,
+      "domain_score": 0.75,
+      "final_score": 78.5,
+      "confidence": 0.78
+    }
+  ]
+}
+
+---
+
+🚀 How to Run
+
+Step 1: Activate environment
+
+.venv\Scripts\activate
+
+Step 2: Run pipeline
+
+python -m app.services.screening_engine_26.run_pipeline26
+
+---
+
+📂 Output Location
+
+data/processed/output_26/
+
+Files are saved as:
+
+screening_results_YYYYMMDD_HHMMSS.json
+
+---
+
+🧪 Example Use Case
+
+- AI-powered interview screening
+- Candidate evaluation automation
+- Pre-interview filtering system
+- Recruitment analytics
+
+---
+
+🏁 Conclusion
+
+The Day 26 Screening Scoring Engine delivers a robust, explainable, and scalable evaluation system for candidate screening.
+
+It integrates AI scoring, semantic intelligence, and domain expertise to produce high-quality hiring signals.
+
+---
+
