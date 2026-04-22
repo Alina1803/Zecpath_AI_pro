@@ -51,5 +51,5 @@ class AdvancedScoringEngine:
             "semantic_score": semantic,
             "domain_score": domain,
             "final_score": final_score,
-            "confidence": round((semantic + domain) / 2, 2)
+            "technical_confidence": round((semantic + domain) / 2, 2)
         }

@@ -2348,3 +2348,206 @@ It integrates AI scoring, semantic intelligence, and domain expertise to produce
 
 ---
 
+📊 Day 27 – Confidence & Sentiment Signal Analysis Engine
+
+🚀 Overview
+
+The Signal Analysis Engine (Day 27) enhances the candidate evaluation pipeline by analyzing communication quality, behavioral signals, and confidence indicators.
+
+This module works on top of Day 26 (Screening Scoring Engine) and provides deeper insights into how candidates communicate, not just what they answer.
+
+---
+
+🎯 Objective
+
+To assess:
+
+- Candidate confidence level
+- Sentiment tone (positive / negative / neutral)
+- Hesitation patterns
+- Contradictions or uncertainty
+- Overall communication strength
+
+---
+
+🧠 Key Features
+
+- ✅ Confidence scoring (0–10 scale)
+- ✅ Sentiment analysis (0–1 normalized)
+- ✅ Hesitation detection (behavioral signals)
+- ✅ Contradiction detection
+- ✅ Communication strength scoring
+- ✅ Explainable insights & flags
+
+---
+
+🏗️ System Architecture
+
+Day 25 → Answer Processing
+        ↓
+Day 26 → Technical Scoring Engine
+        ↓
+Day 27 → Signal Analysis Engine
+        ↓
+Final AI Hiring Intelligence Output
+
+---
+
+📁 Folder Structure
+
+app/
+ └── services/
+     └── signal_engine_27/
+         ├── __init__.py
+         ├── confidence_analyzer.py
+         ├── sentiment_analyzer.py
+         ├── hesitation_detector.py
+         ├── contradiction_checker.py
+         ├── communication_scorer.py
+         ├── signal_engine.py
+         └── run_pipeline27.py
+
+data/
+ ├── processed/
+ │   ├── output_26/
+ │   └── output_27/
+
+---
+
+⚙️ Modules Description
+
+1. Hesitation Detector
+
+Detects uncertainty words like:
+
+- "um", "maybe", "I think", "not sure"
+
+---
+
+2. Sentiment Analyzer
+
+Classifies tone:
+
+- Positive
+- Neutral
+- Negative
+
+Returns normalized score (0–1)
+
+---
+
+3. Confidence Analyzer
+
+Combines:
+
+- Sentiment score
+- Hesitation level
+
+Outputs confidence score (0–10)
+
+---
+
+4. Contradiction Checker
+
+Detects logical inconsistencies:
+
+- "but", "however", "although"
+
+---
+
+5. Communication Scorer
+
+Final behavioral score based on:
+
+- Confidence
+- Contradictions
+
+---
+
+6. Signal Engine (Core)
+
+Aggregates all signals into:
+
+{
+  "confidence_score": 8.1,
+  "sentiment_score": 0.6,
+  "hesitation_score": 0.0,
+  "contradiction_score": 0.0,
+  "communication_strength": 8.1,
+  "flags": []
+}
+
+---
+
+🔁 Pipeline Execution
+
+Run the pipeline:
+
+python -m app.services.signal_engine_27.run_pipeline27
+
+---
+
+📥 Input
+
+Reads latest output from:
+
+data/processed/output_26/
+
+---
+
+📤 Output
+
+Stored in:
+
+data/processed/output_27/
+
+---
+
+📦 Sample Output
+
+{
+  "candidate_id": "CAND_001",
+  "final_score": 78.5,
+  "confidence_score": 8.1,
+  "sentiment_score": 0.6,
+  "communication_strength": 8.1,
+  "flags": [],
+  "insights": "Candidate shows strong confidence with clear communication."
+}
+
+---
+
+🚩 Flags & Indicators
+
+Flag| Meaning
+hesitation_detected| Candidate shows uncertainty
+contradiction_detected| Conflicting statements
+
+---
+
+🧪 Use Cases
+
+- AI-based interview evaluation
+- Behavioral assessment in hiring
+- Communication skill scoring
+- Soft skill analytics for CA domain
+
+---
+
+
+🏁 Conclusion
+
+The Day 27 Signal Analysis Engine transforms your system from:
+
+➡️ Technical Evaluation Tool
+to
+➡️ Complete AI Hiring Intelligence System
+
+By combining:
+
+- Technical scoring (Day 26)
+- Behavioral insights (Day 27)
+
+Now have a production-ready candidate evaluation pipeline capable of real-world hiring decisions.
+
+---

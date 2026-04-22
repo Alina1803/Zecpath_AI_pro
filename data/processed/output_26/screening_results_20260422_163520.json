@@ -1,7 +1,7 @@
 {
     "meta": {
-        "run_id": "RUN_20260422_130730",
-        "run_time": "2026-04-22T13:07:30.553184",
+        "run_id": "RUN_20260422_163520",
+        "run_time": "2026-04-22T16:35:20.842655",
         "total_candidates": 1,
         "processed": 1,
         "failed": 0,
@@ -22,7 +22,7 @@
             "semantic_score": 7.09,
             "domain_score": 3.4,
             "final_score": 64.49,
-            "confidence": 5.24,
+            "technical_confidence": 5.24,
             "candidate_id": "CAND_001"
         }
     ]

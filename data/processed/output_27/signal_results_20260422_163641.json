@@ -1,0 +1,35 @@
+{
+    "meta": {
+        "run_id": "RUN_20260422_163520",
+        "run_time": "2026-04-22T16:35:20.842655",
+        "total_candidates": 1,
+        "processed": 1,
+        "failed": 0,
+        "engine_version": "v2.2",
+        "domain": "Chartered Accountant"
+    },
+    "results": [
+        {
+            "question": "Explain GST filing",
+            "answer": "GST filing involves invoice tracking, ITC claims, and return submission.",
+            "llm_scores": {
+                "clarity": 7,
+                "relevance": 7,
+                "completeness": 6,
+                "consistency": 7,
+                "reason": "Fallback scoring (LLM unavailable)"
+            },
+            "semantic_score": 7.09,
+            "domain_score": 3.4,
+            "final_score": 64.49,
+            "technical_confidence": 5.24,
+            "candidate_id": "CAND_001",
+            "behavioral_confidence": 6.5,
+            "sentiment_score": 0.5,
+            "hesitation_score": 0.0,
+            "contradiction_score": 0.0,
+            "communication_strength": 6.5,
+            "flags": []
+        }
+    ]
+}
