@@ -2664,3 +2664,98 @@ Deliverables:
 ✔ Recruiter-friendly output
 
 ✔ Decision engine
+
+----
+
+###  DAY 29: AI Interview System (Conversational AI Project)
+
+📌 Overview
+
+This project is an AI-powered interview system built using Conversational AI (CA) principles.
+It simulates a real interview by asking questions, evaluating answers, handling silence/errors, and scoring candidate performance.
+
+---
+
+🎯 Features
+
+- 🧠 Structured interview flow (question → answer → evaluation)
+- 🔄 State machine-based conversation control
+- 📊 Answer evaluation and scoring system
+- ⚠️ Handles silence, short answers, and retries
+- 🧩 Modular and scalable architecture
+- 📝 Logging for debugging and analysis
+
+---
+
+🏗️ Project Structure
+
+├── ai-conversation-system29/
+│
+│   ├── flows/                               #conversation control logic
+│   │   ├── decision_tree.py
+│   │   ├── state_machine.py
+│   │   └── fallback_handler.py
+│   │
+│   ├── questions/                       #interview questions
+│   │   ├── question_bank.py
+│   │   └── question_config..json
+│   ├── evaluation/                               #Answer evaluation and scoring
+│   │   ├── evaluator.py
+│   │   └── scoring.py
+│   │
+│   ├── responses/                             #feedback messages
+│   │   ├── templates.py
+│   │   └── retry_messages.py
+│   ├── main.py
+│   │
+│   ├── docs/
+│       └── architecture.md
+│
+├── utils/
+│      ├── logger.py
+│      └── helpers.py
+│
+├── tests/
+│   ├── test_evaluation.py
+│   ├── test_flows.py
+│   └── test_fallbacks.py
+│
+├── configs/
+│   ├── interview_config.yaml
+│   └── scoring_policy.yaml
+││
+└── requirements.txt
+
+---
+
+Final Result:
+
+✔ Modular AI conversation system
+
+✔ Error handling & retry logic
+
+✔ State-based flow (industry standard)
+
+✔ Test cases
+
+✔ Config-driven design
+
+13.Conclusion:
+
+This design models a real-world conversational AI system used in:
+
+Customer support bots
+
+Voice assistants
+
+Call center automation
+
+
+By combining:
+
+Decision trees
+
+State machines
+
+Retry + fallback logic
+-----

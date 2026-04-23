@@ -1,0 +1,30 @@
+AI Interview Output
+========================================
+
+Interview Started
+Q1: Tell me about yourself
+Candidate: i am Alina Ansari who graduated BCA.
+Evaluation: good
+Score: 3
+AI Feedback: Good answer 👍
+Q2: What is Python?
+Candidate: python is a programming language used to build apps,websites,AI tools etc..
+Evaluation: good
+Score: 3
+AI Feedback: Good answer 👍
+Q3: Explain OOP concepts
+Candidate: 
+AI: Please answer the question.
+Candidate: hgfhg
+Evaluation: poor
+Score: 1
+AI Feedback: Answer is too short. Please elaborate.
+Q4: What are your strengths?
+Candidate: hjvjgio;ok/l;
+Evaluation: poor
+Score: 1
+AI Feedback: Answer is too short. Please elaborate.
+Interview Completed
+Final Score: 8
+
+Final Score: 8
