@@ -1,0 +1,50 @@
+[
+    {
+        "candidate_id": "CAND_001",
+        "question": "Explain GST filing",
+        "answer": "GST filing involves invoice tracking, input tax credit claims, and filing returns like GSTR-1 and GSTR-3B.",
+        "expected_answer": "GST filing includes preparation of invoices, claiming ITC, and filing returns such as GSTR-1, GSTR-3B, and reconciliation.",
+        "experience": "2 years",
+        "salary_expectation": "6 LPA",
+        "skills": [
+            "GST",
+            "Taxation",
+            "Accounting"
+        ]
+    },
+    {
+        "candidate_id": "CAND_002",
+        "question": "What is Input Tax Credit (ITC)?",
+        "answer": "ITC allows businesses to reduce tax paid on inputs from their output tax liability.",
+        "expected_answer": "Input Tax Credit is the tax paid on purchases that can be deducted from output tax liability under GST rules.",
+        "experience": "1 year",
+        "salary_expectation": "4 LPA",
+        "skills": [
+            "GST Basics",
+            "Compliance"
+        ]
+    },
+    {
+        "candidate_id": "CAND_003",
+        "question": "Explain TDS",
+        "answer": "TDS is tax deducted at source before payment is made.",
+        "expected_answer": "Tax Deducted at Source (TDS) is a mechanism where tax is deducted by the payer at the time of payment and deposited with the government.",
+        "experience": "",
+        "salary_expectation": "",
+        "skills": [
+            "Income Tax"
+        ]
+    },
+    {
+        "candidate_id": "CAND_004",
+        "question": "What is balance sheet?",
+        "answer": "It shows assets and liabilities.",
+        "expected_answer": "A balance sheet provides a snapshot of a company's financial position including assets, liabilities, and equity at a specific date.",
+        "experience": "3 years",
+        "salary_expectation": "8 LPA",
+        "skills": [
+            "Accounting",
+            "Financial Statements"
+        ]
+    }
+]

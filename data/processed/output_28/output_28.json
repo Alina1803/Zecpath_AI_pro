@@ -1,0 +1,49 @@
+{
+    "meta": {
+        "run_id": "RUN_20260422_201348",
+        "run_time": "2026-04-22T20:13:48.506197",
+        "total_candidates": 1,
+        "processed": 1,
+        "failed": 0,
+        "engine_version": "v3.0",
+        "stage": "Day28_Report_Generation"
+    },
+    "reports": [
+        {
+            "candidate_id": "CAND_001",
+            "overall_summary": {
+                "final_score": 64.49,
+                "overall_confidence": 5.87,
+                "confidence_band": "Medium",
+                "recommendation": "Hold"
+            },
+            "technical_evaluation": {
+                "technical_confidence": 5.24,
+                "semantic_score": 7.09,
+                "domain_score": 3.4,
+                "key_strengths": [
+                    "Strong conceptual understanding",
+                    "Good communication"
+                ],
+                "gaps": [
+                    "Weak domain knowledge"
+                ]
+            },
+            "behavioral_evaluation": {
+                "behavioral_confidence": 6.5,
+                "communication_strength": 6.5,
+                "sentiment_score": 0.5,
+                "risk_flags": []
+            },
+            "highlights": [
+                "Strong understanding of core concepts",
+                "Communicates ideas clearly",
+                "Confident and stable responses"
+            ],
+            "risks": [
+                "High training requirement"
+            ],
+            "missing_data": []
+        }
+    ]
+}
