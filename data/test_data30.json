@@ -1,0 +1,18 @@
+[
+    {
+        "text": "I have experience in Python and AI",
+        "label": "job_application"
+    },
+    {
+        "text": "Looking for opportunities",
+        "label": "job_search"
+    },
+    {
+        "text": "My skills include machine learning",
+        "label": "job_application"
+    },
+    {
+        "text": "Hello",
+        "label": "greeting"
+    }
+]

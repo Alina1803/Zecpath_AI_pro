@@ -1,0 +1,16 @@
+SCREENING SYSTEM TEST REPORT
+====================================
+Generated on: 20260424_075952
+
+---- Simulation Results ----
+{'input': 'I have 3 years experience in Python', 'intent': 'job_application', 'score': 2, 'status': 'Accepted'}
+{'input': 'Looking for job', 'intent': 'job_search', 'score': 0, 'status': 'Rejected'}
+{'input': 'My skills include AI and ML', 'intent': 'job_application', 'score': 2, 'status': 'Accepted'}
+{'input': 'Hi', 'intent': 'job_application', 'score': 0, 'status': 'Rejected'}
+
+---- Evaluation ----
+Accuracy: 0.5
+
+---- Optimization ----
+Best Threshold: 1
+Optimized Accuracy: 0.5

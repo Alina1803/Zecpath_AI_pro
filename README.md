@@ -2759,3 +2759,131 @@ State machines
 
 Retry + fallback logic
 -----
+
+📊 AI Screening System (Day 28–30 Project)
+
+🚀 Overview
+
+The AI Screening System is a mini machine learning pipeline designed to simulate candidate screening in recruitment processes.
+It uses intent detection + rule-based scoring to evaluate user responses and decide whether a candidate should be accepted or rejected.
+
+This project was developed as part of Day 28–30 tasks, focusing on building, testing, and optimizing an AI pipeline.
+
+---
+
+🎯 Objective
+
+- Build an automated screening system
+- Detect user intent using machine learning
+- Score candidate responses
+- Evaluate system performance
+- Optimize decision thresholds
+- Generate structured output reports
+
+---
+
+🏗️ Project Structure
+
+ZECPATH_AI_PRO/
+│
+├── data/
+│   ├── test_data30.json
+│   └── validation_data30.json
+│
+├── models/
+│   ├── intent_model.pkl
+│   └── scoring_model.pkl
+│
+├── screening-system30/
+│   ├── preprocess.py
+│   ├── intent_detection.py
+│   ├── scoring.py
+│   ├── simulator.py
+│   ├── evaluator.py
+│   └── optimizer.py
+│
+├── data/processed/output_30/
+│   └── test_report.txt
+│
+├── main.py
+└── requirements.txt
+---
+
+⚙️ Features
+
+- ✅ Text preprocessing
+- ✅ Intent classification (Naive Bayes)
+- ✅ Rule-based scoring system
+- ✅ Simulation of screening calls
+- ✅ Accuracy evaluation
+- ✅ Threshold optimization
+- ✅ Timestamp-based report generation
+
+---
+
+🧠 Technologies Used
+
+- Python
+- scikit-learn
+- JSON
+- File handling (OS module)
+
+---
+
+▶️ How to Run
+
+1. Install dependencies
+
+pip install -r requirements.txt
+
+2. Run the pipeline
+
+python main_pipeline.py
+
+---
+
+📂 Output
+
+Reports are automatically saved in:
+
+data/processed/output_30/
+
+Example:
+
+test_report_20260424_143210.txt
+
+---
+
+📄 Sample Output
+
+SCREENING SYSTEM TEST REPORT
+====================================
+Generated on: 20260424_143210
+
+---- Simulation Results ----
+{'input': 'I have 3 years experience in Python', 'intent': 'job_application', 'score': 2, 'status': 'Accepted'}
+
+---- Evaluation ----
+Accuracy: 0.75
+
+---- Optimization ----
+Best Threshold: 2
+Optimized Accuracy: 0.75
+
+---
+
+📈 Conclusion
+
+The system successfully simulates an AI-based screening process.
+It demonstrates how machine learning and rule-based logic can be combined to automate candidate evaluation.
+
+Through testing and optimization:
+
+- Accuracy improved
+- Decision-making became more reliable
+- False rejections were reduced
+
+This project serves as a foundation for building real-world recruitment automation systems.
+
+---
+
