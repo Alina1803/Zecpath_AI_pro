@@ -1,0 +1,7 @@
+{
+    "input": "'I have 3 years experience",
+    "output": {
+        "response": "Processed: 'I have 3 years experience",
+        "language": "english"
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "input": "Hi",
+    "output": {
+        "response": "Processed: Hi",
+        "language": "english"
+    }
+}

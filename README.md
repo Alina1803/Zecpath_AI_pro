@@ -2887,3 +2887,320 @@ This project serves as a foundation for building real-world recruitment automati
 
 ---
 
+## Day 31: Edge Case & Failure Handling
+
+🚀 Overview
+
+Day 31 focuses on making the AI system robust, reliable, and production-ready by handling real-world edge cases and failures.
+
+This module ensures the system:
+
+Handles invalid or weak inputs
+
+Prevents crashes
+
+Provides meaningful responses
+
+Logs failures and tracks system health
+
+Saves outputs for auditing and debugging
+
+---
+
+🎯 Objective
+
+To ensure system stability under real-world conditions by implementing:
+
+Input validation
+
+Edge case detection
+
+Retry mechanisms
+
+Fallback handling
+
+Logging and monitoring
+
+---
+
+🧠 Key Features
+
+✅ 1. Input Validation
+
+Rejects empty input
+
+Detects short/weak inputs
+
+
+✅ 2. Issue Detection
+
+Flags problems like:
+
+too_short
+
+(extendable for more rules)
+
+
+
+✅ 3. Smart Processing Flow
+
+Reject → stop pipeline
+
+Issues → skip AI
+
+Valid → run full AI pipeline
+
+
+✅ 4. Retry Mechanism
+
+Automatically retries failed AI calls
+
+Uses exponential backoff
+
+
+✅ 5. Fallback System
+
+Graceful error responses
+
+Prevents system crashes
+
+
+✅ 6. Logging
+
+Tracks validation and processing errors
+
+
+✅ 7. Monitoring
+
+Tracks:
+
+Total requests
+
+Failure count
+
+
+
+✅ 8. Output Persistence
+
+Saves every response as JSON
+
+Enables debugging & auditing
+
+
+
+---
+
+📁 Folder Structure
+
+app/
+││
+├── services/
+│   ├── ai_flow/
+│   │   ├── conversation_manager.py
+│   │   ├── retry_handler.py
+│   │   ├── clarification_engine.py
+│   │   └── fallback_handler.py
+│   │
+│   ├── audio/
+│   │   ├── audio_cleaner.py
+│   │   ├── noise_handler.py
+│   │   └── speech_to_text.py
+│   │
+│   ├── validation/
+│   │   ├── input_validator.py
+│   │   └── language_detector.py
+│   │
+│   └── logging/
+│       ├── error_logger.py
+│       └── monitoring.py
+│  
+├── main_pipeline31.py
+│
+├── utils/
+│   ├── constants31.py
+│   └── helpers.py
+│
+├── tests/
+│   ├── test_edge_cases31.py
+│   └── test_failures31.py
+│
+└── docs/
+    └── edge_cases.md
+
+---
+
+⚙️ How It Works
+
+🔄 Pipeline Flow
+
+Input
+  ↓
+Validation
+  ↓
+Rejected? → Stop
+  ↓
+Issues? → Return issues
+  ↓
+AI Processing (Retry)
+  ↓
+Clarification
+  ↓
+Response + Save Output
+
+
+---
+
+🧪 API Usage
+
+▶️ Run Server
+
+uvicorn app.main:app --reload
+
+
+---
+
+🌐 Swagger UI
+
+http://127.0.0.1:8000/docs
+
+
+---
+
+📌 Endpoint
+
+POST /process
+
+Input:
+
+"Hello AI"
+
+
+---
+
+📤 Sample Outputs
+
+🔴 Rejected Input
+
+{
+  "input": "",
+  "status": "Rejected",
+  "message": "Unable to process input"
+}
+
+
+---
+
+🟡 Short Input
+
+{
+  "input": "Hi",
+  "issues_detected": ["too_short"],
+  "status": "Processed"
+}
+
+
+---
+
+🟢 Valid Input
+
+{
+  "input": "I have 3 years experience",
+  "issues_detected": [],
+  "status": "Processed",
+  "ai_response": "Processed: I have 3 years experience",
+  "language": "english"
+}
+
+
+---
+
+💾 Output Storage
+
+All responses are saved in:
+
+data/processed/output_31/
+
+Example:
+
+{
+  "input": "Hello AI",
+  "output": { ... }
+}
+
+
+---
+
+📊 Monitoring
+
+GET /metrics
+
+{
+  "total_requests": 5,
+  "failures": 1
+}
+
+
+---
+
+🧪 Testing
+
+Run tests:
+
+pytest
+
+Covers:
+
+Empty input
+
+Short input
+
+Failure scenarios
+
+
+
+---
+
+⚠️ Edge Cases Handled
+
+Empty input
+
+Short input
+
+AI failure
+
+Retry exhaustion
+
+Mixed language
+
+Weak responses
+
+
+
+---
+
+🎯 Conclusion
+
+Day 31 transforms the system from a basic pipeline → production-ready system.
+
+Before:
+
+No validation
+
+Same output for all inputs
+
+No failure handling
+
+
+After:
+
+Intelligent validation
+
+Issue detection
+
+Resilient AI processing
+
+Logging + monitoring
+
+Output tracking
+
+---
