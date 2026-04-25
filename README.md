@@ -3204,3 +3204,123 @@ Logging + monitoring
 Output tracking
 
 ---
+
+### Day 32  Screening System Finalization
+
+An AI-powered candidate screening system built using FastAPI and Machine Learning.
+This system evaluates candidate data and returns a selection decision with a confidence score.
+
+---
+
+🚀 Features
+
+- FastAPI-based REST API
+- Machine Learning model integration (scikit-learn)
+- Real-time candidate screening
+- Confidence score output
+- Modular and scalable architecture
+- Docker & CI/CD ready
+
+---
+
+📁 Project Structure
+
+ai-screening-system32/
+│
+├── app/
+│   ├── models/        # ML model & loader
+│   ├── services/      # Business logic
+│   ├── api/           # API routes
+│   ├── utils/         # Helper functions
+│   └── config/        # Configuration
+│
+├── data/              # Datasets
+├── notebooks/         # Experiments
+├── tests/             # Unit tests
+├── docs/              # Documentation
+├── deployment/        # Docker & CI/CD
+│
+├── main.py            # Entry point
+├── requirements.txt
+└── README.md
+
+---
+
+⚙️ Installation
+
+pip install -r requirements.txt
+
+---
+
+▶️ Run the Application
+
+uvicorn main:app --reload
+
+---
+
+🌐 API Documentation
+
+Open in browser:
+
+http://127.0.0.1:8000/docs
+
+---
+
+🧪 API Usage
+
+POST "/screen"
+
+Request:
+
+{
+  "features": [2, 3]
+}
+
+Response:
+
+{
+  "selected": false,
+  "confidence_score": 0.06
+}
+
+---
+
+🧠 How It Works
+
+1. User sends candidate data via API
+2. FastAPI handles request
+3. Model processes input
+4. System returns prediction + confidence score
+
+---
+
+🐳 Docker Support
+
+Build Image
+
+docker build -t ai-screening-app .
+
+Run Container
+
+docker run -p 8000:8000 ai-screening-app
+
+---
+
+🔄 CI/CD Pipeline
+
+- Automated testing using pytest
+- Docker image build
+- Push to Docker Hub via GitHub Actions
+
+---
+
+📊 Future Improvements
+
+- Resume parsing (NLP)
+- Database integration (MongoDB/PostgreSQL)
+- Authentication (JWT)
+- Frontend dashboard
+- Model improvement with real data
+
+---
+

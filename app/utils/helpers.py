@@ -14,3 +14,6 @@ def normalize_text(text: str) -> str:
 
 def clean_input(text: str):
     return text.strip()
+
+def preprocess_input(data: list):
+    return data
