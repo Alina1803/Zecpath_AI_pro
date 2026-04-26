@@ -1,0 +1,26 @@
+{
+    "self_intro": [
+        "Tell me about yourself.",
+        "Walk me through your background."
+    ],
+    "career_journey": [
+        "Why did you choose this career path?",
+        "Explain your career progression."
+    ],
+    "strengths_weaknesses": [
+        "What are your strengths?",
+        "What is your biggest weakness?"
+    ],
+    "teamwork": [
+        "Describe a time you worked in a team.",
+        "How do you handle conflicts?"
+    ],
+    "goals": [
+        "Where do you see yourself in 5 years?",
+        "What are your career goals?"
+    ],
+    "availability": [
+        "When can you join?",
+        "Are you open to relocation?"
+    ]
+}

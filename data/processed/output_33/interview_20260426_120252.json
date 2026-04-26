@@ -1,0 +1,43 @@
+{
+    "role": "ca",
+    "experience": "fresher",
+    "total_questions": 6,
+    "responses": [
+        {
+            "id": 0,
+            "question": "Tell me about yourself.",
+            "answer": "I m ZEIT , Graduated with BCA",
+            "score": null
+        },
+        {
+            "id": 1,
+            "question": "Explain your career progression.",
+            "answer": "BCA Graduated",
+            "score": null
+        },
+        {
+            "id": 2,
+            "question": "Where do you see yourself in 5 years?",
+            "answer": "i will be a professional AI developer",
+            "score": null
+        },
+        {
+            "id": 3,
+            "question": "Are you open to relocation?",
+            "answer": "yes",
+            "score": null
+        },
+        {
+            "id": 4,
+            "question": "When can you join?",
+            "answer": "next weak onwards",
+            "score": null
+        },
+        {
+            "id": 5,
+            "question": "When can you join?",
+            "answer": "29 april",
+            "score": null
+        }
+    ]
+}

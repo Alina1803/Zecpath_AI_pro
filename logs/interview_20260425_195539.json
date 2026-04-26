@@ -1,0 +1,51 @@
+[
+    {
+        "timestamp": "2026-04-25T19:55:39.840554",
+        "session_id": "20260425_195539",
+        "event": "PIPELINE_START",
+        "data": {
+            "role": "ca",
+            "experience": "fresher",
+            "domain": "ca"
+        }
+    },
+    {
+        "timestamp": "2026-04-25T19:55:39.840554",
+        "session_id": "20260425_195539",
+        "event": "INTERVIEW_START",
+        "data": {
+            "role": "ca",
+            "experience": "fresher"
+        }
+    },
+    {
+        "timestamp": "2026-04-25T19:55:39.840554",
+        "session_id": "20260425_195539",
+        "event": "QUESTION",
+        "data": {
+            "question": "No more questions available."
+        }
+    },
+    {
+        "timestamp": "2026-04-25T19:55:47.578498",
+        "session_id": "20260425_195539",
+        "event": "ANSWER",
+        "data": {
+            "answer": "ok"
+        }
+    },
+    {
+        "timestamp": "2026-04-25T19:55:47.578498",
+        "session_id": "20260425_195539",
+        "event": "ERROR",
+        "data": {
+            "message": "'int' object is not subscriptable"
+        }
+    },
+    {
+        "timestamp": "2026-04-25T19:55:47.578498",
+        "session_id": "20260425_195539",
+        "event": "PIPELINE_END",
+        "data": {}
+    }
+]

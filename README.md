@@ -3324,3 +3324,201 @@ docker run -p 8000:8000 ai-screening-app
 
 ---
 
+ ### Day 33 - HR Interview Engine Day 33
+
+📌 Overview
+
+The HR Interview Engine is a modular AI-driven system designed to simulate structured HR interviews. It dynamically generates role-based questions, manages interview flow, and records candidate responses for evaluation.
+
+This project is part of a larger AI Hiring System and serves as the core conversational engine.
+
+---
+
+🎯 Objective
+
+Design and implement a scalable architecture for an AI-powered HR interview system that:
+
+- Generates role-based interview questions
+- Differentiates between fresher and experienced candidates
+- Maintains interview state and flow
+- Produces structured interview reports
+- Prepares for integration with AI evaluation systems
+
+---
+
+🏗️ System Architecture
+
+HR Interview Engine
+│
+├── Question Generator
+├── Interview State Manager
+├── Flow Engine
+├── Question Bank
+├── Output Handler
+
+🔹 Core Components
+
+Component| Description
+Question Generator| Creates dynamic questions based on role & experience
+Interview State| Tracks questions, answers, and progress
+Flow Engine| Controls interview phases
+Question Bank| Stores categorized HR questions
+Output Handler| Saves results in structured format
+
+---
+
+Folder Structure :
+
+ZECPATH_AI_PRO/
+│
+├── data/
+│   └── question_bank33/
+│        └── hr_questions.json
+│
+├── hr_interview_engine33/
+│
+│   ├── question_engine/
+│   │     ├── role_based_generator.py
+│   │     ├── category_selector.py
+│   │
+│   ├── state_manager/
+│   │     ├── interview_state.py
+│   │
+│   ├── flow_engine/
+│   │     ├── interview_flow.py
+│   ├── run_interview.py
+│
+├──── utils/
+│       ├── logger.py
+│
+├──data/processed/ output_33/
+│   └── interview_sessions/
+│
+├── config.py
+├── README.md
+
+⚙️ Features
+
+✅ 1. Role-Based Question Generation
+
+- Adapts questions based on:
+  - Job role
+  - Experience level
+
+✅ 2. Structured Interview Flow
+
+- Introduction
+- Core HR Questions
+- Role-Based Evaluation
+- Closing
+
+✅ 3. State Management
+
+- Tracks:
+  - Question history
+  - Candidate responses
+  - Interview phase
+
+✅ 4. Scalable Architecture
+
+- Modular design
+- Easy integration with:
+  - Scoring engine
+  - Speech-to-text module
+  - UI dashboard
+
+✅ 5. Output Generation
+
+- Saves results in JSON format
+- Timestamp-based storage
+
+---
+
+▶️ How to Run
+
+🔹 Step 1: Clone Repository
+
+git clone <your-repo-url>
+cd hr_interview_engine
+
+🔹 Step 2: Install Dependencies
+
+pip install -r requirements.txt
+
+(If no requirements file, Python standard library is sufficient)
+
+🔹 Step 3: Run the Engine
+
+python run_interview.py
+
+---
+
+🧪 Sample Flow
+
+Enter role: Software Engineer
+Enter experience: fresher
+
+Q1: Tell me about yourself
+Q2: Why did you choose this career path?
+Q3: What are your strengths?
+...
+
+---
+
+📊 Output Example
+
+outputs/interview_sessions/interview_20260426_101500.json
+
+{
+  "role": "software engineer",
+  "experience": "fresher",
+  "total_questions": 6,
+  "responses": [
+    {
+      "id": 0,
+      "question": "Tell me about yourself",
+      "answer": "I am a recent graduate...",
+      "score": null
+    }
+  ]
+}
+
+---
+
+🔌 Future Enhancements
+
+- 🤖 AI-based answer evaluation (LLM integration)
+- 🎤 Speech-to-text input support
+- 📊 Dashboard with analytics
+- 🔁 Adaptive follow-up questions
+- 🌐 REST API (FastAPI backend)
+- 🎨 Web UI (React frontend)
+
+---
+
+🧠 Design Highlights
+
+- Clean separation of concerns
+- Extensible module-based architecture
+- Real-world interview simulation
+- Production-ready structure
+
+---
+
+📦 Deliverables
+
+- ✅ HR Interview Engine Architecture
+- ✅ Question Bank System
+- ✅ Interview Flow Design
+- ✅ Working CLI-based Interview Engine
+
+---
+
+🏁 Conclusion
+
+The HR Interview Engine provides a solid foundation for building intelligent hiring systems. It enables structured, scalable, and customizable interview experiences while being flexible enough to integrate with advanced AI components.
+
+This system can evolve into a fully automated AI recruiter with minimal additional effort.
+
+---
+

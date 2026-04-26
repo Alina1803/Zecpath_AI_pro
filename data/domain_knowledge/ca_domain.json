@@ -1,0 +1,47 @@
+{
+    "role": "Chartered Accountant",
+    "topics": [
+        "Accounting Principles",
+        "Financial Statements",
+        "Taxation",
+        "Auditing",
+        "Cost Accounting",
+        "GST",
+        "Income Tax",
+        "Corporate Law",
+        "Financial Analysis",
+        "Budgeting"
+    ],
+    "key_concepts": {
+        "Accounting Principles": [
+            "GAAP",
+            "Accrual Concept",
+            "Matching Principle",
+            "Conservatism"
+        ],
+        "Financial Statements": [
+            "Balance Sheet",
+            "Profit and Loss",
+            "Cash Flow Statement"
+        ],
+        "Taxation": [
+            "Direct Tax",
+            "Indirect Tax",
+            "GST Filing",
+            "Tax Planning"
+        ],
+        "Auditing": [
+            "Internal Audit",
+            "External Audit",
+            "Audit Procedures",
+            "Compliance"
+        ]
+    },
+    "expected_skills": [
+        "Analytical Thinking",
+        "Accuracy",
+        "Attention to Detail",
+        "Regulatory Knowledge",
+        "Financial Interpretation"
+    ]
+}

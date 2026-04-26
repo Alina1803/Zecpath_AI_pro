@@ -1,0 +1,35 @@
+[
+    {
+        "timestamp": "2026-04-25T20:05:04.999993",
+        "session_id": "20260425_200504",
+        "event": "PIPELINE_START",
+        "data": {
+            "role": "cfa",
+            "experience": "fresher",
+            "domain": "ca"
+        }
+    },
+    {
+        "timestamp": "2026-04-25T20:05:04.999993",
+        "session_id": "20260425_200504",
+        "event": "INTERVIEW_START",
+        "data": {
+            "role": "cfa",
+            "experience": "fresher"
+        }
+    },
+    {
+        "timestamp": "2026-04-25T20:05:04.999993",
+        "session_id": "20260425_200504",
+        "event": "ERROR",
+        "data": {
+            "message": "division by zero"
+        }
+    },
+    {
+        "timestamp": "2026-04-25T20:05:04.999993",
+        "session_id": "20260425_200504",
+        "event": "PIPELINE_END",
+        "data": {}
+    }
+]

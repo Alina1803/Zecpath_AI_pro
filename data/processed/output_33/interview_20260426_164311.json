@@ -1,0 +1,43 @@
+{
+    "role": "CA",
+    "experience": "fresher",
+    "total_questions": 6,
+    "responses": [
+        {
+            "id": 0,
+            "question": "Walk me through your background.",
+            "answer": "I graduated bca ,after that i took a 6 month course big data and AI",
+            "score": null
+        },
+        {
+            "id": 1,
+            "question": "Why did you choose this career path?",
+            "answer": "yes i chosen this mainly because i realized my skills and talent in debugging,coding.",
+            "score": null
+        },
+        {
+            "id": 2,
+            "question": "What are your career goals?",
+            "answer": "i need to be a professional ai developer",
+            "score": null
+        },
+        {
+            "id": 3,
+            "question": "Are you open to relocation?",
+            "answer": "yes",
+            "score": null
+        },
+        {
+            "id": 4,
+            "question": "When can you join?",
+            "answer": "this month",
+            "score": null
+        },
+        {
+            "id": 5,
+            "question": "Are you open to relocation?",
+            "answer": "yes",
+            "score": null
+        }
+    ]
+}

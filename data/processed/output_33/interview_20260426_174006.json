@@ -1,0 +1,43 @@
+{
+    "role": "CA",
+    "experience": "fresher",
+    "total_questions": 6,
+    "responses": [
+        {
+            "id": 0,
+            "question": "Walk me through your background.",
+            "answer": "I graduated BCA",
+            "score": 5
+        },
+        {
+            "id": 1,
+            "question": "Explain your career progression.",
+            "answer": "I completed 6month datascience course",
+            "score": 7
+        },
+        {
+            "id": 2,
+            "question": "Where do you see yourself in 5 years?",
+            "answer": "i will be professional AI Developer",
+            "score": 5
+        },
+        {
+            "id": 3,
+            "question": "Are you open to relocation?",
+            "answer": "ys",
+            "score": 3
+        },
+        {
+            "id": 4,
+            "question": "Are you open to relocation?",
+            "answer": "yes",
+            "score": 3
+        },
+        {
+            "id": 5,
+            "question": "When can you join?",
+            "answer": "this month itself",
+            "score": 5
+        }
+    ]
+}
