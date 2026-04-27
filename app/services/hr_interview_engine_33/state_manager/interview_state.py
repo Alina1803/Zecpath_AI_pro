@@ -33,3 +33,17 @@ class InterviewState:
             "total_questions": len(self.history),
             "responses": self.history
         }
+    def __init__(self, role, experience):
+        self.role = role
+        self.experience = experience
+        self.history = []
+        self.current_phase = "introduction"
+        self.followup_count = 0
+
+    def update(self, question, answer, score, followup=False):
+        self.history.append({
+            "question": question,
+            "answer": answer,
+            "score": score,
+            "followup": followup
+        })

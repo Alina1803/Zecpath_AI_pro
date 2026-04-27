@@ -3522,3 +3522,158 @@ This system can evolve into a fully automated AI recruiter with minimal addition
 
 ---
 
+📘 Day 34 — Dynamic Follow-Up Engine 
+
+🚀 Overview
+
+The Dynamic Follow-Up Engine (Day 34) is an advanced module in the HR Interview System that enables real-time, intelligent follow-up question generation based on candidate responses.
+
+Unlike static interview systems, this engine:
+
+- Understands candidate answers
+- Identifies missing concepts (gaps)
+- Measures confidence and depth
+- Dynamically adjusts question difficulty
+- Generates human-like follow-up questions
+
+---
+
+🎯 Objective
+
+To build an adaptive interview system that:
+
+- Mimics real interviewer behavior
+- Improves candidate evaluation depth
+- Ensures contextual and meaningful interactions
+
+---
+
+🧠 Key Features
+
+- 🔍 Response Analysis
+- 🧩 Gap Detection
+- 📉 Confidence Estimation
+- 🌳 Decision-Based Flow
+- 🎚️ Dynamic Difficulty Adjustment
+- ❓ Context-Aware Follow-Up Questions
+
+---
+
+🏗️ Architecture Flow
+
+User Answer
+    ↓
+Response Analyzer
+    ↓
+Decision Tree
+    ↓
+Difficulty Adapter
+    ↓
+Follow-Up Generator
+    ↓
+Next Question
+
+---
+
+📁 Folder Structure
+
+followup_engine34/
+│
+├── __init__.py
+├── response_analyzer.py
+├── decision_tree.py
+├── difficulty_adapter.py
+├── followup_generator.py
+├── run_pipeline34.py
+
+---
+
+⚙️ Module Description
+
+1. Response Analyzer
+
+Analyzes candidate answers to extract:
+
+- Intent
+- Missing topics (gaps)
+- Confidence level
+- Answer length
+
+---
+
+2. Decision Tree
+
+Determines next action:
+
+- Clarify
+- Expand
+- Probe gaps
+- Deepen response
+- Move forward
+
+---
+
+3. Difficulty Adapter
+
+Adjusts difficulty level dynamically:
+
+- Easy
+- Medium
+- Hard
+
+---
+
+4. Follow-Up Generator
+
+Generates contextual follow-up questions based on:
+
+- Decision output
+- Previous question
+- Identified gaps
+
+---
+
+
+
+📊 Example Output
+
+{
+  "analysis": {
+    "intent": "short_answer",
+    "gaps": ["performance", "security"],
+    "confidence": 0.6,
+    "length": 5
+  },
+  "decision": "expand",
+  "difficulty": "medium",
+  "followup": "Can you elaborate more on that?"
+}
+
+---
+
+▶️ How to Run
+
+python -m app.services.followup_engine34.run_pipeline34
+---
+
+🔥 Use Cases
+
+- AI Interview Platforms
+- HR Screening Automation
+- Candidate Skill Assessment
+- Mock Interview Systems
+
+---
+
+🏁 Conclusion
+
+The Dynamic Follow-Up Engine enhances the HR Interview System by making it:
+
+- Adaptive
+- Context-aware
+- Intelligent
+- Industry-ready
+
+It ensures interviews are interactive, deep, and personalized, closely simulating a real human interviewer.
+
+---

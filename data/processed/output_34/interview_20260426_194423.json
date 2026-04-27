@@ -1,0 +1,79 @@
+{
+    "role": "CA",
+    "experience": "fresher",
+    "total_questions": 12,
+    "responses": [
+        {
+            "question": "Can you elaborate further on your answer?",
+            "answer": "i completed 6months course Bigdata and AI",
+            "score": 5,
+            "followup": true
+        },
+        {
+            "question": "Walk me through your background.",
+            "answer": "I am Alina From Kottayam ,I Graduated BCA and certified in Bigdata",
+            "score": 5,
+            "followup": false
+        },
+        {
+            "question": "Can you elaborate further on your answer?",
+            "answer": "i found my skills in it",
+            "score": 5,
+            "followup": true
+        },
+        {
+            "question": "Explain your career progression.",
+            "answer": "i need to became an AI Developer",
+            "score": 5,
+            "followup": false
+        },
+        {
+            "question": "Can you elaborate further on your answer?",
+            "answer": "same",
+            "score": 5,
+            "followup": true
+        },
+        {
+            "question": "What are your career goals?",
+            "answer": "i need to be professionalized in AI developer",
+            "score": 5,
+            "followup": false
+        },
+        {
+            "question": "Can you give a specific example related to that?",
+            "answer": "next weak",
+            "score": 5,
+            "followup": true
+        },
+        {
+            "question": "When can you join?",
+            "answer": "as soon as possible",
+            "score": 5,
+            "followup": false
+        },
+        {
+            "question": "Can you explain that in more detail?",
+            "answer": "yes i can",
+            "score": 5,
+            "followup": true
+        },
+        {
+            "question": "Are you open to relocation?",
+            "answer": "yes",
+            "score": 5,
+            "followup": false
+        },
+        {
+            "question": "Can you explain that in more detail?",
+            "answer": "yes",
+            "score": 5,
+            "followup": true
+        },
+        {
+            "question": "Are you open to relocation?",
+            "answer": "yes",
+            "score": 5,
+            "followup": false
+        }
+    ]
+}

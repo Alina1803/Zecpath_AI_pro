@@ -22,3 +22,13 @@ class InterviewFlow:
         
     def progress(self):
         self.state.next_phase()
+
+    def handle_followup(self, question, answer, analyzer, generator, decision):
+
+        level = analyzer.analyze(answer)
+
+        if decision.should_followup(level):
+            followup_q = generator.generate(question, answer, level)
+            return followup_q, level
+
+        return None, level

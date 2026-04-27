@@ -1,0 +1,79 @@
+{
+    "role": "CA",
+    "experience": "fresher",
+    "total_questions": 12,
+    "responses": [
+        {
+            "question": "Can you give a specific example related to that?",
+            "answer": "huihiuhuihi",
+            "score": 5,
+            "followup": true
+        },
+        {
+            "question": "Tell me about yourself.",
+            "answer": "i m alina",
+            "score": 5,
+            "followup": false
+        },
+        {
+            "question": "Can you give a specific example related to that?",
+            "answer": "kjiojuhuihuikjhjkhio",
+            "score": 5,
+            "followup": true
+        },
+        {
+            "question": "Why did you choose this career path?",
+            "answer": "i like it",
+            "score": 5,
+            "followup": false
+        },
+        {
+            "question": "Can you give a specific example related to that?",
+            "answer": "jhvibk",
+            "score": 5,
+            "followup": true
+        },
+        {
+            "question": "What are your career goals?",
+            "answer": "hjvhjb",
+            "score": 5,
+            "followup": false
+        },
+        {
+            "question": "Can you explain that in more detail?",
+            "answer": "kmko",
+            "score": 5,
+            "followup": true
+        },
+        {
+            "question": "Are you open to relocation?",
+            "answer": "okok",
+            "score": 5,
+            "followup": false
+        },
+        {
+            "question": "Can you explain that in more detail?",
+            "answer": "jhuhu",
+            "score": 5,
+            "followup": true
+        },
+        {
+            "question": "Are you open to relocation?",
+            "answer": "k",
+            "score": 5,
+            "followup": false
+        },
+        {
+            "question": "Can you explain that in more detail?",
+            "answer": "jklo",
+            "score": 5,
+            "followup": true
+        },
+        {
+            "question": "When can you join?",
+            "answer": "jhi",
+            "score": 5,
+            "followup": false
+        }
+    ]
+}
