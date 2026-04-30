@@ -1,0 +1,15 @@
+{
+    "timestamp": "2026-04-30T17:42:49.776286",
+    "input_answer": "I believe communication is very important because it helps teams collaborate effectively.\n    For example, in my previous project, clear communication improved delivery speed.",
+    "evaluation": {
+        "component_scores": {
+            "fluency": 90,
+            "grammar": 50.0,
+            "vocabulary": 100,
+            "clarity": 90,
+            "filler": 100,
+            "structure": 75
+        },
+        "final_score": 81.5
+    }
+}

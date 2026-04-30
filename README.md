@@ -3677,3 +3677,194 @@ The Dynamic Follow-Up Engine enhances the HR Interview System by making it:
 It ensures interviews are interactive, deep, and personalized, closely simulating a real human interviewer.
 
 ---
+
+📅 Day-35: Communication Skill Evaluation Engine
+
+🚀 Overview
+
+This project implements a Communication Skill Evaluation Engine that analyzes interview-style answers and scores them across multiple communication dimensions such as grammar, fluency, clarity, and structure.
+
+The system is designed to simulate how interviewers evaluate candidate responses and provides both quantitative scores and structured output.
+
+---
+
+🎯 Objective
+
+To build a robust and production-ready system that:
+
+- Accepts a candidate’s answer (text input)
+- Evaluates communication quality
+- Generates a final score + detailed breakdown
+- Saves results in structured JSON format
+
+---
+
+🧠 Features
+
+- ✅ Multi-dimensional evaluation:
+  
+  - Grammar
+  - Fluency
+  - Vocabulary
+  - Clarity
+  - Structure
+  - Filler words
+
+- ✅ Offline Grammar Checking (LanguageTool – Local Server)
+
+- ✅ Robust Error Handling (no crashes)
+
+- ✅ Logging for debugging and traceability
+
+- ✅ JSON output with timestamp
+
+---
+
+🏗️ Project Structure
+
+app/
+└── services/
+    └── communication_engine35/
+        ├── communication_engine.py
+        ├── grammar_evaluator.py
+        ├── fluency_evaluator.py
+        ├── vocabulary_evaluator.py
+        ├── clarity_evaluator.py
+        ├── structure_evaluator.py
+        └── run_engine35.py
+
+data/
+└── processed/
+    └── output_35/
+
+---
+
+⚙️ Installation & Setup
+
+1. Clone the repository
+
+git clone <your-repo-url>
+cd Zecpath_AI_pro
+
+2. Create virtual environment
+
+python -m venv .venv
+.venv\Scripts\activate
+
+3. Install dependencies
+
+pip install -r requirements.txt
+
+---
+
+🔧 LanguageTool Setup (Offline)
+
+Step 1: Download LanguageTool
+
+Download from: https://languagetool.org/download/
+
+Step 2: Start local server
+
+cd G:\LanguageTool
+java -jar languagetool-server.jar
+
+Step 3: Verify server
+
+Open in browser:
+
+http://localhost:8081/v2/languages
+
+---
+
+▶️ How to Run
+
+python -m app.services.communication_engine35.run_engine35
+
+---
+
+📊 Example Output
+
+Console Output
+
+🚀 Starting Communication Engine...
+
+📊 ===== FINAL RESULT =====
+Final Score: 81.5
+Breakdown: {
+  'fluency': 90,
+  'grammar': 78,
+  'vocabulary': 85,
+  'clarity': 88,
+  'filler': 95,
+  'structure': 80
+}
+
+💾 Saved to: data/processed/output_35/communication_score_*.json
+
+---
+
+JSON Output
+
+{
+  "timestamp": "2026-04-30T17:46:00",
+  "input_answer": "Sample answer...",
+  "evaluation": {
+    "final_score": 81.5,
+    "component_scores": {
+      "grammar": 78,
+      "fluency": 90,
+      "clarity": 88,
+      "structure": 80
+    }
+  }
+}
+
+---
+
+🧪 Test Cases
+
+The system is tested with:
+
+1. High-quality structured answer
+2. Average response
+3. Poor communication example
+
+This ensures scoring differentiation and robustness.
+
+---
+
+🛡️ Error Handling
+
+- Engine initialization failure handled
+- Grammar tool failure fallback
+- Safe evaluation wrapper
+- No system crash during execution
+
+---
+
+📈 Evaluation Criteria
+
+Component| Description
+Grammar| Error detection via LanguageTool
+Fluency| Sentence flow
+Vocabulary| Word usage
+Clarity| Understandability
+Structure| Logical organization
+Filler| Redundant words
+
+---
+
+🚀 Future Improvements
+
+- API version (FastAPI)
+- Real-time speech evaluation
+- ML-based grammar scoring
+- UI dashboard for visualization
+- Batch processing
+
+
+
+🏁 Conclusion
+
+This project demonstrates how communication skills can be evaluated programmatically using structured scoring, grammar analysis, and robust system design.
+
