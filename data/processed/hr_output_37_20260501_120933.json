@@ -1,0 +1,17 @@
+{
+    "candidate_id": "C123",
+    "hr_score": 88.5,
+    "decision": "Strong Hire",
+    "details": [
+        {
+            "question_id": "Q1",
+            "scores": {
+                "relevance": 0.9,
+                "communication": 0.85,
+                "confidence": 0.8,
+                "consistency": 1.0
+            },
+            "final_score": 88.5
+        }
+    ]
+}

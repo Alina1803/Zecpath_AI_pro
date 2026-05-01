@@ -4102,3 +4102,275 @@ It transforms raw textual responses into:
 This module serves as a core building block for intelligent hiring systems.
 
 ---
+
+Day 37 — HR Interview Scoring Engine (FastAPI Service)
+
+
+📌 Overview
+
+The HR Interview Scoring Engine is an AI-driven system that evaluates candidate responses using structured scoring logic. It combines multiple evaluation signals into a final HR score (0–100) and provides a decision output.
+
+This module is deployed as a FastAPI microservice, making it scalable and production-ready for real-world hiring systems.
+
+---
+
+🎯 Objective
+
+To design a system that:
+
+- Converts HR interview responses into structured scores
+- Combines relevance, communication, confidence, and consistency
+- Produces an explainable final hiring decision
+- Supports role-based weight configuration
+- Exposes functionality via a REST API (FastAPI)
+
+---
+
+🧠 Core Features
+
+- Multi-factor scoring engine
+- Role-based weight configuration (fresher vs experienced)
+- Consistency detection (contradictions & vagueness)
+- Explainable scoring output
+- JSON-based report generation
+- FastAPI-based API service
+
+---
+
+🏗️ Project Structure
+
+interview_ai_37/
+│
+├── hr_scoring_engine.py
+├── hr_weights.py
+│
+├── api/
+│   ├── main.py
+│   ├── routes/
+│   │   └── hr_routes.py
+│   ├── schemas/
+│   │   └── hr_schema.py
+│
+├── data/
+│   └── processed/
+│       └── hr_output_37.json
+│
+├── tests/
+│   └── test_hr_score.py
+│
+└── README.md
+
+---
+
+⚙️ System Architecture
+
+Candidate Answers
+        ↓
+Feature Extraction
+(Relevance, Communication, Confidence)
+        ↓
+Consistency Analysis
+        ↓
+Weight Configuration (Role-based)
+        ↓
+Scoring Engine
+        ↓
+Aggregation Layer
+        ↓
+Decision Engine
+        ↓
+FastAPI Service
+        ↓
+JSON Output Storage
+
+---
+
+📊 Scoring Parameters
+
+Parameter| Description
+Relevance| Alignment with the question
+Communication| Clarity, grammar, fluency
+Confidence| Behavioral confidence score
+Consistency| Logical correctness
+
+---
+
+🧮 Scoring Formula
+
+HR Score =
+(Relevance × Weight) +
+(Communication × Weight) +
+(Confidence × Weight) +
+(Consistency × Weight)
+
+---
+
+⚖️ Default Weights
+
+DEFAULT_WEIGHTS = {
+    "relevance": 0.30,
+    "communication": 0.25,
+    "confidence": 0.25,
+    "consistency": 0.20
+}
+
+---
+
+👥 Role-Based Weights
+
+ROLE_WEIGHTS = {
+    "fresher": {
+        "relevance": 0.25,
+        "communication": 0.30,
+        "confidence": 0.25,
+        "consistency": 0.20
+    },
+    "experienced": {
+        "relevance": 0.35,
+        "communication": 0.20,
+        "confidence": 0.25,
+        "consistency": 0.20
+    }
+}
+
+---
+
+🔍 Consistency Logic
+
+def score_consistency(answer):
+    if answer.get("contradiction"):
+        return 0.3
+    if answer.get("is_vague"):
+        return 0.6
+    return 1.0
+
+---
+
+🚀 FastAPI Service
+
+▶️ Run Server
+
+uvicorn api.main:app --reload
+
+---
+
+🌐 API Endpoint
+
+POST "/hr/score"
+
+📥 Request
+
+{
+  "candidate_id": "C123",
+  "candidate_type": "experienced",
+  "answers": [
+    {
+      "question_id": "Q1",
+      "relevance_score": 0.9,
+      "communication_score": 85,
+      "confidence_score": 80,
+      "contradiction": false,
+      "is_vague": false
+    }
+  ]
+}
+
+---
+
+📤 Response
+
+{
+  "candidate_id": "C123",
+  "hr_score": 88.5,
+  "decision": "Strong Hire",
+  "details": [
+    {
+      "question_id": "Q1",
+      "scores": {
+        "relevance": 0.9,
+        "communication": 0.85,
+        "confidence": 0.8,
+        "consistency": 1
+      },
+      "final_score": 88.5
+    }
+  ]
+}
+
+---
+
+📁 Output Storage
+
+Results are stored in:
+
+data/processed/hr_output_37_YYYYMMDD_HHMMSS.json
+
+---
+
+📊 Decision Rules
+
+Score Range| Decision
+≥ 75| Strong Hire
+55–74| Consider
+< 55| Reject
+
+---
+
+🧪 Testing
+
+pytest
+
+---
+
+📦 Deliverables
+
+- ✅ HR Interview Scoring Engine
+- ✅ Role-based Weight Configuration
+- ✅ FastAPI Microservice
+- ✅ Explainable JSON Output
+- ✅ Test Coverage
+- ✅ Data Persistence
+
+---
+
+🚀 Advantages
+
+- Consistent candidate evaluation
+- Transparent and explainable scoring
+- Scalable API architecture
+- Lightweight (no heavy ML required)
+- Easily integrable into HR systems
+
+---
+
+⚠️ Limitations
+
+- Rule-based scoring (not adaptive)
+- Limited deep semantic understanding
+- No real-time voice or facial analysis
+
+---
+
+🔮 Future Improvements
+
+- ML-based scoring (BERT / LLMs)
+- Context-aware evaluation
+- Voice emotion detection
+- Video-based behavioral analysis
+- Real-time scoring pipeline
+
+---
+
+🏁 Conclusion
+
+The Day 37 HR Interview Scoring Engine successfully transforms subjective HR evaluations into a structured, explainable, and scalable system.
+
+With FastAPI integration, this module becomes a production-ready AI microservice capable of powering:
+
+- AI interview platforms
+- Candidate screening systems
+- Automated hiring workflows
+
+This marks a significant step toward building a full AI-driven recruitment ecosystem.
+
+---
