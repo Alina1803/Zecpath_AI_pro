@@ -1,0 +1,12 @@
+{
+    "input": {
+        "text": "I am confident but I am not confident",
+        "duration": 5
+    },
+    "confidence": 88.9,
+    "sentiment": 100.0,
+    "stress": 0.0,
+    "contradiction": 100,
+    "behavioral_score": 79.45,
+    "timestamp": "2026-04-30T20:22:48.047951"
+}

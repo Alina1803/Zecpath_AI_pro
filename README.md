@@ -3868,3 +3868,237 @@ Filler| Redundant words
 
 This project demonstrates how communication skills can be evaluated programmatically using structured scoring, grammar analysis, and robust system design.
 
+---
+
+
+ # Day 36: Confidence & Stress Indicators
+
+
+## Overview
+
+The Behavioral Intelligence Module is a rule-based NLP system designed to evaluate candidate responses in interview scenarios.
+
+It analyzes confidence, sentiment, stress, and contradictions to produce a structured behavioral score (0–100).
+
+This module acts as a plug-and-play AI component for:
+
+- AI Interview Platforms
+- HR Screening Systems
+- Candidate Evaluation Engines
+
+---
+
+🎯 Objective
+
+To simulate human interviewer judgment by extracting behavioral signals from text responses and converting them into quantifiable metrics.
+
+---
+
+🧠 Core Capabilities
+
+- Detects hesitation patterns (filler words, pauses)
+- Identifies uncertainty & repetition
+- Performs sentiment analysis
+- Detects logical contradictions
+- Evaluates stress indicators
+- Generates a final behavioral score (0–100)
+
+---
+
+🏗️ Project Structure
+
+Stress_conf_analyzer36/
+│
+├── confidence_analyzer.py
+├── sentiment_engine.py
+├── stress_detector.py
+├── contradiction_detector.py
+├── behavior_analyzer.py
+│
+├── config/
+│   ├── weights36.py
+│   ├── constants36.py
+│
+├── utils/
+│   ├── text_cleaner.py
+│
+├── tests/
+│   ├── test_behavior36.py
+│
+├── examples/
+│   ├── run_demo.py
+│
+├── data/
+│   └── processed/
+│       └── output_36.json
+│
+└── README.md
+
+---
+
+⚙️ System Architecture
+
+Raw Text Input
+      ↓
+Signal Extraction Layer
+ (Confidence, Sentiment, Stress, Contradiction)
+      ↓
+Normalization Layer (0–100 → 0–1)
+      ↓
+Weighted Scoring Engine
+      ↓
+Behavioral Score (0–100)
+      ↓
+JSON Output Storage
+
+---
+
+📊 Behavioral Scoring Formula
+
+Final Score:
+
+Behavior Score =
+(Confidence × 0.5) +
+(Sentiment × 0.25) +
+(Stress × 0.15) +
+(Contradiction × 0.10)
+
+---
+
+🔢 Signal Definitions
+
+Signal| Description
+Confidence| Based on hesitation, repetition, uncertainty, pause
+Sentiment| Emotional tone (positive/negative)
+Stress| Nervous language indicators
+Contradiction| Logical inconsistency in response
+
+---
+
+⚠️ Industry-Level Fixes Applied
+
+1. ✅ Normalization
+
+All module outputs are standardized to 0–100, then normalized to 0–1 before aggregation.
+
+---
+
+2. ✅ Improved Weighting
+
+Weights adjusted to reflect real-world importance of signals:
+
+- Confidence → Primary indicator
+- Sentiment → Secondary emotional signal
+- Stress → Behavioral modifier
+- Contradiction → Logical penalty
+
+---
+
+3. ✅ Contradiction Integration
+
+Previously ignored, now directly impacts final score.
+
+---
+
+4. ✅ Advanced Confidence Calculation
+
+Confidence is computed using weighted penalties:
+
+- Hesitation
+- Uncertainty
+- Repetition
+- Speech rate deviation
+
+---
+
+5. ⚠️ Oversimplified Scoring Fixed
+
+Replaced equal averaging with weighted scoring model.
+
+---
+
+🧪 Example Usage
+
+from app.services.stress_conf_analyzer36.behavior_analyzer import analyze_behavior
+
+text = "I think I am confident but maybe I need improvement"
+duration = 6
+
+result = analyze_behavior(text, duration)
+print(result)
+
+---
+
+📁 Sample Output
+
+{
+    "input": {
+        "text": "I think I am confident but maybe I need improvement",
+        "duration": 6
+    },
+    "confidence": 62.5,
+    "sentiment": 70.0,
+    "stress": 10.0,
+    "contradiction": 0,
+    "behavioral_score": 58.4,
+    "timestamp": "2026-04-30T14:22:11"
+}
+
+---
+
+🧪 Running Tests
+
+pytest tests/test_behavior36.py
+
+---
+
+🚀 Advantages
+
+- Lightweight (no heavy ML models)
+- Fast execution (real-time capable)
+- Explainable scoring system
+- Modular and scalable design
+
+---
+
+⚠️ Limitations
+
+- Rule-based (non-adaptive)
+- No voice tone analysis
+- No facial emotion detection
+- Limited contextual depth
+
+---
+
+🔮 Future Improvements
+
+- Transformer-based models (BERT, RoBERTa)
+- Voice emotion detection (prosody analysis)
+- Facial expression recognition
+- Real-time streaming analysis
+- Hybrid ML + rule-based scoring
+
+---
+
+🧩 Industry Applications
+
+- AI Interview Assistants
+- Resume Screening Engines
+- Candidate Ranking Systems
+- Behavioral Analytics Platforms
+
+---
+
+🏁 Conclusion
+
+The Day 36 Behavioral Module establishes a foundational layer for AI-driven human behavior analysis.
+
+It transforms raw textual responses into:
+
+- Confidence insights
+- Emotional signals
+- Structured evaluation metrics
+
+This module serves as a core building block for intelligent hiring systems.
+
+---
