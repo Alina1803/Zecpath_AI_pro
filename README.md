@@ -4374,3 +4374,202 @@ With FastAPI integration, this module becomes a production-ready AI microservice
 This marks a significant step toward building a full AI-driven recruitment ecosystem.
 
 ---
+## Day 38 – Aptitude Logic Design 
+
+📌 Overview
+
+The Aptitude Logic Module is a core component of the Zecpath AI Interview System.
+It evaluates a candidate’s cognitive abilities during HR interviews, focusing on:
+
+- 🧠 Logical reasoning
+- 🔍 Problem-solving skills
+- ⚖️ Decision-making ability
+- 🎯 Situational judgment
+
+This module transforms traditional interviews into data-driven intelligence systems.
+
+---
+
+🎯 Objective
+
+To build a scalable system that:
+
+- Evaluates structured thinking
+- Analyzes reasoning patterns
+- Scores decision quality
+- Supports scenario-based evaluation
+
+---
+
+🏗️ Folder Structure
+
+aptitude_logic_38/
+│
+├── aptitude_scoring.py        # Core scoring logic
+├── scenario_evaluator.py      # Scenario-based evaluation
+├── ideal_patterns38.py        # Ideal behavioral patterns
+├── run_pipeline.py            # Main pipeline execution
+│
+├── utils/
+│   └── text_processing.py     # NLP utilities
+│
+├── tests/
+│   └── test_aptitude.py       # Unit tests
+│
+└── README.md                  # Documentation
+
+---
+
+⚙️ System Components
+
+1️⃣ Aptitude Scoring Engine
+
+Evaluates:
+
+- Structure (step-by-step thinking)
+- Problem-solving clarity
+- Decision-making quality
+
+📌 Output:
+
+{
+  "aptitude_score": 82.5,
+  "breakdown": {
+    "structure": 1.0,
+    "problem_solving": 0.8,
+    "decision_making": 0.7
+  }
+}
+
+---
+
+2️⃣ Scenario Evaluator
+
+Matches candidate responses against ideal patterns.
+
+Scenario| Expected Behavior
+team_conflict| communicate → understand → resolve
+deadline_pressure| prioritize → plan → execute
+learning| research → practice → apply
+
+---
+
+3️⃣ Pipeline Engine
+
+End-to-end workflow:
+
+Input → Scoring → Scenario Evaluation → Final Score → Save Output
+
+---
+
+4️⃣ Output Storage
+
+Results are saved automatically:
+
+data/processed/output_38/
+    aptitude_score_YYYYMMDD_HHMMSS.json
+
+---
+
+▶️ How to Run
+
+Run Full Pipeline
+
+python -m app.services.aptitude_logic_38.run_pipeline
+
+---
+
+Run Tests
+
+pytest app/services/aptitude_logic_38/tests/test_aptitude.py
+
+---
+
+🧪 Sample Execution
+
+from app.services.aptitude_logic_38.run_pipeline import run_pipeline
+
+result = run_pipeline(
+    answer="First I analyze the problem, then plan a solution and execute it",
+    scenario_type="deadline_pressure"
+)
+
+print(result)
+
+---
+
+📊 Sample Output
+
+{
+  "timestamp": "2026-05-01T18:30:00",
+  "aptitude_score": 82.5,
+  "scenario_score": 0.8,
+  "saved_to": "data/processed/output_38/aptitude_score_20260501.json"
+}
+
+---
+
+🧠 Ideal Answer Structure
+
+Candidates should follow:
+
+1. Problem Understanding
+2. Step-by-step Approach
+3. Decision Justification
+4. Expected Outcome
+
+---
+
+🚀 Key Features
+
+- ✔ Modular architecture
+- ✔ Scenario-based intelligence
+- ✔ Real-time scoring
+- ✔ Persistent output storage
+- ✔ Test-driven development
+
+---
+
+⚠️ Limitations
+
+- Keyword-based evaluation
+- Limited semantic understanding
+- No deep reasoning validation
+
+---
+
+🔮 Future Enhancements
+
+- 🤖 LLM-based reasoning evaluation
+- 🧠 Semantic NLP (spaCy / transformers)
+- 📊 Dashboard visualization
+- 📈 ML-based scoring models
+- 🔗 Integration with Communication Engine
+
+---
+
+📦 Deliverables
+
+- Aptitude Scoring Engine
+- Scenario Evaluation System
+- Ideal Pattern Framework
+- Pipeline Execution Module
+- Test Suite
+- Documentation
+
+---
+
+🏁 Conclusion
+
+The Day 38 Aptitude Logic Module introduces a powerful layer of cognitive assessment into HR interviews.
+
+It enables:
+
+- Better hiring decisions
+- Objective evaluation of thinking skills
+- Scalable AI-driven interview systems
+
+This marks a shift from question-answer systems → intelligent evaluation engines.
+
+---
+

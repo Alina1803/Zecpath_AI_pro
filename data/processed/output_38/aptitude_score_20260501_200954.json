@@ -1,0 +1,14 @@
+{
+    "timestamp": "2026-05-01T20:09:54.014779",
+    "input": {
+        "answer": "First I analyze the problem, then I plan a solution and finally execute it",
+        "scenario_type": "deadline_pressure"
+    },
+    "aptitude_score": 91.0,
+    "details": {
+        "structure": 1.0,
+        "problem_solving": 1.0,
+        "decision_making": 1.0
+    },
+    "scenario_score": 0.7
+}
