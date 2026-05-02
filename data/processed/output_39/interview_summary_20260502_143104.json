@@ -1,0 +1,21 @@
+{
+    "candidate_id": "C500",
+    "overall_score": 73.4,
+    "decision": "Consider",
+    "final_recommendation": {
+        "status": "Consider",
+        "confidence": "Consider"
+    },
+    "summary": {
+        "strengths": [
+            "Strong performance in Q1"
+        ],
+        "weaknesses": [],
+        "risks": [],
+        "inconsistencies": [],
+        "cultural_fit": "Good"
+    },
+    "natural_language_summary": "\nThe candidate demonstrates Strong performance in Q1.\n\nHowever, there are concerns such as minor weaknesses.\n\nRisk factors include no major risks.\n\nCultural fit is assessed as Good.\n\nFinal Recommendation: Consider.\n",
+    "formatted_summary": "\n=== Candidate Summary ===\n\nStrengths:\n- Strong performance in Q1\n\nWeaknesses:\n- None\n\nRisks:\n- None\n\nInconsistencies:\n- None\n\nCultural Fit: Good\n",
+    "timestamp": "2026-05-02T14:31:04.848722"
+}

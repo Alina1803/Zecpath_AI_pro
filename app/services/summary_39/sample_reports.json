@@ -1,0 +1,95 @@
+[
+    {
+        "candidate_id": "C200",
+        "overall_score": 82.3,
+        "decision": "Strong Hire",
+        "final_recommendation": {
+            "status": "Strong Hire",
+            "confidence": "High"
+        },
+        "summary": {
+            "strengths": [
+                "Strong performance in Q1",
+                "Excellent communication skills",
+                "Shows teamwork orientation"
+            ],
+            "weaknesses": [],
+            "risks": [],
+            "inconsistencies": [],
+            "cultural_fit": "Good"
+        },
+        "natural_language_summary": "The candidate demonstrates strong performance and excellent communication skills. No major risks identified. Cultural fit is good. Final Recommendation: Strong Hire.",
+        "formatted_summary": "=== Candidate Summary ===\n\nStrengths:\n- Strong performance in Q1\n- Excellent communication skills\n\nWeaknesses:\n- None\n\nRisks:\n- None\n\nInconsistencies:\n- None\n\nCultural Fit: Good"
+    },
+    {
+        "candidate_id": "C201",
+        "overall_score": 61.5,
+        "decision": "Consider",
+        "final_recommendation": {
+            "status": "Consider",
+            "confidence": "Medium"
+        },
+        "summary": {
+            "strengths": [
+                "Moderate communication"
+            ],
+            "weaknesses": [
+                "Weak response in Q3"
+            ],
+            "risks": [
+                "Low confidence detected"
+            ],
+            "inconsistencies": [],
+            "cultural_fit": "Moderate"
+        },
+        "natural_language_summary": "The candidate shows some strengths but also areas of concern. Low confidence detected. Cultural fit is moderate. Final Recommendation: Consider.",
+        "formatted_summary": "=== Candidate Summary ===\n\nStrengths:\n- Moderate communication\n\nWeaknesses:\n- Weak response in Q3\n\nRisks:\n- Low confidence detected\n\nInconsistencies:\n- None\n\nCultural Fit: Moderate"
+    },
+    {
+        "candidate_id": "C202",
+        "overall_score": 45.2,
+        "decision": "Reject",
+        "final_recommendation": {
+            "status": "Reject",
+            "confidence": "Low"
+        },
+        "summary": {
+            "strengths": [],
+            "weaknesses": [
+                "Poor communication clarity",
+                "Weak response in Q2"
+            ],
+            "risks": [
+                "Low confidence detected"
+            ],
+            "inconsistencies": [
+                "Contradictory statements observed"
+            ],
+            "cultural_fit": "Low"
+        },
+        "natural_language_summary": "The candidate shows multiple weaknesses including poor communication. There are risks and inconsistencies observed. Final Recommendation: Reject.",
+        "formatted_summary": "=== Candidate Summary ===\n\nStrengths:\n- None\n\nWeaknesses:\n- Poor communication clarity\n- Weak response in Q2\n\nRisks:\n- Low confidence detected\n\nInconsistencies:\n- Contradictory statements observed\n\nCultural Fit: Low"
+    },
+    {
+        "candidate_id": "C500",
+        "overall_score": 73.4,
+        "decision": "Consider",
+        "final_recommendation": {
+            "status": "Consider",
+            "confidence": "Consider"
+        },
+        "summary": {
+            "strengths": [
+                "Strong performance in Q1"
+            ],
+            "weaknesses": [],
+            "risks": [],
+            "inconsistencies": [],
+            "cultural_fit": "Good"
+        },
+        "natural_language_summary": "\nThe candidate demonstrates Strong performance in Q1.\n\nHowever, there are concerns such as minor weaknesses.\n\nRisk factors include no major risks.\n\nCultural fit is assessed as Good.\n\nFinal Recommendation: Consider.\n",
+        "formatted_summary": "\n=== Candidate Summary ===\n\nStrengths:\n- Strong performance in Q1\n\nWeaknesses:\n- None\n\nRisks:\n- None\n\nInconsistencies:\n- None\n\nCultural Fit: Good\n",
+        "timestamp": "2026-05-02T14:31:04.848722",
+        "saved_to": "data\\processed\\output_39\\interview_summary_20260502_143104.json"
+    }
+]
