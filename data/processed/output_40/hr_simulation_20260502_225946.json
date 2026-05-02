@@ -1,0 +1,252 @@
+{
+    "timestamp": "20260502_225946",
+    "accuracy": 100.0,
+    "bias": {
+        "Overqualified": -0.3333333333333333,
+        "Hesitant": 1.1666666666666667,
+        "Inexperienced": -0.45454545454545453,
+        "Confident": 0.125
+    },
+    "results": [
+        {
+            "type": "Overqualified",
+            "answer": "I have 10 years experience leading complex systems and teams",
+            "ai_score": 80.75,
+            "human_score": 85.75
+        },
+        {
+            "type": "Hesitant",
+            "answer": "I think maybe I can do it uh not sure but I will try",
+            "ai_score": 72.75,
+            "human_score": 67.75
+        },
+        {
+            "type": "Hesitant",
+            "answer": "I think maybe I can do it uh not sure but I will try",
+            "ai_score": 72.75,
+            "human_score": 67.75
+        },
+        {
+            "type": "Inexperienced",
+            "answer": "I am new but willing to learn",
+            "ai_score": 80.75,
+            "human_score": 85.75
+        },
+        {
+            "type": "Inexperienced",
+            "answer": "I am new but willing to learn",
+            "ai_score": 80.75,
+            "human_score": 85.75
+        },
+        {
+            "type": "Overqualified",
+            "answer": "I have 10 years experience leading complex systems and teams",
+            "ai_score": 80.75,
+            "human_score": 77.75
+        },
+        {
+            "type": "Confident",
+            "answer": "I have strong experience and handled multiple challenges successfully",
+            "ai_score": 80.75,
+            "human_score": 85.75
+        },
+        {
+            "type": "Confident",
+            "answer": "I have strong experience and handled multiple challenges successfully",
+            "ai_score": 80.75,
+            "human_score": 82.75
+        },
+        {
+            "type": "Hesitant",
+            "answer": "I think maybe I can do it uh not sure but I will try",
+            "ai_score": 72.75,
+            "human_score": 68.75
+        },
+        {
+            "type": "Inexperienced",
+            "answer": "I am new but willing to learn",
+            "ai_score": 80.75,
+            "human_score": 76.75
+        },
+        {
+            "type": "Inexperienced",
+            "answer": "I am new but willing to learn",
+            "ai_score": 80.75,
+            "human_score": 80.75
+        },
+        {
+            "type": "Hesitant",
+            "answer": "I think maybe I can do it uh not sure but I will try",
+            "ai_score": 72.75,
+            "human_score": 69.75
+        },
+        {
+            "type": "Overqualified",
+            "answer": "I have 10 years experience leading complex systems and teams",
+            "ai_score": 80.75,
+            "human_score": 80.75
+        },
+        {
+            "type": "Confident",
+            "answer": "I have strong experience and handled multiple challenges successfully",
+            "ai_score": 80.75,
+            "human_score": 77.75
+        },
+        {
+            "type": "Inexperienced",
+            "answer": "I am new but willing to learn",
+            "ai_score": 80.75,
+            "human_score": 77.75
+        },
+        {
+            "type": "Hesitant",
+            "answer": "I think maybe I can do it uh not sure but I will try",
+            "ai_score": 72.75,
+            "human_score": 74.75
+        },
+        {
+            "type": "Hesitant",
+            "answer": "I think maybe I can do it uh not sure but I will try",
+            "ai_score": 72.75,
+            "human_score": 76.75
+        },
+        {
+            "type": "Hesitant",
+            "answer": "I think maybe I can do it uh not sure but I will try",
+            "ai_score": 72.75,
+            "human_score": 77.75
+        },
+        {
+            "type": "Hesitant",
+            "answer": "I think maybe I can do it uh not sure but I will try",
+            "ai_score": 72.75,
+            "human_score": 75.75
+        },
+        {
+            "type": "Inexperienced",
+            "answer": "I am new but willing to learn",
+            "ai_score": 80.75,
+            "human_score": 78.75
+        },
+        {
+            "type": "Confident",
+            "answer": "I have strong experience and handled multiple challenges successfully",
+            "ai_score": 80.75,
+            "human_score": 81.75
+        },
+        {
+            "type": "Confident",
+            "answer": "I have strong experience and handled multiple challenges successfully",
+            "ai_score": 80.75,
+            "human_score": 79.75
+        },
+        {
+            "type": "Overqualified",
+            "answer": "I have 10 years experience leading complex systems and teams",
+            "ai_score": 80.75,
+            "human_score": 85.75
+        },
+        {
+            "type": "Inexperienced",
+            "answer": "I am new but willing to learn",
+            "ai_score": 80.75,
+            "human_score": 80.75
+        },
+        {
+            "type": "Confident",
+            "answer": "I have strong experience and handled multiple challenges successfully",
+            "ai_score": 80.75,
+            "human_score": 77.75
+        },
+        {
+            "type": "Hesitant",
+            "answer": "I think maybe I can do it uh not sure but I will try",
+            "ai_score": 72.75,
+            "human_score": 67.75
+        },
+        {
+            "type": "Overqualified",
+            "answer": "I have 10 years experience leading complex systems and teams",
+            "ai_score": 80.75,
+            "human_score": 82.75
+        },
+        {
+            "type": "Inexperienced",
+            "answer": "I am new but willing to learn",
+            "ai_score": 80.75,
+            "human_score": 82.75
+        },
+        {
+            "type": "Inexperienced",
+            "answer": "I am new but willing to learn",
+            "ai_score": 80.75,
+            "human_score": 82.75
+        },
+        {
+            "type": "Hesitant",
+            "answer": "I think maybe I can do it uh not sure but I will try",
+            "ai_score": 72.75,
+            "human_score": 70.75
+        },
+        {
+            "type": "Confident",
+            "answer": "I have strong experience and handled multiple challenges successfully",
+            "ai_score": 80.75,
+            "human_score": 78.75
+        },
+        {
+            "type": "Overqualified",
+            "answer": "I have 10 years experience leading complex systems and teams",
+            "ai_score": 80.75,
+            "human_score": 78.75
+        },
+        {
+            "type": "Inexperienced",
+            "answer": "I am new but willing to learn",
+            "ai_score": 80.75,
+            "human_score": 77.75
+        },
+        {
+            "type": "Inexperienced",
+            "answer": "I am new but willing to learn",
+            "ai_score": 80.75,
+            "human_score": 83.75
+        },
+        {
+            "type": "Overqualified",
+            "answer": "I have 10 years experience leading complex systems and teams",
+            "ai_score": 80.75,
+            "human_score": 78.75
+        },
+        {
+            "type": "Hesitant",
+            "answer": "I think maybe I can do it uh not sure but I will try",
+            "ai_score": 72.75,
+            "human_score": 68.75
+        },
+        {
+            "type": "Overqualified",
+            "answer": "I have 10 years experience leading complex systems and teams",
+            "ai_score": 80.75,
+            "human_score": 76.75
+        },
+        {
+            "type": "Confident",
+            "answer": "I have strong experience and handled multiple challenges successfully",
+            "ai_score": 80.75,
+            "human_score": 80.75
+        },
+        {
+            "type": "Overqualified",
+            "answer": "I have 10 years experience leading complex systems and teams",
+            "ai_score": 80.75,
+            "human_score": 82.75
+        },
+        {
+            "type": "Hesitant",
+            "answer": "I think maybe I can do it uh not sure but I will try",
+            "ai_score": 72.75,
+            "human_score": 72.75
+        }
+    ]
+}
