@@ -1,0 +1,50 @@
+[
+    {
+        "candidate_id": "C101",
+        "scores": {
+            "ats": 85,
+            "screening": 78,
+            "hr": 90
+        },
+        "weights": {
+            "ats": 0.25,
+            "screening": 0.35,
+            "hr": 0.4
+        },
+        "final_score": 84.55,
+        "decision": "Hire",
+        "hiring_fit": {
+            "hiring_fit_percentage": 84.55,
+            "fit_category": "Excellent Fit"
+        },
+        "explanation": {
+            "ats": "Strong resume match and skill alignment",
+            "screening": "Good response quality but minor gaps",
+            "hr": "Strong communication and confidence"
+        }
+    },
+    {
+        "candidate_id": "C102",
+        "scores": {
+            "ats": 60,
+            "screening": 65,
+            "hr": 70
+        },
+        "weights": {
+            "ats": 0.4,
+            "screening": 0.3,
+            "hr": 0.3
+        },
+        "final_score": 64.5,
+        "decision": "Consider",
+        "hiring_fit": {
+            "hiring_fit_percentage": 64.5,
+            "fit_category": "Moderate Fit"
+        },
+        "explanation": {
+            "ats": "Resume needs improvement",
+            "screening": "Needs better responses",
+            "hr": "Average interpersonal skills"
+        }
+    }
+]

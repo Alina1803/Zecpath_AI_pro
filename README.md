@@ -5113,3 +5113,191 @@ This system is ready for controlled deployment and further enhancement.
 
 ---
 
+Day-41 Unified Scoring Engine – Hiring Intelligence System
+
+📌 Overview
+
+The Unified Scoring Engine is a modular, production-ready system designed to evaluate candidates across multiple hiring stages and generate a single, explainable hiring score.
+
+It combines:
+
+- ATS (Resume Screening)
+- Technical/Screening Round
+- HR Interview
+
+into a unified decision-making framework.
+
+---
+
+🎯 Objective
+
+To build a scalable and explainable hiring intelligence system that:
+
+- Aggregates multi-stage evaluation scores
+- Applies role-based weighting
+- Produces a unified hiring score
+- Generates hiring decisions (Hire / Consider / Reject)
+- Provides transparent explanations for each decision
+
+---
+
+⚙️ Key Features
+
+- ✅ Cross-round score integration
+- ✅ Role-based dynamic weighting
+- ✅ Hiring fit classification
+- ✅ Explainable AI outputs
+- ✅ Batch candidate processing
+- ✅ JSON-based data pipeline
+- ✅ API-ready architecture (FastAPI)
+
+---
+
+🧠 Scoring Formula
+
+Final Score is calculated as:
+
+Final Score = (ATS × Weight) + (Screening × Weight) + (HR × Weight)
+
+Default Weights:
+
+Component| Weight
+ATS| 30%
+Screening| 30%
+HR| 40%
+
+Role-Based Weights:
+
+Role Type| ATS| Screening| HR
+Fresher| 25%| 35%| 40%
+Experienced| 35%| 25%| 40%
+Technical| 40%| 30%| 30%
+Non-Technical| 20%| 30%| 50%
+
+---
+
+📊 Decision Logic
+
+Score Range| Decision
+≥ 75| Hire
+≥ 55| Consider
+< 55| Reject
+
+---
+
+📁 Project Structure
+
+unified_scoring_engine/
+│
+├── config/           # Weights & configs
+├── pipeline/         # Processing pipeline
+├── api/              # FastAPI endpoints
+├── tests/            # Unit tests
+├── data/             # Input/output data
+├── docs/             # Documentation
+├── run.py            # Batch execution
+├── requirements.txt
+└── README.md
+
+---
+
+▶️ How to Run
+
+1️⃣ Install Dependencies
+
+pip install -r requirements.txt
+
+2️⃣ Run Batch Processing
+
+python run.py
+
+3️⃣ Output Location
+
+data/processed/output_41_<timestamp>.json
+
+---
+
+🌐 Run API (Optional)
+
+uvicorn api.main:app --reload
+
+API Endpoint:
+
+POST /score
+
+Sample Request:
+
+{
+  "candidate_id": "C500",
+  "ats": 78,
+  "screening": 72,
+  "hr": 85,
+  "role": "fresher"
+}
+
+---
+
+📦 Sample Output
+
+{
+    "candidate_id": "C502",
+    "scores": {
+        "ats": 55,
+        "screening": 42,
+        "hr": 65
+    },
+    "weights": {
+        "ats": 0.25,
+        "screening": 0.35,
+        "hr": 0.4
+    },
+    "final_score": 54.45,
+    "decision": "Reject",
+    "hiring_fit": {
+        "hiring_fit_percentage": 54.45,
+        "fit_category": "Moderate Fit"
+    },
+    "explanation": {
+        "ats": "Resume needs improvement",
+        "screening": "Needs better responses",
+        "hr": "Average interpersonal skills"
+    }
+}
+
+---
+
+🧪 Testing
+
+Run tests using:
+
+pytest
+
+---
+
+🔥 Key Highlights
+
+- Modular architecture (clean separation of concerns)
+- Industry-style pipeline design
+- Batch processing support
+- Explainable AI outputs
+- Ready for ML integration
+
+---
+
+⚠️ Limitations
+
+- Static rule-based weights
+- No learning from historical hiring data
+
+---
+
+🚀 Future Enhancements
+
+- ML-based dynamic scoring
+- Bias detection system
+- Feedback-driven learning
+- Dashboard visualization
+- Database integration (MongoDB/PostgreSQL)
+
+---
+

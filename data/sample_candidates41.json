@@ -1,0 +1,16 @@
+[
+  {
+    "candidate_id": "C101",
+    "ats": 85,
+    "screening": 78,
+    "hr": 90,
+    "role": "fresher"
+  },
+  {
+    "candidate_id": "C102",
+    "ats": 60,
+    "screening": 65,
+    "hr": 70,
+    "role": "technical"
+  }
+]
