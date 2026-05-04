@@ -1,26 +1,97 @@
-{
-    "self_intro": [
-        "Tell me about yourself.",
-        "Walk me through your background."
+[
+  {
+    "id": "HR00001",
+    "category": "self_introduction",
+    "question": "Walk me through your professional background.",
+    "intent": "communication",
+    "difficulty": "easy",
+    "follow_up_chain": [
+      "Can you elaborate on your key achievements?",
+      "What motivated your career choices?",
+      "What are you most proud of?"
     ],
-    "career_journey": [
-        "Why did you choose this career path?",
-        "Explain your career progression."
+    "evaluation": {
+      "clarity": 5,
+      "confidence": 5,
+      "structure": 5,
+      "relevance": 5
+    },
+    "rejection_signals": ["unclear_communication"]
+  },
+  {
+    "id": "HR00002",
+    "category": "conflict_resolution",
+    "question": "Tell me about a time you had a disagreement with a colleague.",
+    "intent": "conflict_handling",
+    "difficulty": "medium",
+    "follow_up_chain": [
+      "What caused the disagreement?",
+      "How did you resolve it?",
+      "What did you learn?"
     ],
-    "strengths_weaknesses": [
-        "What are your strengths?",
-        "What is your biggest weakness?"
+    "evaluation": {
+      "clarity": 5,
+      "confidence": 5,
+      "structure": 5,
+      "relevance": 5
+    },
+    "rejection_signals": ["blames_others", "no_resolution"]
+  },
+  {
+    "id": "HR00003",
+    "category": "teamwork",
+    "question": "Describe a successful team project you worked on.",
+    "intent": "collaboration",
+    "difficulty": "medium",
+    "follow_up_chain": [
+      "What was your role?",
+      "What challenges did you face?",
+      "How did the team succeed?"
     ],
-    "teamwork": [
-        "Describe a time you worked in a team.",
-        "How do you handle conflicts?"
+    "evaluation": {
+      "clarity": 5,
+      "confidence": 5,
+      "structure": 5,
+      "relevance": 5
+    },
+    "rejection_signals": ["no_team_contribution"]
+  },
+  {
+    "id": "HR00004",
+    "category": "adaptability",
+    "question": "Tell me about a time you had to adapt quickly to change.",
+    "intent": "flexibility",
+    "difficulty": "medium",
+    "follow_up_chain": [
+      "What changed suddenly?",
+      "How did you respond?",
+      "What was the outcome?"
     ],
-    "goals": [
-        "Where do you see yourself in 5 years?",
-        "What are your career goals?"
+    "evaluation": {
+      "clarity": 5,
+      "confidence": 5,
+      "structure": 5,
+      "relevance": 5
+    },
+    "rejection_signals": ["resistant_to_change"]
+  },
+  {
+    "id": "HR00005",
+    "category": "motivation",
+    "question": "What motivates you to perform well at work?",
+    "intent": "motivation",
+    "difficulty": "easy",
+    "follow_up_chain": [
+      "Can you give an example?",
+      "How do you stay motivated long-term?",
+      "What demotivates you?"
     ],
-    "availability": [
-        "When can you join?",
-        "Are you open to relocation?"
-    ]
-}
+    "evaluation": {
+      "clarity": 5,
+      "confidence": 5,
+      "structure": 5,
+      "relevance": 5
+    },
+    "rejection_signals": []
+  }
+] 

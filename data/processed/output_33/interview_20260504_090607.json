@@ -1,0 +1,58 @@
+{
+    "role": "software engineer",
+    "experience": "fresher",
+    "total_questions": 6,
+    "followups_asked": 0,
+    "average_score": 4.0,
+    "decision": "REJECTED",
+    "responses": [
+        {
+            "id": 0,
+            "type": "hr",
+            "question": "Walk me through your professional background.",
+            "answer": "i m a software engineer recently graduated.",
+            "score": 5,
+            "followup": false
+        },
+        {
+            "id": 1,
+            "type": "role",
+            "question": "No role-based question available.",
+            "answer": "ok",
+            "score": 5,
+            "followup": false
+        },
+        {
+            "id": 2,
+            "type": "hr",
+            "question": "Tell me about yourself.",
+            "answer": "ggguy",
+            "score": 3,
+            "followup": false
+        },
+        {
+            "id": 3,
+            "type": "hr",
+            "question": "Tell me about yourself.",
+            "answer": "gyy",
+            "score": 3,
+            "followup": false
+        },
+        {
+            "id": 4,
+            "type": "role",
+            "question": "No role-based question available.",
+            "answer": "hygy",
+            "score": 5,
+            "followup": false
+        },
+        {
+            "id": 5,
+            "type": "hr",
+            "question": "Tell me about yourself.",
+            "answer": "hiii",
+            "score": 3,
+            "followup": false
+        }
+    ]
+}

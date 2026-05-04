@@ -5,9 +5,9 @@ class CategorySelector:
     """
     Selects appropriate interview categories based on:
     - Interview phase
-    - Role type
+    - Role type (technical / non-technical)
     - Experience level
-    - Previously asked categories (to avoid repetition)
+    - Avoids repeating categories
     """
 
     def __init__(self, role: str, experience: str):
@@ -15,22 +15,41 @@ class CategorySelector:
         self.experience = experience.lower()
         self.used_categories = set()
 
-        # Define base categories per phase
+        # ✅ MUST MATCH hr_questions.json categories
         self.phase_categories = {
-            "introduction": ["self_intro"],
+            "introduction": [
+                "self_introduction"
+            ],
+
             "core": [
                 "career_journey",
                 "strengths_weaknesses",
-                "teamwork"
+                "teamwork",
+                "conflict_resolution"
             ],
-            "evaluation": ["goals"],
-            "closing": ["availability"]
+
+            "evaluation": [
+                "career_goals",
+                "adaptability",
+                "motivation",
+                "communication"
+            ],
+
+            "closing": [
+                "availability"
+            ]
         }
 
-        # Role-based category extensions
+        # ✅ Role-based category extensions
         self.role_category_map = {
-            "technical": ["problem_solving", "learning_ability"],
-            "non_technical": ["communication", "adaptability"]
+            "technical": [
+                "problem_solving",
+                "learning_ability"
+            ],
+            "non_technical": [
+                "communication",
+                "adaptability"
+            ]
         }
 
     # ------------------------------
@@ -38,25 +57,29 @@ class CategorySelector:
     # ------------------------------
     def get_category(self, phase: str) -> str:
         """
-        Returns the next category based on logic
+        Returns next category intelligently
         """
 
         phase = phase.lower()
 
-        base_categories = self.phase_categories.get(phase, [])
+        # ✅ Copy list to avoid mutation bug
+        base_categories = list(self.phase_categories.get(phase, []))
 
-        # Add role-based categories if in evaluation phase
+        # ✅ Add role-based categories during evaluation
         if phase == "evaluation":
             role_type = self._detect_role_type()
             base_categories += self.role_category_map.get(role_type, [])
 
-        # Remove already used categories
+        # ✅ Remove duplicates
+        base_categories = list(set(base_categories))
+
+        # ✅ Remove already used categories
         available = [
             cat for cat in base_categories
             if cat not in self.used_categories
         ]
 
-        # Reset if exhausted
+        # ✅ Reset if all used
         if not available:
             available = base_categories
 
@@ -67,16 +90,17 @@ class CategorySelector:
         return selected
 
     # ------------------------------
-    # INTERNAL HELPERS
+    # INTERNAL HELPER
     # ------------------------------
     def _detect_role_type(self) -> str:
         """
-        Basic heuristic to classify role
+        Detects if role is technical or non-technical
         """
 
         technical_keywords = [
-            "engineer", "developer", "data", "analyst",
-            "scientist", "software", "it", "ai", "ml"
+            "engineer", "developer", "data",
+            "analyst", "scientist", "software",
+            "it", "ai", "ml"
         ]
 
         for keyword in technical_keywords:

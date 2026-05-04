@@ -1,0 +1,58 @@
+{
+    "role": "ca",
+    "experience": "fresher",
+    "total_questions": 6,
+    "followups_asked": 0,
+    "average_score": 5.33,
+    "decision": "HOLD",
+    "responses": [
+        {
+            "id": 0,
+            "type": "role",
+            "question": "Explain your core technical skills.",
+            "answer": "python sql",
+            "score": 5,
+            "followup": false
+        },
+        {
+            "id": 1,
+            "type": "hr",
+            "question": "Tell me about a time you had a disagreement with a colleague.",
+            "answer": "actually i am a person who being very friendly with others. if i had any disagreement to others i will not be shy . i always try to talk with them politely",
+            "score": 7,
+            "followup": false
+        },
+        {
+            "id": 2,
+            "type": "role",
+            "question": "Explain your core technical skills.",
+            "answer": "python",
+            "score": 5,
+            "followup": false
+        },
+        {
+            "id": 3,
+            "type": "hr",
+            "question": "Tell me about yourself.",
+            "answer": "i m alina graduated bca",
+            "score": 5,
+            "followup": false
+        },
+        {
+            "id": 4,
+            "type": "hr",
+            "question": "Tell me about yourself.",
+            "answer": "i m alina graduated bca",
+            "score": 5,
+            "followup": false
+        },
+        {
+            "id": 5,
+            "type": "role",
+            "question": "Explain your core technical skills.",
+            "answer": "python",
+            "score": 5,
+            "followup": false
+        }
+    ]
+}

@@ -1,0 +1,58 @@
+{
+    "role": "data analust",
+    "experience": "fresher",
+    "total_questions": 6,
+    "followups_asked": 0,
+    "average_score": 5.0,
+    "decision": "HOLD",
+    "responses": [
+        {
+            "id": 0,
+            "type": "hr",
+            "question": "Walk me through your professional background.",
+            "answer": "i graduated bca",
+            "score": 5,
+            "followup": false
+        },
+        {
+            "id": 1,
+            "type": "hr",
+            "question": "Tell me about yourself.",
+            "answer": "i m alina",
+            "score": 5,
+            "followup": false
+        },
+        {
+            "id": 2,
+            "type": "hr",
+            "question": "Tell me about a time you had to adapt quickly to change.",
+            "answer": "after postpartum i realize i m wasti g my time i need to upgrade my knowledge and try to learn python language",
+            "score": 7,
+            "followup": false
+        },
+        {
+            "id": 3,
+            "type": "hr",
+            "question": "Tell me about yourself.",
+            "answer": "i m alina from ktym",
+            "score": 5,
+            "followup": false
+        },
+        {
+            "id": 4,
+            "type": "hr",
+            "question": "Tell me about yourself.",
+            "answer": "",
+            "score": 3,
+            "followup": false
+        },
+        {
+            "id": 5,
+            "type": "role",
+            "question": "Explain your core technical skills.",
+            "answer": "",
+            "score": 5,
+            "followup": false
+        }
+    ]
+}
