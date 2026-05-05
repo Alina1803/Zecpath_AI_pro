@@ -1,0 +1,28 @@
+[
+    {
+        "cleaned_transcript": "i think i can do this job",
+        "refined_scores": [
+            36.0,
+            52.0,
+            98.0,
+            5.0
+        ],
+        "evaluation": {
+            "stable_score": 44.0,
+            "decision": "Reject"
+        }
+    },
+    {
+        "cleaned_transcript": "i have strong experience in backend development",
+        "refined_scores": [
+            38.0,
+            68.5,
+            99.0,
+            7.0
+        ],
+        "evaluation": {
+            "stable_score": 53.25,
+            "decision": "Reject"
+        }
+    }
+]
