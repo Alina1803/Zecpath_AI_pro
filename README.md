@@ -5655,3 +5655,184 @@ pytest tests/
 This project demonstrates how to build a responsible AI system that not only performs evaluation but also ensures fairness, transparency, and compliance, making it suitable for real-world HR applications.
 
 ---
+
+🚀  Day 44 (Documentation & API Specification)
+
+📌 Overview
+
+This project is part of Day 44 of building an HR Interview AI System.
+It focuses on making the system production-ready by adding:
+
+- 📄 Documentation
+- 🔌 API Specification
+- ⚙️ FastAPI Backend
+- 🧪 Testing
+- 🛠 Developer Integration Guide
+
+---
+
+🎯 Objective
+
+Prepare the HR Interview AI for:
+
+- Integration with frontend / recruiters dashboard
+- Maintenance and scalability
+- Developer-friendly usage
+
+---
+
+📁 Project Structure
+
+doc_api_44/
+│
+├── app/
+│   ├── main.py
+│   ├── routes/
+│   ├── services/
+│   ├── models/
+│
+├── data/
+│   └── processed/output_44/
+│
+├── docs/
+│
+├── tests/
+│
+└── requirements.txt
+
+---
+
+⚙️ Tech Stack
+
+- Backend: FastAPI
+- Language: Python 3.10+
+- Testing: Pytest
+- API Docs: Swagger (auto-generated)
+- AI Logic: Rule-based + NLP (extensible)
+
+---
+
+🚀 Getting Started
+
+1️⃣ Clone Project
+
+git clone <your-repo-url>
+cd project_root
+
+2️⃣ Create Virtual Environment
+
+python -m venv venv
+venv\Scripts\activate   # Windows
+source venv/bin/activate  # Mac/Linux
+
+3️⃣ Install Dependencies
+
+pip install -r requirements.txt
+
+---
+
+▶️ Run the API
+
+uvicorn app.main:app --reload
+
+📍 Open in browser:
+
+- Swagger UI → http://127.0.0.1:8000/docs
+- ReDoc → http://127.0.0.1:8000/redoc
+
+---
+
+🔌 API Endpoints
+
+▶ Start Interview
+
+POST /api/v1/start
+
+▶ Submit Answer
+
+POST /api/v1/answer
+
+▶ Get Report
+
+GET /api/v1/report/{session_id}
+
+---
+
+📊 Scoring Logic
+
+Final Score is calculated as:
+
+Final Score =
+(ATS × 0.3) +
+(Screening × 0.3) +
+(HR × 0.4)
+
+---
+
+🧪 Run Tests
+
+pytest
+
+✔ Ensures all APIs are working correctly
+
+---
+
+📦 Output
+
+Generated documentation output:
+
+data/processed/output_44/day44_output.pdf
+
+---
+
+🛠 Developer Workflow
+
+1. Start interview via API
+2. Send answers
+3. Get AI-generated report
+4. Display results in dashboard
+
+---
+
+⚠️ Troubleshooting
+
+Issue| Fix
+API not starting| Use "uvicorn"
+Import error| Check module paths
+Port busy| Change port
+Test failing| Check request format
+
+---
+
+📈 Future Improvements
+
+- 🔐 Authentication (JWT)
+- 🧠 Advanced NLP models
+- 🗄 Database integration
+- 🌐 Frontend dashboard
+- ⚡ Real-time interview streaming
+
+---
+
+✅ Deliverables 
+
+- ✔ Architecture Documentation
+- ✔ API Specification
+- ✔ Developer Guide
+- ✔ Troubleshooting Guide
+- ✔ FastAPI Backend
+- ✔ Test Cases
+
+---
+
+🧾 Conclusion
+
+This module transforms the HR Interview AI into a production-ready system with:
+
+- Structured APIs
+- Scalable backend
+- Clear documentation
+- Developer usability
+
+---
+
