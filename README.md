@@ -5463,7 +5463,7 @@ Day 42 successfully transforms the HR AI system into a stable, optimized, and pr
 
 ---
 
-🚀   Day 43-  Zecpath AI – Ethics & Compliance API 
+DAY 43- Ethics & Compliance API 
 
 📌 Overview
 
@@ -5510,18 +5510,66 @@ To build an AI system that:
 
 🏗️ Project Structure
 
+app/
+│
+├── api/
+│   └── v1/
+│       └── endpoints/
+│           └── ethics.py
+│
+├── services/
 │   └── ethics_ai_43/
 │       ├── main_pipeline.py
 │       ├── ethics_framework.py
 │       ├── fairness_review.py
 │       ├── explainability.py
 │       └── compliance.py
-
+│
+├── schemas/
+│   └── ethics_schema.py
 │
 ├── utils/
 │   └── data_masking43.py
 │
-└── main_pipeline.py
+└── main.py
+
+---
+
+⚙️ Tech Stack
+
+- Python 3.10+
+- FastAPI
+- Pydantic
+- Uvicorn
+
+---
+
+🚀 Getting Started
+
+1️⃣ Clone Repository
+
+git clone <your-repo-url>
+cd project_root
+
+2️⃣ Install Dependencies
+
+pip install fastapi uvicorn
+
+3️⃣ Run Server
+
+uvicorn app.main:app --reload
+
+---
+
+🌐 API Endpoints
+
+🔹 Health Check
+
+GET /
+
+🔹 Evaluate Candidate
+
+POST /api/v1/evaluate
 
 ---
 
@@ -5594,6 +5642,13 @@ AI Evaluation → Explainability → Secure Storage → Retention Policy
 - Explainability dashboards
 - AI fairness audits
 - Database integration (MongoDB/PostgreSQL)
+
+---
+
+🧪 Testing
+
+pytest tests/
+
 
 📌 Conclusion
 
