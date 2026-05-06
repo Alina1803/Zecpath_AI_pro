@@ -1,0 +1,19 @@
+{
+    "data": {
+        "email": "***masked***",
+        "score": 78,
+        "consent": true,
+        "date": "2026-05-06T07:37:46.042158"
+    },
+    "ethics_valid": true,
+    "explanation": {
+        "final_score": 78,
+        "explanation": {
+            "ats": "Skill match evaluation",
+            "screening": "Response clarity and relevance",
+            "hr": "Confidence and communication"
+        }
+    },
+    "retention": "retain",
+    "timestamp": "2026-05-06T07:37:46.042158"
+}

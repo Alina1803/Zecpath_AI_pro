@@ -5462,3 +5462,141 @@ Ensures:
 Day 42 successfully transforms the HR AI system into a stable, optimized, and production-ready solution by enhancing scoring reliability, improving performance, and ensuring scalability.
 
 ---
+
+🚀   Day 43-  Zecpath AI – Ethics & Compliance API 
+
+📌 Overview
+
+This project implements an Ethical AI Evaluation System for HR interviews, ensuring fairness, transparency, accountability, and data privacy.
+It exposes the pipeline as a FastAPI backend service, making it production-ready and scalable.
+
+---
+
+🎯 Objective
+
+To build an AI system that:
+
+- Eliminates bias in candidate evaluation
+- Provides explainable decisions
+- Ensures data privacy and compliance
+- Follows ethical AI principles
+
+---
+
+🧠 Key Features
+
+✅ Fairness
+
+- Removes bias-related fields (name, gender, etc.)
+- Scores based only on job-relevant data
+
+🔍 Explainability
+
+- Provides detailed breakdown of AI decisions
+- Shows why a candidate was evaluated in a certain way
+
+🔐 Privacy Protection
+
+- Masks sensitive data (email, phone)
+- Ensures secure handling of candidate information
+
+📜 Compliance
+
+- Consent-based processing
+- Data retention policy (90 days)
+- GDPR-like alignment
+
+---
+
+🏗️ Project Structure
+
+│   └── ethics_ai_43/
+│       ├── main_pipeline.py
+│       ├── ethics_framework.py
+│       ├── fairness_review.py
+│       ├── explainability.py
+│       └── compliance.py
+
+│
+├── utils/
+│   └── data_masking43.py
+│
+└── main_pipeline.py
+
+---
+
+📥 Sample Request
+
+{
+  "name": "John",
+  "gender": "Male",
+  "email": "john@email.com",
+  "score": 78,
+  "consent": true
+}
+
+---
+
+📤 Sample Response
+
+{
+  "status": "success",
+  "result": {
+    "data": {
+      "email": "***masked***",
+      "score": 78,
+      "consent": true,
+      "date": "2026-01-01T10:00:00"
+    },
+    "ethics_valid": true,
+    "explanation": {
+      "final_score": 78,
+      "explanation": {
+        "ats": "Skill match evaluation",
+        "screening": "Response clarity and relevance",
+        "hr": "Confidence and communication"
+      }
+    },
+    "retention": "retain",
+    "timestamp": "2026-01-01T10:00:00"
+  }
+}
+
+---
+
+📊 Ethical AI Flow
+
+Consent → Data Collection → Bias Removal → Data Masking → 
+AI Evaluation → Explainability → Secure Storage → Retention Policy
+
+---
+
+📈 Advantages
+
+- Builds trust with candidates
+- Reduces legal risks
+- Ensures ethical hiring decisions
+- Production-ready API
+
+---
+
+⚠️ Limitations
+
+- Rule-based system (no ML yet)
+- Partial GDPR compliance
+- No real-time bias monitoring
+
+---
+
+🔮 Future Improvements
+
+- Real-time bias detection
+- Explainability dashboards
+- AI fairness audits
+- Database integration (MongoDB/PostgreSQL)
+
+📌 Conclusion
+
+This project demonstrates how to build a responsible AI system that not only performs evaluation but also ensures fairness, transparency, and compliance, making it suitable for real-world HR applications.
+
+---
