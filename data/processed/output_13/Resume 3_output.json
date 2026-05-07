@@ -1,34 +1,96 @@
 {
-    "skills": [
-        "leadership"
-    ],
-    "experience": {
-        "experiences": [],
-        "total_experience_months": 0
+    "metadata": {
+        "file_name": "Resume 3.pdf",
+        "processed_at": "2026-05-08 02:55:23.497037"
     },
-    "education": [
-        {
-            "degree": "LORNA ALVARADO MarketingManager ABOUT ME +123-456-7890 www.reallygreatsite.com Lorem ipsum dolor sit amet, hello@reallygreatsite.com 123 Anywhere St., Any consectetur adipiscing elit, sed City, ST 12345 do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut EXPERIENCE enim ad minim veniam, quis nostrud exercitation ullamco Product Design Manager 2020 - 2023 laboris nisi ut aliquip ex ea Arowwai Industries l 123 Anywhere St., Any City commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet sem nec risus egestas accumsan. In enim nunc, tincidunt ut quam eget, luctus sollicitudin neque. Sed leo nisl, semper ac hendrerit a, sollicitudin EDUCATION in arcu. Bachelor of Business Management Marketing Manager 2019 - 2020 Wardiere University Arowwai Industries l 123 Anywhere St., Any City 2016 - 2020 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet sem nec risus egestas accumsan. In enim nunc, tincidunt ut quam eget, Bachelor of Business Management luctus sollicitudin neque. Sed leo nisl, semper ac hendrerit a, sollicitudin Wardiere University in arcu. 2020 - 2023 Marketing Manager 2017- 2019 Arowwai Industries l 123 Anywhere St., Any City SKILLS Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet Management Skills sem nec risus egestas accumsan. In enim nunc, tincidunt ut quam eget, luctus sollicitudin neque. Sed leo nisl, semper ac hendrerit a, sollicitudin Creativity in arcu. Digital Marketing Marketing Manager 2016- 2017 Negotiation Arowwai Industries l 123 Anywhere St., Any City Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet Critical Thinking sem nec risus egestas accumsan. In enim nunc, tincidunt ut quam eget, Leadership luctus sollicitudin neque. LANGUAGE REFERENCES English Harumi Kobayashi Bailey Dupont Wardiere Inc. / CEO Wardiere Inc. / CEO Spain Phone: 123-456-7890 Phone: 123-456-7890 Email : hello@reallygreatsite.com Email : hello@reallygreatsite.com",
-            "year": "2020"
-        }
-    ],
-    "certifications": [],
+    "extracted_data": {
+        "skills": [
+            "leadership"
+        ],
+        "experience": {
+            "experiences": [],
+            "total_experience_months": 0
+        },
+        "education": [
+            {
+                "degree": "LORNA ALVARADO MarketingManager ABOUT ME +123-456-7890 www.reallygreatsite.com Lorem ipsum dolor sit amet, hello@reallygreatsite.com 123 Anywhere St., Any consectetur adipiscing elit, sed City, ST 12345 do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut EXPERIENCE enim ad minim veniam, quis nostrud exercitation ullamco Product Design Manager 2020 - 2023 laboris nisi ut aliquip ex ea Arowwai Industries l 123 Anywhere St., Any City commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet sem nec risus egestas accumsan. In enim nunc, tincidunt ut quam eget, luctus sollicitudin neque. Sed leo nisl, semper ac hendrerit a, sollicitudin EDUCATION in arcu. Bachelor of Business Management Marketing Manager 2019 - 2020 Wardiere University Arowwai Industries l 123 Anywhere St., Any City 2016 - 2020 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet sem nec risus egestas accumsan. In enim nunc, tincidunt ut quam eget, Bachelor of Business Management luctus sollicitudin neque. Sed leo nisl, semper ac hendrerit a, sollicitudin Wardiere University in arcu. 2020 - 2023 Marketing Manager 2017- 2019 Arowwai Industries l 123 Anywhere St., Any City SKILLS Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet Management Skills sem nec risus egestas accumsan. In enim nunc, tincidunt ut quam eget, luctus sollicitudin neque. Sed leo nisl, semper ac hendrerit a, sollicitudin Creativity in arcu. Digital Marketing Marketing Manager 2016- 2017 Negotiation Arowwai Industries l 123 Anywhere St., Any City Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet Critical Thinking sem nec risus egestas accumsan. In enim nunc, tincidunt ut quam eget, Leadership luctus sollicitudin neque. LANGUAGE REFERENCES English Harumi Kobayashi Bailey Dupont Wardiere Inc. / CEO Wardiere Inc. / CEO Spain Phone: 123-456-7890 Phone: 123-456-7890 Email : hello@reallygreatsite.com Email : hello@reallygreatsite.com",
+                "year": "2020"
+            }
+        ],
+        "certifications": []
+    },
+    "semantic_similarity": 0.315,
     "scores": {
-        "final_score": 50.17,
+        "final_score": 39.38,
         "breakdown": {
             "skills_score": 0.0,
-            "experience_score": 100,
-            "education_score": 100,
-            "semantic_score": 20.7,
+            "experience_score": 70,
+            "education_score": 70,
+            "semantic_score": 31.5,
             "matched_skills": [],
             "missing_skills": [
-                "taxation",
-                "bookkeeping",
+                "sap fico",
+                "tax compliance",
                 "accounting",
+                "statutory audit",
+                "oracle erp",
+                "taxation",
                 "gst",
+                "erp systems",
+                "bookkeeping",
+                "internal audit",
+                "netsuite",
                 "auditing",
-                "financial reporting"
+                "compliance",
+                "direct tax",
+                "financial reporting",
+                "sap",
+                "filing",
+                "indirect tax",
+                "income tax",
+                "risk management",
+                "sox",
+                "excel"
             ]
-        }
+        },
+        "domain_analysis": {
+            "domain_match": false,
+            "domain_name": "non_ca",
+            "confidence_score": 0,
+            "match_percentage": 0.0,
+            "matched_skills": [],
+            "missing_skills": [
+                "accounting",
+                "accounts payable",
+                "accounts receivable",
+                "audit",
+                "bank reconciliation",
+                "budgeting",
+                "cash flow",
+                "compliance",
+                "cost accounting",
+                "excel",
+                "financial analysis",
+                "financial reporting",
+                "forecasting",
+                "fp&a",
+                "gaap",
+                "gst",
+                "ifrs",
+                "income tax",
+                "internal audit",
+                "mis reporting",
+                "power bi",
+                "roc filing",
+                "sap fico",
+                "statutory audit",
+                "tally",
+                "taxation",
+                "tds"
+            ],
+            "matched_roles": [],
+            "matched_keywords": []
+        },
+        "recommendation": "Not Suitable for CA Domain"
     }
 }

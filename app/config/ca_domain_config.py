@@ -1,51 +1,146 @@
 # ==========================================
-# 🎯 CA DOMAIN CONFIG (GLOBAL PROJECT)
+# 🎯 CA DOMAIN CONFIG
 # ==========================================
 
 DOMAIN_NAME = "chartered_accounting"
 
+
+# ==========================================
+# 🎯 DEFAULT ROLES
+# ==========================================
+
 DEFAULT_ROLES = [
+
     "Chartered Accountant",
-    "Senior Chartered Accountant",
     "Tax Consultant",
-    "Tax Manager",
     "Audit Manager",
     "Internal Auditor",
-    "Financial Controller",
     "Finance Manager",
-    "MIS Analyst",
-    "FP&A Analyst",
     "Accounts Manager",
     "Cost Accountant",
-    "Forensic Auditor",
     "Compliance Manager",
-    "Treasury Manager",
     "Risk Analyst",
-    "Financial Reporting Manager",
-    "Business Finance Manager",
-    "Virtual CFO",
     "Chief Financial Officer"
 ]
 
+
+# ==========================================
+# 🎯 SKILL DATABASE
+# ==========================================
+
 SKILL_DATABASE = [
-    "gst", "taxation", "tds", "tally", "sap fico",
-    "financial reporting", "audit", "statutory audit",
-    "internal audit", "bank reconciliation",
-    "accounts payable", "accounts receivable",
-    "mis reporting", "budgeting", "forecasting",
-    "financial analysis", "ifrs", "gaap",
-    "income tax", "roc filing", "compliance",
-    "excel", "power bi", "cash flow",
-    "cost accounting", "variance analysis"
+
+    # Tax
+    "gst",
+    "taxation",
+    "income tax",
+    "tds",
+
+    # Accounting
+    "accounting",
+    "financial reporting",
+    "cost accounting",
+    "accounts payable",
+    "accounts receivable",
+    "bank reconciliation",
+
+    # Audit
+    "audit",
+    "statutory audit",
+    "internal audit",
+
+    # Compliance
+    "roc filing",
+    "compliance",
+
+    # Finance
+    "financial analysis",
+    "budgeting",
+    "forecasting",
+    "cash flow",
+
+    # ERP / Tools
+    "tally",
+    "sap fico",
+    "excel",
+    "power bi",
+
+    # Standards
+    "ifrs",
+    "gaap",
+
+    # Reporting
+    "mis reporting",
+    "fp&a"
 ]
 
-# 🔥 NEW: SYNONYMS (VERY IMPORTANT)
+
+# ==========================================
+# 🎯 SKILL SYNONYMS
+# ==========================================
+
 SKILL_SYNONYMS = {
-    "gst": ["goods and services tax"],
-    "tds": ["tax deducted at source"],
-    "sap fico": ["sap finance", "sap fico module"],
-    "ifrs": ["international financial reporting standards"],
-    "gaap": ["generally accepted accounting principles"],
-    "fp&a": ["financial planning and analysis"],
-    "mis reporting": ["management information system reporting"]
+
+    "gst": [
+        "goods and services tax"
+    ],
+
+    "tds": [
+        "tax deducted at source"
+    ],
+
+    "sap fico": [
+        "sap finance",
+        "sap fico module"
+    ],
+
+    "ifrs": [
+        "international financial reporting standards"
+    ],
+
+    "gaap": [
+        "generally accepted accounting principles"
+    ],
+
+    "fp&a": [
+        "financial planning and analysis"
+    ],
+
+    "mis reporting": [
+        "management information system reporting"
+    ],
+
+    "audit": [
+        "auditing",
+        "financial audit"
+    ],
+
+    "accounting": [
+        "bookkeeping",
+        "financial accounting"
+    ]
 }
+
+
+# ==========================================
+# 🎯 DOMAIN KEYWORDS
+# ==========================================
+
+DOMAIN_KEYWORDS = [
+
+    "chartered accountant",
+    "tax consultant",
+    "auditor",
+    "accountant",
+    "finance manager",
+    "financial controller"
+]
+
+
+# ==========================================
+# 🎯 MATCH THRESHOLDS
+# ==========================================
+
+MIN_CA_SKILL_MATCH = 3
+
+MIN_CA_MATCH_PERCENT = 10
