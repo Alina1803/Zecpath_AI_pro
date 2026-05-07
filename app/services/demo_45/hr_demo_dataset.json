@@ -1,0 +1,61 @@
+[
+  {
+    "candidate_id": "C1001",
+    "role": "Backend Developer",
+    "experience": "2 Years",
+    "answers": [
+      {
+        "question": "Tell me about yourself",
+        "answer": "I am a backend developer with experience in Python and FastAPI."
+      },
+      {
+        "question": "Describe your teamwork experience",
+        "answer": "I worked with a development team to deliver projects on time."
+      },
+      {
+        "question": "What are your strengths?",
+        "answer": "Problem solving and quick learning."
+      }
+    ]
+  },
+
+  {
+    "candidate_id": "C1002",
+    "role": "Frontend Developer",
+    "experience": "Fresher",
+    "answers": [
+      {
+        "question": "Tell me about yourself",
+        "answer": "I recently graduated and learned React.js and JavaScript."
+      },
+      {
+        "question": "How do you work in teams?",
+        "answer": "I collaborated with classmates during college projects."
+      },
+      {
+        "question": "What are your strengths?",
+        "answer": "Creativity and UI design."
+      }
+    ]
+  },
+
+  {
+    "candidate_id": "C1003",
+    "role": "Data Analyst",
+    "experience": "1 Year",
+    "answers": [
+      {
+        "question": "Tell me about yourself",
+        "answer": "I work with data visualization and SQL reporting."
+      },
+      {
+        "question": "Describe a challenge you solved",
+        "answer": "I optimized reporting queries to improve dashboard speed."
+      },
+      {
+        "question": "What are your strengths?",
+        "answer": "Analytical thinking and communication."
+      }
+    ]
+  }
+]
