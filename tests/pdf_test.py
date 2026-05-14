@@ -1,4 +1,25 @@
-from pdf2image import convert_from_path
+from app.services.parsers.resume_parser import parse_resume
 
-images = convert_from_path(r"D:\Zecser\CV\Abhi resume.pdf", poppler_path=r"D:\Poppler-25.12.0\poppler-25.12.0\Library\bin")
-print(len(images))
+
+def test_pdf_resume_parser():
+
+    sample_resume = """
+    John Doe
+    Backend Developer
+    Python FastAPI SQL
+    """
+
+    result = parse_resume(sample_resume)
+
+    assert result is not None
+
+
+def test_resume_contains_skills():
+
+    sample_resume = """
+    Python FastAPI Machine Learning
+    """
+
+    result = parse_resume(sample_resume)
+
+    assert "skills" in result

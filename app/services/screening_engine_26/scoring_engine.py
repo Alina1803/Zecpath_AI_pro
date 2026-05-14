@@ -10,7 +10,7 @@ from app.utils.text_preprocessor import TextPreprocessor
 class AdvancedScoringEngine:
 
     # ✅ FIXED constructor
-    def __init__(self, domain_data, prompt_template):
+    def __init__(self, domain_data, prompt_template): 
         self.domain_data = domain_data
         self.prompt_template = prompt_template
 

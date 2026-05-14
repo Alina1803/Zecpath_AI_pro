@@ -1,0 +1,102 @@
+{
+    "timestamp": "2026-05-11T14:36:06.570799",
+    "candidate": {
+        "candidate_id": "C1001",
+        "candidate_name": "Michael",
+        "role": "Backend Developer",
+        "experience": "2 Years",
+        "candidate_type": "experienced"
+    },
+    "pipeline_result": {
+        "timestamp": "2026-05-11T14:36:06.570799",
+        "question_id": 1,
+        "question": {
+            "type": "role",
+            "question": "Tell me about a time when you handled debugging."
+        },
+        "candidate_answer": "\n    First I analyze the problem carefully.\n    Then I divide the system into modules.\n    After planning the architecture,\n    I implement and test the application.\n    ",
+        "nlp_analysis": {
+            "intent": "general",
+            "skills": [],
+            "experience": null,
+            "salary": null,
+            "availability": null,
+            "off_topic": true,
+            "is_vague": false
+        },
+        "communication_analysis": {
+            "component_scores": {
+                "fluency": 75,
+                "grammar": 50.0,
+                "vocabulary": 93.91,
+                "clarity": 60,
+                "filler": 100,
+                "structure": 90
+            },
+            "final_score": 74.59
+        },
+        "behavioral_analysis": {
+            "input": {
+                "text": "\n    First I analyze the problem carefully.\n    Then I divide the system into modules.\n    After planning the architecture,\n    I implement and test the application.\n    ",
+                "duration": 75
+            },
+            "confidence": 86.88,
+            "sentiment": 0.0,
+            "stress": 0.0,
+            "contradiction": 0,
+            "behavioral_score": 43.44,
+            "timestamp": "2026-05-11T14:36:06.333226"
+        },
+        "aptitude_analysis": {
+            "timestamp": "2026-05-11T14:36:06.333226",
+            "input": {
+                "answer": "\n    First I analyze the problem carefully.\n    Then I divide the system into modules.\n    After planning the architecture,\n    I implement and test the application.\n    ",
+                "scenario_type": "deadline_pressure"
+            },
+            "aptitude_score": 83.65,
+            "details": {
+                "structure": 0.7,
+                "problem_solving": 1.0,
+                "decision_making": 1.0
+            },
+            "scenario_score": 0.7
+        },
+        "screening_engine_26": {
+            "error": "AdvancedScoringEngine.evaluate() missing 2 required positional arguments: 'answer' and 'expected_answer'"
+        },
+        "screening_system_30": {
+            "simulation": {
+                "input": "\n    First I analyze the problem carefully.\n    Then I divide the system into modules.\n    After planning the architecture,\n    I implement and test the application.\n    ",
+                "intent": "job_application",
+                "score": 1,
+                "status": "Rejected"
+            },
+            "accuracy": 0.0
+        },
+        "hr_scoring": {
+            "hr_score": 45.78,
+            "decision": "Reject",
+            "details": [
+                {
+                    "question_id": 1,
+                    "scores": {
+                        "relevance": 0,
+                        "communication": 0.75,
+                        "confidence": 0.43,
+                        "consistency": 1.0
+                    },
+                    "final_score": 45.78
+                }
+            ]
+        },
+        "ats_scoring": {
+            "error": "'module' object is not callable"
+        },
+        "unified_scoring": {
+            "error": "calculate_unified_score() missing 3 required positional arguments: 'screening', 'hr', and 'weights'"
+        },
+        "final_decision": {
+            "error": "'communication_score'"
+        }
+    }
+}

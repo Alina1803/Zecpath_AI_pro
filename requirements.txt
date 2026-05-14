@@ -1,4 +1,11 @@
+gtts
+speechrecognition
+sounddevice
+scipy
+pydub
+numpy
 spacy
+SpeechRecognition
 dateparser
 sentence-transformers
 streamlit

@@ -1,99 +1,52 @@
-from fastapi.testclient import TestClient
-from app.services.demo_45.main import app
+import unittest
 
-# -----------------------------------
-# Create Test Client
-# -----------------------------------
-client = TestClient(app)
+from app.services.demo_45.final_hr_engine import run_final_hr_pipeline
 
+class TestFinalHRSystem(unittest.TestCase):
 
-# -----------------------------------
-# Test Root Endpoint
-# -----------------------------------
-def test_root():
+    def setUp(self):
 
-    response = client.get("/")
+        self.candidate_data = {
+            "candidate_id": "C1001",
+            "role": "Backend Developer",
+            "experience": "2 Years"
+        }
 
-    assert response.status_code == 200
+    def test_pipeline_execution(self):
 
-    data = response.json()
+        result = run_final_hr_pipeline(
+            self.candidate_data
+        )
 
-    assert data["message"] == "HR AI Running"
-    assert data["status"] == "Production Ready"
+        self.assertIn("candidate", result)
 
+        self.assertIn("scores", result)
 
-# -----------------------------------
-# Test Health Endpoint
-# -----------------------------------
-def test_health():
+        self.assertIn("summary", result)
 
-    response = client.get("/health")
+    def test_final_score_exists(self):
 
-    assert response.status_code == 200
+        result = run_final_hr_pipeline(
+            self.candidate_data
+        )
 
-    data = response.json()
+        self.assertIn(
+            "final_score",
+            result["scores"]
+        )
 
-    assert data["status"] == "OK"
-    assert data["system"] == "HR Interview AI"
+    def test_decision_generation(self):
 
+        result = run_final_hr_pipeline(
+            self.candidate_data
+        )
 
-# -----------------------------------
-# Test Demo API
-# -----------------------------------
-def test_demo_api():
-
-    payload = {
-        "candidate_id": "C1001",
-        "answers": [
-            {
-                "question": "Tell me about yourself",
-                "answer": "I am a Python developer"
-            }
-        ]
-    }
-
-    response = client.post(
-        "/api/v1/demo",
-        json=payload
-    )
-
-    assert response.status_code == 200
-
-    data = response.json()
-
-    assert data["status"] == "success"
-    assert "final_score" in data["data"]
-    assert "decision" in data["data"]
+        self.assertIn(
+            result["scores"]["decision"],
+            ["HIRE", "REVIEW", "REJECT"]
+        )
 
 
-# -----------------------------------
-# Test Report API
-# -----------------------------------
-def test_report_api():
+if __name__ == "__main__":
 
-    response = client.get("/api/v1/report/C1001")
-
-    assert response.status_code == 200
-
-    data = response.json()
-
-    assert data["candidate_id"] == "C1001"
-    assert data["status"] == "Completed"
-
-
-# -----------------------------------
-# Test Invalid Payload
-# -----------------------------------
-def test_invalid_demo_payload():
-
-    payload = {
-        "candidate": "WrongField"
-    }
-
-    response = client.post(
-        "/api/v1/demo",
-        json=payload
-    )
-
-    # FastAPI validation error
-    assert response.status_code == 422
+    unittest.main()

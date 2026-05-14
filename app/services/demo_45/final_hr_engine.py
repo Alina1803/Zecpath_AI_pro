@@ -1,58 +1,103 @@
-from app.services.demo_45.scoring_engine import calculate_scores
-from app.services.demo_45.summary_engine import generate_summary
+from app.services.demo_45.workflow_manager import (WorkflowManager)
+
+from app.services.demo_45.interview_controller import (InterviewController)
+
+# =====================================================
+# FINAL HR INTERVIEW ENGINE
+# =====================================================
+
+class FinalHRInterviewSystem:
+
+    def __init__(self):
+
+        
+        self.workflow = (
+            WorkflowManager())
 
 
-def run_hr_interview(candidate_id, answers):
-    """
-    Main HR Interview AI Pipeline
+        self.controller = (
+            InterviewController())
 
-    Steps:
-    1. Process answers
-    2. Calculate scores
-    3. Generate summary
-    4. Make hiring decision
-    """
+    # =================================================
+    # START INTERVIEW
+    # =================================================
 
-    # -----------------------------------
-    # Calculate Scores
-    # -----------------------------------
-    scores = calculate_scores(answers)
+    def start_interview(
+        self,
+        candidate_id="CAND_001",
+        role="backend developer",
+        experience="experienced"):
 
-    # -----------------------------------
-    # Unified Final Score
-    # -----------------------------------
-    final_score = (
-        scores["ats"] * 0.3 +
-        scores["screening"] * 0.3 +
-        scores["hr"] * 0.4
-    )
+        print("\n=====================================")
 
-    final_score = round(final_score, 2)
+        print("FINAL HR INTERVIEW SYSTEM STARTED")
 
-    # -----------------------------------
-    # Hiring Decision
-    # -----------------------------------
-    if final_score >= 75:
-        decision = "Hire"
-    elif final_score >= 60:
-        decision = "Hold"
-    else:
-        decision = "Reject"
+        print("=====================================\n")
 
-    # -----------------------------------
-    # Generate Summary
-    # -----------------------------------
-    summary = generate_summary(scores)
+        # =====================================
+        # CONTROLLER START
+        # =====================================
 
-    # -----------------------------------
-    # Final Result
-    # -----------------------------------
-    result = {
-        "candidate_id": candidate_id,
-        "scores": scores,
-        "final_score": final_score,
-        "decision": decision,
-        "summary": summary
-    }
+        try:
 
-    return result
+            self.controller.initialize_interview(
+                candidate_id=candidate_id,
+                role=role,
+                experience=experience)
+
+        except Exception as e:
+
+            print(f"Controller Initialization Failed: {e}")
+
+        # =====================================
+        # RUN WORKFLOW
+        # =====================================
+
+        try:
+
+            result = (
+                self.workflow.run(
+                    role=role,
+                    experience=experience,
+                    candidate_id=candidate_id))
+
+            print("\n=====================================")
+
+            print("FINAL INTERVIEW RESULT")
+
+            print("=====================================\n")
+
+            print(result)
+
+            return result
+
+        except Exception as e:
+
+            print(f"\nWorkflow Execution Failed: {e}")
+
+            return {
+                "status": "failed",
+                "error": str(e)
+            }
+
+
+# =====================================================
+# CLI ENTRY
+# =====================================================
+
+if __name__ == "__main__":
+
+    engine = (FinalHRInterviewSystem())
+
+    result = engine.start_interview(
+        candidate_id="CAND_001",
+        role="backend developer",
+        experience="experienced")
+
+    print("\n=====================================")
+
+    print("FINAL OUTPUT")
+
+    print("=====================================\n")
+
+    print(result)
