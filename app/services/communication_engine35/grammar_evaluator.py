@@ -2,7 +2,7 @@ import language_tool_python
 import re
 import os
 import logging
-import threading
+from app.core.language_tool_manager import get_language_tool
 
 
 # =========================================================
@@ -42,80 +42,23 @@ class GrammarEvaluator:
 
     def __init__(self):
 
-        self.tool = None
-
-        def init_tool():
+        try:
 
             # =========================================
-            # OPTION 1:
-            # INTERNAL LANGUAGETOOL (PRIMARY)
+            # SINGLETON LANGUAGETOOL INSTANCE
             # =========================================
 
-            try:
+            self.tool = get_language_tool()
 
-                self.tool = language_tool_python.LanguageTool(
-                    'en-US'
-                )
+            logging.info(
+                "✅ Shared LanguageTool Instance Loaded"
+            )
 
-                logging.info(
-                    "✅ Using Internal LanguageTool Engine"
-                )
-
-                return
-
-            except Exception:
-
-                logging.warning(
-                    "⚠️ Internal LanguageTool Failed",
-                    exc_info=True
-                )
-
-            # =========================================
-            # OPTION 2:
-            # LOCALHOST SERVER (FALLBACK)
-            # =========================================
-
-            try:
-
-                self.tool = (
-                    language_tool_python.LanguageToolPublicAPI(
-                        'en-US',
-                        remote_server='http://localhost:8081'
-                    )
-                )
-
-                logging.info(
-                    "✅ Connected to Local LanguageTool Server"
-                )
-
-                return
-
-            except Exception:
-
-                logging.error(
-                    "❌ Localhost LanguageTool Failed",
-                    exc_info=True
-                )
-
-                self.tool = None
-
-        # =============================================
-        # THREAD + TIMEOUT PROTECTION
-        # =============================================
-
-        thread = threading.Thread(
-            target=init_tool,
-            daemon=True
-        )
-
-        thread.start()
-
-        thread.join(timeout=600)
-
-        if thread.is_alive():
+        except Exception:
 
             logging.error(
-                "❌ LanguageTool Init TIMEOUT"
+                "❌ Failed To Initialize LanguageTool",
+                exc_info=True
             )
 
             self.tool = None

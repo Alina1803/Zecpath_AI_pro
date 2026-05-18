@@ -1,41 +1,241 @@
 [
     {
-        "question_id": "CA001",
-        "question": "Are you a qualified Chartered Accountant?",
-        "category": "Education",
-        "answer_type": "boolean",
+        "question_id": "HR001",
+        "question": "Can you introduce yourself?",
+        "category": "Introduction",
+        "answer_type": "text",
         "mandatory": true,
         "score_weight": 5
     },
     {
-        "question_id": "CA002",
-        "question": "How many years of experience do you have in accounting/audit?",
+        "question_id": "HR002",
+        "question": "Tell me about your educational background.",
+        "category": "Education",
+        "answer_type": "text",
+        "mandatory": true,
+        "score_weight": 5
+    },
+    {
+        "question_id": "HR003",
+        "question": "What technical skills are you strongest in?",
+        "category": "Skills",
+        "answer_type": "list",
+        "mandatory": true,
+        "score_weight": 5
+    },
+    {
+        "question_id": "HR004",
+        "question": "How many years of experience do you have?",
         "category": "Experience",
         "answer_type": "number",
         "mandatory": true,
-        "score_weight": 4
+        "score_weight": 5
     },
     {
-        "question_id": "CA003",
-        "question": "Do you have GST filing experience?",
-        "category": "Skills",
-        "answer_type": "boolean",
+        "question_id": "HR005",
+        "question": "What projects are you most proud of?",
+        "category": "Projects",
+        "answer_type": "text",
+        "mandatory": true,
+        "score_weight": 5
+    },
+    {
+        "question_id": "HR006",
+        "question": "Describe a challenging problem you solved recently.",
+        "category": "ProblemSolving",
+        "answer_type": "text",
+        "mandatory": true,
+        "score_weight": 5
+    },
+    {
+        "question_id": "HR007",
+        "question": "How do you prioritize tasks under pressure?",
+        "category": "Behavioral",
+        "answer_type": "text",
         "mandatory": true,
         "score_weight": 4
     },
     {
-        "question_id": "CA004",
-        "question": "Have you handled Income Tax returns?",
-        "category": "Skills",
-        "answer_type": "boolean",
+        "question_id": "HR008",
+        "question": "Describe a situation where you worked in a team.",
+        "category": "Teamwork",
+        "answer_type": "text",
+        "mandatory": true,
+        "score_weight": 5
+    },
+    {
+        "question_id": "HR009",
+        "question": "Have you ever handled a conflict in the workplace?",
+        "category": "Behavioral",
+        "answer_type": "text",
         "mandatory": true,
         "score_weight": 4
     },
     {
-        "question_id": "CA005",
-        "question": "Which tools do you know (Tally, SAP, Excel)?",
-        "category": "Skills",
+        "question_id": "HR010",
+        "question": "What motivates you professionally?",
+        "category": "Motivation",
+        "answer_type": "text",
+        "mandatory": true,
+        "score_weight": 4
+    },
+    {
+        "question_id": "HR011",
+        "question": "Why do you want to join our company?",
+        "category": "CompanyInterest",
+        "answer_type": "text",
+        "mandatory": true,
+        "score_weight": 5
+    },
+    {
+        "question_id": "HR012",
+        "question": "Where do you see yourself in five years?",
+        "category": "CareerGoals",
+        "answer_type": "text",
+        "mandatory": true,
+        "score_weight": 4
+    },
+    {
+        "question_id": "HR013",
+        "question": "What is your greatest strength?",
+        "category": "Strengths",
+        "answer_type": "text",
+        "mandatory": true,
+        "score_weight": 4
+    },
+    {
+        "question_id": "HR014",
+        "question": "What is one weakness you are improving?",
+        "category": "Weakness",
+        "answer_type": "text",
+        "mandatory": true,
+        "score_weight": 4
+    },
+    {
+        "question_id": "HR015",
+        "question": "How do you handle criticism?",
+        "category": "Behavioral",
+        "answer_type": "text",
+        "mandatory": true,
+        "score_weight": 4
+    },
+    {
+        "question_id": "HR016",
+        "question": "What tools or technologies do you use daily?",
+        "category": "TechnicalTools",
         "answer_type": "list",
+        "mandatory": true,
+        "score_weight": 5
+    },
+    {
+        "question_id": "HR017",
+        "question": "Describe your ideal work environment.",
+        "category": "Culture",
+        "answer_type": "text",
+        "mandatory": false,
+        "score_weight": 3
+    },
+    {
+        "question_id": "HR018",
+        "question": "How do you stay updated with industry trends?",
+        "category": "Learning",
+        "answer_type": "text",
+        "mandatory": true,
+        "score_weight": 4
+    },
+    {
+        "question_id": "HR019",
+        "question": "Have you mentored junior team members before?",
+        "category": "Leadership",
+        "answer_type": "boolean",
+        "mandatory": false,
+        "score_weight": 3
+    },
+    {
+        "question_id": "HR020",
+        "question": "Describe a time you failed and what you learned from it.",
+        "category": "Behavioral",
+        "answer_type": "text",
+        "mandatory": true,
+        "score_weight": 5
+    },
+    {
+        "question_id": "HR021",
+        "question": "How comfortable are you with remote collaboration?",
+        "category": "RemoteWork",
+        "answer_type": "text",
+        "mandatory": false,
+        "score_weight": 3
+    },
+    {
+        "question_id": "HR022",
+        "question": "How do you manage deadlines?",
+        "category": "TimeManagement",
+        "answer_type": "text",
+        "mandatory": true,
+        "score_weight": 4
+    },
+    {
+        "question_id": "HR023",
+        "question": "What certifications do you currently hold?",
+        "category": "Certifications",
+        "answer_type": "list",
+        "mandatory": false,
+        "score_weight": 3
+    },
+    {
+        "question_id": "HR024",
+        "question": "What is your expected salary range?",
+        "category": "Salary",
+        "answer_type": "number",
+        "mandatory": false,
+        "score_weight": 2
+    },
+    {
+        "question_id": "HR025",
+        "question": "What is your notice period?",
+        "category": "Availability",
+        "answer_type": "text",
+        "mandatory": true,
+        "score_weight": 4
+    },
+    {
+        "question_id": "HR026",
+        "question": "What achievement are you most proud of?",
+        "category": "Achievements",
+        "answer_type": "text",
+        "mandatory": true,
+        "score_weight": 5
+    },
+    {
+        "question_id": "HR027",
+        "question": "Describe your communication style.",
+        "category": "Communication",
+        "answer_type": "text",
+        "mandatory": true,
+        "score_weight": 4
+    },
+    {
+        "question_id": "HR028",
+        "question": "How do you approach learning a new technology?",
+        "category": "Learning",
+        "answer_type": "text",
+        "mandatory": true,
+        "score_weight": 5
+    },
+    {
+        "question_id": "HR029",
+        "question": "Describe a situation where you led a project.",
+        "category": "Leadership",
+        "answer_type": "text",
+        "mandatory": false,
+        "score_weight": 4
+    },
+    {
+        "question_id": "HR030",
+        "question": "Do you prefer working independently or in a team?",
+        "category": "WorkStyle",
+        "answer_type": "text",
         "mandatory": true,
         "score_weight": 3
     }

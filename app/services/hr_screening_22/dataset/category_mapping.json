@@ -1,65 +1,229 @@
 {
-    "chartered_accountant": {
-        "keywords": [
-            "chartered accountant",
-            "ca",
-            "aca",
-            "icai"
-        ],
-        "category": "finance",
+    "introduction": {
+        "category": "communication",
         "skills": [
-            "gst",
-            "income tax",
-            "audit",
-            "accounting",
-            "financial statements"
+            "self introduction",
+            "confidence",
+            "verbal communication",
+            "professional speaking"
         ]
     },
-    "accounts_officer": {
-        "keywords": [
-            "accounts officer",
-            "account executive",
-            "accountant"
-        ],
-        "category": "finance",
+    "education": {
+        "category": "academic",
         "skills": [
-            "tally",
-            "gst",
-            "accounting",
-            "bookkeeping"
+            "degree",
+            "qualification",
+            "academic performance",
+            "specialization"
         ]
     },
-    "auditor": {
-        "keywords": [
-            "auditor",
-            "internal auditor",
-            "external auditor"
-        ],
-        "category": "finance",
+    "experience": {
+        "category": "professional",
         "skills": [
-            "audit",
-            "compliance",
-            "risk assessment",
-            "financial statements"
+            "industry experience",
+            "project handling",
+            "real world exposure",
+            "role responsibility"
         ]
     },
-    "tax_consultant": {
-        "keywords": [
-            "tax consultant",
-            "tax advisor",
-            "tax specialist"
-        ],
-        "category": "finance",
+    "skills": {
+        "category": "technical",
         "skills": [
-            "gst",
-            "income tax",
-            "taxation",
-            "returns filing"
+            "problem solving",
+            "technical knowledge",
+            "tools expertise",
+            "frameworks",
+            "debugging"
         ]
     },
-    "default": {
-        "keywords": [],
-        "category": "general",
-        "skills": []
+    "projects": {
+        "category": "project_management",
+        "skills": [
+            "project architecture",
+            "team collaboration",
+            "deployment",
+            "system design"
+        ]
+    },
+    "problem_solving": {
+        "category": "analytical",
+        "skills": [
+            "critical thinking",
+            "logical reasoning",
+            "bug fixing",
+            "decision making"
+        ]
+    },
+    "behavioral": {
+        "category": "soft_skills",
+        "skills": [
+            "adaptability",
+            "stress handling",
+            "conflict resolution",
+            "emotional intelligence"
+        ]
+    },
+    "teamwork": {
+        "category": "collaboration",
+        "skills": [
+            "team coordination",
+            "communication",
+            "cross functional work",
+            "supportive attitude"
+        ]
+    },
+    "motivation": {
+        "category": "mindset",
+        "skills": [
+            "career goals",
+            "self motivation",
+            "growth mindset",
+            "professional interest"
+        ]
+    },
+    "company_interest": {
+        "category": "organizational_fit",
+        "skills": [
+            "company research",
+            "role understanding",
+            "career alignment",
+            "industry awareness"
+        ]
+    },
+    "career_goals": {
+        "category": "future_planning",
+        "skills": [
+            "long term vision",
+            "career planning",
+            "professional growth",
+            "goal setting"
+        ]
+    },
+    "strengths": {
+        "category": "personality",
+        "skills": [
+            "leadership",
+            "discipline",
+            "confidence",
+            "work ethic"
+        ]
+    },
+    "weakness": {
+        "category": "self_awareness",
+        "skills": [
+            "self evaluation",
+            "personal improvement",
+            "learning attitude",
+            "honesty"
+        ]
+    },
+    "technical_tools": {
+        "category": "technology",
+        "skills": [
+            "python",
+            "sql",
+            "git",
+            "docker",
+            "api development"
+        ]
+    },
+    "culture": {
+        "category": "workplace_fit",
+        "skills": [
+            "adaptability",
+            "professional ethics",
+            "team culture",
+            "work environment"
+        ]
+    },
+    "learning": {
+        "category": "continuous_learning",
+        "skills": [
+            "online learning",
+            "technology updates",
+            "self improvement",
+            "research"
+        ]
+    },
+    "leadership": {
+        "category": "management",
+        "skills": [
+            "team leadership",
+            "mentoring",
+            "ownership",
+            "decision making"
+        ]
+    },
+    "remote_work": {
+        "category": "remote_collaboration",
+        "skills": [
+            "virtual communication",
+            "time management",
+            "remote productivity",
+            "online collaboration"
+        ]
+    },
+    "time_management": {
+        "category": "productivity",
+        "skills": [
+            "task prioritization",
+            "deadline management",
+            "planning",
+            "execution"
+        ]
+    },
+    "certifications": {
+        "category": "professional_validation",
+        "skills": [
+            "industry certification",
+            "specialized learning",
+            "professional courses",
+            "career development"
+        ]
+    },
+    "salary": {
+        "category": "compensation",
+        "skills": [
+            "salary expectation",
+            "negotiation",
+            "market understanding",
+            "offer discussion"
+        ]
+    },
+    "availability": {
+        "category": "joining",
+        "skills": [
+            "notice period",
+            "joining flexibility",
+            "availability",
+            "commitment"
+        ]
+    },
+    "achievements": {
+        "category": "performance",
+        "skills": [
+            "awards",
+            "recognition",
+            "high performance",
+            "career milestones"
+        ]
+    },
+    "communication": {
+        "category": "interaction",
+        "skills": [
+            "speaking",
+            "listening",
+            "presentation",
+            "clarity"
+        ]
+    },
+    "work_style": {
+        "category": "professional_behavior",
+        "skills": [
+            "independent working",
+            "team collaboration",
+            "responsibility",
+            "ownership"
+        ]
     }
 }

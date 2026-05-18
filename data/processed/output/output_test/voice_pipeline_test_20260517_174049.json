@@ -1,0 +1,9 @@
+{
+    "question": "Please introduce yourself. Tell me about your background, skills, and experience.",
+    "question_audio": "E:\\Zecpath_AI_pro\\data\\raw\\Audios\\question_self_intro.mp3.wav",
+    "recorded_audio": "E:\\Zecpath_AI_pro\\data\\raw\\Audios\\answer_self_intro.wav",
+    "cleaned_audio": "E:\\Zecpath_AI_pro\\data\\processed\\output_Audios_45\\cleaned_self_intro.wav",
+    "wav_audio": "E:\\Zecpath_AI_pro\\data\\processed\\output_Audios_45\\cleaned_self_intro_converted.wav",
+    "audio_path": "E:\\Zecpath_AI_pro\\data\\processed\\output_Audios_45\\cleaned_self_intro_converted.wav",
+    "transcript": "y Welcome to snatch"
+}

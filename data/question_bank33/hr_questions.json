@@ -13,7 +13,7 @@
     "evaluation": {
       "clarity": 5,
       "confidence": 5,
-      "structure": 5,
+      "structure": 5, 
       "relevance": 5
     },
     "rejection_signals": ["unclear_communication"]
