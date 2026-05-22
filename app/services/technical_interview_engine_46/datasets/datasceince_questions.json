@@ -1,0 +1,30 @@
+{
+    "Machine Learning": {
+        "basic": [
+            "What is supervised learning?",
+            "Difference between classification and regression."
+        ],
+        "intermediate": [
+            "Explain overfitting and underfitting.",
+            "What is cross-validation?"
+        ],
+        "advanced": [
+            "Design recommendation system.",
+            "How would you deploy ML models in production?"
+        ]
+    },
+    "Statistics": {
+        "basic": [
+            "What is mean and median?",
+            "Explain standard deviation."
+        ],
+        "intermediate": [
+            "What is hypothesis testing?",
+            "Explain probability distributions."
+        ],
+        "advanced": [
+            "Explain Bayesian inference.",
+            "Design statistical analysis pipeline."
+        ]
+    }
+}

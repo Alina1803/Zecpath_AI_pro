@@ -1,0 +1,30 @@
+{
+    "Android": {
+        "basic": [
+            "What is an Activity in Android?",
+            "Explain Android lifecycle."
+        ],
+        "intermediate": [
+            "Explain RecyclerView.",
+            "What is ViewModel?"
+        ],
+        "advanced": [
+            "Design scalable Android application.",
+            "Explain offline-first mobile architecture."
+        ]
+    },
+    "Flutter": {
+        "basic": [
+            "What is Flutter?",
+            "Explain widgets in Flutter."
+        ],
+        "intermediate": [
+            "Explain state management.",
+            "What is FutureBuilder?"
+        ],
+        "advanced": [
+            "Design scalable Flutter architecture.",
+            "How would you optimize Flutter app performance?"
+        ]
+    }
+}

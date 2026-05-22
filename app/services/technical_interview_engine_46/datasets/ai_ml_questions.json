@@ -1,0 +1,30 @@
+{
+    "Deep Learning": {
+        "basic": [
+            "What is neural network?",
+            "Explain activation functions."
+        ],
+        "intermediate": [
+            "Explain CNN architecture.",
+            "What is backpropagation?"
+        ],
+        "advanced": [
+            "Design large-scale AI system.",
+            "Explain transformer architecture."
+        ]
+    },
+    "NLP": {
+        "basic": [
+            "What is Natural Language Processing?",
+            "Explain tokenization."
+        ],
+        "intermediate": [
+            "Explain word embeddings.",
+            "What is sentiment analysis?"
+        ],
+        "advanced": [
+            "Design enterprise chatbot system.",
+            "Explain LLM fine-tuning."
+        ]
+    }
+}

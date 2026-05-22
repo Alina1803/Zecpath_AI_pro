@@ -1,0 +1,172 @@
+{
+    "status": "success",
+    "generated_at": "2026-05-22T00:04:33.240674",
+    "candidate_id": "CAND_001",
+    "role": "backend developer",
+    "experience": "experienced",
+    "interview_duration": "0:04:28.099648",
+    "total_questions": 6,
+    "failed_answers": 0,
+    "responses": [
+        {
+            "id": 0,
+            "type": "role",
+            "question": "What is your strategy for debugging? Explain with real-world examples.",
+            "answer": "Invalid or unclear response detected.",
+            "transcript": "Invalid or unclear response detected.",
+            "audio_path": "E:\\Zecpath_AI_pro\\data\\processed\\output_45\\cleaned_1_converted.wav",
+            "communication_score": 3.0,
+            "confidence_score": 3.0,
+            "technical_score": 3.0,
+            "behavioral_score": 3.0,
+            "final_score": 3.0,
+            "followup": false,
+            "timestamp": "2026-05-22 00:01:17.086194"
+        },
+        {
+            "id": 1,
+            "type": "hr",
+            "question": "Describe a successful team project you worked on.",
+            "answer": "please send it my phone",
+            "transcript": "please send it my phone",
+            "audio_path": "E:\\Zecpath_AI_pro\\data\\processed\\output_45\\cleaned_2_converted.wav",
+            "communication_score": 3.0,
+            "confidence_score": 3.0,
+            "technical_score": 3.0,
+            "behavioral_score": 3.0,
+            "final_score": 3.0,
+            "followup": false,
+            "timestamp": "2026-05-22 00:01:52.549393"
+        },
+        {
+            "id": 2,
+            "type": "hr",
+            "question": "Tell me about yourself.",
+            "answer": "my DCA and Pindancy, Corridor, and the AI. Please, kindly, I take care of the developer.",
+            "transcript": "my DCA and Pindancy, Corridor, and the AI. Please, kindly, I take care of the developer.",
+            "audio_path": "E:\\Zecpath_AI_pro\\data\\processed\\output_45\\cleaned_3_converted.wav",
+            "communication_score": 7.0,
+            "confidence_score": 7.0,
+            "technical_score": 7.0,
+            "behavioral_score": 7.0,
+            "final_score": 7.0,
+            "followup": false,
+            "timestamp": "2026-05-22 00:02:30.302377"
+        },
+        {
+            "id": 3,
+            "type": "hr",
+            "question": "What motivates you to perform well at work?",
+            "answer": "Invalid or unclear response detected.",
+            "transcript": "Invalid or unclear response detected.",
+            "audio_path": "E:\\Zecpath_AI_pro\\data\\processed\\output_45\\cleaned_4_converted.wav",
+            "communication_score": 3.0,
+            "confidence_score": 3.0,
+            "technical_score": 3.0,
+            "behavioral_score": 3.0,
+            "final_score": 3.0,
+            "followup": false,
+            "timestamp": "2026-05-22 00:03:00.507792"
+        },
+        {
+            "id": 4,
+            "type": "role",
+            "question": "How do you improve your skills in communication? Explain with real-world examples.",
+            "answer": "Invalid or unclear response detected.",
+            "transcript": "Invalid or unclear response detected.",
+            "audio_path": "E:\\Zecpath_AI_pro\\data\\processed\\output_45\\cleaned_5_converted.wav",
+            "communication_score": 3.0,
+            "confidence_score": 3.0,
+            "technical_score": 3.0,
+            "behavioral_score": 3.0,
+            "final_score": 3.0,
+            "followup": false,
+            "timestamp": "2026-05-22 00:03:30.440362"
+        },
+        {
+            "id": 5,
+            "type": "role",
+            "question": "Tell me about a time when you handled behavioral. Explain with real-world examples.",
+            "answer": "Invalid or unclear response detected.",
+            "transcript": "Invalid or unclear response detected.",
+            "audio_path": "E:\\Zecpath_AI_pro\\data\\processed\\output_45\\cleaned_6_converted.wav",
+            "communication_score": 3.0,
+            "confidence_score": 3.0,
+            "technical_score": 3.0,
+            "behavioral_score": 3.0,
+            "final_score": 3.0,
+            "followup": false,
+            "timestamp": "2026-05-22 00:04:01.745985"
+        }
+    ],
+    "analysis": {
+        "overall_score": 3.67,
+        "communication_analysis": {
+            "component_scores": {
+                "fluency": 55,
+                "grammar": 75,
+                "vocabulary": 67.32,
+                "clarity": 60,
+                "filler": 100,
+                "structure": 90
+            },
+            "final_score": 72.85,
+            "status": "success",
+            "word_count": 41
+        },
+        "behavior_analysis": {
+            "input": {
+                "text": "Invalid or unclear response detected. please send it my phone my DCA and Pindancy, Corridor, and the AI. Please, kindly, I take care of the developer. Invalid or unclear response detected. Invalid or unclear response detected. Invalid or unclear response detected.",
+                "duration": 60
+            },
+            "confidence": 83.95,
+            "sentiment": 50.0,
+            "stress": 0.0,
+            "contradiction": 0,
+            "behavioral_score": 54.48,
+            "timestamp": "2026-05-22T00:04:33.158956"
+        },
+        "voice_pipeline": {
+            "question": "Tell me about yourself",
+            "question_id": 1,
+            "question_type": "hr",
+            "thinking_time": 20,
+            "duration": 10,
+            "question_audio": null,
+            "recorded_audio": "data/raw/Audios_45\\answer_1.wav",
+            "cleaned_audio": "E:\\Zecpath_AI_pro\\data\\processed\\output_45\\cleaned_1.wav",
+            "wav_audio": "E:\\Zecpath_AI_pro\\data\\processed\\output_45\\cleaned_1_converted.wav",
+            "audio_path": "E:\\Zecpath_AI_pro\\data\\processed\\output_45\\cleaned_1_converted.wav",
+            "transcript": "Invalid or unclear response detected.",
+            "valid_response": false,
+            "status": "failed",
+            "timestamp": "2026-05-22 00:04:32.551373",
+            "processing_time_sec": 30.1
+        }
+    },
+    "summary": {
+        "candidate_id": "CAND_001",
+        "role": "backend developer",
+        "experience": null,
+        "overall_score": 0,
+        "decision": "Reject",
+        "final_recommendation": {
+            "status": "Reject",
+            "confidence": "Reject"
+        },
+        "summary": {
+            "strengths": [],
+            "weaknesses": [
+                "Poor communication clarity"
+            ],
+            "risks": [
+                "Low confidence detected"
+            ],
+            "inconsistencies": [],
+            "cultural_fit": "Moderate"
+        },
+        "natural_language_summary": "\nThe candidate demonstrates some strengths.\n\nHowever, there are concerns such as Poor communication clarity.\n\nRisk factors include Low confidence detected.\n\nCultural fit is assessed as Moderate.\n\nFinal Recommendation: Reject.\n",
+        "formatted_summary": "\n=== Candidate Summary ===\n\nStrengths:\n- None\n\nWeaknesses:\n- Poor communication clarity\n\nRisks:\n- Low confidence detected\n\nInconsistencies:\n- None\n\nCultural Fit: Moderate\n"
+    },
+    "final_decision": "REJECTED"
+}

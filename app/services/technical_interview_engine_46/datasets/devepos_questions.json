@@ -1,0 +1,30 @@
+{
+    "Docker": {
+        "basic": [
+            "What is Docker?",
+            "Difference between image and container."
+        ],
+        "intermediate": [
+            "Explain Docker volumes.",
+            "What is Docker Compose?"
+        ],
+        "advanced": [
+            "How would you optimize Docker images?",
+            "Design container orchestration architecture."
+        ]
+    },
+    "Kubernetes": {
+        "basic": [
+            "What is Kubernetes?",
+            "Explain pods and deployments."
+        ],
+        "intermediate": [
+            "What is auto-scaling?",
+            "Explain services in Kubernetes."
+        ],
+        "advanced": [
+            "Design scalable Kubernetes cluster.",
+            "Explain Kubernetes networking."
+        ]
+    }
+}

@@ -4,15 +4,9 @@ import traceback
 from datetime import datetime
 from typing import Optional, Dict, Any, List
 
-from app.services.demo_45.workflow_manager import (
-    WorkflowManager
-)
+from app.services.demo_45.workflow_manager import (WorkflowManager)
 
-from app.services.demo_45.interview_controller import (
-    InterviewController
-)
-
-
+from app.services.demo_45.interview_controller import (InterviewController)
 
 # =====================================================
 # LOGGER CONFIGURATION
@@ -26,12 +20,10 @@ logging.basicConfig(
         "%(asctime)s | "
         "%(levelname)s | "
         "%(name)s | "
-        "%(message)s"
-    )
+        "%(message)s")
 )
 
 logger = logging.getLogger(__name__)
-
 
 # =====================================================
 # FINAL HR INTERVIEW ENGINE
@@ -42,16 +34,13 @@ class FinalHRInterviewSystem:
     def __init__(self):
 
         logger.info(
-            "\n====================================="
-        )
+            "\n=====================================")
 
         logger.info(
-            "INITIALIZING FINAL HR INTERVIEW SYSTEM"
-        )
+            "INITIALIZING FINAL HR INTERVIEW SYSTEM")
 
         logger.info(
-            "=====================================\n"
-        )
+            "=====================================\n")
 
         # =============================================
         # CORE COMPONENTS
@@ -68,8 +57,7 @@ class FinalHRInterviewSystem:
         self.system_initialized = True
 
         logger.info(
-            "✅ FinalHRInterviewSystem Ready"
-        )
+            "✅ FinalHRInterviewSystem Ready")
 
     # =================================================
     # SAFE LOGGER

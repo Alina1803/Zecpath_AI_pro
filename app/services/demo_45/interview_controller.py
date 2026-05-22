@@ -1,12 +1,8 @@
 import traceback
 
-from app.services.demo_45.workflow_manager import (
-    WorkflowManager
-)
+from app.services.demo_45.workflow_manager import (WorkflowManager)
 
-from app.services.hr_interview_engine_33.state_manager.interview_state import (
-    InterviewState
-)
+from app.services.hr_interview_engine_33.state_manager.interview_state import (InterviewState)
 
 
 # =====================================================
@@ -55,16 +51,13 @@ class InterviewController:
         try:
 
             self._log(
-                "==================================="
-            )
+                "===================================")
 
             self._log(
-                "INTERVIEW INITIALIZATION STARTED"
-            )
+                "INTERVIEW INITIALIZATION STARTED")
 
             self._log(
-                "==================================="
-            )
+                "===================================")
 
             # =============================================
             # VALIDATION

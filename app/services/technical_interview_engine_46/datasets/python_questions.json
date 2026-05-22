@@ -1,0 +1,33 @@
+{
+    "Python": {
+        "basic": [
+            "What is a list in Python?",
+            "Difference between list and tuple.",
+            "Explain Python dictionaries."
+        ],
+        "intermediate": [
+            "Explain decorators.",
+            "What is GIL in Python?",
+            "Explain generators."
+        ],
+        "advanced": [
+            "Design scalable backend system in Python.",
+            "Explain async programming in Python.",
+            "How does multiprocessing work?"
+        ]
+    },
+    "FastAPI": {
+        "basic": [
+            "What is FastAPI?",
+            "Explain API routing."
+        ],
+        "intermediate": [
+            "How does dependency injection work in FastAPI?",
+            "Explain middleware in FastAPI."
+        ],
+        "advanced": [
+            "How would you scale FastAPI services?",
+            "Design production-ready FastAPI architecture."
+        ]
+    }
+}

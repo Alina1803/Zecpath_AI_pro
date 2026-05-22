@@ -1,0 +1,30 @@
+{
+    "SQL": {
+        "basic": [
+            "What is a primary key?",
+            "Explain normalization."
+        ],
+        "intermediate": [
+            "Explain joins in SQL.",
+            "What are indexes?"
+        ],
+        "advanced": [
+            "Design scalable database schema.",
+            "Explain database sharding."
+        ]
+    },
+    "MongoDB": {
+        "basic": [
+            "What is MongoDB?",
+            "Explain collections and documents."
+        ],
+        "intermediate": [
+            "Explain aggregation pipeline.",
+            "What is indexing in MongoDB?"
+        ],
+        "advanced": [
+            "Design distributed MongoDB cluster.",
+            "Explain replication and sharding."
+        ]
+    }
+}

@@ -1,176 +1,356 @@
 import os
+import wave
 import time
+import queue
 import traceback
 
-import sounddevice as sd
 import numpy as np
+import sounddevice as sd
 
-from scipy.io.wavfile import write
 
 class MicrophoneInput:
 
+    # =====================================================
+    # INIT
+    # =====================================================
+
     def __init__(self):
 
-        self.audio_dir = "data/raw/Audios"
+        self.output_dir = (
+            "data/raw/Audios_45"
+        )
 
-        os.makedirs(self.audio_dir,exist_ok=True)
+        os.makedirs(
+            self.output_dir,
+            exist_ok=True
+        )
 
-    # ==============================================
-    # SHOW AVAILABLE DEVICES
-    # ==============================================
+        print("✅ MicrophoneInput Ready")
+
+    # =====================================================
+    # LIST DEVICES
+    # =====================================================
 
     def list_devices(self):
 
-        print("\n===== AVAILABLE AUDIO DEVICES =====\n")
+        print("\n=================================")
+        print("AVAILABLE MICROPHONE DEVICES")
+        print("=================================\n")
 
-        print(sd.query_devices())
+        devices = sd.query_devices()
 
-    # ==============================================
-    # RECORD AUDIO
-    # ==============================================
+        for idx, device in enumerate(devices):
 
-    def record_audio(self,filename=None,duration=10,sample_rate=16000):
+            if device["max_input_channels"] > 0:
+
+                print(
+                    f"[{idx}] "
+                    f"{device['name']}"
+                )
+
+        return devices
+
+    # =====================================================
+    # SMART RECORDING
+    # =====================================================
+
+    def record_audio_dynamic(
+
+        self,
+
+        filename="output.wav",
+
+        duration=60,
+
+        silence_limit=4,
+
+        sample_rate=16000,
+
+        device=None
+
+    ):
+
+        print("\n=================================")
+        print("SMART RECORDING STARTED")
+        print("=================================")
+
+        filepath = os.path.join(
+            self.output_dir,
+            filename
+        )
+
+        audio_queue = queue.Queue()
+
+        audio_chunks = []
+
+        # =================================================
+        # IMPROVED SETTINGS
+        # =================================================
+
+        silence_threshold = 0.0015
+
+        block_duration = 0.2
+
+        silence_counter = 0
+
+        speech_detected = False
+
+        speech_frames = 0
+
+        min_speech_frames = 5
+
+        # =================================================
+        # CALLBACK
+        # =================================================
+
+        def callback(
+
+            indata,
+            frames,
+            time_info,
+            status
+
+        ):
+
+            if status:
+
+                print(status)
+
+            audio_queue.put(
+                indata.copy()
+            )
 
         try:
 
-            # ======================================
-            # AUTO GENERATE UNIQUE FILENAME
-            # ======================================
+            # =============================================
+            # START STREAM
+            # =============================================
 
-            if filename is None:
+            with sd.InputStream(
 
-                timestamp = int(time.time())
-
-                filename = f"candidate_{timestamp}.wav"
-
-            # ======================================
-            # ENSURE WAV EXTENSION
-            # ======================================
-
-            if not filename.endswith(".wav"):
-
-                filename += ".wav"
-
-            # ======================================
-            # FULL SAVE PATH
-            # ======================================
-
-            save_path = os.path.abspath(os.path.join(self.audio_dir,filename))
-
-            # ======================================
-            # DEBUG INFO
-            # ======================================
-
-            print("\n=================================")
-            print("MICROPHONE RECORDING STARTED")
-            print("=================================")
-
-            print(f"Filename       : {filename}")
-            print(f"Duration       : {duration} seconds")
-            print(f"Sample Rate    : {sample_rate}")
-            print(f"Absolute Path  : {save_path}")
-
-            # ======================================
-            # CHECK AUDIO DEVICES
-            # ======================================
-
-            try:
-
-                default_input, default_output = sd.default.device
-
-                print(f"Default Input Device  : {default_input}")
-                print(f"Default Output Device : {default_output}")
-
-            except Exception as device_error:
-
-                print(f"Device Detection Error : {device_error}")
-
-            # ======================================
-            # START RECORDING
-            # ======================================
-
-            print("\nRecording... Speak now.")
-
-            audio = sd.rec(
-                int(duration * sample_rate),
                 samplerate=sample_rate,
+
                 channels=1,
-                dtype="float32")
 
-            # ======================================
-            # WAIT FOR RECORDING COMPLETION
-            # ======================================
+                dtype="float32",
 
-            sd.wait()
+                blocksize=int(
+                    sample_rate * block_duration
+                ),
 
-            print("Recording finished.")
+                device=device,
 
-            # ======================================
-            # VALIDATE AUDIO
-            # ======================================
+                callback=callback
 
-            if audio is None:
+            ):
 
-                raise Exception("Audio buffer is None")
+                print("\n🎤 Recording Started...")
+                print("Speak naturally...")
+                print(
+                    f"Max Duration : {duration} sec"
+                )
 
-            if len(audio) == 0:
+                start_time = time.time()
 
-                raise Exception("Audio buffer is empty")
+                while True:
 
-            # ======================================
-            # CONVERT FLOAT32 → INT16
-            # ======================================
+                    # =====================================
+                    # MAX DURATION
+                    # =====================================
 
-            audio_int16 = np.int16(audio * 32767)
+                    elapsed = (
+                        time.time() - start_time
+                    )
 
-            # ======================================
-            # SAVE AUDIO FILE
-            # ======================================
+                    if elapsed >= duration:
 
-            write(save_path,
-                sample_rate,
-                audio_int16
-            )
+                        print(
+                            "\n⏰ Max duration reached"
+                        )
 
-            # ======================================
-            # VERIFY FILE EXISTS
-            # ======================================
+                        break
 
-            if not os.path.exists(save_path):
+                    # =====================================
+                    # GET AUDIO DATA
+                    # =====================================
 
-                raise FileNotFoundError(
-                    f"Audio file not found after save: {save_path}")
+                    try:
 
-            # ======================================
-            # VERIFY FILE SIZE
-            # ======================================
+                        data = audio_queue.get(
+                            timeout=1
+                        )
 
-            file_size = os.path.getsize(save_path)
+                    except queue.Empty:
 
-            print(f"Saved File Size : {file_size} bytes")
+                        continue
 
-            if file_size <= 100:
+                    audio_chunks.append(data)
+
+                    # =====================================
+                    # BETTER VOLUME CALCULATION
+                    # =====================================
+
+                    volume = float(
+
+                        np.sqrt(
+                            np.mean(
+                                np.square(data)
+                            )
+                        )
+                    )
+
+                    print(
+                        f"Volume : {volume:.5f}",
+                        end="\r"
+                    )
+
+                    # =====================================
+                    # SPEECH DETECTION
+                    # =====================================
+
+                    if volume > silence_threshold:
+
+                        speech_frames += 1
+
+                        silence_counter = 0
+
+                        if (
+                            speech_frames >=
+                            min_speech_frames
+                        ):
+
+                            speech_detected = True
+
+                    else:
+
+                        # only track silence
+                        # AFTER speech begins
+
+                        if speech_detected:
+
+                            silence_counter += (
+                                block_duration
+                            )
+
+                    # =====================================
+                    # STOP ON SILENCE
+                    # =====================================
+
+                    if (
+
+                        speech_detected
+
+                        and
+
+                        silence_counter >=
+                        silence_limit
+
+                    ):
+
+                        print(
+                            "\n🔇 Silence detected"
+                        )
+
+                        break
+
+            # =============================================
+            # NO AUDIO CHECK
+            # =============================================
+
+            if len(audio_chunks) == 0:
 
                 raise Exception(
-                    "Audio file too small. Recording likely failed.")
+                    "No audio chunks captured"
+                )
 
-            print("\n=================================")
-            print("RECORDING SUCCESS")
-            print("=================================")
+            # =============================================
+            # MERGE AUDIO
+            # =============================================
 
-            print(f"Audio Saved At : {save_path}")
+            audio = np.concatenate(
+                audio_chunks,
+                axis=0
+            )
 
-            return save_path
+            # =============================================
+            # AUTO NORMALIZATION
+            # =============================================
+
+            max_amp = np.max(
+                np.abs(audio)
+            )
+
+            if max_amp > 0:
+
+                audio = audio / max_amp
+
+            # =============================================
+            # CONVERT TO INT16
+            # =============================================
+
+            audio_int16 = np.int16(
+                audio * 32767
+            )
+
+            # =============================================
+            # SAVE WAV
+            # =============================================
+
+            with wave.open(
+                filepath,
+                "wb"
+            ) as wf:
+
+                wf.setnchannels(1)
+
+                wf.setsampwidth(2)
+
+                wf.setframerate(sample_rate)
+
+                wf.writeframes(
+                    audio_int16.tobytes()
+                )
+
+            # =============================================
+            # VALIDATE FILE
+            # =============================================
+
+            if not os.path.exists(filepath):
+
+                raise Exception(
+                    "Audio file not created"
+                )
+
+            file_size = os.path.getsize(
+                filepath
+            )
+
+            print(
+                f"\n✅ Audio Saved : {filepath}"
+            )
+
+            print(
+                f"📦 File Size : "
+                f"{file_size} bytes"
+            )
+
+            # =============================================
+            # VERY SMALL AUDIO CHECK
+            # =============================================
+
+            if file_size < 5000:
+
+                print(
+                    "\n⚠ Warning:"
+                    " Very small audio detected"
+                )
+
+            return filepath
 
         except Exception as e:
 
-            print("\n=================================")
-            print("MICROPHONE RECORDING FAILED")
-            print("=================================")
-
-            print(f"Error : {str(e)}")
-
-            print("\nTRACEBACK:\n")
+            print("\n⚠ RECORDING ERROR")
+            print(str(e))
             print(traceback.format_exc())
 
             return None

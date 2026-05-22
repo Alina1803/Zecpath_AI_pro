@@ -1,0 +1,17 @@
+{
+    "Software Architecture": {
+        "basic": [
+            "What is monolithic architecture?",
+            "Explain MVC architecture."
+        ],
+        "intermediate": [
+            "Explain microservices.",
+            "What is event-driven architecture?"
+        ],
+        "advanced": [
+            "Design enterprise SaaS platform.",
+            "Explain distributed systems architecture.",
+            "Design scalable multi-tenant system."
+        ]
+    }
+}

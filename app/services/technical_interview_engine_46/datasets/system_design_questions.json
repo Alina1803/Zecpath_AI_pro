@@ -1,0 +1,16 @@
+{
+    "basic": [
+        "Design a URL shortener.",
+        "Design online voting system."
+    ],
+    "intermediate": [
+        "Design chat application.",
+        "Design ride-sharing backend."
+    ],
+    "advanced": [
+        "Design YouTube architecture.",
+        "Design Netflix streaming platform.",
+        "Design scalable payment gateway.",
+        "Design distributed notification system."
+    ]
+}

@@ -1,0 +1,39 @@
+{
+    "JavaScript": {
+        "basic": [
+            "What is hoisting in JavaScript?",
+            "Explain difference between let, const, and var.",
+            "What is a closure?",
+            "What are JavaScript data types?"
+        ],
+        "intermediate": [
+            "Explain event loop in JavaScript.",
+            "How does async/await work?",
+            "Explain promises in JavaScript.",
+            "What is debouncing and throttling?"
+        ],
+        "advanced": [
+            "Design scalable frontend architecture.",
+            "How would you optimize React application performance?",
+            "Explain server-side rendering.",
+            "How does React reconciliation work?"
+        ]
+    },
+    "React": {
+        "basic": [
+            "What is JSX?",
+            "Explain React components.",
+            "What are props and state?"
+        ],
+        "intermediate": [
+            "Explain React hooks.",
+            "What is useEffect?",
+            "How does Virtual DOM work?"
+        ],
+        "advanced": [
+            "Explain React fiber architecture.",
+            "How would you manage state in enterprise applications?",
+            "Design scalable React application structure."
+        ]
+    }
+}

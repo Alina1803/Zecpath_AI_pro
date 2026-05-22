@@ -1,0 +1,33 @@
+{
+    "Java": {
+        "basic": [
+            "What is JVM?",
+            "Explain OOP concepts.",
+            "Difference between JDK, JRE, and JVM."
+        ],
+        "intermediate": [
+            "Explain multithreading in Java.",
+            "What is synchronization?",
+            "Explain exception handling."
+        ],
+        "advanced": [
+            "Design scalable microservice architecture.",
+            "Explain Java memory management.",
+            "How does garbage collection work?"
+        ]
+    },
+    "Spring Boot": {
+        "basic": [
+            "What is Spring Boot?",
+            "Explain dependency injection."
+        ],
+        "intermediate": [
+            "Explain REST APIs in Spring Boot.",
+            "What is Spring Security?"
+        ],
+        "advanced": [
+            "Design enterprise backend architecture.",
+            "How would you scale Spring Boot applications?"
+        ]
+    }
+}

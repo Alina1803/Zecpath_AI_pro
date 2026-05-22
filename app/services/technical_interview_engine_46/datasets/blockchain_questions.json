@@ -1,0 +1,30 @@
+{
+    "Blockchain": {
+        "basic": [
+            "What is blockchain?",
+            "Explain cryptocurrency."
+        ],
+        "intermediate": [
+            "Explain smart contracts.",
+            "What is proof of work?"
+        ],
+        "advanced": [
+            "Design decentralized application.",
+            "Explain blockchain scalability challenges."
+        ]
+    },
+    "Ethereum": {
+        "basic": [
+            "What is Ethereum?",
+            "Explain gas fees."
+        ],
+        "intermediate": [
+            "Explain Solidity.",
+            "What is ERC-20 token?"
+        ],
+        "advanced": [
+            "Design enterprise blockchain solution.",
+            "Explain Layer-2 scaling."
+        ]
+    }
+}

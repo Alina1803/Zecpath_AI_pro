@@ -1,0 +1,30 @@
+{
+    "UI Design": {
+        "basic": [
+            "What is typography?",
+            "Explain color theory."
+        ],
+        "intermediate": [
+            "Explain responsive design.",
+            "What is design consistency?"
+        ],
+        "advanced": [
+            "Design enterprise dashboard UI.",
+            "Explain scalable design systems."
+        ]
+    },
+    "UX Design": {
+        "basic": [
+            "What is user experience?",
+            "Explain wireframing."
+        ],
+        "intermediate": [
+            "Explain user journey mapping.",
+            "What is usability testing?"
+        ],
+        "advanced": [
+            "Design enterprise UX workflow.",
+            "Explain accessibility-first UX strategy."
+        ]
+    }
+}

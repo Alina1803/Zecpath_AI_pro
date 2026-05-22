@@ -1,0 +1,30 @@
+{
+    "Network Security": {
+        "basic": [
+            "What is a firewall?",
+            "Explain VPN."
+        ],
+        "intermediate": [
+            "Explain SQL injection.",
+            "What is Cross-Site Scripting (XSS)?"
+        ],
+        "advanced": [
+            "Design secure enterprise infrastructure.",
+            "Explain zero-trust architecture."
+        ]
+    },
+    "Ethical Hacking": {
+        "basic": [
+            "What is penetration testing?",
+            "Explain phishing attack."
+        ],
+        "intermediate": [
+            "Explain privilege escalation.",
+            "What is packet sniffing?"
+        ],
+        "advanced": [
+            "Design enterprise penetration testing strategy.",
+            "Explain advanced persistent threats."
+        ]
+    }
+}

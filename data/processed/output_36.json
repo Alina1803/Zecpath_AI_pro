@@ -1,12 +1,12 @@
 {
     "input": {
-        "text": "I am confident but I am not confident",
-        "duration": 5
+        "text": "Invalid or unclear response detected. please send it my phone my DCA and Pindancy, Corridor, and the AI. Please, kindly, I take care of the developer. Invalid or unclear response detected. Invalid or unclear response detected. Invalid or unclear response detected.",
+        "duration": 60
     },
-    "confidence": 88.9,
-    "sentiment": 100.0,
+    "confidence": 83.95,
+    "sentiment": 50.0,
     "stress": 0.0,
-    "contradiction": 100,
-    "behavioral_score": 79.45,
-    "timestamp": "2026-04-30T20:22:48.047951"
+    "contradiction": 0,
+    "behavioral_score": 54.48,
+    "timestamp": "2026-05-22T00:04:33.158956"
 }

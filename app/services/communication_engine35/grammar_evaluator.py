@@ -1,67 +1,16 @@
-import language_tool_python
 import re
-import os
 import logging
-from app.core.language_tool_manager import get_language_tool
 
+logger = logging.getLogger(__name__)
 
-# =========================================================
-# LOGGING
-# =========================================================
-
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s [%(levelname)s] %(message)s"
-)
-
-
-# =========================================================
-# TEMP DIRECTORY
-# =========================================================
-
-TEMP_DIR = "G:\\temp"
-
-os.makedirs(TEMP_DIR, exist_ok=True)
-
-os.environ["TMPDIR"] = TEMP_DIR
-os.environ["TEMP"] = TEMP_DIR
-
-
-# =========================================================
-# OPTIONAL LOCAL LANGUAGETOOL PATH
-# =========================================================
-
-os.environ["LANGUAGETOOL_HOME"] = r"G:\LanguageTool"
-
-
-# =========================================================
-# GRAMMAR EVALUATOR
-# =========================================================
 
 class GrammarEvaluator:
 
     def __init__(self):
 
-        try:
-
-            # =========================================
-            # SINGLETON LANGUAGETOOL INSTANCE
-            # =========================================
-
-            self.tool = get_language_tool()
-
-            logging.info(
-                "✅ Shared LanguageTool Instance Loaded"
-            )
-
-        except Exception:
-
-            logging.error(
-                "❌ Failed To Initialize LanguageTool",
-                exc_info=True
-            )
-
-            self.tool = None
+        logger.info(
+            "✅ Lightweight GrammarEvaluator Loaded"
+        )
 
     # =====================================================
     # MAIN EVALUATION
@@ -69,77 +18,55 @@ class GrammarEvaluator:
 
     def evaluate(self, text: str) -> float:
 
-        # =========================================
-        # EMPTY INPUT
-        # =========================================
-
         if not text or not text.strip():
 
             return 0.0
 
-        # =========================================
-        # FALLBACK MODE
-        # =========================================
+        words = text.split()
 
-        if self.tool is None:
+        word_count = len(words)
 
-            logging.warning(
-                "⚠️ Grammar Tool Not Available → Using Fallback"
-            )
+        unique_words = len(set(words))
 
-            return 50.0
+        # =================================================
+        # BASE SCORE
+        # =================================================
 
-        # =========================================
-        # RUN GRAMMAR CHECK
-        # =========================================
+        score = 85
 
-        try:
+        # =================================================
+        # SHORT ANSWER PENALTY
+        # =================================================
 
-            matches = self.tool.check(text)
+        if word_count < 5:
 
-        except Exception:
+            score -= 20
 
-            logging.error(
-                "⚠️ Grammar Check Failed",
-                exc_info=True
-            )
+        elif word_count < 15:
 
-            return 50.0
+            score -= 10
 
-        # =========================================
-        # ERROR ANALYSIS
-        # =========================================
+        # =================================================
+        # REPETITION PENALTY
+        # =================================================
 
-        grammar_errors = 0
-        spelling_errors = 0
-        style_issues = 0
+        repetition_ratio = (
 
-        for m in matches:
+            (word_count - unique_words)
 
-            issue_type = getattr(
-                m,
-                "ruleIssueType",
-                ""
-            )
+            / max(word_count, 1)
+        )
 
-            if issue_type == 'misspelling':
+        if repetition_ratio > 0.3:
 
-                spelling_errors += 1
+            score -= 10
 
-            elif issue_type == 'grammar':
-
-                grammar_errors += 1
-
-            else:
-
-                style_issues += 1
-
-        # =========================================
-        # SENTENCE ANALYSIS
-        # =========================================
+        # =================================================
+        # LONG SENTENCE PENALTY
+        # =================================================
 
         sentences = re.split(
-            r'[.!?]',
+            r"[.!?]",
             text
         )
 
@@ -149,48 +76,32 @@ class GrammarEvaluator:
             if s.strip()
         ]
 
-        incomplete_sentences = sum(
+        avg_sentence_length = (
 
-            1 for s in sentences
+            word_count
 
-            if len(s.split()) < 3
+            / max(len(sentences), 1)
         )
 
-        # =========================================
-        # WEIGHTED ERROR CALCULATION
-        # =========================================
+        if avg_sentence_length > 25:
 
-        weighted_errors = (
+            score -= 10
 
-            grammar_errors * 1.0 +
+        # =================================================
+        # LOWERCASE START PENALTY
+        # =================================================
 
-            spelling_errors * 0.8 +
+        if text and text[0].islower():
 
-            style_issues * 0.5 +
+            score -= 5
 
-            incomplete_sentences * 0.7
-        )
-
-        word_count = max(
-            len(text.split()),
-            1
-        )
-
-        error_density = (
-            weighted_errors / word_count
-        )
-
-        # =========================================
+        # =================================================
         # FINAL SCORE
-        # =========================================
-
-        score = (
-            1 - error_density
-        ) * 100
+        # =================================================
 
         score = max(
             min(score, 100),
-            0
+            40
         )
 
         return round(score, 2)
@@ -204,16 +115,11 @@ if __name__ == "__main__":
 
     evaluator = GrammarEvaluator()
 
-    sample_text = (
-        "I think I am confident "
-        "but maybe I need improve grammar"
+    sample = (
+        "I have worked with FastAPI, "
+        "Docker and scalable backend systems."
     )
 
-    score = evaluator.evaluate(
-        sample_text
-    )
+    result = evaluator.evaluate(sample)
 
-    print(
-        "Grammar Score:",
-        score
-    )
+    print(result)

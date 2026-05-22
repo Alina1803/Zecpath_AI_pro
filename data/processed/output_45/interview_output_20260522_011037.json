@@ -1,0 +1,141 @@
+{
+    "status": "success",
+    "generated_at": "2026-05-22T01:10:37.817858",
+    "candidate_id": "CAND_001",
+    "role": "backend developer",
+    "experience": "experienced",
+    "interview_duration": "0:04:32.416408",
+    "total_questions": 6,
+    "failed_answers": 6,
+    "responses": [
+        {
+            "id": 0,
+            "type": "hr",
+            "question": "Walk me through your professional background.",
+            "answer": "",
+            "transcript": "",
+            "audio_path": null,
+            "communication_score": 0,
+            "confidence_score": 0,
+            "technical_score": 0,
+            "behavioral_score": 0,
+            "final_score": 0.0,
+            "followup": false,
+            "timestamp": "2026-05-22 01:06:50.672308"
+        },
+        {
+            "id": 1,
+            "type": "role",
+            "question": "What is your strategy for behavioral? Explain with real-world examples.",
+            "answer": "",
+            "transcript": "",
+            "audio_path": null,
+            "communication_score": 0,
+            "confidence_score": 0,
+            "technical_score": 0,
+            "behavioral_score": 0,
+            "final_score": 0.0,
+            "followup": false,
+            "timestamp": "2026-05-22 01:07:23.416264"
+        },
+        {
+            "id": 2,
+            "type": "role",
+            "question": "What are common mistakes in customer_handling and how do you avoid them? Explain with real-world examples.",
+            "answer": "",
+            "transcript": "",
+            "audio_path": null,
+            "communication_score": 0,
+            "confidence_score": 0,
+            "technical_score": 0,
+            "behavioral_score": 0,
+            "final_score": 0.0,
+            "followup": false,
+            "timestamp": "2026-05-22 01:07:57.373259"
+        },
+        {
+            "id": 3,
+            "type": "hr",
+            "question": "Tell me about yourself.",
+            "answer": "",
+            "transcript": "",
+            "audio_path": null,
+            "communication_score": 0,
+            "confidence_score": 0,
+            "technical_score": 0,
+            "behavioral_score": 0,
+            "final_score": 0.0,
+            "followup": false,
+            "timestamp": "2026-05-22 01:08:24.989823"
+        },
+        {
+            "id": 4,
+            "type": "hr",
+            "question": "Tell me about a time you had to adapt quickly to change.",
+            "answer": "",
+            "transcript": "",
+            "audio_path": null,
+            "communication_score": 0,
+            "confidence_score": 0,
+            "technical_score": 0,
+            "behavioral_score": 0,
+            "final_score": 0.0,
+            "followup": false,
+            "timestamp": "2026-05-22 01:09:04.484102"
+        },
+        {
+            "id": 5,
+            "type": "role",
+            "question": "Describe a challenge related to sql and how you solved it. Explain with real-world examples.",
+            "answer": "",
+            "transcript": "",
+            "audio_path": null,
+            "communication_score": 0,
+            "confidence_score": 0,
+            "technical_score": 0,
+            "behavioral_score": 0,
+            "final_score": 0.0,
+            "followup": false,
+            "timestamp": "2026-05-22 01:09:36.560207"
+        }
+    ],
+    "analysis": {
+        "overall_score": 0.0,
+        "communication_analysis": null,
+        "behavior_analysis": null,
+        "voice_pipeline": {
+            "question": "Tell me about yourself",
+            "question_id": 1,
+            "question_type": "hr",
+            "status": "failed",
+            "transcript": "",
+            "error": "Final WAV audio missing",
+            "timestamp": "2026-05-22 01:10:37.750859"
+        }
+    },
+    "summary": {
+        "candidate_id": "CAND_001",
+        "role": "backend developer",
+        "experience": null,
+        "overall_score": 0,
+        "decision": "Reject",
+        "final_recommendation": {
+            "status": "Reject",
+            "confidence": "Reject"
+        },
+        "summary": {
+            "strengths": [],
+            "weaknesses": [
+                "Poor communication clarity"
+            ],
+            "risks": [
+                "Low confidence detected"
+            ],
+            "inconsistencies": [],
+            "cultural_fit": "Moderate"
+        },
+        "natural_language_summary": "\nThe candidate demonstrates some strengths.\n\nHowever, there are concerns such as Poor communication clarity.\n\nRisk factors include Low confidence detected.\n\nCultural fit is assessed as Moderate.\n\nFinal Recommendation: Reject.\n",
+        "formatted_summary": "\n=== Candidate Summary ===\n\nStrengths:\n- None\n\nWeaknesses:\n- Poor communication clarity\n\nRisks:\n- Low confidence detected\n\nInconsistencies:\n- None\n\nCultural Fit: Moderate\n"
+    },
+    "final_decision": "REJECTED"
+}

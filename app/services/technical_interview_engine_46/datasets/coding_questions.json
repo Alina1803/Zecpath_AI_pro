@@ -1,0 +1,50 @@
+{
+    "easy": [
+        {
+            "question": "Reverse a string.",
+            "expected_topics": [
+                "loops",
+                "strings"
+            ]
+        },
+        {
+            "question": "Find largest number in array.",
+            "expected_topics": [
+                "arrays",
+                "loops"
+            ]
+        }
+    ],
+    "medium": [
+        {
+            "question": "Implement LRU cache.",
+            "expected_topics": [
+                "hashmap",
+                "linkedlist"
+            ]
+        },
+        {
+            "question": "Find duplicate elements efficiently.",
+            "expected_topics": [
+                "hashing",
+                "optimization"
+            ]
+        }
+    ],
+    "hard": [
+        {
+            "question": "Design scalable distributed cache system.",
+            "expected_topics": [
+                "distributed systems",
+                "caching"
+            ]
+        },
+        {
+            "question": "Implement rate limiter.",
+            "expected_topics": [
+                "system design",
+                "algorithms"
+            ]
+        }
+    ]
+}

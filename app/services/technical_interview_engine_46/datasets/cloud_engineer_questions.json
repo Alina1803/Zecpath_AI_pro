@@ -1,0 +1,30 @@
+{
+    "AWS": {
+        "basic": [
+            "What is EC2?",
+            "Explain S3 storage."
+        ],
+        "intermediate": [
+            "Explain load balancing in AWS.",
+            "What is Auto Scaling?"
+        ],
+        "advanced": [
+            "Design scalable cloud infrastructure.",
+            "Explain multi-region deployment strategy."
+        ]
+    },
+    "Azure": {
+        "basic": [
+            "What is Azure Virtual Machine?",
+            "Explain Azure Blob Storage."
+        ],
+        "intermediate": [
+            "Explain Azure DevOps.",
+            "What is Azure Functions?"
+        ],
+        "advanced": [
+            "Design enterprise Azure architecture.",
+            "Explain hybrid cloud strategy."
+        ]
+    }
+}

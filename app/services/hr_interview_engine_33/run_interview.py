@@ -64,7 +64,11 @@ def save_results(data):
         f"interview_{timestamp}.json"
     )
 
-    with open(file_path, "w", encoding="utf-8") as f:
+    with open(
+        file_path,
+        "w",
+        encoding="utf-8"
+    ) as f:
 
         json.dump(
             data,
@@ -76,7 +80,7 @@ def save_results(data):
 
 
 # =========================================================
-# SIMPLE HR SCORE
+# HR SCORING
 # =========================================================
 
 def simple_hr_score(answer):
@@ -85,17 +89,47 @@ def simple_hr_score(answer):
 
         return 0
 
-    words = answer.strip().split()
+    answer = str(answer).strip().lower()
 
-    if len(words) < 3:
+    invalid_answers = [
+
+        ".",
+        ". .",
+        "...",
+        "music",
+        "music music",
+        "bang",
+        "bang!",
+        "noise",
+        "test",
+        "hello"
+    ]
+
+    if answer in invalid_answers:
+
+        return 0
+
+    words = answer.split()
+
+    word_count = len(words)
+
+    if word_count < 3:
+
+        return 1
+
+    elif word_count < 8:
 
         return 3
 
-    elif len(words) < 8:
+    elif word_count < 15:
 
         return 5
 
-    return 7
+    elif word_count < 30:
+
+        return 7
+
+    return 9
 
 
 # =========================================================
@@ -127,6 +161,38 @@ class LegacyInterviewEngine:
         self.voice_pipeline = (
             VoiceInterviewPipeline()
         )
+
+    # =====================================================
+    # CLEAN TRANSCRIPT
+    # =====================================================
+
+    def clean_transcript(
+        self,
+        text
+    ):
+
+        if not text:
+
+            return ""
+
+        text = str(text).strip()
+
+        invalid = [
+
+            ".",
+            ". .",
+            "...",
+            "music",
+            "music music",
+            "bang!",
+            "noise"
+        ]
+
+        if text.lower() in invalid:
+
+            return ""
+
+        return text
 
     # =====================================================
     # UNIQUE QUESTION CHECK
@@ -207,7 +273,7 @@ class LegacyInterviewEngine:
             ):
 
                 print(
-                    "Scoring files not found"
+                    "⚠ Scoring files not found"
                 )
 
                 return None
@@ -228,7 +294,7 @@ class LegacyInterviewEngine:
             )
 
             print(
-                "Scoring Engine Initialized"
+                "✅ Scoring Engine Initialized"
             )
 
             return scoring_engine
@@ -236,7 +302,7 @@ class LegacyInterviewEngine:
         except Exception as e:
 
             print(
-                f"Scoring Engine Disabled: {e}"
+                f"⚠ Scoring Engine Disabled: {e}"
             )
 
             return None
@@ -265,7 +331,7 @@ class LegacyInterviewEngine:
         )
 
         # =================================================
-        # GENERATOR
+        # QUESTION GENERATOR
         # =================================================
 
         generator = (
@@ -276,7 +342,7 @@ class LegacyInterviewEngine:
         )
 
         # =================================================
-        # FLOW
+        # FLOW ENGINE
         # =================================================
 
         flow = InterviewFlow(
@@ -285,7 +351,7 @@ class LegacyInterviewEngine:
         )
 
         # =================================================
-        # SCORING
+        # SCORING ENGINE
         # =================================================
 
         scoring_engine = (
@@ -295,7 +361,7 @@ class LegacyInterviewEngine:
         )
 
         # =================================================
-        # DECISION ENGINE
+        # FOLLOWUP DECISION
         # =================================================
 
         decision_engine = (
@@ -320,7 +386,7 @@ class LegacyInterviewEngine:
             )
 
             # =============================================
-            # UNIQUE QUESTION
+            # GET QUESTION
             # =============================================
 
             try:
@@ -406,6 +472,12 @@ class LegacyInterviewEngine:
                     )
                 )
 
+                transcript = (
+                    self.clean_transcript(
+                        transcript
+                    )
+                )
+
                 answer = transcript
 
                 audio_path = (
@@ -436,39 +508,106 @@ class LegacyInterviewEngine:
             if not answer:
 
                 print(
-                    "\nNo candidate response captured."
+                    "\n⚠ No valid candidate response captured."
                 )
 
             # =============================================
             # SCORING
             # =============================================
 
-            score = 5
+            score = 0
 
             try:
 
-                if q_type == "hr":
+                # =========================================
+                # INVALID ANSWER
+                # =========================================
 
-                    score = (
-                        simple_hr_score(
-                            answer
-                        )
-                    )
+                if not answer:
+
+                    score = 0
+
+                elif len(answer.split()) < 2:
+
+                    score = 1
 
                 else:
 
-                    if scoring_engine:
+                    # =====================================
+                    # HR QUESTIONS
+                    # =====================================
+
+                    if q_type == "hr":
 
                         score = (
-                            scoring_engine.evaluate(
-                                question_text,
+                            simple_hr_score(
                                 answer
                             )
                         )
 
-                        if score is None:
+                    # =====================================
+                    # ROLE QUESTIONS
+                    # =====================================
 
-                            score = 5
+                    else:
+
+                        if scoring_engine:
+
+                            score = (
+                                scoring_engine.evaluate(
+                                    question_text,
+                                    answer
+                                )
+                            )
+
+                            if score is None:
+
+                                score = (
+                                    simple_hr_score(
+                                        answer
+                                    )
+                                )
+
+                        else:
+
+                            score = (
+                                simple_hr_score(
+                                    answer
+                                )
+                            )
+
+                # =========================================
+                # SEMANTIC BONUS
+                # =========================================
+
+                relevant_keywords = [
+
+                    "project",
+                    "team",
+                    "system",
+                    "api",
+                    "database",
+                    "debug",
+                    "experience",
+                    "backend",
+                    "python",
+                    "fastapi"
+                ]
+
+                matches = sum(
+
+                    1 for k in relevant_keywords
+
+                    if k in answer.lower()
+                )
+
+                score += matches * 0.5
+
+                if score > 10:
+
+                    score = 10
+
+                score = round(score, 2)
 
             except Exception as e:
 
@@ -476,7 +615,7 @@ class LegacyInterviewEngine:
                     f"Scoring Failed: {e}"
                 )
 
-                score = 5
+                score = 0
 
             print(
                 f"\nCalculated Score: {score}"
@@ -506,23 +645,50 @@ class LegacyInterviewEngine:
             )
 
             # =============================================
-            # FOLLOWUP
+            # FOLLOWUP ENGINE
             # =============================================
 
             try:
 
-                followup, level = (
+                result = (
                     flow.handle_followup(
+
                         q_data=q_data,
+
                         answer=answer,
+
                         analyzer=None,
+
                         followup_generator=None,
+
                         decision=decision_engine
                     )
                 )
 
+                followup = None
+
+                level = "unknown"
+
                 # =========================================
-                # FOLLOWUP DUPLICATE CHECK
+                # SAFE RESULT HANDLING
+                # =========================================
+
+                if isinstance(result, tuple):
+
+                    if len(result) >= 1:
+
+                        followup = result[0]
+
+                    if len(result) >= 2:
+
+                        level = result[1]
+
+                elif isinstance(result, str):
+
+                    followup = result
+
+                # =========================================
+                # ASK FOLLOWUP
                 # =========================================
 
                 if followup:
@@ -556,6 +722,12 @@ class LegacyInterviewEngine:
                                 followup_voice.get(
                                     "transcript",
                                     ""
+                                )
+                            )
+
+                            fu_answer = (
+                                self.clean_transcript(
+                                    fu_answer
                                 )
                             )
 
@@ -613,6 +785,27 @@ class LegacyInterviewEngine:
         )
 
         results = state.get_results()
+
+        # =====================================================
+        # FINAL DECISION
+        # =====================================================
+
+        avg_score = results.get(
+            "average_score",
+            0
+        )
+
+        if avg_score >= 8:
+
+            results["decision"] = "SELECT"
+
+        elif avg_score >= 5:
+
+            results["decision"] = "HOLD"
+
+        else:
+
+            results["decision"] = "REJECT"
 
         print(
             "===== INTERVIEW SUMMARY ====="

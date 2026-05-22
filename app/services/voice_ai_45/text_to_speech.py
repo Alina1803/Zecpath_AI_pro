@@ -1,174 +1,343 @@
+# app/services/voice_ai_45/text_to_speech.py
+
 import os
 import time
+import asyncio
 import traceback
+import threading
 
-import pyttsx3
+import edge_tts
+from pydub import AudioSegment
+from pydub.playback import play
 
 
 class TextToSpeechEngine:
 
+    # =====================================================
+    # INIT
+    # =====================================================
+
     def __init__(self):
 
-        # ==========================================
-        # AUDIO DIRECTORY
-        # ==========================================
+        self.output_dir = (
+            "data/raw/questions_45"
+        )
 
-        self.audio_dir = "data/raw/Audios"
+        os.makedirs(
+            self.output_dir,
+            exist_ok=True
+        )
 
-        os.makedirs(self.audio_dir,
-            exist_ok=True)
+        # =============================================
+        # NATURAL HR VOICES
+        # =============================================
 
-        # ==========================================
-        # INIT ENGINE
-        # ==========================================
+        self.hr_voices = {
 
-        self.engine = pyttsx3.init()
+            "female_hr": "en-IN-NeerjaNeural",
 
-        self.engine.setProperty(
-            "rate",
-            160)
+            "male_hr": "en-IN-PrabhatNeural",
 
-        self.engine.setProperty(
-            "volume",
-            1.0)
+            "default": "en-IN-NeerjaNeural"
+        }
 
-        print("\nTTS Engine Initialized")
+        self.default_voice = (
+            self.hr_voices[
+                "default"
+            ]
+        )
 
-    # ==============================================
-    # GENERATE AUDIO
-    # ==============================================
+        print(
+            "✅ Natural TTS Engine Ready"
+        )
 
-    def generate_audio(
+    # =====================================================
+    # NATURAL QUESTION FORMATTER
+    # =====================================================
+
+    def make_natural_script(
+        self,
+        text
+    ):
+
+        text = str(text).strip()
+
+        # =============================================
+        # HUMAN-LIKE HR DELIVERY
+        # =============================================
+
+        text = (
+
+            f"Alright. "
+
+            f"{text} "
+
+            f"Please explain with examples."
+        )
+
+        return text
+
+    # =====================================================
+    # ASYNC GENERATOR
+    # =====================================================
+
+    async def _generate(
         self,
         text,
-        filename=None,
-        auto_play=True):
+        output_path,
+        voice
+    ):
+
+        communicate = edge_tts.Communicate(
+
+            text=text,
+
+            voice=voice,
+
+            rate="-12%",
+
+            pitch="-4Hz"
+        )
+
+        await communicate.save(
+            output_path
+        )
+
+    # =====================================================
+    # SAFE ASYNC RUNNER
+    # =====================================================
+
+    def run_async(
+        self,
+        coro
+    ):
+
+        result = {}
+
+        def runner():
+
+            loop = asyncio.new_event_loop()
+
+            asyncio.set_event_loop(loop)
+
+            try:
+
+                loop.run_until_complete(
+                    coro
+                )
+
+                result["success"] = True
+
+            except Exception as e:
+
+                result["error"] = str(e)
+
+            finally:
+
+                loop.close()
+
+        thread = threading.Thread(
+            target=runner
+        )
+
+        thread.start()
+
+        thread.join()
+
+        if "error" in result:
+
+            raise Exception(
+                result["error"]
+            )
+
+    # =====================================================
+    # WAIT FOR FILE
+    # =====================================================
+
+    def wait_for_audio(
+        self,
+        path,
+        timeout=10
+    ):
+
+        start = time.time()
+
+        while True:
+
+            if os.path.exists(path):
+
+                try:
+
+                    size = os.path.getsize(
+                        path
+                    )
+
+                    if size > 5000:
+
+                        return True
+
+                except:
+                    pass
+
+            if time.time() - start > timeout:
+
+                return False
+
+            time.sleep(0.2)
+
+    # =====================================================
+    # PLAY NATURAL AUDIO
+    # =====================================================
+
+    def play_audio(
+        self,
+        audio_path
+    ):
 
         try:
 
-            # ======================================
-            # VALIDATE INPUT
-            # ======================================
+            audio = AudioSegment.from_file(
+                audio_path
+            )
 
-            if text is None:
+            # =========================================
+            # SLIGHT HR PAUSE EFFECT
+            # =========================================
 
-                raise ValueError(
-                    "TTS text is None")
+            pause = AudioSegment.silent(
+                duration=300
+            )
 
-            text = str(text).strip()
+            final_audio = (
+                pause + audio + pause
+            )
 
-            if text == "":
+            play(final_audio)
 
-                raise ValueError(
-                    "TTS text is empty")
+        except Exception as e:
 
-            # ======================================
-            # AUTO GENERATE FILENAME
-            # ======================================
+            print(
+                f"Playback Error : {e}"
+            )
 
-            if filename is None:
+    # =====================================================
+    # GENERATE AUDIO
+    # =====================================================
 
-                timestamp = int(time.time())
+    def generate_audio(
 
-                filename = f"tts_{timestamp}.wav"
+        self,
 
-            # ======================================
-            # ENSURE WAV EXTENSION
-            # ======================================
+        text,
 
-            if not filename.endswith(".wav"):
+        filename="question.mp3",
 
-                filename += ".wav"
+        interviewer_type="senior_recruiter"
+    ):
 
-            # ======================================
-            # ABSOLUTE SAVE PATH
-            # ======================================
+        try:
 
-            save_path = os.path.abspath(
-                os.path.join(
-                    self.audio_dir,
-                    filename)
+            # =============================================
+            # NATURAL HR SCRIPT
+            # =============================================
+
+            natural_text = (
+                self.make_natural_script(
+                    text
+                )
+            )
+
+            # =============================================
+            # UNIQUE FILE
+            # =============================================
+
+            filename = (
+
+                f"{int(time.time())}_"
+                f"{filename}"
+            )
+
+            output_path = os.path.join(
+
+                self.output_dir,
+
+                filename
+            )
+
+            voice = self.hr_voices.get(
+
+                interviewer_type,
+
+                self.default_voice
             )
 
             print("\n=================================")
-            print("OFFLINE TTS STARTED")
+            print("NATURAL AI HR VOICE")
             print("=================================")
 
-            print(f"Text Length : {len(text)}")
-            print(f"Filename    : {filename}")
-            print(f"Save Path   : {save_path}")
+            print(
+                f"Voice : {interviewer_type}"
+            )
 
-            # ======================================
-            # CLEAR ENGINE QUEUE
-            # ======================================
+            print(
+                f"Speaking : {natural_text}"
+            )
 
-            self.engine.stop()
+            # =============================================
+            # GENERATE
+            # =============================================
 
-            # ======================================
-            # SAVE AUDIO FILE FIRST
-            # ======================================
+            self.run_async(
 
-            print("\nGenerating audio file...")
+                self._generate(
 
-            self.engine.save_to_file(
-                text,
-                save_path)
+                    text=natural_text,
 
-            self.engine.runAndWait()
+                    output_path=output_path,
 
-            # ======================================
-            # VERIFY FILE EXISTS
-            # ======================================
+                    voice=voice
+                )
+            )
 
-            if not os.path.exists(save_path):
+            # =============================================
+            # WAIT
+            # =============================================
 
-                raise FileNotFoundError(
-                    f"TTS file not generated: {save_path}")
+            ready = self.wait_for_audio(
+                output_path
+            )
 
-            # ======================================
-            # VERIFY FILE SIZE
-            # ======================================
-
-            file_size = os.path.getsize(
-                save_path)
-
-            print(f"Generated File Size : {file_size} bytes")
-
-            if file_size <= 100:
+            if not ready:
 
                 raise Exception(
-                    "Generated TTS file is empty")
+                    "TTS generation timeout"
+                )
 
-            # ======================================
-            # OPTIONAL LIVE SPEAK
-            # ======================================
+            # =============================================
+            # NATURAL PLAYBACK
+            # =============================================
 
-            if auto_play:
+            print(
+                "\n🔊 AI HR Speaking..."
+            )
 
-                print("\nPlaying generated speech...")
+            self.play_audio(
+                output_path
+            )
 
-                self.engine.say(text)
+            print(
+                "✅ HR Question Completed"
+            )
 
-                self.engine.runAndWait()
-
-            print("\n=================================")
-            print("TTS SUCCESS")
-            print("=================================")
-
-            print(f"Saved At : {save_path}")
-
-            return save_path
+            return output_path
 
         except Exception as e:
 
             print("\n=================================")
-            print("OFFLINE TTS FAILED")
+            print("NATURAL TTS FAILED")
             print("=================================")
 
-            print(f"Error : {str(e)}")
-
-            print("\nTRACEBACK:\n")
-
+            print(str(e))
             print(traceback.format_exc())
 
             return None

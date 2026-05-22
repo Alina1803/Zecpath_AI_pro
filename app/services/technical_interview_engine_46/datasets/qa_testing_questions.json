@@ -1,0 +1,30 @@
+{
+    "Manual Testing": {
+        "basic": [
+            "What is software testing?",
+            "Explain bug lifecycle."
+        ],
+        "intermediate": [
+            "What is regression testing?",
+            "Explain smoke testing."
+        ],
+        "advanced": [
+            "Design enterprise testing strategy.",
+            "Explain risk-based testing."
+        ]
+    },
+    "Automation Testing": {
+        "basic": [
+            "What is Selenium?",
+            "Explain test automation."
+        ],
+        "intermediate": [
+            "Explain Page Object Model.",
+            "What is API testing?"
+        ],
+        "advanced": [
+            "Design scalable automation framework.",
+            "Explain CI/CD test integration."
+        ]
+    }
+}
