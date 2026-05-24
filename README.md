@@ -6291,3 +6291,56 @@ The system supports multiple technical domains:
 Run:
 
 uvicorn app.services.technical_interview_engine_46.run_engine46:app
+
+---------------------------------------------------------------------------------------------------------
+#DAY 47-  Technical Skill Scoring Model – FastAPI
+
+## Overview
+
+The Technical Skill Scoring Model is an AI-powered backend system that evaluates technical answers beyond simple keyword matching.
+
+The project analyzes:
+
+- Accuracy
+- Technical depth
+- Logical reasoning
+- Real-world applicability
+
+It generates explainable technical evaluation scores using FastAPI APIs.
+
+---
+
+# Features
+
+- Technical answer scoring
+- Depth detection engine
+- Logical reasoning analysis
+- Real-world applicability scoring
+- Difficulty normalization
+- Explainable outputs
+- Swagger API documentation
+- Modular FastAPI architecture
+
+---
+
+# Project Structure
+
+```bash
+app/
+│
+├── services/
+│   └── technical_skill_ai_47/
+│       ├── __init__.py
+│       ├── main47.py
+│       ├── models.py
+│       ├── scoring_engine.py
+│       ├── depth_detector.py
+│       ├── logic_engine.py
+│       ├── realworld_engine.py
+│       ├── difficulty_engine.py
+│       └── explain_engine.py
+│
+├── requirements.txt
+└── README.md
+
+                         
