@@ -6293,7 +6293,8 @@ Run:
 uvicorn app.services.technical_interview_engine_46.run_engine46:app
 
 ---------------------------------------------------------------------------------------------------------
-#DAY 47-  Technical Skill Scoring Model – FastAPI
+
+# Technical Skill Scoring Model – FastAPI
 
 ## Overview
 
@@ -6343,4 +6344,678 @@ app/
 ├── requirements.txt
 └── README.md
 
-                         
+
+---
+
+Technologies Used
+
+FastAPI
+
+Python
+
+Pydantic
+
+Uvicorn
+
+NLP-based scoring logic
+
+
+
+---
+
+Installation
+
+Step 1: Clone Project
+
+git clone <repository_url>
+
+
+---
+
+Step 2: Create Virtual Environment
+
+python -m venv .venv
+
+
+---
+
+Step 3: Activate Virtual Environment
+
+Windows
+
+.venv\Scripts\activate
+
+Linux / Mac
+
+source .venv/bin/activate
+
+
+---
+
+Step 4: Install Dependencies
+
+pip install -r requirements.txt
+
+
+---
+
+Running the FastAPI Server
+
+Run the server using:
+
+uvicorn app.services.technical_skill_ai_47.main47:app --reload
+
+Server starts at:
+
+http://127.0.0.1:8000
+
+
+---
+
+Swagger API Documentation
+
+Open:
+
+http://127.0.0.1:8000/docs
+
+Interactive API testing is available in Swagger UI.
+
+
+---
+
+API Endpoints
+
+Home Route
+
+GET /
+
+Returns API status.
+
+Response
+
+{
+  "message": "Technical Skill Scoring API Running"
+}
+
+
+---
+
+Technical Evaluation Route
+
+POST /evaluate
+
+Evaluates a technical answer.
+
+Request Body
+
+{
+  "answer": "First I design scalable architecture then optimize performance because real-world systems require efficiency.",
+  "difficulty": "advanced",
+  "is_correct": true
+}
+
+
+---
+
+Example Response
+
+{
+  "technical_score": 100,
+  "breakdown": {
+    "accuracy": 1.0,
+    "depth": 1.0,
+    "logic": 1.0,
+    "real_world": 1.0
+  },
+  "explanation": {
+    "accuracy": "Correct answer provided",
+    "depth": "Answer contains technical explanation",
+    "logic": "Step-by-step reasoning detected",
+    "real_world": "Linked with practical usage"
+  }
+}
+
+
+---
+
+Scoring Parameters
+
+Parameter	Description
+
+Accuracy	Correctness of answer
+Depth	Technical explanation quality
+Logic	Step-by-step reasoning
+Real-world	Practical applicability
+
+
+
+---
+
+Difficulty Levels
+
+Difficulty	Multiplier
+
+Basic	1.0
+Intermediate	1.1
+Advanced	1.2
+
+
+
+---
+
+Technical Evaluation Flow
+
+1. User submits technical answer
+
+
+2. System analyzes answer depth
+
+
+3. Logical reasoning is evaluated
+
+
+4. Real-world relevance is detected
+
+
+5. Difficulty normalization applied
+
+
+6. Final technical score generated
+
+
+7. Explainable output returned
+
+
+
+
+---
+
+Example Modules
+
+Depth Detector
+
+Detects technical explanation quality using keyword analysis.
+
+Logic Engine
+
+Checks reasoning flow using structured sentence patterns.
+
+Real-world Engine
+
+Detects practical implementation understanding.
+
+Difficulty Engine
+
+Adjusts scoring based on answer difficulty level.
+
+
+---
+
+Future Improvements
+
+AI-powered semantic evaluation
+
+LLM-based reasoning engine
+
+AST code analysis
+
+Real coding execution sandbox
+
+Candidate ranking system
+
+Interview analytics dashboard
+
+
+
+---
+
+
+
+# Behavioral AI Research & Design System
+
+## Overview
+
+The Behavioral AI Research & Design System is an industry-level AI framework developed to analyze candidate behavior during interviews using non-invasive observable signals.
+
+The system evaluates:
+
+- Eye movement & gaze stability
+- Head movement patterns
+- Facial engagement
+- Attention consistency
+- Distraction frequency
+
+The platform generates explainable behavioral insights and scoring outputs to assist recruiters and interview systems.
+
+---
+
+# Objective
+
+The objective of this project is to understand candidate behavior during interviews using ethical and privacy-first AI analysis.
+
+The system is designed to:
+
+- Detect behavioral engagement
+- Measure attention levels
+- Analyze focus stability
+- Identify distraction patterns
+- Generate explainable behavioral reports
+- Build recruiter-friendly behavioral intelligence
+
+---
+
+# Features
+
+- Behavioral signal analysis
+- Eye focus tracking
+- Head movement analysis
+- Engagement detection
+- Distraction detection
+- Behavioral scoring engine
+- Explainable AI insights
+- Risk detection logic
+- FastAPI backend APIs
+- Swagger documentation support
+
+---
+
+# Project Structure
+
+```bash
+behavioral_ai_system/
+│
+├── app/
+│   ├── main48.py
+│   ├── models.py
+│   │
+│   ├── behavior_engine/
+│   │   ├── signal_mapping.py
+│   │   ├── eye_tracking_engine.py
+│   │   ├── head_movement_engine.py
+│   │   ├── engagement_engine.py
+│   │   ├── distraction_engine.py
+│   │   ├── risk_detection.py
+│   │   ├── scoring_engine.py
+│   │   └── insight_generator.py
+│   │
+│   └── utils/
+│       └── normalizer.py
+│
+├── tests/
+│   └── test_behavior.py
+│
+├── requirements.txt
+├── README.md
+└── run.py
+
+
+---
+
+Technologies Used
+
+Python
+
+FastAPI
+
+Pydantic
+
+Uvicorn
+
+AI Behavioral Analysis
+
+Rule-Based Signal Processing
+
+
+
+---
+
+Behavioral Signals
+
+Signal	Description
+
+Eye Focus	Tracks gaze stability and concentration
+Head Stability	Detects excessive movement or distraction
+Engagement	Measures behavioral participation
+Distraction	Detects off-screen attention loss
+
+
+
+---
+
+Industry-Level Deliverables
+
+1. Behavioral AI Design Document
+
+Complete architecture and behavioral AI workflow documentation.
+
+
+---
+
+2. Signal-to-Score Mapping Model
+
+Weighted behavioral scoring engine.
+
+
+---
+
+3. Behavioral Analysis Framework
+
+Pipeline for signal processing and insight generation.
+
+
+---
+
+4. Recruiter Behavioral Insights
+
+Explainable and readable behavioral summaries.
+
+
+---
+
+5. Risk Detection Engine
+
+Behavioral instability and distraction detection.
+
+
+---
+
+Installation
+
+Step 1: Create Virtual Environment
+
+python -m venv .venv
+
+
+---
+
+Step 2: Activate Environment
+
+Windows
+
+.venv\Scripts\activate
+
+Linux / Mac
+
+source .venv/bin/activate
+
+
+---
+
+Step 3: Install Dependencies
+
+pip install -r requirements.txt
+
+
+---
+
+Running the FastAPI Server
+
+Run the server using:
+
+uvicorn app.main48:app --reload
+
+Server starts at:
+
+http://127.0.0.1:8000
+
+
+---
+
+Swagger API Documentation
+
+Open:
+
+http://127.0.0.1:8000/docs
+
+Swagger UI allows direct API testing.
+
+
+---
+
+API Endpoints
+
+Home Endpoint
+
+GET /
+
+Returns API status.
+
+Example Response
+
+{
+  "message": "Behavioral AI System Running"
+}
+
+
+---
+
+Behavioral Analysis Endpoint
+
+POST /analyze
+
+Analyzes candidate behavioral signals.
+
+Request Body
+
+{
+  "eye_focus": 0.8,
+  "head_stability": 0.7,
+  "engagement": 0.9,
+  "distraction": 0.2
+}
+
+
+---
+
+Example Response
+
+{
+  "behavior_score": 82.0,
+  "signals": {
+    "eye_focus": 0.8,
+    "head_stability": 0.7,
+    "engagement": 0.9,
+    "distraction": 0.2
+  },
+  "risk": "Low Risk",
+  "insights": {
+    "focus_level": "Good",
+    "engagement": "Strong",
+    "risk": "Low"
+  }
+}
+
+
+---
+
+Behavioral Analysis Framework
+
+Step 1 – Capture Signals
+
+The system collects behavioral observations:
+
+Eye movement
+
+Head movement
+
+Engagement activity
+
+Attention consistency
+
+
+
+---
+
+Step 2 – Normalize Signals
+
+Signals are converted into normalized values between:
+
+0 → Low
+1 → High
+
+
+---
+
+Step 3 – Pattern Detection
+
+The AI engine identifies:
+
+Focus stability
+
+Distraction patterns
+
+Nervous movement
+
+Engagement quality
+
+
+
+---
+
+Step 4 – Behavioral Scoring
+
+Weighted scoring model:
+
+Signal	Weight
+
+Eye Focus	30%
+Head Stability	20%
+Engagement	30%
+Distraction	20%
+
+
+
+---
+
+Step 5 – Insight Generation
+
+The system generates:
+
+Behavioral summary
+
+Focus analysis
+
+Engagement insights
+
+Risk detection report
+
+
+
+---
+
+Non-Invasive AI Principles
+
+The system follows ethical AI standards:
+
+No biometric identity tracking
+
+No facial recognition storage
+
+No raw video storage
+
+Metadata-only processing
+
+Privacy-first architecture
+
+Candidate consent required
+
+
+
+---
+
+Behavioral Scoring Levels
+
+Score Range	Behavior Level
+
+85–100	Highly Focused
+70–84	Good Engagement
+50–69	Moderate
+Below 50	Distracted
+
+
+
+---
+
+Advantages
+
+Enhances interview intelligence
+
+Improves candidate evaluation
+
+Explainable behavioral scoring
+
+Ethical AI framework
+
+Real-time behavioral analysis
+
+Scalable backend architecture
+
+
+
+---
+
+Limitations
+
+No deep emotion analysis
+
+Depends on webcam quality
+
+Rule-based scoring logic
+
+Limited contextual understanding
+
+
+
+---
+
+Future Improvements
+
+Real-time webcam integration
+
+AI gesture recognition
+
+Emotion-aware engagement detection
+
+Deep learning behavioral models
+
+Interview analytics dashboard
+
+Multi-candidate comparison engine
+
+
+
+---
+
+Testing
+
+Run tests using:
+
+pytest
+
+
+---
+
+Conclusion
+
+The Behavioral AI Research & Design System provides an industry-level approach for understanding interview behavior using ethical and explainable AI methods.
+
+The project demonstrates:
+
+Behavioral signal analysis
+
+AI scoring systems
+
+Privacy-first AI architecture
+
+FastAPI backend development
+
+Recruiter insight generation
+
+Scalable behavioral intelligence
+
+
+This framework can be extended into enterprise-level hiring intelligence platforms with real-time AI behavioral analytics.
+
+
+---
+
