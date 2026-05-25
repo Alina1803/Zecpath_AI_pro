@@ -7551,3 +7551,578 @@ The platform can be extended into enterprise hiring ecosystems with advanced beh
 
 -------------------------------------------------------------------------------------------------------------
 
+#DAY 50 - Machine Test AI Design System
+
+## Overview
+
+The Machine Test AI Design System is an enterprise-level AI-powered technical evaluation framework developed to assess real-world engineering skills through practical machine tests.
+
+The system evaluates candidates using:
+
+- Coding challenges
+- Debugging tasks
+- File-based assignments
+- Mini system design problems
+
+The platform combines automated execution, multi-metric scoring, and explainable evaluation pipelines to generate recruiter-friendly technical assessment reports.
+
+---
+
+# Objective
+
+The objective of this project is to design an intelligent machine test evaluation system capable of measuring real-world technical performance using practical engineering tasks.
+
+The platform focuses on:
+
+- Technical skill validation
+- Automated task evaluation
+- Time-aware performance scoring
+- Code quality assessment
+- Runtime efficiency analysis
+- Problem-solving capability tracking
+- Explainable AI-based reporting
+
+The system is designed for scalable AI hiring platforms and technical interview automation systems.
+
+---
+
+# Features
+
+- AI-powered machine test evaluation
+- Automated code execution
+- Test case validation
+- Runtime efficiency scoring
+- Code quality analysis
+- Problem-solving evaluation
+- Time-based scoring engine
+- Recruiter reporting system
+- Candidate performance analytics
+- Explainable AI outputs
+- FastAPI backend APIs
+
+---
+
+# Project Structure
+
+```bash
+machine_test_ai/
+│
+├── app/
+│   ├── main50.py
+│   ├── models.py
+│   │
+│   ├── machine_test/
+│   │   ├── coding_engine.py
+│   │   ├── debugging_engine.py
+│   │   ├── file_task_engine.py
+│   │   ├── system_design_engine.py
+│   │   ├── evaluation_logic.py
+│   │   ├── execution_engine.py
+│   │   ├── scoring_engine.py
+│   │   ├── plagiarism_checker.py
+│   │   ├── behavior_tracker.py
+│   │   ├── report_generator.py
+│   │   └── scoring_pipeline.py
+│   │
+│   └── utils/
+│       └── normalizer.py
+│
+├── tests/
+│   └── test_machine.py
+│
+├── requirements.txt
+├── README.md
+└── run.py
+
+
+---
+
+Machine Test Types
+
+Test Type	Description
+
+Coding Problems	Algorithm and logic-based implementation
+Debugging Tasks	Fixing broken or incomplete code
+File-Based Tasks	Working with real project files
+Mini System Design	Building scalable mini architectures
+
+
+
+---
+
+System Architecture
+
+Candidate Interface
+        ↓
+Code Capture Engine
+        ↓
+Execution Sandbox
+        ↓
+Test Case Evaluator
+        ↓
+Code Quality Analyzer
+        ↓
+Behavior Tracker
+        ↓
+Scoring Engine
+        ↓
+Report Generator
+
+
+---
+
+Evaluation Metrics
+
+Metric	Description
+
+Correctness	Test case success rate
+Efficiency	Runtime optimization
+Code Quality	Readability and structure
+Problem Solving	Attempts and logical approach
+Time Score	Completion speed
+
+
+
+---
+
+Industry-Level Deliverables
+
+1. Machine Test AI Framework
+
+Enterprise-level architecture for technical task evaluation.
+
+
+---
+
+2. Task Evaluation Logic
+
+Automated scoring pipeline for coding and debugging tasks.
+
+
+---
+
+3. Scoring Model
+
+Weighted AI scoring engine for practical engineering assessments.
+
+
+---
+
+4. Recruiter Reporting Engine
+
+Explainable recruiter-friendly evaluation reports.
+
+
+---
+
+5. Time-Based Intelligence
+
+Performance-aware scoring based on task completion time.
+
+
+---
+
+Technologies Used
+
+Python
+
+FastAPI
+
+Pydantic
+
+Uvicorn
+
+AI Evaluation Logic
+
+Rule-Based Scoring Systems
+
+
+
+---
+
+Installation
+
+Step 1 – Create Virtual Environment
+
+python -m venv .venv
+
+
+---
+
+Step 2 – Activate Environment
+
+Windows
+
+.venv\Scripts\activate
+
+Linux / Mac
+
+source .venv/bin/activate
+
+
+---
+
+Step 3 – Install Dependencies
+
+pip install -r requirements.txt
+
+
+---
+
+Running the System
+
+Run the FastAPI server:
+
+uvicorn app.services.machine_test_50.main50:app --reload
+
+
+---
+
+Server URL
+
+http://127.0.0.1:8000
+
+
+---
+
+Swagger API Documentation
+
+Open:
+
+http://127.0.0.1:8000/docs
+
+Swagger UI allows direct API testing.
+
+
+---
+
+API Endpoints
+
+Home Endpoint
+
+GET /
+
+Returns API status.
+
+Example Response
+
+{
+  "message": "Machine Test AI Running"
+}
+
+
+---
+
+Evaluation Endpoint
+
+POST /evaluate
+
+Evaluates machine test performance.
+
+Request Body
+
+{
+  "candidate_id": "C5001",
+  "task_id": "T101",
+  "passed": 8,
+  "total": 10,
+  "runtime": 1.2,
+  "code_snapshot": "def add(a,b): return a+b",
+  "attempts": 2,
+  "time_taken": 25
+}
+
+
+---
+
+Example Response
+
+{
+  "candidate_id": "C5001",
+  "final_score": 76.8,
+  "decision": "Good Performance",
+  "score_breakdown": {
+    "task_score": 78.5,
+    "breakdown": {
+      "correctness": 0.8,
+      "efficiency": 0.7,
+      "code_quality": 1.0,
+      "problem_solving": 0.7
+    }
+  }
+}
+
+
+---
+
+Task Evaluation Logic
+
+Correctness Evaluation
+
+Measures test case success rate.
+
+correctness = passed / total
+
+
+---
+
+Efficiency Evaluation
+
+Measures runtime optimization.
+
+Runtime	Score
+
+< 1 sec	1.0
+< 2 sec	0.7
+> 2 sec	0.4
+
+
+
+---
+
+Code Quality Evaluation
+
+Measures code readability and structure.
+
+Lines of Code	Score
+
+< 20	1.0
+< 50	0.7
+> 50	0.4
+
+
+
+---
+
+Problem Solving Evaluation
+
+Measures logical attempts.
+
+Attempts	Score
+
+1	1.0
+≤ 3	0.7
+> 3	0.4
+
+
+
+---
+
+Machine Test Scoring Formula
+
+Task Score
+
+Task Score =
+(Correctness × 0.4) +
+(Efficiency × 0.2) +
+(Code Quality × 0.2) +
+(Problem Solving × 0.2)
+
+
+---
+
+Final Score
+
+Final Score =
+(Task Score × 0.8) +
+(Time Score × 0.2)
+
+
+---
+
+Time-Based Scoring Logic
+
+def time_score(time_taken, limit=30):
+
+    ratio = time_taken / limit
+
+    if ratio <= 0.5:
+        return 1.0
+
+    elif ratio <= 1.0:
+        return 0.7
+
+    return 0.4
+
+
+---
+
+AI Evaluation Workflow
+
+Step 1 – Candidate Submission
+
+The candidate submits code or project files.
+
+
+---
+
+Step 2 – Execution Engine
+
+The sandbox environment executes the submitted solution.
+
+
+---
+
+Step 3 – Test Case Evaluation
+
+The system validates correctness against hidden test cases.
+
+
+---
+
+Step 4 – Runtime Analysis
+
+The engine measures execution performance.
+
+
+---
+
+Step 5 – Code Quality Analysis
+
+The AI engine evaluates readability and structure.
+
+
+---
+
+Step 6 – Problem-Solving Analysis
+
+The platform analyzes attempts and solution behavior.
+
+
+---
+
+Step 7 – Final Scoring
+
+Weighted AI scoring generates recruiter-ready outputs.
+
+
+---
+
+Ethical AI Principles
+
+The platform follows explainable and privacy-first AI practices.
+
+Key Principles
+
+No invasive monitoring
+
+Explainable scoring
+
+Transparent evaluation logic
+
+Recruiter-readable reports
+
+Fair technical assessment
+
+Objective scoring pipelines
+
+
+
+---
+
+Advantages
+
+Real-world skill validation
+
+Automated technical evaluation
+
+Scalable assessment architecture
+
+Recruiter-friendly reporting
+
+Explainable AI scoring
+
+Time-aware performance analysis
+
+
+
+---
+
+Limitations
+
+Limited deep code review
+
+Basic plagiarism detection
+
+No live collaboration analysis
+
+Runtime dependency
+
+
+
+---
+
+Future Improvements
+
+AI code reviewer
+
+Advanced plagiarism engine
+
+Cloud sandbox execution
+
+Live coding interviews
+
+LLM-based feedback generation
+
+Enterprise recruiter analytics
+
+
+
+---
+
+Testing
+
+Run tests using:
+
+pytest
+
+
+---
+
+Test Script
+
+def test_machine():
+
+    from app.services.machine_test_50.evaluation_logic import (
+        calculate_task_score
+    )
+
+    result = calculate_task_score(
+        5,
+        10,
+        1.5,
+        "print('hi')",
+        2
+    )
+
+    assert result["task_score"] > 0
+
+
+---
+
+Conclusion
+
+The Machine Test AI Design System provides an enterprise-grade framework for evaluating technical candidates using practical engineering tasks and explainable AI scoring models.
+
+The project demonstrates:
+
+AI-powered coding evaluation
+
+Automated technical scoring
+
+Real-world task assessment
+
+Runtime performance analysis
+
+Time-aware scoring logic
+
+Recruiter-friendly reporting
+
+Scalable FastAPI backend development
+
+
+This framework can be extended into enterprise hiring ecosystems with live coding intelligence, AI code review systems, advanced plagiarism detection, and recruiter analytics dashboards.
+
+
+-----------------------------------------------------------------------------------
+
