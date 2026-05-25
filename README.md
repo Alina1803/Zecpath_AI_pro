@@ -7017,5 +7017,537 @@ Scalable behavioral intelligence
 This framework can be extended into enterprise-level hiring intelligence platforms with real-time AI behavioral analytics.
 
 
+----------------------------------------------------------------------------------------------------------
+
+
+# Day 49 - Malpractice & Integrity Detection System
+
+## Overview
+
+The Malpractice & Integrity Detection System is an industry-level AI framework designed to detect cheating, suspicious activity, and external assistance during online interviews.
+
+The system uses multiple behavioral and environmental signals to generate explainable integrity scores and recruiter-friendly risk reports.
+
+The platform focuses on:
+
+- Real-time malpractice monitoring
+- Behavioral anomaly detection
+- Integrity scoring
+- Risk classification
+- Explainable AI warnings
+- Privacy-first interview intelligence
+
 ---
+
+# Objective
+
+The objective of this project is to design a scalable AI-powered integrity monitoring system capable of identifying suspicious interview behavior using non-invasive detection techniques.
+
+The system monitors:
+
+- Browser tab switching
+- Screen focus loss
+- External voice activity
+- Gaze diversion patterns
+- Behavioral inconsistencies
+
+The platform generates:
+
+- Integrity scores
+- Real-time warnings
+- Risk flags
+- Recruiter dashboards
+- Explainable insights
+
+---
+
+# Features
+
+- Real-time interview monitoring
+- Multi-signal malpractice detection
+- Browser activity tracking
+- Voice anomaly detection
+- Gaze diversion analysis
+- Pattern recognition engine
+- Integrity scoring system
+- Risk classification
+- Recruiter dashboard payloads
+- Explainable AI alerts
+- FastAPI REST APIs
+
+---
+
+# Project Structure
+
+```bash
+integrity_engine_49/
+│
+├── app/services/integrity_engine/
+│   ├── main49.py
+│   ├── models.py
+│   │
+│   │   ├── tab_monitor.py
+│   │   ├── focus_tracker.py
+│   │   ├── voice_detector.py
+│   │   ├── gaze_detector.py
+│   │   ├── event_aggregator.py
+│   │   ├── pattern_engine.py
+│   │   ├── scoring_engine.py
+│   │   ├── risk_engine.py
+│   │   ├── warning_engine.py
+│   │   ├── dashboard_payload.py
+│   │   └── scoring_pipeline.py
+│   │
+│   └── utils/
+│       └── normalizer.py
+│
+├── tests/
+│   └── test_integrity.py
+│
+├── requirements.txt
+├── README.md
+└── run.py
+
+
+---
+
+Technologies Used
+
+Python
+
+FastAPI
+
+Pydantic
+
+Uvicorn
+
+AI Behavioral Monitoring
+
+Rule-Based Pattern Recognition
+
+
+
+---
+
+Malpractice Signals
+
+Signal	Description
+
+Tab Switching	Frequent browser switching activity
+Focus Loss	User leaves interview screen
+External Voice	Background or external assistance
+Gaze Diversion	Repeated looking away from screen
+
+
+
+---
+
+Detection Logic
+
+Threshold-Based Detection
+
+The system triggers alerts when predefined thresholds are exceeded.
+
+Example:
+
+Signal	Threshold
+
+Tab Switching	> 2
+Voice Detection	> 1
+Focus Loss	> 3
+Gaze Diversion	> 4
+
+
+
+---
+
+Pattern Recognition
+
+The system identifies suspicious behavioral combinations.
+
+Examples:
+
+Pattern	Possible Meaning
+
+Frequent Tab Switching	Browser searching
+Continuous Voice Detection	External help
+Focus Loss + Gaze Off	Looking at notes
+Long Focus Breaks	Multitasking
+
+
+
+---
+
+Integrity Scoring System
+
+The system calculates a weighted integrity score.
+
+Scoring Formula
+
+Signal	Penalty
+
+Tab Switching	-5
+Focus Loss	-4
+Voice Detection	-10
+Gaze Diversion	-3
+
+
+Final score range:
+
+0 → High Risk
+100 → Safe Interview
+
+
+---
+
+Risk Classification
+
+Score Range	Risk Level
+
+75–100	Low Risk
+50–74	Moderate Risk
+Below 50	High Risk
+
+
+
+---
+
+Real-Time Warning System
+
+The AI engine generates recruiter and candidate warnings.
+
+Examples:
+
+Please stay on the interview screen
+
+External voice detected
+
+Focus loss detected
+
+Suspicious activity observed
+
+
+
+---
+
+Recruiter Dashboard Payload
+
+The system returns structured integrity reports.
+
+Example Output:
+
+{
+  "candidate_id": "C4001",
+  "integrity_score": 62,
+  "risk_level": "Moderate Risk",
+  "patterns_detected": [
+    "Possible Browser Searching",
+    "Possible Note Referencing"
+  ],
+  "warnings": [
+    "Please stay on the interview screen"
+  ]
+}
+
+
+---
+
+Installation
+
+Step 1: Create Virtual Environment
+
+python -m venv .venv
+
+
+---
+
+Step 2: Activate Environment
+
+Windows
+
+.venv\Scripts\activate
+
+Linux / Mac
+
+source .venv/bin/activate
+
+
+---
+
+Step 3: Install Dependencies
+
+pip install -r requirements.txt
+
+
+---
+
+Running the FastAPI Server
+
+Run the server:
+
+uvicorn app.main49:app --reload
+
+Server URL:
+
+http://127.0.0.1:8000
+
+
+---
+
+Swagger API Documentation
+
+Open:
+
+http://127.0.0.1:8000/docs
+
+
+---
+
+API Endpoints
+
+Home Endpoint
+
+GET /
+
+Returns API status.
+
+Example Response
+
+{
+  "message": "Integrity Detection System Running"
+}
+
+
+---
+
+Integrity Detection Endpoint
+
+POST /detect
+
+Analyzes malpractice and integrity signals.
+
+Request Body
+
+{
+  "tab_switch": 4,
+  "focus_loss": 3,
+  "voice_detect": 1,
+  "gaze_off": 5
+}
+
+
+---
+
+Example Response
+
+{
+  "candidate_id": "C4001",
+  "integrity_score": 62,
+  "risk_level": "Moderate Risk",
+  "patterns_detected": [
+    "Possible Browser Searching",
+    "Possible Note Referencing"
+  ],
+  "warnings": [
+    "Please stay on the interview screen"
+  ]
+}
+
+
+---
+
+Integrity Detection Workflow
+
+Step 1 – Monitor Environment
+
+Track:
+
+Browser activity
+
+Audio environment
+
+Screen focus
+
+Eye movement
+
+
+
+---
+
+Step 2 – Aggregate Signals
+
+Collect suspicious interview events into structured logs.
+
+
+---
+
+Step 3 – Detect Behavioral Patterns
+
+Apply rule-based and threshold-based AI logic.
+
+
+---
+
+Step 4 – Generate Integrity Score
+
+Calculate weighted malpractice score.
+
+
+---
+
+Step 5 – Risk Classification
+
+Assign:
+
+Low Risk
+
+Moderate Risk
+
+High Risk
+
+
+
+---
+
+Step 6 – Generate Warnings
+
+Provide recruiter and candidate alerts.
+
+
+---
+
+Step 7 – Dashboard Reporting
+
+Send explainable integrity reports to recruiter systems.
+
+
+---
+
+Ethical AI Principles
+
+The platform follows privacy-first AI architecture.
+
+Key Principles
+
+No biometric storage
+
+No facial identity recognition
+
+No invasive surveillance
+
+Metadata-only monitoring
+
+Consent-based processing
+
+Explainable AI outputs
+
+
+
+---
+
+Advantages
+
+Prevents interview malpractice
+
+Improves hiring fairness
+
+Enhances recruiter trust
+
+Real-time monitoring
+
+Explainable AI alerts
+
+Scalable AI architecture
+
+
+
+---
+
+Limitations
+
+False positives possible
+
+Depends on browser permissions
+
+Requires device compatibility
+
+Rule-based logic limitations
+
+
+
+---
+
+Future Improvements
+
+AI anomaly detection
+
+Voice identity verification
+
+Real-time computer vision
+
+Behavioral learning models
+
+Enterprise recruiter dashboards
+
+Adaptive fraud intelligence
+
+
+
+---
+
+Testing
+
+Run tests using:
+
+pytest
+
+
+---
+
+Test Script
+
+def test_integrity():
+
+    from app.integrity_engine.scoring_engine import (
+        calculate_integrity_score
+    )
+
+    score = calculate_integrity_score({
+
+        "tab_switch": 2,
+        "focus_loss": 1,
+        "voice_detect": 0,
+        "gaze_off": 2
+    })
+
+    assert score > 0
+
+
+---
+
+Conclusion
+
+The Malpractice & Integrity Detection System provides an enterprise-level AI framework for ensuring fairness, transparency, and trust in online interview environments.
+
+The project demonstrates:
+
+AI-powered malpractice detection
+
+Multi-signal behavioral analysis
+
+Real-time integrity monitoring
+
+Explainable recruiter insights
+
+Ethical AI architecture
+
+FastAPI backend development
+
+Scalable interview intelligence systems
+
+
+The platform can be extended into enterprise hiring ecosystems with advanced behavioral analytics, anomaly detection, and recruiter intelligence dashboards.
+
+
+-------------------------------------------------------------------------------------------------------------
 
