@@ -8126,3 +8126,157 @@ This framework can be extended into enterprise hiring ecosystems with live codin
 
 -----------------------------------------------------------------------------------
 
+
+# Day 51 – Cross-Round Aggregation Engine
+
+## Overview
+
+This project combines all interview rounds into one unified AI hiring score.
+
+The system collects scores from:
+
+- ATS Screening
+- Screening Round
+- HR Interview
+- Technical Interview
+- Machine Test
+
+Then it calculates a final Hiring Fit Score using weighted scoring logic.
+
+Built using FastAPI and Python.
+
+---
+
+# Objective
+
+The goal of this project is to:
+
+- Combine multiple interview evaluations
+- Generate one final hiring score
+- Apply role-based weightage
+- Create recruiter-friendly outputs
+- Build explainable AI scoring
+
+---
+
+# Features
+
+- Cross-round score aggregation
+- Hiring fit calculation
+- Role-based weights
+- Candidate normalization
+- Explainable AI outputs
+- Recruiter decision support
+
+---
+
+# Folder Structure
+
+```bash
+app/
+│
+├── main51.py
+├── models.py
+│
+├── services/
+│   └── cross_round_ai_51/
+│       ├── cross_round_engine.py
+│       ├── normalization_engine.py
+│       ├── hiring_fit_engine.py
+│       ├── decision_engine.py
+│       ├── benchmarking_engine.py
+│       ├── explainability_engine.py
+│       ├── recruiter_report.py
+│       └── scoring_pipeline.py
+│
+├── tests/
+│   └── test_aggregation.py
+│
+├── requirements.txt
+└── README.md
+
+
+---
+
+Technologies Used
+
+Python
+
+FastAPI
+
+Uvicorn
+
+Pydantic
+
+
+
+---
+
+API Endpoint
+
+POST /aggregate
+
+Combines all scores into one final hiring score.
+
+
+---
+
+Example Request
+
+{
+  "candidate_id": "C9001",
+  "role_type": "technical",
+  "ats": 75,
+  "screening": 70,
+  "hr": 80,
+  "technical": 90,
+  "machine_test": 85
+}
+
+
+---
+
+Example Response
+
+{
+  "candidate_id": "C9001",
+  "final_score": 82.75,
+  "hiring_fit": "Strong Fit",
+  "decision": "Hire",
+  "benchmark": "Top 15%"
+}
+
+
+---
+
+Run Project
+
+uvicorn app.services.cross_round_ai_51.main51:app --reload
+
+
+---
+
+Swagger API
+
+http://127.0.0.1:8000/docs
+
+
+---
+
+Deliverables
+
+Hiring fit calculator
+
+Cross-round aggregation engine
+
+Unified candidate score object
+
+
+
+---
+
+Conclusion
+
+The Cross-Round Aggregation Engine helps recruiters combine all interview rounds into one intelligent hiring score.
+
+It improves hiring accuracy, transparency, and recruiter decision-making using AI-powered evaluation logic.
