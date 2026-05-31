@@ -3,7 +3,6 @@ class ReportGenerator:
     Generates recruiter-ready screening reports
     from combined technical + behavioral evaluation data.
     """
-
     # -------------------------------
     # CONFIDENCE BAND
     # -------------------------------
