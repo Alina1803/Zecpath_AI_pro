@@ -5,7 +5,7 @@ SENSITIVE_FIELDS = [
     "dob",
     "photo",
     "marital_status",
-    "nationality"
+    "nationality",
 ]
 
 

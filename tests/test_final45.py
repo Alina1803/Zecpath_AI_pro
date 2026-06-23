@@ -2,6 +2,7 @@ import unittest
 
 from app.services.demo_45.final_hr_engine import run_final_hr_pipeline
 
+
 class TestFinalHRSystem(unittest.TestCase):
 
     def setUp(self):
@@ -9,14 +10,12 @@ class TestFinalHRSystem(unittest.TestCase):
         self.candidate_data = {
             "candidate_id": "C1001",
             "role": "Backend Developer",
-            "experience": "2 Years"
+            "experience": "2 Years",
         }
 
     def test_pipeline_execution(self):
 
-        result = run_final_hr_pipeline(
-            self.candidate_data
-        )
+        result = run_final_hr_pipeline(self.candidate_data)
 
         self.assertIn("candidate", result)
 
@@ -26,25 +25,15 @@ class TestFinalHRSystem(unittest.TestCase):
 
     def test_final_score_exists(self):
 
-        result = run_final_hr_pipeline(
-            self.candidate_data
-        )
+        result = run_final_hr_pipeline(self.candidate_data)
 
-        self.assertIn(
-            "final_score",
-            result["scores"]
-        )
+        self.assertIn("final_score", result["scores"])
 
     def test_decision_generation(self):
 
-        result = run_final_hr_pipeline(
-            self.candidate_data
-        )
+        result = run_final_hr_pipeline(self.candidate_data)
 
-        self.assertIn(
-            result["scores"]["decision"],
-            ["HIRE", "REVIEW", "REJECT"]
-        )
+        self.assertIn(result["scores"]["decision"], ["HIRE", "REVIEW", "REJECT"])
 
 
 if __name__ == "__main__":

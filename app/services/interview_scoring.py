@@ -3,22 +3,42 @@ from textblob import TextBlob
 
 CONFIDENCE_KEYWORDS = {
     "high": [
-        "led", "managed", "owned", "delivered", "achieved",
-        "improved", "optimized", "increased", "reduced",
-        "implemented", "developed", "executed", "driven",
-        "spearheaded", "resolved", "handled independently"
+        "led",
+        "managed",
+        "owned",
+        "delivered",
+        "achieved",
+        "improved",
+        "optimized",
+        "increased",
+        "reduced",
+        "implemented",
+        "developed",
+        "executed",
+        "driven",
+        "spearheaded",
+        "resolved",
+        "handled independently",
     ],
-
     "medium": [
-        "worked on", "assisted", "supported", "participated",
-        "contributed", "involved in", "helped",
-        "collaborated", "coordinated"
+        "worked on",
+        "assisted",
+        "supported",
+        "participated",
+        "contributed",
+        "involved in",
+        "helped",
+        "collaborated",
+        "coordinated",
     ],
-
     "low": [
-        "learned", "familiar with", "basic knowledge",
-        "exposed to", "observed", "theoretical knowledge"
-    ]
+        "learned",
+        "familiar with",
+        "basic knowledge",
+        "exposed to",
+        "observed",
+        "theoretical knowledge",
+    ],
 }
 
 
@@ -53,5 +73,5 @@ def score_interview(transcript: str) -> Dict:
         "sentiment_score": round(sentiment * 100, 2),
         "confidence_score": round(confidence * 100, 2),
         "communication_score": round(communication * 100, 2),
-        "final_interview_score": round(final_score * 100, 2)
+        "final_interview_score": round(final_score * 100, 2),
     }

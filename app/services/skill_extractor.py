@@ -1,13 +1,13 @@
 import json
-import re
 import os
 import pdfplumber
-from collections import defaultdict
 import warnings
 import logging
 
 warnings.filterwarnings("ignore")
 logging.getLogger("pdfminer").setLevel(logging.ERROR)
+
+
 # ----------- Resume Parser -----------
 def extract_text_from_pdf(pdf_path):
 
@@ -44,7 +44,7 @@ def extract_skills(text):
         "docker",
         "html",
         "css",
-        "javascript"
+        "javascript",
     ]
 
     found_skills = []
@@ -80,11 +80,7 @@ def run_pipeline():
 
             skills = extract_skills(text)
 
-            result = {
-                "file": file,
-                "skills": skills,
-                "raw_text": text[:500]
-            }
+            result = {"file": file, "skills": skills, "raw_text": text[:500]}
 
             output_file = file.replace(".pdf", ".json")
 

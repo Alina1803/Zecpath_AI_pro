@@ -1,5 +1,6 @@
 from app.models.ideal_patterns38 import get_keywords
 
+
 def evaluate_scenario(text, scenario_type):
     """
     Evaluate answer against ideal behavioral patterns

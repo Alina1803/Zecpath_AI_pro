@@ -10,4 +10,4 @@ def analyze_bias(results):
 
         bias[t].append(diff)
 
-    return {k: sum(v)/len(v) for k, v in bias.items()}
+    return {k: sum(v) / len(v) for k, v in bias.items()}

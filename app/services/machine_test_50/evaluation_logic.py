@@ -2,6 +2,7 @@
 # Correctness Score
 # --------------------------------------
 
+
 def correctness_score(passed, total):
 
     if total == 0:
@@ -13,6 +14,7 @@ def correctness_score(passed, total):
 # --------------------------------------
 # Efficiency Score
 # --------------------------------------
+
 
 def efficiency_score(runtime):
 
@@ -28,6 +30,7 @@ def efficiency_score(runtime):
 # --------------------------------------
 # Code Quality Score
 # --------------------------------------
+
 
 def code_quality_score(code):
 
@@ -46,6 +49,7 @@ def code_quality_score(code):
 # Problem Solving Score
 # --------------------------------------
 
+
 def problem_solving_score(attempts):
 
     if attempts == 1:
@@ -61,18 +65,10 @@ def problem_solving_score(attempts):
 # Final Task Score
 # --------------------------------------
 
-def calculate_task_score(
-    passed,
-    total,
-    runtime,
-    code,
-    attempts
-):
 
-    correctness = correctness_score(
-        passed,
-        total
-    )
+def calculate_task_score(passed, total, runtime, code, attempts):
+
+    correctness = correctness_score(passed, total)
 
     efficiency = efficiency_score(runtime)
 
@@ -80,29 +76,14 @@ def calculate_task_score(
 
     problem = problem_solving_score(attempts)
 
-    final = (
-
-        correctness * 0.4 +
-
-        efficiency * 0.2 +
-
-        quality * 0.2 +
-
-        problem * 0.2
-    )
+    final = correctness * 0.4 + efficiency * 0.2 + quality * 0.2 + problem * 0.2
 
     return {
-
         "task_score": round(final * 100, 2),
-
         "breakdown": {
-
             "correctness": round(correctness, 2),
-
             "efficiency": round(efficiency, 2),
-
             "code_quality": round(quality, 2),
-
-            "problem_solving": round(problem, 2)
-        }
+            "problem_solving": round(problem, 2),
+        },
     }

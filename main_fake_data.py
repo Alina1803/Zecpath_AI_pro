@@ -6,6 +6,7 @@ app = FastAPI(title="Zecpath AI Resume System")
 
 file_id = "https://drive.google.com/drive/folders/10S7B4NN0sYGeK-pXaqVfkCOr7OXoen4Z?usp=sharing"
 
+
 # ✅ 1. Generate fake resume (single)
 @app.get("/generate-fake-resume/")
 def get_fake_resume():
@@ -23,10 +24,7 @@ def create_fake_dataset():
 @app.get("/download-from-drive/")
 def download_resume(file_id: str):
     file_path = f"data/raw/{file_id}.pdf"
-    
+
     download_file_from_drive(file_id, file_path)
-    
-    return {
-        "message": "File downloaded successfully",
-        "file_path": file_path
-    }
+
+    return {"message": "File downloaded successfully", "file_path": file_path}

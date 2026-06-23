@@ -14,10 +14,12 @@ def detect_roles(text: str, roles):
             matched_keywords.append(role_lower)
 
         if matched_keywords:
-            detected_roles.append({
-                "role": role,
-                "matched_keywords": matched_keywords,
-                "confidence": 100.0
-            })
+            detected_roles.append(
+                {
+                    "role": role,
+                    "matched_keywords": matched_keywords,
+                    "confidence": 100.0,
+                }
+            )
 
     return detected_roles

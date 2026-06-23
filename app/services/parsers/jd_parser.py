@@ -7,17 +7,29 @@ from app.services.JD_Parser.education_extractor import extract_education
 from app.services.JD_Parser.experience_extractor import extract_experience
 from app.services.JD_Parser.section_splitter import split_sections
 
-
 # -------------------------------
 # 🔥 DEFAULT ROLES (CA DOMAIN)
 # -------------------------------
 DEFAULT_ROLES = [
-    "chartered_accountant","articleship","audit_associate","internal_auditor",
-    "external_auditor","tax_consultant","tax_analyst",
-    "gst_specialist","accountant","senior_accountant",
-    "finance_executive","finance_manager","accounts_executive",
-    "accounts_manager","payroll_specialist","compliance_officer",
-    "risk_analyst","financial_analyst","cost_accountant"
+    "chartered_accountant",
+    "articleship",
+    "audit_associate",
+    "internal_auditor",
+    "external_auditor",
+    "tax_consultant",
+    "tax_analyst",
+    "gst_specialist",
+    "accountant",
+    "senior_accountant",
+    "finance_executive",
+    "finance_manager",
+    "accounts_executive",
+    "accounts_manager",
+    "payroll_specialist",
+    "compliance_officer",
+    "risk_analyst",
+    "financial_analyst",
+    "cost_accountant",
 ]
 
 
@@ -31,11 +43,9 @@ def detect_roles(text, roles):
         score = fuzz.partial_ratio(role.replace("_", " "), text.lower())
 
         if score > 85:
-            detected.append({
-                "role": role,
-                "confidence": score,
-                "matched_keywords": [role]
-            })
+            detected.append(
+                {"role": role, "confidence": score, "matched_keywords": [role]}
+            )
 
     return detected
 
@@ -60,10 +70,10 @@ def parse_jd(jd_text, roles=None):
     sections = split_sections(text)
 
     skills_text = (
-        sections.get("skills", "") +
-        sections.get("experience", "") +
-        sections.get("responsibilities", "") +
-        text
+        sections.get("skills", "")
+        + sections.get("experience", "")
+        + sections.get("responsibilities", "")
+        + text
     )
 
     skills = extract_skills(skills_text)
@@ -100,15 +110,13 @@ def parse_jd(jd_text, roles=None):
     # Final Output
     # -------------------------------
     return {
-        "role": primary_role,   # 🔥 IMPORTANT (for eligibility engine)
+        "role": primary_role,  # 🔥 IMPORTANT (for eligibility engine)
         "roles": detected_roles,
-
         "skills": skills,
         "education": education,
         "experience": experience,
         "sections": sections,
-
         "role_summary": role_summary.strip(),
         "responsibilities": responsibilities.strip(),
-        "qualifications": qualifications.strip()
+        "qualifications": qualifications.strip(),
     }

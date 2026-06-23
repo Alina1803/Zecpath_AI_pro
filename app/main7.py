@@ -15,7 +15,7 @@ from app.utils.dataset import save_dataset
 
 app = FastAPI()
 
-RESUME_DIR = (r"E:\Zecpath_AI_pro\data\raw")
+RESUME_DIR = r"E:\Zecpath_AI_pro\data\raw"
 AUDIO_DIR = "storage-audio"
 
 
@@ -38,32 +38,24 @@ async def upload_resume(file: UploadFile = File(...)):
         candidate = Candidate(
             candidate_id=candidate_id,
             name=parsed_data.get("name"),
-            parsed_data=parsed_data
+            parsed_data=parsed_data,
         )
         db.add(candidate)
 
         # Save score
         ats = ATSScore(
-            candidate_id=candidate_id,
-            job_id="J001",
-            score=score,
-            model_version="v1.0"
+            candidate_id=candidate_id, job_id="J001", score=score, model_version="v1.0"
         )
         db.add(ats)
 
         db.commit()
 
         # Save dataset
-        save_dataset({
-            "candidate_id": candidate_id,
-            "parsed_data": parsed_data,
-            "score": score
-        })
+        save_dataset(
+            {"candidate_id": candidate_id, "parsed_data": parsed_data, "score": score}
+        )
 
-        return {
-            "candidate_id": candidate_id,
-            "score": score
-        }
+        return {"candidate_id": candidate_id, "score": score}
 
     except Exception as e:
         db.rollback()
@@ -73,6 +65,8 @@ async def upload_resume(file: UploadFile = File(...)):
         db.close()
 
     # 🔷 Interview Upload API
+
+
 @app.post("/upload-interview/")
 async def upload_interview(file: UploadFile = File(...)):
     db = SessionLocal()
@@ -92,7 +86,7 @@ async def upload_interview(file: UploadFile = File(...)):
             transcript=transcript,
             scores=evaluation,
             model_version="interview_v1",
-            timestamp=datetime.utcnow()
+            timestamp=datetime.utcnow(),
         )
 
         db.add(db_result)
@@ -101,7 +95,7 @@ async def upload_interview(file: UploadFile = File(...)):
         return {
             "interview_id": interview_id,
             "transcript": transcript,
-            "evaluation": evaluation
+            "evaluation": evaluation,
         }
 
     except Exception as e:

@@ -4,5 +4,5 @@ def validate_prediction(candidate, expected_decision):
     return {
         "predicted": predicted,
         "expected": expected_decision,
-        "match": predicted == expected_decision
+        "match": predicted == expected_decision,
     }

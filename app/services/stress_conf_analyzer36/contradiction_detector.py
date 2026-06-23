@@ -1,6 +1,7 @@
 from app.config.constants36 import CONTRADICTIONS
 from utils.text_cleaner import clean_text
 
+
 def detect_contradiction(text):
     text = clean_text(text)
 

@@ -1,4 +1,9 @@
-from app.services.aptitude_logic_38.text_processing import keyword_match_count, contains_any, length_score
+from app.services.aptitude_logic_38.text_processing import (
+    keyword_match_count,
+    contains_any,
+    length_score,
+)
+
 
 def detect_structure(text):
     keywords = ["first", "then", "next", "finally", "because", "therefore"]
@@ -31,19 +36,13 @@ def calculate_aptitude_score(text):
     problem = problem_solving_score(text)
     decision = decision_score(text)
 
-    final = (
-        structure * 0.35 +
-        problem * 0.35 +
-        decision * 0.30
-    )
+    final = structure * 0.35 + problem * 0.35 + decision * 0.30
 
     return {
         "aptitude_score": round(final * 100, 2),
         "breakdown": {
             "structure": round(structure, 2),
             "problem_solving": round(problem, 2),
-            "decision_making": round(decision, 2)
-        }
+            "decision_making": round(decision, 2),
+        },
     }
-
-

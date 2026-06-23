@@ -5,76 +5,48 @@ import traceback
 from datetime import datetime
 
 from app.services.hr_interview_engine_33.state_manager.interview_state import (
-    InterviewState
+    InterviewState,
 )
 
 from app.services.hr_interview_engine_33.question_engine.role_based_generator import (
-    RoleBasedQuestionGenerator
+    RoleBasedQuestionGenerator,
 )
 
-from app.services.hr_interview_engine_33.flow_engine.interview_flow import (
-    InterviewFlow
-)
+from app.services.hr_interview_engine_33.flow_engine.interview_flow import InterviewFlow
 
-from app.services.screening_engine_26.scoring_engine import (
-    AdvancedScoringEngine
-)
+from app.services.screening_engine_26.scoring_engine import AdvancedScoringEngine
 
-from app.services.voice_ai_45.voice_pipeline import (
-    VoiceInterviewPipeline
-)
+from app.services.voice_ai_45.voice_pipeline import VoiceInterviewPipeline
 
 # =========================================================
 # CONFIG
 # =========================================================
 
-OUTPUT_DIR = os.path.join(
-    "data",
-    "processed",
-    "output_33"
-)
+OUTPUT_DIR = os.path.join("data", "processed", "output_33")
 
-DOMAIN_BASE_PATH = os.path.join(
-    "data",
-    "domain_knowledge"
-)
+DOMAIN_BASE_PATH = os.path.join("data", "domain_knowledge")
 
 # =========================================================
 # HELPERS
 # =========================================================
 
+
 def create_output_dir():
 
-    os.makedirs(
-        OUTPUT_DIR,
-        exist_ok=True
-    )
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 
 def save_results(data):
 
     create_output_dir()
 
-    timestamp = datetime.now().strftime(
-        "%Y%m%d_%H%M%S"
-    )
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 
-    file_path = os.path.join(
-        OUTPUT_DIR,
-        f"interview_{timestamp}.json"
-    )
+    file_path = os.path.join(OUTPUT_DIR, f"interview_{timestamp}.json")
 
-    with open(
-        file_path,
-        "w",
-        encoding="utf-8"
-    ) as f:
+    with open(file_path, "w", encoding="utf-8") as f:
 
-        json.dump(
-            data,
-            f,
-            indent=4
-        )
+        json.dump(data, f, indent=4)
 
     print(f"\nResults saved to: {file_path}")
 
@@ -82,6 +54,7 @@ def save_results(data):
 # =========================================================
 # HR SCORING
 # =========================================================
+
 
 def simple_hr_score(answer):
 
@@ -92,7 +65,6 @@ def simple_hr_score(answer):
     answer = str(answer).strip().lower()
 
     invalid_answers = [
-
         ".",
         ". .",
         "...",
@@ -102,7 +74,7 @@ def simple_hr_score(answer):
         "bang!",
         "noise",
         "test",
-        "hello"
+        "hello",
     ]
 
     if answer in invalid_answers:
@@ -136,12 +108,10 @@ def simple_hr_score(answer):
 # FOLLOWUP DECISION
 # =========================================================
 
+
 class SimpleDecision:
 
-    def should_followup(
-        self,
-        level
-    ):
+    def should_followup(self, level):
 
         return level == "low"
 
@@ -149,6 +119,7 @@ class SimpleDecision:
 # =========================================================
 # LEGACY INTERVIEW ENGINE
 # =========================================================
+
 
 class LegacyInterviewEngine:
 
@@ -158,18 +129,13 @@ class LegacyInterviewEngine:
 
         self.max_duplicate_retries = 10
 
-        self.voice_pipeline = (
-            VoiceInterviewPipeline()
-        )
+        self.voice_pipeline = VoiceInterviewPipeline()
 
     # =====================================================
     # CLEAN TRANSCRIPT
     # =====================================================
 
-    def clean_transcript(
-        self,
-        text
-    ):
+    def clean_transcript(self, text):
 
         if not text:
 
@@ -177,16 +143,7 @@ class LegacyInterviewEngine:
 
         text = str(text).strip()
 
-        invalid = [
-
-            ".",
-            ". .",
-            "...",
-            "music",
-            "music music",
-            "bang!",
-            "noise"
-        ]
+        invalid = [".", ". .", "...", "music", "music music", "bang!", "noise"]
 
         if text.lower() in invalid:
 
@@ -198,11 +155,7 @@ class LegacyInterviewEngine:
     # UNIQUE QUESTION CHECK
     # =====================================================
 
-    def _get_unique_question(
-        self,
-        flow,
-        state
-    ):
+    def _get_unique_question(self, flow, state):
 
         retries = 0
 
@@ -214,67 +167,39 @@ class LegacyInterviewEngine:
 
                 return None
 
-            question = q_data.get(
-                "question",
-                ""
-            ).strip()
+            question = q_data.get("question", "").strip()
 
             # =============================================
             # DUPLICATE CHECK
             # =============================================
 
-            if not state.has_asked_question(
-                question
-            ):
+            if not state.has_asked_question(question):
 
                 return q_data
 
-            print(
-                f"\nDuplicate Question Skipped:\n"
-                f"{question}"
-            )
+            print(f"\nDuplicate Question Skipped:\n" f"{question}")
 
             retries += 1
 
-        raise Exception(
-            "Unable to generate unique question"
-        )
+        raise Exception("Unable to generate unique question")
 
     # =====================================================
     # LOAD SCORING ENGINE
     # =====================================================
 
-    def load_scoring_engine(
-        self,
-        role
-    ):
+    def load_scoring_engine(self, role):
 
         try:
 
-            base_path = os.path.join(
-                DOMAIN_BASE_PATH,
-                role.lower()
-            )
+            base_path = os.path.join(DOMAIN_BASE_PATH, role.lower())
 
-            domain_path = os.path.join(
-                base_path,
-                "domain.json"
-            )
+            domain_path = os.path.join(base_path, "domain.json")
 
-            prompt_path = os.path.join(
-                base_path,
-                "prompt.txt"
-            )
+            prompt_path = os.path.join(base_path, "prompt.txt")
 
-            if (
-                not os.path.exists(domain_path)
-                or
-                not os.path.exists(prompt_path)
-            ):
+            if not os.path.exists(domain_path) or not os.path.exists(prompt_path):
 
-                print(
-                    "⚠ Scoring files not found"
-                )
+                print("⚠ Scoring files not found")
 
                 return None
 
@@ -286,24 +211,15 @@ class LegacyInterviewEngine:
 
                 prompt_template = f.read()
 
-            scoring_engine = (
-                AdvancedScoringEngine(
-                    domain_data,
-                    prompt_template
-                )
-            )
+            scoring_engine = AdvancedScoringEngine(domain_data, prompt_template)
 
-            print(
-                "✅ Scoring Engine Initialized"
-            )
+            print("✅ Scoring Engine Initialized")
 
             return scoring_engine
 
         except Exception as e:
 
-            print(
-                f"⚠ Scoring Engine Disabled: {e}"
-            )
+            print(f"⚠ Scoring Engine Disabled: {e}")
 
             return None
 
@@ -311,79 +227,49 @@ class LegacyInterviewEngine:
     # MAIN RUN
     # =====================================================
 
-    def run(
-        self,
-        role,
-        experience
-    ):
+    def run(self, role, experience):
 
-        print(
-            "\n===== HR Interview Engine Started =====\n"
-        )
+        print("\n===== HR Interview Engine Started =====\n")
 
         # =================================================
         # STATE
         # =================================================
 
-        state = InterviewState(
-            role=role,
-            experience=experience
-        )
+        state = InterviewState(role=role, experience=experience)
 
         # =================================================
         # QUESTION GENERATOR
         # =================================================
 
-        generator = (
-            RoleBasedQuestionGenerator(
-                role,
-                experience
-            )
-        )
+        generator = RoleBasedQuestionGenerator(role, experience)
 
         # =================================================
         # FLOW ENGINE
         # =================================================
 
-        flow = InterviewFlow(
-            state,
-            generator
-        )
+        flow = InterviewFlow(state, generator)
 
         # =================================================
         # SCORING ENGINE
         # =================================================
 
-        scoring_engine = (
-            self.load_scoring_engine(
-                role
-            )
-        )
+        scoring_engine = self.load_scoring_engine(role)
 
         # =================================================
         # FOLLOWUP DECISION
         # =================================================
 
-        decision_engine = (
-            SimpleDecision()
-        )
+        decision_engine = SimpleDecision()
 
-        print(
-            "\n--- Interview Started ---"
-        )
+        print("\n--- Interview Started ---")
 
         # =================================================
         # MAIN INTERVIEW LOOP
         # =================================================
 
-        for i in range(
-            self.total_questions
-        ):
+        for i in range(self.total_questions):
 
-            print(
-                f"\nPhase: "
-                f"{state.current_phase.upper()}"
-            )
+            print(f"\nPhase: " f"{state.current_phase.upper()}")
 
             # =============================================
             # GET QUESTION
@@ -391,44 +277,25 @@ class LegacyInterviewEngine:
 
             try:
 
-                q_data = (
-                    self._get_unique_question(
-                        flow,
-                        state
-                    )
-                )
+                q_data = self._get_unique_question(flow, state)
 
             except Exception as e:
 
-                print(
-                    f"\nQuestion Generation Failed: {e}"
-                )
+                print(f"\nQuestion Generation Failed: {e}")
 
                 break
 
             if not q_data:
 
-                print(
-                    "\nNo valid question available."
-                )
+                print("\nNo valid question available.")
 
                 break
 
-            question_text = q_data.get(
-                "question",
-                "No question"
-            )
+            question_text = q_data.get("question", "No question")
 
-            q_type = q_data.get(
-                "type",
-                "unknown"
-            )
+            q_type = q_data.get("type", "unknown")
 
-            print(
-                f"\nQ{i + 1} "
-                f"[{q_type.upper()}]: "
-                f"{question_text}"
-            )
+            print(f"\nQ{i + 1} " f"[{q_type.upper()}]: " f"{question_text}")
 
             # =============================================
             # VOICE PIPELINE
@@ -442,64 +309,31 @@ class LegacyInterviewEngine:
 
             try:
 
-                print(
-                    "\nAI HR is asking question..."
+                print("\nAI HR is asking question...")
+
+                voice_result = self.voice_pipeline.process_question(
+                    question=question_text, question_id=i + 1, duration=20
                 )
 
-                voice_result = (
-                    self.voice_pipeline.process_question(
-                        question=question_text,
-                        question_id=i + 1,
-                        duration=15
-                    )
-                )
+                print("\nVOICE PIPELINE RESULT\n")
 
-                print(
-                    "\nVOICE PIPELINE RESULT\n"
-                )
+                print(json.dumps(voice_result, indent=4))
 
-                print(
-                    json.dumps(
-                        voice_result,
-                        indent=4
-                    )
-                )
+                transcript = voice_result.get("transcript", "")
 
-                transcript = (
-                    voice_result.get(
-                        "transcript",
-                        ""
-                    )
-                )
-
-                transcript = (
-                    self.clean_transcript(
-                        transcript
-                    )
-                )
+                transcript = self.clean_transcript(transcript)
 
                 answer = transcript
 
-                audio_path = (
-                    voice_result.get(
-                        "audio_path"
-                    )
-                )
+                audio_path = voice_result.get("audio_path")
 
-                print(
-                    f"\nCandidate Answer:\n"
-                    f"{answer}"
-                )
+                print(f"\nCandidate Answer:\n" f"{answer}")
 
             except Exception as e:
 
-                print(
-                    f"\nVoice Pipeline Failed: {e}"
-                )
+                print(f"\nVoice Pipeline Failed: {e}")
 
-                print(
-                    traceback.format_exc()
-                )
+                print(traceback.format_exc())
 
             # =============================================
             # EMPTY ANSWER
@@ -507,9 +341,7 @@ class LegacyInterviewEngine:
 
             if not answer:
 
-                print(
-                    "\n⚠ No valid candidate response captured."
-                )
+                print("\n⚠ No valid candidate response captured.")
 
             # =============================================
             # SCORING
@@ -539,11 +371,7 @@ class LegacyInterviewEngine:
 
                     if q_type == "hr":
 
-                        score = (
-                            simple_hr_score(
-                                answer
-                            )
-                        )
+                        score = simple_hr_score(answer)
 
                     # =====================================
                     # ROLE QUESTIONS
@@ -553,35 +381,21 @@ class LegacyInterviewEngine:
 
                         if scoring_engine:
 
-                            score = (
-                                scoring_engine.evaluate(
-                                    question_text,
-                                    answer
-                                )
-                            )
+                            score = scoring_engine.evaluate(question_text, answer)
 
                             if score is None:
 
-                                score = (
-                                    simple_hr_score(
-                                        answer
-                                    )
-                                )
+                                score = simple_hr_score(answer)
 
                         else:
 
-                            score = (
-                                simple_hr_score(
-                                    answer
-                                )
-                            )
+                            score = simple_hr_score(answer)
 
                 # =========================================
                 # SEMANTIC BONUS
                 # =========================================
 
                 relevant_keywords = [
-
                     "project",
                     "team",
                     "system",
@@ -591,15 +405,10 @@ class LegacyInterviewEngine:
                     "experience",
                     "backend",
                     "python",
-                    "fastapi"
+                    "fastapi",
                 ]
 
-                matches = sum(
-
-                    1 for k in relevant_keywords
-
-                    if k in answer.lower()
-                )
+                matches = sum(1 for k in relevant_keywords if k in answer.lower())
 
                 score += matches * 0.5
 
@@ -611,37 +420,25 @@ class LegacyInterviewEngine:
 
             except Exception as e:
 
-                print(
-                    f"Scoring Failed: {e}"
-                )
+                print(f"Scoring Failed: {e}")
 
                 score = 0
 
-            print(
-                f"\nCalculated Score: {score}"
-            )
+            print(f"\nCalculated Score: {score}")
 
             # =============================================
             # UPDATE STATE
             # =============================================
 
             state.update(
-
                 q_data=q_data,
-
                 answer=answer,
-
                 transcript=transcript,
-
                 audio_path=audio_path,
-
                 communication_score=score,
-
                 confidence_score=score,
-
                 technical_score=score,
-
-                behavioral_score=score
+                behavioral_score=score,
             )
 
             # =============================================
@@ -650,19 +447,12 @@ class LegacyInterviewEngine:
 
             try:
 
-                result = (
-                    flow.handle_followup(
-
-                        q_data=q_data,
-
-                        answer=answer,
-
-                        analyzer=None,
-
-                        followup_generator=None,
-
-                        decision=decision_engine
-                    )
+                result = flow.handle_followup(
+                    q_data=q_data,
+                    answer=answer,
+                    analyzer=None,
+                    followup_generator=None,
+                    decision=decision_engine,
                 )
 
                 followup = None
@@ -693,82 +483,46 @@ class LegacyInterviewEngine:
 
                 if followup:
 
-                    if state.has_asked_question(
-                        followup
-                    ):
+                    if state.has_asked_question(followup):
 
-                        print(
-                            "\nDuplicate Follow-up Skipped"
-                        )
+                        print("\nDuplicate Follow-up Skipped")
 
                     else:
 
-                        print(
-                            f"\nFollow-up Question:\n"
-                            f"{followup}"
-                        )
+                        print(f"\nFollow-up Question:\n" f"{followup}")
 
                         try:
 
-                            followup_voice = (
-                                self.voice_pipeline.process_question(
-                                    question=followup,
-                                    question_id=f"followup_{i + 1}",
-                                    duration=10
-                                )
+                            followup_voice = self.voice_pipeline.process_question(
+                                question=followup,
+                                question_id=f"followup_{i + 1}",
+                                duration=10,
                             )
 
-                            fu_answer = (
-                                followup_voice.get(
-                                    "transcript",
-                                    ""
-                                )
-                            )
+                            fu_answer = followup_voice.get("transcript", "")
 
-                            fu_answer = (
-                                self.clean_transcript(
-                                    fu_answer
-                                )
-                            )
+                            fu_answer = self.clean_transcript(fu_answer)
 
-                            print(
-                                f"\nFollow-up Answer:\n"
-                                f"{fu_answer}"
-                            )
+                            print(f"\nFollow-up Answer:\n" f"{fu_answer}")
 
                             state.update(
-
-                                q_data={
-                                    "question": followup,
-                                    "type": "followup"
-                                },
-
+                                q_data={"question": followup, "type": "followup"},
                                 answer=fu_answer,
-
                                 transcript=fu_answer,
-
                                 audio_path=None,
-
                                 communication_score=score,
-
                                 confidence_score=score,
-
                                 technical_score=score,
-
-                                behavioral_score=score
+                                behavioral_score=score,
                             )
 
                         except Exception as e:
 
-                            print(
-                                f"\nFollow-up Voice Failed: {e}"
-                            )
+                            print(f"\nFollow-up Voice Failed: {e}")
 
             except Exception as e:
 
-                print(
-                    f"\nFollow-up Handling Failed: {e}"
-                )
+                print(f"\nFollow-up Handling Failed: {e}")
 
             # =============================================
             # NEXT PHASE
@@ -780,9 +534,7 @@ class LegacyInterviewEngine:
         # INTERVIEW COMPLETED
         # =====================================================
 
-        print(
-            "\n--- Interview Completed ---\n"
-        )
+        print("\n--- Interview Completed ---\n")
 
         results = state.get_results()
 
@@ -790,10 +542,7 @@ class LegacyInterviewEngine:
         # FINAL DECISION
         # =====================================================
 
-        avg_score = results.get(
-            "average_score",
-            0
-        )
+        avg_score = results.get("average_score", 0)
 
         if avg_score >= 8:
 
@@ -807,20 +556,11 @@ class LegacyInterviewEngine:
 
             results["decision"] = "REJECT"
 
-        print(
-            "===== INTERVIEW SUMMARY ====="
-        )
+        print("===== INTERVIEW SUMMARY =====")
 
-        print(
-            json.dumps(
-                results,
-                indent=4
-            )
-        )
+        print(json.dumps(results, indent=4))
 
-        save_results(
-            results
-        )
+        save_results(results)
 
         return results
 
@@ -829,25 +569,16 @@ class LegacyInterviewEngine:
 # CLI RUNNER
 # =========================================================
 
+
 def run():
 
-    role = input(
-        "Enter role: "
-    ).strip().lower()
+    role = input("Enter role: ").strip().lower()
 
-    experience = input(
-        "Enter experience "
-        "(fresher/experienced): "
-    ).strip().lower()
+    experience = input("Enter experience " "(fresher/experienced): ").strip().lower()
 
-    engine = (
-        LegacyInterviewEngine()
-    )
+    engine = LegacyInterviewEngine()
 
-    engine.run(
-        role=role,
-        experience=experience
-    )
+    engine.run(role=role, experience=experience)
 
 
 # =========================================================

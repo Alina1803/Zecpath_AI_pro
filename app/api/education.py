@@ -6,8 +6,8 @@ from app.services.education_engine.education_parser import parse_education
 from app.services.education_engine.certification_parser import extract_certifications
 from app.services.education_engine.relevance_engine import certification_relevance
 
-
 router = APIRouter()
+
 
 class ResumeInput(BaseModel):
     text: str
@@ -22,12 +22,6 @@ def parse_resume_education(data: ResumeInput):
 
     cert_output = []
     for cert in certifications:
-        cert_output.append({
-            "name": cert,
-            "category": certification_relevance(cert)
-        })
+        cert_output.append({"name": cert, "category": certification_relevance(cert)})
 
-    return {
-        "education": education,
-        "certifications": cert_output
-    }
+    return {"education": education, "certifications": cert_output}

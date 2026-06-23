@@ -5,7 +5,6 @@ from app.services.ranking_engine14.rank_candidates import rank_candidates
 from app.services.ranking_engine14.shortlist_engine import apply_shortlisting
 from app.services.ranking_engine14.recruiter_summary import generate_summary
 
-
 INPUT_FOLDER = "data/processed/output_13"
 OUTPUT_FILE = "data/processed/output_14/ranked_candidates.json"
 
@@ -63,10 +62,7 @@ def main():
     shortlisted = apply_shortlisting(ranked)
     summary = generate_summary(shortlisted)
 
-    final_output = {
-        "summary": summary,
-        "ranked_candidates": shortlisted
-    }
+    final_output = {"summary": summary, "ranked_candidates": shortlisted}
 
     save_output(final_output)
 

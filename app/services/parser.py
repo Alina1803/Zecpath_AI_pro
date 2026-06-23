@@ -3,5 +3,5 @@ def parse_resume(file_path: str) -> dict:
     return {
         "name": "John Doe",
         "skills": ["Python", "Machine Learning"],
-        "experience": 3
+        "experience": 3,
     }

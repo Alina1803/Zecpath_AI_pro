@@ -6,7 +6,7 @@ class ScoreAggregator:
         "vocabulary": 0.15,
         "clarity": 0.15,
         "filler": 0.15,
-        "structure": 0.10
+        "structure": 0.10,
     }
 
     def aggregate(self, scores: dict) -> float:

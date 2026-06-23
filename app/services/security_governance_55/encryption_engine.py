@@ -7,13 +7,9 @@ cipher = Fernet(key)
 
 def encrypt_data(data):
 
-    return cipher.encrypt(
-        data.encode()
-    )
+    return cipher.encrypt(data.encode())
 
 
 def decrypt_data(token):
 
-    return cipher.decrypt(
-        token
-    ).decode()
+    return cipher.decrypt(token).decode()

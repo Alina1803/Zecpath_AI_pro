@@ -44,7 +44,6 @@ class CommunicationEngine:
         # ================================================
 
         invalid_patterns = [
-
             ".",
             "..",
             ". .",
@@ -58,7 +57,7 @@ class CommunicationEngine:
             "hmm",
             "uh",
             "noise",
-            "[music]"
+            "[music]",
         ]
 
         if text in invalid_patterns:
@@ -94,30 +93,17 @@ class CommunicationEngine:
         if self.is_invalid_response(text):
 
             return {
-
                 "component_scores": {
-
                     "fluency": 0,
-
                     "grammar": 0,
-
                     "vocabulary": 0,
-
                     "clarity": 0,
-
                     "filler": 0,
-
-                    "structure": 0
+                    "structure": 0,
                 },
-
                 "final_score": 0,
-
                 "status": "invalid_response",
-
-                "reason": (
-                    "Noise / Empty / Very Short "
-                    "candidate response detected"
-                )
+                "reason": ("Noise / Empty / Very Short " "candidate response detected"),
             }
 
         # ================================================
@@ -125,43 +111,21 @@ class CommunicationEngine:
         # ================================================
 
         scores = {
-
-            "fluency": (
-                self.fluency.evaluate(text)
-            ),
-
-            "grammar": (
-                self.grammar.evaluate(text)
-            ),
-
-            "vocabulary": (
-                self.vocab.evaluate(text)
-            ),
-
-            "clarity": (
-                self.clarity.evaluate(text)
-            ),
-
-            "filler": (
-                self.filler.evaluate(text)
-            ),
-
-            "structure": (
-                self.structure.evaluate(text)
-            )
+            "fluency": (self.fluency.evaluate(text)),
+            "grammar": (self.grammar.evaluate(text)),
+            "vocabulary": (self.vocab.evaluate(text)),
+            "clarity": (self.clarity.evaluate(text)),
+            "filler": (self.filler.evaluate(text)),
+            "structure": (self.structure.evaluate(text)),
         }
 
         # ================================================
         # FINAL SCORE
         # ================================================
 
-        final_score = (
-            self.aggregator.aggregate(scores)
-        )
+        final_score = self.aggregator.aggregate(scores)
 
-        final_score = (
-            self.normalizer.normalize(final_score)
-        )
+        final_score = self.normalizer.normalize(final_score)
 
         # ================================================
         # LOW QUALITY RESPONSE PENALTY
@@ -171,25 +135,15 @@ class CommunicationEngine:
 
         if word_count < 8:
 
-            final_score = max(
-                0,
-                final_score - 20
-            )
+            final_score = max(0, final_score - 20)
 
         # ================================================
         # FINAL OUTPUT
         # ================================================
 
         return {
-
             "component_scores": scores,
-
-            "final_score": round(
-                final_score,
-                2
-            ),
-
+            "final_score": round(final_score, 2),
             "status": "success",
-
-            "word_count": word_count
+            "word_count": word_count,
         }

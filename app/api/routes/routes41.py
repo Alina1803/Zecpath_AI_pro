@@ -1,11 +1,15 @@
 from fastapi import APIRouter
-from app.services.unified_scoring_engine_41.pipeline.unified_pipeline import unified_pipeline
+from app.services.unified_scoring_engine_41.pipeline.unified_pipeline import (
+    unified_pipeline,
+)
 
 router = APIRouter()
+
 
 @router.get("/")
 def home():
     return {"message": "Unified Scoring Engine API Running"}
+
 
 @router.post("/score")
 def score_candidate(data: dict):
@@ -14,6 +18,6 @@ def score_candidate(data: dict):
         ats=data["ats"],
         screening=data["screening"],
         hr=data["hr"],
-        role=data.get("role", "fresher")
+        role=data.get("role", "fresher"),
     )
     return result

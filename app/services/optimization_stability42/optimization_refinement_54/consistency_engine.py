@@ -14,20 +14,10 @@ class ConsistencyEngine:
         elif gap > 25:
             adjustment = -5
 
-        final_score = round(
-            sum(scores) / len(scores) + adjustment,
-            2
-        )
+        final_score = round(sum(scores) / len(scores) + adjustment, 2)
 
         return {
-
-            "scores": {
-                "ats": ats,
-                "technical": technical,
-                "hr": hr
-            },
-
+            "scores": {"ats": ats, "technical": technical, "hr": hr},
             "adjustment": adjustment,
-
-            "final_score": final_score
+            "final_score": final_score,
         }

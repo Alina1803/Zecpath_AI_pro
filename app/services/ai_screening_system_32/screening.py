@@ -4,5 +4,5 @@ def screen_candidate(data: list, model):
 
     return {
         "selected": bool(prediction),
-        "confidence_score": round(float(probability), 2)
+        "confidence_score": round(float(probability), 2),
     }

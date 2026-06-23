@@ -2,6 +2,7 @@
 # Logical Reasoning Engine
 # -------------------------------
 
+
 def logical_score(text):
 
     text = text.lower()

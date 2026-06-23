@@ -7,13 +7,14 @@ from app.services.screening_system_30.simulator import simulate_call
 from app.services.screening_system_30.evaluator import evaluate
 from app.services.screening_system_30.optimizer import optimize_threshold
 
+
 def main():
     print("===== SCREENING SYSTEM PIPELINE STARTED =====\n")
 
     # -------------------------------
     # 1. Load Training Data
     # -------------------------------
-    with open('data/test_data30.json') as f:
+    with open("data/test_data30.json") as f:
         train_data = json.load(f)
 
     print("Training data loaded...")
@@ -31,7 +32,7 @@ def main():
         "I have 3 years experience in Python",
         "Looking for job",
         "My skills include AI and ML",
-        "Hi"
+        "Hi",
     ]
 
     results = []
@@ -73,7 +74,7 @@ def main():
     filename = f"test_report_{timestamp}.txt"
     output_file = os.path.join(output_dir, filename)
 
-    with open(output_file, 'w') as f:
+    with open(output_file, "w") as f:
         f.write("SCREENING SYSTEM TEST REPORT\n")
         f.write("====================================\n")
         f.write(f"Generated on: {timestamp}\n\n")

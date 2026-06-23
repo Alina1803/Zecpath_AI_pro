@@ -7,7 +7,6 @@ from app.services.speech_module_24.text_cleaner import TextCleaner
 from app.services.speech_module_24.transcript_processor import TranscriptProcessor
 from app.services.speech_module_24.accuracy_test import STTAccuracy
 
-
 # ✅ FIXED BASE DIR
 BASE_DIR = os.getcwd()
 
@@ -59,7 +58,7 @@ def run_pipeline(audio_path, ground_truth=None):
         "audio_file": audio_path,
         "raw_text": stt_output["full_text"],
         "processed_text": processed_text,
-        "clean_text": clean_text
+        "clean_text": clean_text,
     }
 
     if ground_truth:
@@ -86,8 +85,7 @@ if __name__ == "__main__":
 
     # ✅ Read audio files
     audio_files = [
-        f for f in os.listdir(INPUT_DIR)
-        if f.lower().endswith((".wav", ".mp3", ".m4a"))
+        f for f in os.listdir(INPUT_DIR) if f.lower().endswith((".wav", ".mp3", ".m4a"))
     ]
 
     if not audio_files:

@@ -2,6 +2,7 @@
 # External Voice Detection
 # ----------------------------------------
 
+
 def analyze_external_voice(count):
 
     if count >= 3:

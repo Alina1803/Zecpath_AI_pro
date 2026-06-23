@@ -29,5 +29,5 @@ class AnswerEngine:
             "salary": salary,
             "availability": availability,
             "off_topic": off_topic,
-            "is_vague": vague
+            "is_vague": vague,
         }

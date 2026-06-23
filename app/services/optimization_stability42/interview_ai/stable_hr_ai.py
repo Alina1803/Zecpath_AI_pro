@@ -1,10 +1,8 @@
 # -------------------------------
 # Stabilized Scoring Thresholds
 # -------------------------------
-DECISION_THRESHOLDS = {
-    "hire": 75,
-    "consider": 55
-}
+DECISION_THRESHOLDS = {"hire": 75, "consider": 55}
+
 
 # -------------------------------
 # Smoothed Score Adjustment
@@ -39,7 +37,4 @@ def stable_hr_evaluation(scores):
     smoothed = smooth_score(scores)
     decision = stable_decision(smoothed)
 
-    return {
-        "stable_score": smoothed,
-        "decision": decision
-    }
+    return {"stable_score": smoothed, "decision": decision}

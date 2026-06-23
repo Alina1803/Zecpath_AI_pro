@@ -14,7 +14,7 @@ class InterviewManager:
             "Describe a challenge you faced.",
             "What are your strengths?",
             "What are your weaknesses?",
-            "Where do you see yourself in 5 years?"
+            "Where do you see yourself in 5 years?",
         ]
 
     def _generate_answer(self, question):
@@ -26,7 +26,7 @@ class InterviewManager:
             "Confident": "I have strong experience and I handled challenges effectively with clear outcomes.",
             "Hesitant": "I think maybe I can do it uh I am not completely sure but I will try my best.",
             "Inexperienced": "I am new to this but I am willing to learn and improve.",
-            "Overqualified": "I have extensive experience leading complex projects and mentoring teams successfully."
+            "Overqualified": "I have extensive experience leading complex projects and mentoring teams successfully.",
         }
 
         return base_answers.get(self.candidate_type, "I will try my best.")
@@ -38,11 +38,7 @@ class InterviewManager:
             answer = self._generate_answer(question)
             score = calculate_score(answer)
 
-            results.append({
-                "question": question,
-                "answer": answer,
-                "score": score
-            })
+            results.append({"question": question, "answer": answer, "score": score})
 
         self.responses = results
         return results
@@ -71,5 +67,5 @@ class InterviewManager:
             "candidate_type": self.candidate_type,
             "responses": self.responses,
             "final_score": self.get_final_score(),
-            "decision": self.generate_decision()
+            "decision": self.generate_decision(),
         }

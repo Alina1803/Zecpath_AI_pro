@@ -5,7 +5,6 @@ from .skill_dictionary import MASTER_SKILLS
 from .synonym_mapper import normalize_skill
 from .stack_resolver import expand_stack
 
-
 # -------------------------------
 # LOAD MODEL ONLY ONCE (CRITICAL)
 # -------------------------------

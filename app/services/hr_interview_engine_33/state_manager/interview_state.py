@@ -74,10 +74,7 @@ class InterviewState:
 
             return False
 
-        return (
-            question.strip().lower()
-            in self.asked_questions
-        )
+        return question.strip().lower() in self.asked_questions
 
     # =========================================================
     # GET ALL PREVIOUS QUESTIONS
@@ -102,7 +99,7 @@ class InterviewState:
         confidence_score=0,
         technical_score=0,
         behavioral_score=0,
-        followup=False
+        followup=False,
     ):
 
         try:
@@ -123,77 +120,52 @@ class InterviewState:
             # SAFE SCORE HANDLING
             # =================================================
 
-            communication_score = (
-                communication_score or 0
-            )
+            communication_score = communication_score or 0
 
-            confidence_score = (
-                confidence_score or 0
-            )
+            confidence_score = confidence_score or 0
 
-            technical_score = (
-                technical_score or 0
-            )
+            technical_score = technical_score or 0
 
-            behavioral_score = (
-                behavioral_score or 0
-            )
+            behavioral_score = behavioral_score or 0
 
             # =================================================
             # QUESTION EXTRACTION
             # =================================================
 
-            question_text = question_data.get(
-                "question",
-                ""
-            ).strip()
+            question_text = question_data.get("question", "").strip()
 
-            question_type = question_data.get(
-                "type",
-                "general"
-            )
+            question_type = question_data.get("type", "general")
 
             # =================================================
             # PREVENT DUPLICATE STORAGE
             # =================================================
 
-            normalized_question = (
-                question_text.lower()
-            )
+            normalized_question = question_text.lower()
 
             if normalized_question in self.asked_questions:
 
-                print(
-                    f"\nWARNING: Duplicate Question Detected:\n"
-                    f"{question_text}"
-                )
+                print(f"\nWARNING: Duplicate Question Detected:\n" f"{question_text}")
 
             else:
 
-                self.asked_questions.add(
-                    normalized_question
-                )
+                self.asked_questions.add(normalized_question)
 
             # =================================================
             # FINAL QUESTION SCORE
             # =================================================
 
             final_score = (
-                communication_score +
-                confidence_score +
-                technical_score +
-                behavioral_score
+                communication_score
+                + confidence_score
+                + technical_score
+                + behavioral_score
             ) / 4
 
             # =================================================
             # FAILED ANSWER DETECTION
             # =================================================
 
-            if (
-                not transcript or
-                not answer or
-                "STT Error" in str(answer)
-            ):
+            if not transcript or not answer or "STT Error" in str(answer):
 
                 self.failed_answers += 1
 
@@ -202,54 +174,22 @@ class InterviewState:
             # =================================================
 
             response_data = {
-
                 "id": self.current_question_id,
-
                 "type": question_type,
-
                 "question": question_text,
-
                 "answer": answer,
-
                 "transcript": transcript,
-
                 "audio_path": audio_path,
-
-                "communication_score": round(
-                    communication_score,
-                    2
-                ),
-
-                "confidence_score": round(
-                    confidence_score,
-                    2
-                ),
-
-                "technical_score": round(
-                    technical_score,
-                    2
-                ),
-
-                "behavioral_score": round(
-                    behavioral_score,
-                    2
-                ),
-
-                "final_score": round(
-                    final_score,
-                    2
-                ),
-
+                "communication_score": round(communication_score, 2),
+                "confidence_score": round(confidence_score, 2),
+                "technical_score": round(technical_score, 2),
+                "behavioral_score": round(behavioral_score, 2),
+                "final_score": round(final_score, 2),
                 "followup": followup,
-
-                "timestamp": str(
-                    datetime.now()
-                )
+                "timestamp": str(datetime.now()),
             }
 
-            self.history.append(
-                response_data
-            )
+            self.history.append(response_data)
 
             # =================================================
             # STORE TRANSCRIPTS
@@ -257,9 +197,7 @@ class InterviewState:
 
             if transcript:
 
-                self.transcripts.append(
-                    transcript
-                )
+                self.transcripts.append(transcript)
 
             # =================================================
             # STORE AUDIO FILES
@@ -267,9 +205,7 @@ class InterviewState:
 
             if audio_path:
 
-                self.audio_files.append(
-                    audio_path
-                )
+                self.audio_files.append(audio_path)
 
             # =================================================
             # TRACK TOTAL SCORES
@@ -277,21 +213,13 @@ class InterviewState:
 
             self.total_score += final_score
 
-            self.communication_score += (
-                communication_score
-            )
+            self.communication_score += communication_score
 
-            self.confidence_score += (
-                confidence_score
-            )
+            self.confidence_score += confidence_score
 
-            self.technical_score += (
-                technical_score
-            )
+            self.technical_score += technical_score
 
-            self.behavioral_score += (
-                behavioral_score
-            )
+            self.behavioral_score += behavioral_score
 
             # =================================================
             # FOLLOWUP TRACKING
@@ -317,9 +245,7 @@ class InterviewState:
 
         except Exception as e:
 
-            print(
-                f"\nInterviewState Update Error: {e}"
-            )
+            print(f"\nInterviewState Update Error: {e}")
 
     # =========================================================
     # AUTO UPDATE PHASE
@@ -345,22 +271,13 @@ class InterviewState:
 
     def next_phase(self):
 
-        phases = [
-            "introduction",
-            "core",
-            "evaluation",
-            "closing"
-        ]
+        phases = ["introduction", "core", "evaluation", "closing"]
 
-        current_index = phases.index(
-            self.current_phase
-        )
+        current_index = phases.index(self.current_phase)
 
         if current_index < len(phases) - 1:
 
-            self.current_phase = (
-                phases[current_index + 1]
-            )
+            self.current_phase = phases[current_index + 1]
 
     # =========================================================
     # GET CURRENT PHASE
@@ -422,12 +339,7 @@ class InterviewState:
 
         if self.total_questions == 0:
 
-            return {
-
-                "message": (
-                    "No interview data available"
-                )
-            }
+            return {"message": ("No interview data available")}
 
         # =====================================================
         # END TIME
@@ -435,104 +347,47 @@ class InterviewState:
 
         self.interview_end_time = datetime.now()
 
-        duration = (
-            self.interview_end_time -
-            self.interview_start_time
-        )
+        duration = self.interview_end_time - self.interview_start_time
 
         # =====================================================
         # AVERAGE SCORES
         # =====================================================
 
-        avg_score = (
-            self.total_score /
-            self.total_questions
-        )
+        avg_score = self.total_score / self.total_questions
 
-        avg_communication = (
-            self.communication_score /
-            self.total_questions
-        )
+        avg_communication = self.communication_score / self.total_questions
 
-        avg_confidence = (
-            self.confidence_score /
-            self.total_questions
-        )
+        avg_confidence = self.confidence_score / self.total_questions
 
-        avg_technical = (
-            self.technical_score /
-            self.total_questions
-        )
+        avg_technical = self.technical_score / self.total_questions
 
-        avg_behavioral = (
-            self.behavioral_score /
-            self.total_questions
-        )
+        avg_behavioral = self.behavioral_score / self.total_questions
 
         # =====================================================
         # FINAL DECISION
         # =====================================================
 
-        decision = self._final_decision(
-            avg_score
-        )
+        decision = self._final_decision(avg_score)
 
         # =====================================================
         # RETURN FINAL REPORT
         # =====================================================
 
         return {
-
             "role": self.role,
-
             "experience": self.experience,
-
             "phase": self.current_phase,
-
-            "total_questions": (
-                self.total_questions
-            ),
-
-            "followups_asked": (
-                self.followup_count
-            ),
-
-            "failed_answers": (
-                self.failed_answers
-            ),
-
-            "interview_duration": str(
-                duration
-            ),
-
-            "average_score": round(
-                avg_score,
-                2
-            ),
-
-            "communication_score": round(
-                avg_communication,
-                2
-            ),
-
-            "confidence_score": round(
-                avg_confidence,
-                2
-            ),
-
-            "technical_score": round(
-                avg_technical,
-                2
-            ),
-
-            "behavioral_score": round(
-                avg_behavioral,
-                2
-            ),
-
+            "total_questions": (self.total_questions),
+            "followups_asked": (self.followup_count),
+            "failed_answers": (self.failed_answers),
+            "interview_duration": str(duration),
+            "average_score": round(avg_score, 2),
+            "communication_score": round(avg_communication, 2),
+            "confidence_score": round(avg_confidence, 2),
+            "technical_score": round(avg_technical, 2),
+            "behavioral_score": round(avg_behavioral, 2),
             "decision": decision,
-
-            "responses": self.history
+            "responses": self.history,
         }
 
     # =========================================================

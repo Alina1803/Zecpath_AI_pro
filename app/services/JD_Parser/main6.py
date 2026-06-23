@@ -6,7 +6,6 @@ from app.services.JD_Parser.jd_parser import parse_jd
 from app.services.JD_Parser.pdf_reader import extract_text_from_pdf
 from app.services.JD_Parser.section_splitter import split_role_blocks
 
-
 PDF_PATH = "data/raw/Chartered Accountant.pdf"
 
 
@@ -46,11 +45,7 @@ def main():
         sections = result.get("sections", {})
 
         # Safe filename
-        safe_name = re.sub(
-            r'[^a-zA-Z0-9]+',
-            '_',
-            role_name
-        ).strip('_').lower()
+        safe_name = re.sub(r"[^a-zA-Z0-9]+", "_", role_name).strip("_").lower()
 
         file_path = os.path.join(output_dir, f"{safe_name}.json")
 
@@ -60,13 +55,11 @@ def main():
             "matched": True,
             "confidence": 100.0,
             "matched_keywords": [role_name.lower()],
-
             "role_summary": sections.get("role_summary", ""),
             "responsibilities": sections.get("responsibilities", ""),
             "qualifications": sections.get("qualifications", ""),
-
             "skills": result.get("skills", {}),
-            "sections": sections
+            "sections": sections,
         }
 
         # Save role JSON
@@ -83,9 +76,7 @@ def main():
     with open(summary_path, "w", encoding="utf-8") as f:
         json.dump(all_roles_summary, f, indent=4)
 
-    print(
-        f" Successfully created {len(role_blocks)} unique role JSON files!"
-    )
+    print(f" Successfully created {len(role_blocks)} unique role JSON files!")
 
 
 if __name__ == "__main__":

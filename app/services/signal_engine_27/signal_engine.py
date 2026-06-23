@@ -28,5 +28,5 @@ class SignalEngine:
             "hesitation_score": hesitation,
             "contradiction_score": contradiction,
             "communication_strength": comm_score,
-            "flags": flags
+            "flags": flags,
         }

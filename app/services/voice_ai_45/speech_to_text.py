@@ -3,630 +3,273 @@ import re
 import wave
 import traceback
 import logging
-import numpy as np
 
+import numpy as np
 from faster_whisper import WhisperModel
 
-
 logger = logging.getLogger(__name__)
-
-# =====================================================
-# GLOBAL MODEL CACHE
-# =====================================================
 
 _WHISPER_MODEL = None
 
 
-# =====================================================
-# SPEECH TO TEXT ENGINE
-# =====================================================
-
 class SpeechToTextEngine:
 
-    # =================================================
-    # INIT
-    # =================================================
-
     def __init__(
-
         self,
-
         model_name="base",
-
         device="cpu",
-
-        compute_type="int8"
+        compute_type="int8",
     ):
 
         global _WHISPER_MODEL
 
+        self.model = None
+
         try:
 
             print("\n=================================")
-            print("LOADING FASTER WHISPER MODEL")
+            print("LOADING FASTER WHISPER")
             print("=================================")
 
-            if _WHISPER_MODEL is None:
+            cache = r"E:\hf_cache"
 
-                print(
-                    "Initializing Global Whisper Model..."
-                )
-
-                _WHISPER_MODEL = WhisperModel(
-
-                    model_name,
-
-                    device=device,
-
-                    compute_type=compute_type
-                )
-
-                print(
-                    f"✅ Model Loaded : {model_name}"
-                )
-
-            else:
-
-                print(
-                    "✅ Reusing Existing Whisper Model"
-                )
-
-            self.model = _WHISPER_MODEL
-
-            print(
-                "✅ SpeechToTextEngine Ready"
+            os.makedirs(
+                cache,
+                exist_ok=True,
             )
 
-        except Exception as e:
+            os.environ["HF_HOME"] = cache
+            os.environ["HUGGINGFACE_HUB_CACHE"] = cache
+            os.environ["HF_HUB_DISABLE_SYMLINKS"] = "1"
 
-            print("\n=================================")
-            print("WHISPER MODEL LOAD FAILED")
-            print("=================================")
+            if _WHISPER_MODEL:
 
-            print(str(e))
-            print(traceback.format_exc())
+                self.model = _WHISPER_MODEL
 
-            raise e
+                print("✅ Using Cached Model")
 
-    # =================================================
-    # INVALID RESPONSE FILTER
-    # =================================================
+                return
 
-    def is_invalid_response(
-
-        self,
-
-        transcript
-    ):
-
-        try:
-
-            text = str(
-                transcript
-            ).lower().strip()
-
-            # =========================================
-            # EMPTY
-            # =========================================
-
-            if not text:
-
-                return True
-
-            # =========================================
-            # BLOCKED PHRASES
-            # =========================================
-
-            blocked = [
-
-                "i don't know",
-                "i dont know",
-
-                "what's going on",
-                "whats going on",
-
-                "i don't want to talk",
-                "i dont want to talk",
-
-                "subscribe",
-                "thank you for watching",
-
-                "background music",
-
-                "be right back",
-                "i'll be right back",
-
-                "testing testing",
-
-                "hello hello",
-
-                "you you you",
-
-                "check one two",
-
-                "can you hear me"
+            candidates = [
+                model_name,
+                "base",
+                "tiny",
             ]
 
-            for item in blocked:
+            for name in candidates:
 
-                if item in text:
+                try:
 
-                    print(
-                        f"\n⚠ BLOCKED RESPONSE DETECTED : {item}"
+                    print(f"Trying Model → {name}")
+
+                    self.model = WhisperModel(
+                        name,
+                        device=device,
+                        compute_type=compute_type,
+                        download_root=cache,
                     )
 
-                    return True
+                    _WHISPER_MODEL = self.model
 
-            # =========================================
-            # VERY SHORT RESPONSE
-            # =========================================
+                    print(f"✅ Loaded → {name}")
 
-            words = text.split()
+                    break
 
-            if len(words) <= 1:
+                except Exception as e:
 
-                print(
-                    "\n⚠ VERY SHORT RESPONSE"
-                )
+                    print(f"❌ Failed → {name}")
 
-                return True
+                    print(str(e))
 
-            # =========================================
-            # REPETITIVE SPEECH DETECTION
-            # =========================================
+            print("✅ SpeechToTextEngine Ready")
 
-            unique_words = len(set(words))
+        except Exception:
 
-            repetition_ratio = (
-                unique_words / max(len(words), 1)
-            )
+            print(traceback.format_exc())
 
-            print(
-                f"Repetition Ratio : {repetition_ratio}"
-            )
+            self.model = None
 
-            if repetition_ratio < 0.30:
-
-                print(
-                    "\n⚠ REPETITIVE RESPONSE DETECTED"
-                )
-
-                return True
-
-            # =========================================
-            # SAME PHRASE REPEATED
-            # =========================================
-
-            repeated_patterns = re.findall(
-
-                r"(.{3,40}?)\1{2,}",
-
-                text
-            )
-
-            if repeated_patterns:
-
-                print(
-                    "\n⚠ REPEATED PHRASE DETECTED"
-                )
-
-                return True
-
-            return False
-
-        except Exception as e:
-
-            print(
-                f"\nInvalid Response Check Failed : {e}"
-            )
-
-            return False
-
-    # =================================================
-    # AUDIO VALIDATION
-    # =================================================
+    # =========================================
 
     def validate_audio(
-
         self,
-
-        audio_path
+        audio_path,
     ):
 
         try:
 
             with wave.open(
                 audio_path,
-                "rb"
-            ) as wav_file:
+                "rb",
+            ) as wf:
 
-                channels = (
-                    wav_file.getnchannels()
-                )
+                rate = wf.getframerate()
 
-                sample_width = (
-                    wav_file.getsampwidth()
-                )
+                frames = wf.getnframes()
 
-                frame_rate = (
-                    wav_file.getframerate()
-                )
+                duration = frames / rate
 
-                num_frames = (
-                    wav_file.getnframes()
-                )
-
-                duration = (
-                    num_frames / float(frame_rate)
-                )
-
-                print("\n=================================")
-                print("AUDIO INFO")
-                print("=================================")
-
-                print(f"Channels     : {channels}")
-                print(f"Sample Width : {sample_width}")
-                print(f"Frame Rate   : {frame_rate}")
-                print(f"Frames       : {num_frames}")
-                print(f"Duration     : {duration} sec")
-
-            # ==========================================
-            # AUDIO ENERGY
-            # ==========================================
-
-            with wave.open(audio_path, "rb") as wf:
-
-                frames = wf.readframes(
-                    wf.getnframes()
-                )
+                raw = wf.readframes(frames)
 
             audio = np.frombuffer(
-                frames,
-                dtype=np.int16
+                raw,
+                dtype=np.int16,
             )
 
-            energy = np.abs(audio).mean()
+            energy = float(np.abs(audio).mean())
 
-            print(f"Audio Energy : {energy}")
+            print(f"Duration={duration}")
 
-            # ==========================================
-            # SILENT AUDIO
-            # ==========================================
+            print(f"Energy={energy}")
 
-            if energy < 150:
+            if duration < 0.6:
 
-                print("\n⚠ SILENT AUDIO DETECTED")
+                print("⚠ Too Short")
 
                 return False
 
-            # ==========================================
-            # WARNINGS
-            # ==========================================
+            if energy < 80:
 
-            if duration < 1:
+                print("⚠ Very Low Energy")
 
-                print(
-                    "⚠ WARNING: Audio Too Short"
-                )
-
-            if frame_rate < 16000:
-
-                print(
-                    "⚠ WARNING: Low Sample Rate"
-                )
+                return False
 
             return True
 
-        except Exception as e:
-
-            print(f"\n⚠ Audio Validation Failed: {e}")
-
-            print(traceback.format_exc())
+        except Exception:
 
             return False
 
-    # =================================================
-    # CLEAN TRANSCRIPT
-    # =================================================
+    # =========================================
 
     def clean_transcript(
-
         self,
-
-        transcript
+        text,
     ):
 
         try:
 
-            transcript = str(
-                transcript
-            ).strip()
-
-            # ==========================================
-            # REMOVE EXTRA SPACES
-            # ==========================================
-
-            transcript = re.sub(
-
+            text = re.sub(
                 r"\s+",
-
                 " ",
-
-                transcript
+                str(text),
             )
 
-            # ==========================================
-            # REMOVE DUPLICATE WORDS
-            # ==========================================
+            words = text.split()
 
-            words = transcript.split()
+            out = []
 
-            cleaned_words = []
+            prev = ""
 
-            prev_word = None
+            repeat = 0
 
-            repeat_count = 0
+            for w in words:
 
-            for word in words:
+                lw = w.lower()
 
-                current = word.lower()
+                if lw == prev:
 
-                if current == prev_word:
-
-                    repeat_count += 1
+                    repeat += 1
 
                 else:
 
-                    repeat_count = 0
+                    repeat = 0
 
-                # ======================================
-                # KEEP ONLY MAX 2 REPETITIONS
-                # ======================================
+                if repeat < 2:
 
-                if repeat_count < 2:
+                    out.append(w)
 
-                    cleaned_words.append(word)
+                prev = lw
 
-                prev_word = current
+            return " ".join(out).strip()
 
-            transcript = " ".join(
-                cleaned_words
-            )
+        except Exception:
 
-            return transcript.strip()
+            return text
 
-        except:
-            return transcript
+    # =========================================
 
-    # =================================================
-    # TRANSCRIBE AUDIO
-    # =================================================
+    def is_invalid_response(
+        self,
+        text,
+    ):
+
+        if not text:
+
+            return True
+
+        text = text.lower()
+
+        blocked = [
+            "subscribe",
+            "youtube",
+            "background music",
+            "test test",
+        ]
+
+        if any(x in text for x in blocked):
+
+            return True
+
+        return False
+
+    # =========================================
 
     def transcribe(
-
         self,
-
-        audio_path
+        audio_path,
     ):
 
         try:
 
-            print("\n=================================")
-            print("STARTING SPEECH TO TEXT")
-            print("=================================")
-
-            # =============================================
-            # INPUT VALIDATION
-            # =============================================
-
-            if audio_path is None:
-
-                raise ValueError(
-                    "audio_path is None"
-                )
-
-            if not isinstance(
-                audio_path,
-                str
-            ):
-
-                raise TypeError(
-
-                    f"Expected string path, "
-                    f"got {type(audio_path)}"
-                )
-
-            # =============================================
-            # ABSOLUTE PATH
-            # =============================================
-
-            audio_path = os.path.abspath(
-                audio_path
-            )
-
-            print(
-                f"Audio Path : {audio_path}"
-            )
-
-            # =============================================
-            # FILE EXISTS
-            # =============================================
-
-            if not os.path.exists(
-                audio_path
-            ):
-
-                raise FileNotFoundError(
-
-                    f"Audio File Not Found:\n"
-                    f"{audio_path}"
-                )
-
-            # =============================================
-            # FILE SIZE
-            # =============================================
-
-            file_size = os.path.getsize(
-                audio_path
-            )
-
-            print(
-                f"File Size : {file_size} bytes"
-            )
-
-            if file_size <= 100:
-
-                raise Exception(
-                    "Audio file empty/corrupted"
-                )
-
-            # =============================================
-            # AUDIO VALIDATION
-            # =============================================
-
-            valid_audio = self.validate_audio(
-                audio_path
-            )
-
-            if not valid_audio:
+            if not self.model:
 
                 return ""
 
-            # =============================================
-            # TRANSCRIBE
-            # =============================================
+            if not audio_path:
 
-            print("\nTranscribing Audio...")
+                return ""
+
+            audio_path = os.path.abspath(audio_path)
+
+            if not os.path.exists(audio_path):
+
+                return ""
+
+            if not self.validate_audio(audio_path):
+
+                return ""
+
+            print("Transcribing...")
 
             segments, info = self.model.transcribe(
-
                 audio_path,
-
-                beam_size=1,
-
-                best_of=1,
-
-                temperature=0.0,
-
                 language="en",
-
-                vad_filter=False,
-
+                beam_size=3,
+                best_of=3,
+                temperature=0,
+                vad_filter=True,
+                vad_parameters={"min_silence_duration_ms": 600},
                 condition_on_previous_text=False,
-
                 compression_ratio_threshold=2.4,
-
-                log_prob_threshold=-1.0,
-
-                no_speech_threshold=0.3
+                no_speech_threshold=0.45,
             )
 
-            segments = list(segments)
+            text = " ".join(seg.text for seg in segments).strip()
 
-            # =============================================
-            # DEBUG SEGMENTS
-            # =============================================
+            text = self.clean_transcript(text)
 
-            transcript_parts = []
+            print(f"Detected={info.language}")
 
-            print("\n=================================")
-            print("RAW WHISPER OUTPUT")
-            print("=================================")
+            print(f"Transcript={text}")
 
-            for segment in segments:
-
-                text = segment.text.strip()
-
-                print(
-
-                    f"[{segment.start:.2f}s "
-                    f"-> "
-                    f"{segment.end:.2f}s]"
-                )
-
-                print(text)
-
-                if text:
-
-                    transcript_parts.append(text)
-
-            # =============================================
-            # FINAL TRANSCRIPT
-            # =============================================
-
-            transcript = " ".join(
-                transcript_parts
-            ).strip()
-
-            transcript = self.clean_transcript(
-                transcript
-            )
-
-            # =============================================
-            # TRANSCRIPTION INFO
-            # =============================================
-
-            print("\n=================================")
-            print("TRANSCRIPTION INFO")
-            print("=================================")
-
-            print(
-                f"Detected Language : "
-                f"{info.language}"
-            )
-
-            print(
-                f"Language Probability : "
-                f"{round(info.language_probability, 2)}"
-            )
-
-            # =============================================
-            # EMPTY CHECK
-            # =============================================
-
-            if not transcript:
-
-                print("\n⚠ EMPTY TRANSCRIPT")
+            if self.is_invalid_response(text):
 
                 return ""
 
-            # =============================================
-            # INVALID RESPONSE CHECK
-            # =============================================
+            return text
 
-            if self.is_invalid_response(
-                transcript
-            ):
-
-                print("\n=================================")
-                print("INVALID RESPONSE DETECTED")
-                print("=================================")
-
-                return "Invalid or unclear response detected."
-
-            # =============================================
-            # SUCCESS
-            # =============================================
-
-            print("\n=================================")
-            print("TRANSCRIPTION SUCCESS")
-            print("=================================")
-
-            print(
-                f"Transcript :\n{transcript}"
-            )
-
-            return transcript
-
-        except Exception as e:
-
-            print("\n=================================")
-            print("STT FAILED")
-            print("=================================")
-
-            print(f"Error : {str(e)}")
-
-            print("\nTRACEBACK:\n")
+        except Exception:
 
             print(traceback.format_exc())
 

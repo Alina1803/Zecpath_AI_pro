@@ -2,10 +2,7 @@ import logging
 import traceback
 import time
 
-from app.core.language_tool_manager import (
-    get_language_tool
-)
-
+from app.core.language_tool_manager import get_language_tool
 
 # =========================================================
 # LOGGER
@@ -18,14 +15,12 @@ logger = logging.getLogger(__name__)
 # VALIDATE LANGUAGETOOL
 # =========================================================
 
+
 def validate_language_tool(tool):
 
     if tool is None:
 
-        logger.warning(
-            "⚠️ LanguageTool Not Available "
-            "→ Running In Fallback Mode"
-        )
+        logger.warning("⚠️ LanguageTool Not Available " "→ Running In Fallback Mode")
 
         return False
 
@@ -36,48 +31,34 @@ def validate_language_tool(tool):
 # SAFE LANGUAGETOOL INIT
 # =========================================================
 
+
 def safe_initialize_language_tool():
 
     start_time = time.time()
 
     try:
 
-        logger.info(
-            "🚀 Initializing LanguageTool..."
-        )
+        logger.info("🚀 Initializing LanguageTool...")
 
         tool = get_language_tool()
 
-        is_valid = validate_language_tool(
-            tool
-        )
+        is_valid = validate_language_tool(tool)
 
-        elapsed = round(
-            time.time() - start_time,
-            2
-        )
+        elapsed = round(time.time() - start_time, 2)
 
         if is_valid:
 
-            logger.info(
-                f"✅ LanguageTool Ready "
-                f"({elapsed}s)"
-            )
+            logger.info(f"✅ LanguageTool Ready " f"({elapsed}s)")
 
         else:
 
-            logger.warning(
-                f"⚠️ LanguageTool Disabled "
-                f"({elapsed}s)"
-            )
+            logger.warning(f"⚠️ LanguageTool Disabled " f"({elapsed}s)")
 
         return tool
 
     except Exception:
 
-        logger.exception(
-            "❌ LanguageTool Startup Failed"
-        )
+        logger.exception("❌ LanguageTool Startup Failed")
 
         return None
 
@@ -86,19 +67,14 @@ def safe_initialize_language_tool():
 # APPLICATION STARTUP
 # =========================================================
 
+
 def initialize_services():
 
-    logger.info(
-        "=" * 60
-    )
+    logger.info("=" * 60)
 
-    logger.info(
-        "🚀 APPLICATION STARTUP INITIALIZED"
-    )
+    logger.info("🚀 APPLICATION STARTUP INITIALIZED")
 
-    logger.info(
-        "=" * 60
-    )
+    logger.info("=" * 60)
 
     startup_start = time.time()
 
@@ -121,59 +97,33 @@ def initialize_services():
         #
         # =================================================
 
-        total_time = round(
-            time.time() - startup_start,
-            2
-        )
+        total_time = round(time.time() - startup_start, 2)
 
-        logger.info(
-            "=" * 60
-        )
+        logger.info("=" * 60)
 
-        logger.info(
-            f"✅ ALL SERVICES INITIALIZED "
-            f"({total_time}s)"
-        )
+        logger.info(f"✅ ALL SERVICES INITIALIZED " f"({total_time}s)")
 
-        logger.info(
-            "=" * 60
-        )
+        logger.info("=" * 60)
 
         return {
-
             "status": "success",
-
-            "language_tool": (
-                "enabled"
-                if tool
-                else "fallback"
-            ),
-
-            "startup_time_seconds":
-                total_time
+            "language_tool": ("enabled" if tool else "fallback"),
+            "startup_time_seconds": total_time,
         }
 
     except Exception as e:
 
-        logger.exception(
-            "❌ APPLICATION STARTUP FAILED"
-        )
+        logger.exception("❌ APPLICATION STARTUP FAILED")
 
         print("\n" + "=" * 60)
 
-        print(
-            "APPLICATION STARTUP FAILED"
-        )
+        print("APPLICATION STARTUP FAILED")
 
         print("=" * 60)
 
-        print(
-            f"ERROR TYPE: {type(e).__name__}"
-        )
+        print(f"ERROR TYPE: {type(e).__name__}")
 
-        print(
-            f"ERROR MESSAGE: {str(e)}"
-        )
+        print(f"ERROR MESSAGE: {str(e)}")
 
         print("\nTRACEBACK:\n")
 
@@ -182,14 +132,9 @@ def initialize_services():
         print("=" * 60 + "\n")
 
         return {
-
             "status": "failed",
-
-            "error_type":
-                type(e).__name__,
-
-            "error_message":
-                str(e)
+            "error_type": type(e).__name__,
+            "error_message": str(e),
         }
 
 

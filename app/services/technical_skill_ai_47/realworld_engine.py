@@ -2,6 +2,7 @@
 # Real World Applicability
 # -------------------------------
 
+
 def real_world_score(text):
 
     text = text.lower()

@@ -1,7 +1,7 @@
 CA_KEY_TERMS = {
     "gst": ["gst", "input tax credit", "returns", "gstr"],
     "audit": ["audit", "verification", "compliance"],
-    "tax": ["income tax", "deductions", "filing"]
+    "tax": ["income tax", "deductions", "filing"],
 }
 
 

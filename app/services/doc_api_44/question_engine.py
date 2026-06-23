@@ -3,6 +3,6 @@ def generate_questions(role_type: str):
         return [
             "Tell me about yourself",
             "What are your strengths?",
-            "Explain a project you worked on"
+            "Explain a project you worked on",
         ]
     return ["Why should we hire you?"]

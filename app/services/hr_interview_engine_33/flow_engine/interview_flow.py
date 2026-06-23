@@ -3,7 +3,7 @@ import json
 import os
 
 from app.services.hr_interview_engine_33.question_engine.category_selector import (
-    CategorySelector
+    CategorySelector,
 )
 
 
@@ -19,10 +19,7 @@ class InterviewFlow:
 
         self.generator = generator
 
-        self.selector = CategorySelector(
-            state.role,
-            state.experience
-        )
+        self.selector = CategorySelector(state.role, state.experience)
 
         # =================================================
         # TRACK USED HR QUESTIONS
@@ -35,30 +32,14 @@ class InterviewFlow:
         # =================================================
 
         BASE_DIR = os.path.abspath(
-
-            os.path.join(
-                os.path.dirname(__file__),
-                "../../../.."
-            )
+            os.path.join(os.path.dirname(__file__), "../../../..")
         )
 
-        path = os.path.join(
-
-            BASE_DIR,
-
-            "data",
-
-            "question_bank33",
-
-            "hr_questions.json"
-        )
+        path = os.path.join(BASE_DIR, "data", "question_bank33", "hr_questions.json")
 
         if not os.path.exists(path):
 
-            raise FileNotFoundError(
-
-                f"HR dataset not found at: {path}"
-            )
+            raise FileNotFoundError(f"HR dataset not found at: {path}")
 
         with open(path, "r", encoding="utf-8") as f:
 
@@ -84,9 +65,7 @@ class InterviewFlow:
         # DYNAMIC CATEGORY
         # =================================================
 
-        category = self.selector.get_category(
-            phase
-        )
+        category = self.selector.get_category(phase)
 
         print(f"Selected Category : {category}")
 
@@ -98,9 +77,7 @@ class InterviewFlow:
 
             if random.random() < 0.6:
 
-                question = self._get_hr_question(
-                    category
-                )
+                question = self._get_hr_question(category)
 
             else:
 
@@ -118,15 +95,7 @@ class InterviewFlow:
         # FINAL FALLBACK
         # =================================================
 
-        return {
-
-            "type": "hr",
-
-            "question":
-                "Tell me about yourself.",
-
-            "meta": None
-        }
+        return {"type": "hr", "question": "Tell me about yourself.", "meta": None}
 
     # =====================================================
     # HR QUESTION HANDLER
@@ -136,28 +105,16 @@ class InterviewFlow:
 
         print("\n===== HR QUESTION ENGINE =====")
 
-        filtered = [
+        filtered = [q for q in self.hr_questions if q.get("category") == category]
 
-            q for q in self.hr_questions
-
-            if q.get("category") == category
-        ]
-
-        print(
-            f"Filtered Questions : {len(filtered)}"
-        )
+        print(f"Filtered Questions : {len(filtered)}")
 
         # =================================================
         # REMOVE DUPLICATES
         # =================================================
 
         available = [
-
-            q for q in filtered
-
-            if q.get("question")
-
-            not in self.used_hr_questions
+            q for q in filtered if q.get("question") not in self.used_hr_questions
         ]
 
         # =================================================
@@ -166,9 +123,7 @@ class InterviewFlow:
 
         if not available:
 
-            print(
-                "⚠ Resetting Used Questions"
-            )
+            print("⚠ Resetting Used Questions")
 
             self.used_hr_questions.clear()
 
@@ -180,31 +135,17 @@ class InterviewFlow:
 
         if not available:
 
-            print(
-                "⚠ No HR Questions Found"
-            )
+            print("⚠ No HR Questions Found")
 
-            return {
-
-                "type": "hr",
-
-                "question":
-                    "Tell me about yourself.",
-
-                "meta": None
-            }
+            return {"type": "hr", "question": "Tell me about yourself.", "meta": None}
 
         # =================================================
         # RANDOM QUESTION
         # =================================================
 
-        selected = random.choice(
-            available
-        )
+        selected = random.choice(available)
 
-        question_text = selected.get(
-            "question"
-        )
+        question_text = selected.get("question")
 
         # =================================================
         # SAFETY CHECK
@@ -212,33 +153,15 @@ class InterviewFlow:
 
         if question_text in self.used_hr_questions:
 
-            print(
-                f"Duplicate Question Skipped:\n"
-                f"{question_text}"
-            )
+            print(f"Duplicate Question Skipped:\n" f"{question_text}")
 
-            return self._get_hr_question(
-                category
-            )
+            return self._get_hr_question(category)
 
-        self.used_hr_questions.add(
-            question_text
-        )
+        self.used_hr_questions.add(question_text)
 
-        print(
-            f"Selected HR Question : "
-            f"{question_text}"
-        )
+        print(f"Selected HR Question : " f"{question_text}")
 
-        return {
-
-            "type": "hr",
-
-            "question":
-                question_text,
-
-            "meta": selected
-        }
+        return {"type": "hr", "question": question_text, "meta": selected}
 
     # =====================================================
     # ROLE QUESTION HANDLER
@@ -252,39 +175,20 @@ class InterviewFlow:
 
             q = self.generator.get_question()
 
-            question_text = q.get(
-                "question"
-            )
+            question_text = q.get("question")
 
-            print(
-                f"Selected Role Question : "
-                f"{question_text}"
-            )
+            print(f"Selected Role Question : " f"{question_text}")
 
-            return {
-
-                "type": "role",
-
-                "question":
-                    question_text,
-
-                "meta": q
-            }
+            return {"type": "role", "question": question_text, "meta": q}
 
         except Exception as e:
 
-            print(
-                f"⚠ Role Question Error: {e}"
-            )
+            print(f"⚠ Role Question Error: {e}")
 
             return {
-
                 "type": "role",
-
-                "question":
-                    "Explain your core technical skills.",
-
-                "meta": None
+                "question": "Explain your core technical skills.",
+                "meta": None,
             }
 
     # =====================================================
@@ -297,30 +201,20 @@ class InterviewFlow:
 
         self.state.next_phase()
 
-        print(
-            f"Next Phase : "
-            f"{self.state.current_phase}"
-        )
+        print(f"Next Phase : " f"{self.state.current_phase}")
 
     # =====================================================
     # FOLLOW-UP HANDLING
     # =====================================================
 
     def handle_followup(
-
         self,
-
         q_data=None,
-
         answer=None,
-
         score=None,
-
         analyzer=None,
-
         followup_generator=None,
-
-        decision=None
+        decision=None,
     ):
 
         print("\n===== FOLLOWUP ENGINE =====")
@@ -351,34 +245,19 @@ class InterviewFlow:
 
         if answer == "":
 
-            print(
-                "⚠ Empty Candidate Response"
-            )
+            print("⚠ Empty Candidate Response")
 
             return {
-
                 "needs_followup": True,
-
-                "followup_question":
-                    "I could not hear your answer clearly. Can you please repeat it?",
-
-                "level": "weak"
+                "followup_question": "I could not hear your answer clearly. Can you please repeat it?",
+                "level": "weak",
             }
 
         # =================================================
         # INVALID / SPAM ANSWER DETECTION
         # =================================================
 
-        spam_words = [
-
-            "subscribe",
-
-            "like share",
-
-            "hello guys",
-
-            "youtube"
-        ]
+        spam_words = ["subscribe", "like share", "hello guys", "youtube"]
 
         lower_answer = answer.lower()
 
@@ -386,46 +265,30 @@ class InterviewFlow:
 
             if spam in lower_answer:
 
-                print(
-                    "⚠ Spam / Invalid Response Detected"
-                )
+                print("⚠ Spam / Invalid Response Detected")
 
                 return {
-
                     "needs_followup": True,
-
-                    "followup_question":
-                        "Please provide a professional interview answer related to the question.",
-
-                    "level": "weak"
+                    "followup_question": "Please provide a professional interview answer related to the question.",
+                    "level": "weak",
                 }
 
         # =================================================
         # SHORT ANSWER DETECTION
         # =================================================
 
-        word_count = len(
-            answer.split()
-        )
+        word_count = len(answer.split())
 
-        print(
-            f"Answer Word Count : {word_count}"
-        )
+        print(f"Answer Word Count : {word_count}")
 
         if word_count <= 3:
 
-            print(
-                "⚠ Very Short Answer Detected"
-            )
+            print("⚠ Very Short Answer Detected")
 
             return {
-
                 "needs_followup": True,
-
-                "followup_question":
-                    "Can you explain your answer in more detail?",
-
-                "level": "weak"
+                "followup_question": "Can you explain your answer in more detail?",
+                "level": "weak",
             }
 
         # =================================================
@@ -438,15 +301,11 @@ class InterviewFlow:
 
             try:
 
-                level = analyzer.analyze(
-                    answer
-                )
+                level = analyzer.analyze(answer)
 
             except Exception as e:
 
-                print(
-                    f"⚠ Analyzer Failed: {e}"
-                )
+                print(f"⚠ Analyzer Failed: {e}")
 
                 level = "medium"
 
@@ -468,9 +327,7 @@ class InterviewFlow:
 
                 level = "strong"
 
-        print(
-            f"Detected Answer Level : {level}"
-        )
+        print(f"Detected Answer Level : {level}")
 
         # =================================================
         # DECISION ENGINE
@@ -482,140 +339,65 @@ class InterviewFlow:
 
             try:
 
-                should_ask = (
-                    decision.should_followup(
-                        level
-                    )
-                )
+                should_ask = decision.should_followup(level)
 
             except Exception as e:
 
-                print(
-                    f"⚠ Decision Engine Failed: {e}"
-                )
+                print(f"⚠ Decision Engine Failed: {e}")
 
-                should_ask = (
-
-                    level in [
-
-                        "weak",
-
-                        "moderate"
-                    ]
-                )
+                should_ask = level in ["weak", "moderate"]
 
         else:
 
-            should_ask = (
+            should_ask = level in ["weak", "moderate"]
 
-                level in [
-
-                    "weak",
-
-                    "moderate"
-                ]
-            )
-
-        print(
-            f"Should Ask Followup : "
-            f"{should_ask}"
-        )
+        print(f"Should Ask Followup : " f"{should_ask}")
 
         # =================================================
         # DATASET FOLLOWUP CHAIN
         # =================================================
 
-        if (
-
-            should_ask and
-
-            q_data.get("meta") and
-
-            "follow_up_chain"
-
-            in q_data["meta"]
-
-        ):
+        if should_ask and q_data.get("meta") and "follow_up_chain" in q_data["meta"]:
 
             try:
 
-                followup_q = random.choice(
+                followup_q = random.choice(q_data["meta"]["follow_up_chain"])
 
-                    q_data["meta"][
-                        "follow_up_chain"
-                    ]
-                )
-
-                print(
-                    "✅ Dataset Followup Generated"
-                )
+                print("✅ Dataset Followup Generated")
 
                 return {
-
                     "needs_followup": True,
-
-                    "followup_question":
-                        followup_q,
-
-                    "level": level
+                    "followup_question": followup_q,
+                    "level": level,
                 }
 
             except Exception as e:
 
-                print(
-                    f"⚠ Dataset Followup Failed: {e}"
-                )
+                print(f"⚠ Dataset Followup Failed: {e}")
 
         # =================================================
         # AI FOLLOWUP GENERATOR
         # =================================================
 
-        if (
-
-            should_ask and
-
-            analyzer and
-
-            followup_generator
-
-        ):
+        if should_ask and analyzer and followup_generator:
 
             try:
 
-                followup_q = (
-
-                    followup_generator.generate(
-
-                        q_data.get(
-                            "question",
-                            ""
-                        ),
-
-                        answer,
-
-                        level
-                    )
+                followup_q = followup_generator.generate(
+                    q_data.get("question", ""), answer, level
                 )
 
-                print(
-                    "✅ AI Followup Generated"
-                )
+                print("✅ AI Followup Generated")
 
                 return {
-
                     "needs_followup": True,
-
-                    "followup_question":
-                        followup_q,
-
-                    "level": level
+                    "followup_question": followup_q,
+                    "level": level,
                 }
 
             except Exception as e:
 
-                print(
-                    f"⚠ AI Followup Failed: {e}"
-                )
+                print(f"⚠ AI Followup Failed: {e}")
 
         # =================================================
         # LOW SCORE DEFAULT FOLLOWUP
@@ -623,33 +405,18 @@ class InterviewFlow:
 
         if score is not None and score < 5:
 
-            print(
-                "⚠ Low Score Followup Triggered"
-            )
+            print("⚠ Low Score Followup Triggered")
 
             return {
-
                 "needs_followup": True,
-
-                "followup_question":
-                    "Can you explain in more detail?",
-
-                "level": level
+                "followup_question": "Can you explain in more detail?",
+                "level": level,
             }
 
         # =================================================
         # DEFAULT
         # =================================================
 
-        print(
-            "ℹ No Followup Needed"
-        )
+        print("ℹ No Followup Needed")
 
-        return {
-
-            "needs_followup": False,
-
-            "followup_question": None,
-
-            "level": level
-        }
+        return {"needs_followup": False, "followup_question": None, "level": level}

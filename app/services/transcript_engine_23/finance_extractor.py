@@ -4,8 +4,9 @@ CA_SKILLS = {
     "audit": ["audit", "internal control", "vouching"],
     "sap_fico": ["sap fico", "gl posting", "cost center"],
     "financial_reporting": ["balance sheet", "p&l", "cash flow"],
-    "compliance": ["roc", "mca", "statutory", "ind as", "ifrs"]
+    "compliance": ["roc", "mca", "statutory", "ind as", "ifrs"],
 }
+
 
 def extract_ca_skills(text: str):
     text = text.lower()

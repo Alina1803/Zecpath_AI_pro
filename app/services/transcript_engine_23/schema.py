@@ -2,6 +2,7 @@ from pydantic import BaseModel
 from typing import List, Optional
 from datetime import datetime
 
+
 class TranscriptSegment(BaseModel):
     speaker: str
     text: str
@@ -9,12 +10,14 @@ class TranscriptSegment(BaseModel):
     confidence: float
     finance_skill_tags: List[str] = []
 
+
 class TranscriptMetadata(BaseModel):
     candidate_id: str
     job_id: str
     question_id: str
     domain: str = "chartered_accountant"
     created_at: datetime
+
 
 class Transcript(BaseModel):
     metadata: TranscriptMetadata

@@ -11,7 +11,4 @@ def analyze_signal(payload: dict):
 
     result = engine.evaluate(answer)
 
-    return {
-        "status": "success",
-        "data": result
-    }
+    return {"status": "success", "data": result}

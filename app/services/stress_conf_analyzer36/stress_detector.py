@@ -1,6 +1,7 @@
 from app.config.constants36 import STRESS_WORDS
 from utils.text_cleaner import clean_text
 
+
 def stress_score(text):
     text = clean_text(text)
 

@@ -10,7 +10,6 @@ DOMAIN_NAME = "chartered_accounting"
 # ==========================================
 
 DEFAULT_ROLES = [
-
     "Chartered Accountant",
     "Tax Consultant",
     "Audit Manager",
@@ -20,7 +19,7 @@ DEFAULT_ROLES = [
     "Cost Accountant",
     "Compliance Manager",
     "Risk Analyst",
-    "Chief Financial Officer"
+    "Chief Financial Officer",
 ]
 
 
@@ -29,13 +28,11 @@ DEFAULT_ROLES = [
 # ==========================================
 
 SKILL_DATABASE = [
-
     # Tax
     "gst",
     "taxation",
     "income tax",
     "tds",
-
     # Accounting
     "accounting",
     "financial reporting",
@@ -43,35 +40,29 @@ SKILL_DATABASE = [
     "accounts payable",
     "accounts receivable",
     "bank reconciliation",
-
     # Audit
     "audit",
     "statutory audit",
     "internal audit",
-
     # Compliance
     "roc filing",
     "compliance",
-
     # Finance
     "financial analysis",
     "budgeting",
     "forecasting",
     "cash flow",
-
     # ERP / Tools
     "tally",
     "sap fico",
     "excel",
     "power bi",
-
     # Standards
     "ifrs",
     "gaap",
-
     # Reporting
     "mis reporting",
-    "fp&a"
+    "fp&a",
 ]
 
 
@@ -80,45 +71,15 @@ SKILL_DATABASE = [
 # ==========================================
 
 SKILL_SYNONYMS = {
-
-    "gst": [
-        "goods and services tax"
-    ],
-
-    "tds": [
-        "tax deducted at source"
-    ],
-
-    "sap fico": [
-        "sap finance",
-        "sap fico module"
-    ],
-
-    "ifrs": [
-        "international financial reporting standards"
-    ],
-
-    "gaap": [
-        "generally accepted accounting principles"
-    ],
-
-    "fp&a": [
-        "financial planning and analysis"
-    ],
-
-    "mis reporting": [
-        "management information system reporting"
-    ],
-
-    "audit": [
-        "auditing",
-        "financial audit"
-    ],
-
-    "accounting": [
-        "bookkeeping",
-        "financial accounting"
-    ]
+    "gst": ["goods and services tax"],
+    "tds": ["tax deducted at source"],
+    "sap fico": ["sap finance", "sap fico module"],
+    "ifrs": ["international financial reporting standards"],
+    "gaap": ["generally accepted accounting principles"],
+    "fp&a": ["financial planning and analysis"],
+    "mis reporting": ["management information system reporting"],
+    "audit": ["auditing", "financial audit"],
+    "accounting": ["bookkeeping", "financial accounting"],
 }
 
 
@@ -127,13 +88,12 @@ SKILL_SYNONYMS = {
 # ==========================================
 
 DOMAIN_KEYWORDS = [
-
     "chartered accountant",
     "tax consultant",
     "auditor",
     "accountant",
     "finance manager",
-    "financial controller"
+    "financial controller",
 ]
 
 

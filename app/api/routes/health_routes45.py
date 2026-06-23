@@ -12,7 +12,7 @@ def health_check():
     return {
         "status": "healthy",
         "service": "HR Interview AI",
-        "timestamp": str(datetime.now())
+        "timestamp": str(datetime.now()),
     }
 
 
@@ -25,7 +25,7 @@ def system_health():
         "processor": platform.processor(),
         "cpu_usage_percent": psutil.cpu_percent(),
         "memory_usage_percent": psutil.virtual_memory().percent,
-        "disk_usage_percent": psutil.disk_usage('/').percent
+        "disk_usage_percent": psutil.disk_usage("/").percent,
     }
 
 
@@ -36,5 +36,5 @@ def api_health():
         "api_status": "running",
         "interview_engine": "active",
         "voice_pipeline": "active",
-        "database": "connected"
+        "database": "connected",
     }

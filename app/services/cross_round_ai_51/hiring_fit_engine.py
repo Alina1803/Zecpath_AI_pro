@@ -2,6 +2,7 @@
 # Hiring Fit Classification
 # -----------------------------------
 
+
 def hiring_fit(score):
 
     if score >= 85:

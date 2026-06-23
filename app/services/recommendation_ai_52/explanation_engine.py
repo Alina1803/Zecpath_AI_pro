@@ -15,7 +15,4 @@ def generate_explanation(scores):
     if scores.get("integrity", 100) < 60:
         weaknesses.append("Integrity risks")
 
-    return {
-        "strengths": strengths,
-        "weaknesses": weaknesses
-    }
+    return {"strengths": strengths, "weaknesses": weaknesses}

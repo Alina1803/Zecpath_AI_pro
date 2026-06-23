@@ -1,5 +1,6 @@
 from app.services.Section_segmentation8.rule_based import is_heading, classify_heading
 
+
 def segment_text(lines):
     sections = {}
     current_section = "other"

@@ -17,39 +17,26 @@ class CategorySelector:
 
         # ✅ MUST MATCH hr_questions.json categories
         self.phase_categories = {
-            "introduction": [
-                "self_introduction"
-            ],
-
+            "introduction": ["self_introduction"],
             "core": [
                 "career_journey",
                 "strengths_weaknesses",
                 "teamwork",
-                "conflict_resolution"
+                "conflict_resolution",
             ],
-
             "evaluation": [
                 "career_goals",
                 "adaptability",
                 "motivation",
-                "communication"
+                "communication",
             ],
-
-            "closing": [
-                "availability"
-            ]
+            "closing": ["availability"],
         }
 
         # ✅ Role-based category extensions
         self.role_category_map = {
-            "technical": [
-                "problem_solving",
-                "learning_ability"
-            ],
-            "non_technical": [
-                "communication",
-                "adaptability"
-            ]
+            "technical": ["problem_solving", "learning_ability"],
+            "non_technical": ["communication", "adaptability"],
         }
 
     # ------------------------------
@@ -74,10 +61,7 @@ class CategorySelector:
         base_categories = list(set(base_categories))
 
         # ✅ Remove already used categories
-        available = [
-            cat for cat in base_categories
-            if cat not in self.used_categories
-        ]
+        available = [cat for cat in base_categories if cat not in self.used_categories]
 
         # ✅ Reset if all used
         if not available:
@@ -98,9 +82,15 @@ class CategorySelector:
         """
 
         technical_keywords = [
-            "engineer", "developer", "data",
-            "analyst", "scientist", "software",
-            "it", "ai", "ml"
+            "engineer",
+            "developer",
+            "data",
+            "analyst",
+            "scientist",
+            "software",
+            "it",
+            "ai",
+            "ml",
         ]
 
         for keyword in technical_keywords:

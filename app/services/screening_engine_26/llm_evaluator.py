@@ -3,6 +3,7 @@ import json
 
 try:
     from openai import OpenAI
+
     client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
     USE_LLM = True
 except:
@@ -17,8 +18,7 @@ def evaluate_with_llm(question, answer, prompt_template):
     if USE_LLM and os.getenv("OPENAI_API_KEY"):
         try:
             response = client.chat.completions.create(
-                model="gpt-4o-mini",
-                messages=[{"role": "user", "content": prompt}]
+                model="gpt-4o-mini", messages=[{"role": "user", "content": prompt}]
             )
 
             content = response.choices[0].message.content
@@ -34,5 +34,5 @@ def evaluate_with_llm(question, answer, prompt_template):
         "relevance": 7,
         "completeness": 6,
         "consistency": 7,
-        "reason": "Fallback scoring (LLM unavailable)"
+        "reason": "Fallback scoring (LLM unavailable)",
     }

@@ -4,23 +4,17 @@ import traceback
 from datetime import datetime
 from typing import Optional, Dict, Any, List
 
-from app.services.demo_45.workflow_manager import (WorkflowManager)
+from app.services.demo_45.workflow_manager import WorkflowManager
 
-from app.services.demo_45.interview_controller import (InterviewController)
+from app.services.demo_45.interview_controller import InterviewController
 
 # =====================================================
 # LOGGER CONFIGURATION
 # =====================================================
 
 logging.basicConfig(
-
     level=logging.INFO,
-
-    format=(
-        "%(asctime)s | "
-        "%(levelname)s | "
-        "%(name)s | "
-        "%(message)s")
+    format=("%(asctime)s | " "%(levelname)s | " "%(name)s | " "%(message)s"),
 )
 
 logger = logging.getLogger(__name__)
@@ -29,18 +23,16 @@ logger = logging.getLogger(__name__)
 # FINAL HR INTERVIEW ENGINE
 # =====================================================
 
+
 class FinalHRInterviewSystem:
 
     def __init__(self):
 
-        logger.info(
-            "\n=====================================")
+        logger.info("\n=====================================")
 
-        logger.info(
-            "INITIALIZING FINAL HR INTERVIEW SYSTEM")
+        logger.info("INITIALIZING FINAL HR INTERVIEW SYSTEM")
 
-        logger.info(
-            "=====================================\n")
+        logger.info("=====================================\n")
 
         # =============================================
         # CORE COMPONENTS
@@ -56,8 +48,7 @@ class FinalHRInterviewSystem:
 
         self.system_initialized = True
 
-        logger.info(
-            "✅ FinalHRInterviewSystem Ready")
+        logger.info("✅ FinalHRInterviewSystem Ready")
 
     # =================================================
     # SAFE LOGGER
@@ -75,22 +66,16 @@ class FinalHRInterviewSystem:
         self,
         candidate_id: str = "CAND_001",
         role: Optional[str] = None,
-        experience: Optional[str] = None
+        experience: Optional[str] = None,
     ) -> Dict[str, Any]:
 
         start_time = datetime.now()
 
-        self._log(
-            "\n====================================="
-        )
+        self._log("\n=====================================")
 
-        self._log(
-            "FINAL HR INTERVIEW SYSTEM STARTED"
-        )
+        self._log("FINAL HR INTERVIEW SYSTEM STARTED")
 
-        self._log(
-            "=====================================\n"
-        )
+        self._log("=====================================\n")
 
         # =============================================
         # VALIDATION
@@ -100,9 +85,7 @@ class FinalHRInterviewSystem:
 
             if not candidate_id:
 
-                raise ValueError(
-                    "candidate_id is required"
-                )
+                raise ValueError("candidate_id is required")
 
             # =========================================
             # AUTO ROLE DETECTION
@@ -110,114 +93,75 @@ class FinalHRInterviewSystem:
 
             if role is None:
 
-                role = (
-                    self.detect_candidate_role()
-                )
+                role = self.detect_candidate_role()
 
-                self._log(
-                    f"🎯 Auto-detected role: {role}"
-                )
+                self._log(f"🎯 Auto-detected role: {role}")
 
             if experience is None:
 
-                experience = (
-                    self.detect_experience_level()
-                )
+                experience = self.detect_experience_level()
 
-                self._log(
-                    f"📊 Auto-detected experience: "
-                    f"{experience}"
-                )
+                self._log(f"📊 Auto-detected experience: " f"{experience}")
 
             # =========================================
             # INITIALIZE CONTROLLER
             # =========================================
 
-            self._log(
-                "🚀 Initializing Interview Controller"
-            )
+            self._log("🚀 Initializing Interview Controller")
 
-            controller_state = (
-                self.controller.initialize_interview(
-                    candidate_id=candidate_id,
-                    role=role,
-                    experience=experience
-                )
+            controller_state = self.controller.initialize_interview(
+                candidate_id=candidate_id, role=role, experience=experience
             )
 
             if controller_state is None:
 
-                raise Exception(
-                    "Controller initialization returned None"
-                )
+                raise Exception("Controller initialization returned None")
 
-            self._log(
-                "✅ Controller Initialized"
-            )
+            self._log("✅ Controller Initialized")
 
             # =========================================
             # RUN WORKFLOW
             # =========================================
 
-            self._log(
-                "🚀 Starting Workflow Execution"
-            )
+            self._log("🚀 Starting Workflow Execution")
 
             workflow_result = self.workflow.run(
-                role=role,
-                experience=experience,
-                candidate_id=candidate_id
+                role=role, experience=experience, candidate_id=candidate_id
             )
 
             if not workflow_result:
 
-                raise Exception(
-                    "Workflow returned empty result"
-                )
+                raise Exception("Workflow returned empty result")
 
-            self._log(
-                "✅ Workflow Execution Completed"
-            )
+            self._log("✅ Workflow Execution Completed")
 
             # =========================================
             # GENERATE FINAL REPORT
             # =========================================
 
-            final_report = (
-                self.generate_final_report(
-                    candidate_id=candidate_id,
-                    role=role,
-                    experience=experience,
-                    workflow_result=workflow_result,
-                    started_at=start_time
-                )
+            final_report = self.generate_final_report(
+                candidate_id=candidate_id,
+                role=role,
+                experience=experience,
+                workflow_result=workflow_result,
+                started_at=start_time,
             )
 
-            self._log(
-                "✅ Final Report Generated"
-            )
+            self._log("✅ Final Report Generated")
 
             return final_report
 
         except Exception as e:
 
-            logger.exception(
-                f"❌ Interview Failed: {e}"
-            )
+            logger.exception(f"❌ Interview Failed: {e}")
 
             print(traceback.format_exc())
 
             return {
-
                 "status": "failed",
-
                 "candidate_id": candidate_id,
-
                 "error": str(e),
-
-                "timestamp": (
-                    datetime.now().isoformat()
-                )
+                "timestamp": (datetime.now().isoformat()),
             }
 
     # =================================================
@@ -230,7 +174,7 @@ class FinalHRInterviewSystem:
         role: str,
         experience: str,
         workflow_result: Dict[str, Any],
-        started_at: datetime
+        started_at: datetime,
     ) -> Dict[str, Any]:
 
         try:
@@ -239,64 +183,29 @@ class FinalHRInterviewSystem:
             # EXTRACT INTERVIEW RESULTS
             # =========================================
 
-            interview_results = (
-                workflow_result.get(
-                    "interview_results",
-                    {}
-                )
-            )
+            interview_results = workflow_result.get("interview_results", {})
 
-            responses = interview_results.get(
-                "responses",
-                []
-            )
+            responses = interview_results.get("responses", [])
 
             # =========================================
             # ANALYSIS DATA
             # =========================================
 
-            communication_analysis = (
-                workflow_result.get(
-                    "communication_analysis",
-                    {}
-                )
-            )
+            communication_analysis = workflow_result.get("communication_analysis", {})
 
-            behavior_analysis = (
-                workflow_result.get(
-                    "behavior_analysis",
-                    {}
-                )
-            )
+            behavior_analysis = workflow_result.get("behavior_analysis", {})
 
-            voice_pipeline = (
-                workflow_result.get(
-                    "voice_pipeline",
-                    {}
-                )
-            )
+            voice_pipeline = workflow_result.get("voice_pipeline", {})
 
-            summary = workflow_result.get(
-                "summary",
-                {}
-            )
+            summary = workflow_result.get("summary", {})
 
-            overall_score = (
-                workflow_result.get(
-                    "overall_score",
-                    0
-                )
-            )
+            overall_score = workflow_result.get("overall_score", 0)
 
             # =========================================
             # FINAL DECISION
             # =========================================
 
-            final_decision = (
-                self._generate_final_decision(
-                    overall_score
-                )
-            )
+            final_decision = self._generate_final_decision(overall_score)
 
             # =========================================
             # INTERVIEW DURATION
@@ -304,9 +213,7 @@ class FinalHRInterviewSystem:
 
             ended_at = datetime.now()
 
-            duration = str(
-                ended_at - started_at
-            )
+            duration = str(ended_at - started_at)
 
             # =========================================
             # FAILED ANSWERS
@@ -316,15 +223,9 @@ class FinalHRInterviewSystem:
 
             for item in responses:
 
-                answer = item.get(
-                    "answer",
-                    ""
-                )
+                answer = item.get("answer", "")
 
-                if (
-                    not answer or
-                    "STT Error" in str(answer)
-                ):
+                if not answer or "STT Error" in str(answer):
 
                     failed_answers += 1
 
@@ -333,91 +234,51 @@ class FinalHRInterviewSystem:
             # =========================================
 
             report = {
-
                 # =====================================
                 # SYSTEM STATUS
                 # =====================================
-
                 "status": "success",
-
-                "generated_at": (
-                    datetime.now().isoformat()
-                ),
-
+                "generated_at": (datetime.now().isoformat()),
                 # =====================================
                 # CANDIDATE INFO
                 # =====================================
-
                 "candidate_id": candidate_id,
-
                 "role": role,
-
                 "experience": experience,
-
                 # =====================================
                 # INTERVIEW METADATA
                 # =====================================
-
                 "interview_duration": duration,
-
-                "total_questions": len(
-                    responses
-                ),
-
-                "failed_answers": (
-                    failed_answers
-                ),
-
+                "total_questions": len(responses),
+                "failed_answers": (failed_answers),
                 # =====================================
                 # INTERVIEW RESPONSES
                 # =====================================
-
                 "responses": responses,
-
                 # =====================================
                 # ANALYSIS
                 # =====================================
-
                 "analysis": {
-
-                    "overall_score":
-                        overall_score,
-
-                    "communication_analysis":
-                        communication_analysis,
-
-                    "behavior_analysis":
-                        behavior_analysis,
-
-                    "voice_pipeline":
-                        voice_pipeline
+                    "overall_score": overall_score,
+                    "communication_analysis": communication_analysis,
+                    "behavior_analysis": behavior_analysis,
+                    "voice_pipeline": voice_pipeline,
                 },
-
                 # =====================================
                 # SUMMARY
                 # =====================================
-
                 "summary": summary,
-
                 # =====================================
                 # FINAL DECISION
                 # =====================================
-
-                "final_decision":
-                    final_decision
+                "final_decision": final_decision,
             }
 
-            logger.info(
-                "\n====================================="
-            )
+            logger.info("\n=====================================")
 
-            logger.info(
-                "FINAL INTERVIEW REPORT GENERATED"
-            )
+            logger.info("FINAL INTERVIEW REPORT GENERATED")
 
-            logger.info(
-                "=====================================\n"
-            )
+            logger.info("=====================================\n")
 
             logger.info(report)
 
@@ -425,35 +286,21 @@ class FinalHRInterviewSystem:
 
         except Exception as e:
 
-            logger.exception(
-                f"❌ Report Generation Failed: {e}"
-            )
+            logger.exception(f"❌ Report Generation Failed: {e}")
 
             print(traceback.format_exc())
 
-            return {
-
-                "status": "failed",
-
-                "stage": "report_generation",
-
-                "error": str(e)
-            }
+            return {"status": "failed", "stage": "report_generation", "error": str(e)}
 
     # =================================================
     # FINAL DECISION LOGIC
     # =================================================
 
-    def _generate_final_decision(
-        self,
-        overall_score
-    ):
+    def _generate_final_decision(self, overall_score):
 
         try:
 
-            overall_score = float(
-                overall_score
-            )
+            overall_score = float(overall_score)
 
         except:
 
@@ -480,7 +327,6 @@ class FinalHRInterviewSystem:
     # =================================================
 
     def detect_candidate_role(self) -> str:
-
         """
         Future Upgrade:
         - Resume Parser
@@ -495,7 +341,6 @@ class FinalHRInterviewSystem:
     # =================================================
 
     def detect_experience_level(self) -> str:
-
         """
         Future Upgrade:
         - Resume Analysis
@@ -511,32 +356,17 @@ class FinalHRInterviewSystem:
 
     def validate_system(self):
 
-        self._log(
-            "\n====================================="
-        )
+        self._log("\n=====================================")
 
-        self._log(
-            "SYSTEM VALIDATION"
-        )
+        self._log("SYSTEM VALIDATION")
 
-        self._log(
-            "=====================================\n"
-        )
+        self._log("=====================================\n")
 
-        print(
-            f"Workflow Loaded : "
-            f"{self.workflow is not None}"
-        )
+        print(f"Workflow Loaded : " f"{self.workflow is not None}")
 
-        print(
-            f"Controller Loaded : "
-            f"{self.controller is not None}"
-        )
+        print(f"Controller Loaded : " f"{self.controller is not None}")
 
-        print(
-            f"System Initialized : "
-            f"{self.system_initialized}"
-        )
+        print(f"System Initialized : " f"{self.system_initialized}")
 
 
 # =====================================================
@@ -549,20 +379,12 @@ if __name__ == "__main__":
 
     engine.validate_system()
 
-    result = engine.start_interview(
-        candidate_id="CAND_001"
-    )
+    result = engine.start_interview(candidate_id="CAND_001")
 
-    logger.info(
-        "\n====================================="
-    )
+    logger.info("\n=====================================")
 
-    logger.info(
-        "FINAL OUTPUT"
-    )
+    logger.info("FINAL OUTPUT")
 
-    logger.info(
-        "=====================================\n"
-    )
+    logger.info("=====================================\n")
 
     logger.info(result)

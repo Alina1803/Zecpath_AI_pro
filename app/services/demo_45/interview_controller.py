@@ -1,13 +1,15 @@
 import traceback
 
-from app.services.demo_45.workflow_manager import (WorkflowManager)
+from app.services.demo_45.workflow_manager import WorkflowManager
 
-from app.services.hr_interview_engine_33.state_manager.interview_state import (InterviewState)
-
+from app.services.hr_interview_engine_33.state_manager.interview_state import (
+    InterviewState,
+)
 
 # =====================================================
 # INTERVIEW CONTROLLER
 # =====================================================
+
 
 class InterviewController:
 
@@ -41,23 +43,15 @@ class InterviewController:
     # INITIALIZE INTERVIEW
     # =====================================================
 
-    def initialize_interview(
-        self,
-        candidate_id,
-        role,
-        experience="experienced"
-    ):
+    def initialize_interview(self, candidate_id, role, experience="experienced"):
 
         try:
 
-            self._log(
-                "===================================")
+            self._log("===================================")
 
-            self._log(
-                "INTERVIEW INITIALIZATION STARTED")
+            self._log("INTERVIEW INITIALIZATION STARTED")
 
-            self._log(
-                "===================================")
+            self._log("===================================")
 
             # =============================================
             # VALIDATION
@@ -65,36 +59,25 @@ class InterviewController:
 
             if not candidate_id:
 
-                raise ValueError(
-                    "candidate_id is required"
-                )
+                raise ValueError("candidate_id is required")
 
             if not role:
 
-                raise ValueError(
-                    "role is required"
-                )
+                raise ValueError("role is required")
 
-            experience = (
-                experience or "experienced"
-            )
+            experience = experience or "experienced"
 
             # =============================================
             # CREATE STATE
             # =============================================
 
-            self.state = InterviewState(
-                role=role,
-                experience=experience
-            )
+            self.state = InterviewState(role=role, experience=experience)
 
             # =============================================
             # ATTACH CANDIDATE ID
             # =============================================
 
-            self.state.candidate_id = (
-                candidate_id
-            )
+            self.state.candidate_id = candidate_id
 
             # =============================================
             # DEBUG INFO
@@ -106,17 +89,13 @@ class InterviewController:
 
             print(f"Experience   : {experience}")
 
-            self._log(
-                "INTERVIEW STATE CREATED"
-            )
+            self._log("INTERVIEW STATE CREATED")
 
             return self.state
 
         except Exception as e:
 
-            self._log(
-                f"Interview Initialization Failed: {e}"
-            )
+            self._log(f"Interview Initialization Failed: {e}")
 
             print(traceback.format_exc())
 
@@ -126,26 +105,15 @@ class InterviewController:
     # START INTERVIEW
     # =====================================================
 
-    def start_interview(
-        self,
-        candidate_id,
-        role,
-        experience="experienced"
-    ):
+    def start_interview(self, candidate_id, role, experience="experienced"):
 
         try:
 
-            self._log(
-                "==================================="
-            )
+            self._log("===================================")
 
-            self._log(
-                "STARTING INTERVIEW"
-            )
+            self._log("STARTING INTERVIEW")
 
-            self._log(
-                "==================================="
-            )
+            self._log("===================================")
 
             # =============================================
             # PREVENT MULTIPLE RUNS
@@ -153,14 +121,7 @@ class InterviewController:
 
             if self.is_running:
 
-                return {
-
-                    "status": "error",
-
-                    "message": (
-                        "Interview already running"
-                    )
-                }
+                return {"status": "error", "message": ("Interview already running")}
 
             self.is_running = True
 
@@ -169,29 +130,23 @@ class InterviewController:
             # =============================================
 
             state = self.initialize_interview(
-                candidate_id=candidate_id,
-                role=role,
-                experience=experience
+                candidate_id=candidate_id, role=role, experience=experience
             )
 
             if not state:
 
-                raise Exception(
-                    "Failed to initialize interview state"
-                )
+                raise Exception("Failed to initialize interview state")
 
             # =============================================
             # RUN MAIN WORKFLOW
             # =============================================
 
-            self._log(
-                "RUNNING WORKFLOW MANAGER"
-            )
+            self._log("RUNNING WORKFLOW MANAGER")
 
             report = self.workflow.run(
                 role=state.role,
                 experience=state.experience,
-                candidate_id=state.candidate_id
+                candidate_id=state.candidate_id,
             )
 
             # =============================================
@@ -200,9 +155,7 @@ class InterviewController:
 
             if not report:
 
-                raise Exception(
-                    "Workflow returned empty report"
-                )
+                raise Exception("Workflow returned empty report")
 
             # =============================================
             # STORE REPORT
@@ -210,33 +163,17 @@ class InterviewController:
 
             self.state.final_report = report
 
-            self._log(
-                "INTERVIEW COMPLETED SUCCESSFULLY"
-            )
+            self._log("INTERVIEW COMPLETED SUCCESSFULLY")
 
-            return {
-
-                "status": "success",
-
-                "candidate_id": candidate_id,
-
-                "report": report
-            }
+            return {"status": "success", "candidate_id": candidate_id, "report": report}
 
         except Exception as e:
 
-            self._log(
-                f"Interview Failed: {e}"
-            )
+            self._log(f"Interview Failed: {e}")
 
             print(traceback.format_exc())
 
-            return {
-
-                "status": "error",
-
-                "message": str(e)
-            }
+            return {"status": "error", "message": str(e)}
 
         finally:
 
@@ -250,9 +187,7 @@ class InterviewController:
 
         if self.state is None:
 
-            self._log(
-                "No Active Interview State"
-            )
+            self._log("No Active Interview State")
 
             return None
 
@@ -268,11 +203,7 @@ class InterviewController:
 
             return None
 
-        return getattr(
-            self.state,
-            "final_report",
-            None
-        )
+        return getattr(self.state, "final_report", None)
 
     # =====================================================
     # VALIDATE CONTROLLER
@@ -280,17 +211,11 @@ class InterviewController:
 
     def validate(self):
 
-        self._log(
-            "==================================="
-        )
+        self._log("===================================")
 
-        self._log(
-            "CONTROLLER VALIDATION"
-        )
+        self._log("CONTROLLER VALIDATION")
 
-        self._log(
-            "==================================="
-        )
+        self._log("===================================")
 
         print(f"Workflow Loaded : {self.workflow is not None}")
 
@@ -316,32 +241,19 @@ class InterviewController:
 
         try:
 
-            self._log(
-                "RESETTING INTERVIEW CONTROLLER"
-            )
+            self._log("RESETTING INTERVIEW CONTROLLER")
 
             self.state = None
 
             self.is_running = False
 
             return {
-
                 "status": "reset",
-
-                "message": (
-                    "Interview controller reset successful"
-                )
+                "message": ("Interview controller reset successful"),
             }
 
         except Exception as e:
 
-            self._log(
-                f"Reset Failed: {e}"
-            )
+            self._log(f"Reset Failed: {e}")
 
-            return {
-
-                "status": "error",
-
-                "message": str(e)
-            }
+            return {"status": "error", "message": str(e)}

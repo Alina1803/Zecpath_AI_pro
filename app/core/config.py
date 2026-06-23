@@ -1,7 +1,6 @@
 import os
 from pathlib import Path
 
-
 # =========================================================
 # BASE DIRECTORY
 # =========================================================
@@ -12,6 +11,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 # =========================================================
 # PROJECT CONFIGURATION
 # =========================================================
+
 
 class Settings:
 
@@ -49,13 +49,9 @@ class Settings:
 
     DATA_DIR: Path = ROOT_DIR / "data"
 
-    TEMP_DIR: Path = Path(
-        os.getenv("APP_TEMP_DIR", "G:/temp")
-    )
+    TEMP_DIR: Path = Path(os.getenv("APP_TEMP_DIR", "G:/temp"))
 
-    OUTPUT_DIR: Path = (
-        DATA_DIR / "processed" / "output_45"
-    )
+    OUTPUT_DIR: Path = DATA_DIR / "processed" / "output_45"
 
     # =====================================================
     # LANGUAGETOOL
@@ -82,15 +78,9 @@ class Settings:
         # CREATE DIRECTORIES
         # ================================================
 
-        cls.TEMP_DIR.mkdir(
-            parents=True,
-            exist_ok=True
-        )
+        cls.TEMP_DIR.mkdir(parents=True, exist_ok=True)
 
-        cls.OUTPUT_DIR.mkdir(
-            parents=True,
-            exist_ok=True
-        )
+        cls.OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
         # ================================================
         # ENVIRONMENT VARIABLES

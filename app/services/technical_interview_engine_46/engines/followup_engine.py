@@ -1,6 +1,4 @@
-from app.services.followup_engine34.followup_generator import (
-    FollowUpGenerator
-)
+from app.services.followup_engine34.followup_generator import FollowUpGenerator
 
 
 class FollowUpEngine:
@@ -11,8 +9,4 @@ class FollowUpEngine:
 
     def generate(self, question, answer, level):
 
-        return self.generator.generate(
-            question,
-            answer,
-            level
-        )
+        return self.generator.generate(question, answer, level)

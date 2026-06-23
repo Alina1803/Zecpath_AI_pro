@@ -7,5 +7,5 @@ def explain_candidate(candidate):
         "explanation": (
             "Candidate ranked based on ATS, experience, "
             "education, and semantic relevance."
-        )
+        ),
     }

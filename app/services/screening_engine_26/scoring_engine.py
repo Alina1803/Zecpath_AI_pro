@@ -10,7 +10,7 @@ from app.utils.text_preprocessor import TextPreprocessor
 class AdvancedScoringEngine:
 
     # ✅ FIXED constructor
-    def __init__(self, domain_data, prompt_template): 
+    def __init__(self, domain_data, prompt_template):
         self.domain_data = domain_data
         self.prompt_template = prompt_template
 
@@ -20,11 +20,7 @@ class AdvancedScoringEngine:
         clean_answer = TextPreprocessor.clean_text(answer)
 
         # ✅ LLM with prompt
-        llm_scores = evaluate_with_llm(
-            question,
-            clean_answer,
-            self.prompt_template
-        )
+        llm_scores = evaluate_with_llm(question, clean_answer, self.prompt_template)
 
         # ✅ semantic similarity
         semantic = compute_similarity(clean_answer, expected_answer)
@@ -34,12 +30,12 @@ class AdvancedScoringEngine:
 
         # ✅ weighted score
         final_score = (
-            llm_scores["clarity"] * WEIGHTS["clarity"] +
-            llm_scores["relevance"] * WEIGHTS["relevance"] +
-            llm_scores["completeness"] * WEIGHTS["completeness"] +
-            llm_scores["consistency"] * WEIGHTS["consistency"] +
-            semantic * WEIGHTS["semantic"] +
-            domain * WEIGHTS["domain"]
+            llm_scores["clarity"] * WEIGHTS["clarity"]
+            + llm_scores["relevance"] * WEIGHTS["relevance"]
+            + llm_scores["completeness"] * WEIGHTS["completeness"]
+            + llm_scores["consistency"] * WEIGHTS["consistency"]
+            + semantic * WEIGHTS["semantic"]
+            + domain * WEIGHTS["domain"]
         ) * 10
 
         final_score = calibrate(final_score)
@@ -51,5 +47,5 @@ class AdvancedScoringEngine:
             "semantic_score": semantic,
             "domain_score": domain,
             "final_score": final_score,
-            "technical_confidence": round((semantic + domain) / 2, 2)
+            "technical_confidence": round((semantic + domain) / 2, 2),
         }

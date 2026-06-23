@@ -21,17 +21,11 @@ class TestVoicePipeline(unittest.TestCase):
 
     def test_voice_pipeline_methods(self):
 
-        self.assertTrue(
-            hasattr(self.pipeline, "ask_question")
-        )
+        self.assertTrue(hasattr(self.pipeline, "ask_question"))
 
-        self.assertTrue(
-            hasattr(self.pipeline, "capture_candidate_answer")
-        )
+        self.assertTrue(hasattr(self.pipeline, "capture_candidate_answer"))
 
-        self.assertTrue(
-            hasattr(self.pipeline, "run_voice_round")
-        )
+        self.assertTrue(hasattr(self.pipeline, "run_voice_round"))
 
 
 if __name__ == "__main__":

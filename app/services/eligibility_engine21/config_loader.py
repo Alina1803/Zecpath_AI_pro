@@ -2,16 +2,10 @@ import os
 import json
 
 # 🔥 Base directory = app folder
-BASE_DIR = os.path.abspath(
-    os.path.join(os.path.dirname(__file__), "../../")
-)
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../"))
 
 # 🔥 Correct path (app/config/)
-DEFAULT_CONFIG_PATH = os.path.join(
-    BASE_DIR,
-    "config",
-    "eligibility_rules.json"
-)
+DEFAULT_CONFIG_PATH = os.path.join(BASE_DIR, "config", "eligibility_rules.json")
 
 
 def load_rules(path: str = DEFAULT_CONFIG_PATH):
@@ -20,7 +14,8 @@ def load_rules(path: str = DEFAULT_CONFIG_PATH):
 
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
-    
+
+
 def normalize_role(role: str) -> str:
     """
     Normalize role name for consistent matching

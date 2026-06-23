@@ -2,9 +2,18 @@ import re
 from datetime import datetime
 
 MONTH_MAP = {
-    "jan": 1, "feb": 2, "mar": 3, "apr": 4,
-    "may": 5, "jun": 6, "jul": 7, "aug": 8,
-    "sep": 9, "oct": 10, "nov": 11, "dec": 12
+    "jan": 1,
+    "feb": 2,
+    "mar": 3,
+    "apr": 4,
+    "may": 5,
+    "jun": 6,
+    "jul": 7,
+    "aug": 8,
+    "sep": 9,
+    "oct": 10,
+    "nov": 11,
+    "dec": 12,
 }
 
 
@@ -56,18 +65,18 @@ def extract_experience(text):
             span_end = m.end() + 50
             context = text[span_start:span_end]
 
-            experiences.append({
-                "company": "unknown",
-                "role": context[:50],
-                "start_date": start.strftime("%Y-%m"),
-                "end_date": end.strftime("%Y-%m"),
-                "duration_months": duration
-            })
+            experiences.append(
+                {
+                    "company": "unknown",
+                    "role": context[:50],
+                    "start_date": start.strftime("%Y-%m"),
+                    "end_date": end.strftime("%Y-%m"),
+                    "duration_months": duration,
+                }
+            )
 
-    return {
-        "experiences": experiences,
-        "total_experience_months": total_months
-    }
+    return {"experiences": experiences, "total_experience_months": total_months}
+
 
 def detect_gaps(experiences):
     gaps = []
@@ -76,12 +85,14 @@ def detect_gaps(experiences):
 
     for i in range(len(sorted_exp) - 1):
         end = datetime.strptime(sorted_exp[i]["end_date"], "%Y-%m")
-        next_start = datetime.strptime(sorted_exp[i+1]["start_date"], "%Y-%m")
+        next_start = datetime.strptime(sorted_exp[i + 1]["start_date"], "%Y-%m")
 
         diff = calculate_months(end, next_start)
 
         if diff > 1:
-            gaps.append(f"{sorted_exp[i]['end_date']} to {sorted_exp[i+1]['start_date']}")
+            gaps.append(
+                f"{sorted_exp[i]['end_date']} to {sorted_exp[i+1]['start_date']}"
+            )
 
     return gaps
 

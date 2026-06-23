@@ -1,5 +1,5 @@
 from app.services.communication_engine35.communication_engine import (
-    CommunicationEngine as BaseCommunicationEngine
+    CommunicationEngine as BaseCommunicationEngine,
 )
 
 

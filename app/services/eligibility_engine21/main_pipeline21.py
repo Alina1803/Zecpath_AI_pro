@@ -84,14 +84,12 @@ def run_pipeline(resume_path: str, jd_text: str):
         # -----------------------------
         candidate = {
             "id": os.path.basename(resume_path),
-
             # 🔥 FORCE ROLE (IMPORTANT FIX)
             "role": "chartered_accountant",
-
             "score": score,
             "skills": skills,
             "experience": experience,
-            "certifications": parsed_resume.get("certifications", [])
+            "certifications": parsed_resume.get("certifications", []),
         }
 
         # -----------------------------
@@ -123,7 +121,7 @@ def run_pipeline(resume_path: str, jd_text: str):
             "ats_score": score,
             "decision": decision,
             "skills": skills,
-            "experience": experience
+            "experience": experience,
         }
 
     except Exception as e:
@@ -135,10 +133,7 @@ def run_pipeline(resume_path: str, jd_text: str):
 # 🚀 FASTAPI ENDPOINT
 # =========================================================
 @app.post("/process")
-async def process(
-    resume: UploadFile = File(...),
-    jd: str = Form(...)
-):
+async def process(resume: UploadFile = File(...), jd: str = Form(...)):
     try:
         logging.info(f"[API START] Processing file: {resume.filename}")
 
@@ -157,10 +152,7 @@ async def process(
         # -----------------------------
         result = run_pipeline(file_path, jd)
 
-        return {
-            "message": "Processing successful",
-            **result
-        }
+        return {"message": "Processing successful", **result}
 
     except Exception as e:
         logging.error(f"[API ERROR] {str(e)}")

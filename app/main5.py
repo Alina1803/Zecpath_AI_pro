@@ -9,6 +9,7 @@ from app.utils.file_handler import save_output
 RAW_FOLDER = "data/raw"
 PROCESSED_FOLDER = "data/processed/output_5"
 
+
 def process_file(file_path):
     file_name = os.path.basename(file_path)
 

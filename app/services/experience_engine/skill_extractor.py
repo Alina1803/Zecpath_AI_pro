@@ -1,6 +1,7 @@
 from .synonym_mapper import normalize_skill
 from app.utils.constants import SKILL_KEYWORDS
 
+
 def extract_skills(text):
     text = text.lower()
     found_skills = []

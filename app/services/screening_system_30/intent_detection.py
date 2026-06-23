@@ -30,10 +30,7 @@ def train_intent_model(data):
 
     # Save model
     with open(MODEL_PATH, "wb") as f:
-        pickle.dump({
-            "vectorizer": vectorizer,
-            "model": model
-        }, f)
+        pickle.dump({"vectorizer": vectorizer, "model": model}, f)
 
     print("✅ intent_model.pkl saved successfully!")
 
@@ -43,9 +40,7 @@ def load_model():
     Load model safely
     """
     if not os.path.exists(MODEL_PATH):
-        raise FileNotFoundError(
-            "❌ Model not found! Please run training first."
-        )
+        raise FileNotFoundError("❌ Model not found! Please run training first.")
 
     with open(MODEL_PATH, "rb") as f:
         saved = pickle.load(f)

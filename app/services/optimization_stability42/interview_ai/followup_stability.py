@@ -9,4 +9,4 @@ def stable_followup(answer_quality, retry_count):
     if answer_quality == "uncertain":
         return "simplify"
 
-    return "continue"  
+    return "continue"

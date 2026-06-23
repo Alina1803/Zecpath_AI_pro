@@ -10,10 +10,7 @@ class InterviewLogger:
         os.makedirs(self.log_dir, exist_ok=True)
 
         self.session_id = session_id or self._generate_session_id()
-        self.log_file = os.path.join(
-            self.log_dir,
-            f"interview_{self.session_id}.json"
-        )
+        self.log_file = os.path.join(self.log_dir, f"interview_{self.session_id}.json")
 
         self.logs = []
 
@@ -29,7 +26,7 @@ class InterviewLogger:
             "timestamp": datetime.now().isoformat(),
             "session_id": self.session_id,
             "event": event_type,
-            "data": data
+            "data": data,
         }
 
         self.logs.append(entry)
@@ -62,20 +59,14 @@ class InterviewLogger:
         Useful for analytics
         """
 
-        total_questions = len(
-            [l for l in self.logs if l["event"] == "QUESTION"]
-        )
+        total_questions = len([l for l in self.logs if l["event"] == "QUESTION"])
 
-        scores = [
-            l["data"]["score"]
-            for l in self.logs
-            if l["event"] == "SCORE"
-        ]
+        scores = [l["data"]["score"] for l in self.logs if l["event"] == "SCORE"]
 
         avg_score = sum(scores) / len(scores) if scores else 0
 
         return {
             "session_id": self.session_id,
             "total_questions": total_questions,
-            "average_score": avg_score
+            "average_score": avg_score,
         }

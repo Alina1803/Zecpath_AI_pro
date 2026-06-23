@@ -31,7 +31,7 @@ def run_pipeline(resume_text: str, job_description: str):
     return {
         "skills": skills,
         "experience": experience_data,
-        "relevance": relevance_data
+        "relevance": relevance_data,
     }
 
 

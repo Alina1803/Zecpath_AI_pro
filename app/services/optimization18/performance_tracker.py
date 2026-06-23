@@ -4,10 +4,12 @@ from functools import wraps
 
 logging.basicConfig(filename="logs/app.log", level=logging.INFO)
 
+
 def track_time(func):
     """
     Decorator to measure execution time
     """
+
     @wraps(func)
     def wrapper(*args, **kwargs):
         start = time.time()

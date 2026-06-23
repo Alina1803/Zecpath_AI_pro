@@ -5,7 +5,8 @@ from datetime import datetime
 from app.services.summary_39.summary_generator import generate_interview_summary
 
 OUTPUT_DIR = os.path.join("data", "processed", "output_39")
-DATASET_FILE = os.path.join("app","services","summary_39", "sample_reports.json")
+DATASET_FILE = os.path.join("app", "services", "summary_39", "sample_reports.json")
+
 
 def ensure_output_dir():
     os.makedirs(OUTPUT_DIR, exist_ok=True)
@@ -48,7 +49,9 @@ def append_to_dataset(new_result: dict):
         json.dump(data, f, indent=4)
 
 
-def run_pipeline39(candidate_id, hr_scores, communication, behavior, answers, save_output=True):
+def run_pipeline39(
+    candidate_id, hr_scores, communication, behavior, answers, save_output=True
+):
     """
     Full Interview Summary Pipeline (Day 39)
     """
@@ -60,7 +63,7 @@ def run_pipeline39(candidate_id, hr_scores, communication, behavior, answers, sa
             hr_scores=hr_scores,
             communication=communication,
             behavior=behavior,
-            answers=answers
+            answers=answers,
         )
 
         # Step 2: Add timestamp
@@ -77,10 +80,7 @@ def run_pipeline39(candidate_id, hr_scores, communication, behavior, answers, sa
         return result
 
     except Exception as e:
-        return {
-            "error": str(e),
-            "timestamp": datetime.now().isoformat()
-        }
+        return {"error": str(e), "timestamp": datetime.now().isoformat()}
 
 
 # ===============================
@@ -94,17 +94,15 @@ def run():
 
     hr_scores = [
         {"question_id": "Q1", "final_score": 85},
-        {"question_id": "Q2", "final_score": 60}
+        {"question_id": "Q2", "final_score": 60},
     ]
 
-    communication = {
-        "communication_score": 78
-    }
+    communication = {"communication_score": 78}
 
     behavior = {
         "confidence": {"confidence_score": 65},
         "behavioral_score": 70,
-        "contradiction": False
+        "contradiction": False,
     }
 
     answers = ["I worked in a team project"]
@@ -116,7 +114,7 @@ def run():
         communication=communication,
         behavior=behavior,
         answers=answers,
-        save_output=True
+        save_output=True,
     )
 
     # 🔹 Print result

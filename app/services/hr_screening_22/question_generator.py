@@ -13,7 +13,7 @@ def generate_ca_questions():
         with open(
             "app/services/hr_screening_22/dataset/category_mapping.json",
             "r",
-            encoding="utf-8"
+            encoding="utf-8",
         ) as f:
 
             category_data = json.load(f)
@@ -28,11 +28,7 @@ def generate_ca_questions():
     # GET SKILLS
     # ==========================================
 
-    skills = (
-        category_data
-        .get("skills", {})
-        .get("skills", [])
-    )
+    skills = category_data.get("skills", {}).get("skills", [])
 
     # ==========================================
     # FALLBACK SKILLS
@@ -40,11 +36,7 @@ def generate_ca_questions():
 
     if not skills:
 
-        skills = [
-            "GST",
-            "Income Tax",
-            "Audit"
-        ]
+        skills = ["GST", "Income Tax", "Audit"]
 
     # ==========================================
     # SHUFFLE QUESTIONS
@@ -60,8 +52,6 @@ def generate_ca_questions():
 
     for skill in skills:
 
-        questions.append(
-            f"Do you have experience in {skill}?"
-        )
+        questions.append(f"Do you have experience in {skill}?")
 
     return questions

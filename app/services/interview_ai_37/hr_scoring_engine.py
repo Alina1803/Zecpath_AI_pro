@@ -11,7 +11,7 @@ DEFAULT_WEIGHTS = {
     "relevance": 0.30,
     "communication": 0.25,
     "confidence": 0.25,
-    "consistency": 0.20
+    "consistency": 0.20,
 }
 
 
@@ -36,10 +36,10 @@ def score_hr_answer(answer, weights=DEFAULT_WEIGHTS):
     consistency = score_consistency(answer)
 
     final = (
-        relevance * weights["relevance"] +
-        communication * weights["communication"] +
-        confidence * weights["confidence"] +
-        consistency * weights["consistency"]
+        relevance * weights["relevance"]
+        + communication * weights["communication"]
+        + confidence * weights["confidence"]
+        + consistency * weights["consistency"]
     )
 
     return {
@@ -48,9 +48,9 @@ def score_hr_answer(answer, weights=DEFAULT_WEIGHTS):
             "relevance": round(relevance, 2),
             "communication": round(communication, 2),
             "confidence": round(confidence, 2),
-            "consistency": round(consistency, 2)
+            "consistency": round(consistency, 2),
         },
-        "final_score": round(final * 100, 2)
+        "final_score": round(final * 100, 2),
     }
 
 
@@ -82,13 +82,9 @@ def hr_scoring_pipeline(answers, candidate_type="fresher"):
     final_score = aggregate_hr_scores(scored)
 
     decision = (
-        "Strong Hire" if final_score >= 75 else
-        "Consider" if final_score >= 55 else
-        "Reject"
+        "Strong Hire"
+        if final_score >= 75
+        else "Consider" if final_score >= 55 else "Reject"
     )
 
-    return {
-        "hr_score": final_score,
-        "decision": decision,
-        "details": scored
-    }
+    return {"hr_score": final_score, "decision": decision, "details": scored}

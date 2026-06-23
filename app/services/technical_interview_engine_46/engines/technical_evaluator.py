@@ -6,7 +6,7 @@ class TechnicalEvaluator:
         "performance",
         "database",
         "architecture",
-        "complexity"
+        "complexity",
     ]
 
     @classmethod
@@ -34,7 +34,4 @@ class TechnicalEvaluator:
         else:
             level = "weak"
 
-        return {
-            "technical_score": min(score, 10),
-            "quality": level
-        }
+        return {"technical_score": min(score, 10), "quality": level}

@@ -8,25 +8,23 @@ def run_skill_pipeline(input_json, output_json):
     with open(input_json, "r", encoding="utf-8") as f:
         data = json.load(f)
 
-    print("[DEBUG] JSON Keys:",data.keys())
+    print("[DEBUG] JSON Keys:", data.keys())
 
     text = (
-            data.get("raw_text")
-            or data.get("text")
-            or data.get("resume_text")
-            or data.get("full_text")
-            or json.dumps(data)
-            )
+        data.get("raw_text")
+        or data.get("text")
+        or data.get("resume_text")
+        or data.get("full_text")
+        or json.dumps(data)
+    )
 
-    
     skills = extract_skills(text)
 
     scored = []
     for skill in skills:
-        scored.append({
-            "skill": skill,
-            "confidence": score_skill_confidence(skill, text)
-        })
+        scored.append(
+            {"skill": skill, "confidence": score_skill_confidence(skill, text)}
+        )
 
     data["skills"] = scored
 

@@ -2,6 +2,7 @@
 # Debugging Capability Engine
 # --------------------------------------
 
+
 def debugging_score(errors_fixed):
 
     if errors_fixed >= 8:

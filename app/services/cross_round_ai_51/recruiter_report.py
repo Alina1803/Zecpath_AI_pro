@@ -2,6 +2,7 @@
 # Recruiter Reporting Engine
 # -----------------------------------
 
+
 def recruiter_summary(candidate_id, score):
 
     if score >= 80:
@@ -13,9 +14,4 @@ def recruiter_summary(candidate_id, score):
     else:
         summary = "Candidate requires improvement"
 
-    return {
-
-        "candidate_id": candidate_id,
-
-        "recruiter_summary": summary
-    }
+    return {"candidate_id": candidate_id, "recruiter_summary": summary}

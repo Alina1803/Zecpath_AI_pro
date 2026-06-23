@@ -13,6 +13,7 @@ app = FastAPI()
 OUTPUT_DIR = "data/processed/output_31"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
+
 # Dummy AI (replace with real model)
 def ai_model(text):
     return "Processed: " + text
@@ -30,10 +31,7 @@ def process(input_text: str = Body(...)):
     file_path = os.path.join(OUTPUT_DIR, file_name)
 
     # 🔹 Save output safely
-    output_data = {
-        "input": input_text,
-        "output": response
-    }
+    output_data = {"input": input_text, "output": response}
 
     try:
         with open(file_path, "w") as f:
@@ -41,10 +39,7 @@ def process(input_text: str = Body(...)):
     except Exception as e:
         file_path = "Error saving file"
 
-    return {
-        "response": response,
-        "saved_to": file_path
-    }
+    return {"response": response, "saved_to": file_path}
 
 
 @app.get("/metrics")

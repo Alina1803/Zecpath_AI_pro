@@ -4,7 +4,7 @@ import json
 from app.utils.text_cleaner import clean_text
 from app.utils.file_loader import load_file
 
-from app.services.skill_engine9.skill_extractor import  extract_skills
+from app.services.skill_engine9.skill_extractor import extract_skills
 from app.services.experience_engine.experience_parser import extract_experience
 
 from app.services.education_engine11.education_parser import extract_education
@@ -37,7 +37,7 @@ def run_pipeline(resume_text, job_description):
         "experience": experience,
         "education": education,
         "certifications": certifications,
-        "education_relevance": edu_score
+        "education_relevance": edu_score,
     }
 
 

@@ -2,6 +2,7 @@
 # Behavioral Pattern Recognition
 # ----------------------------------------
 
+
 def detect_patterns(events):
 
     patterns = []
@@ -12,10 +13,7 @@ def detect_patterns(events):
     if events["voice_detect"] >= 2:
         patterns.append("Possible External Assistance")
 
-    if (
-        events["gaze_off"] >= 4 and
-        events["focus_loss"] >= 3
-    ):
+    if events["gaze_off"] >= 4 and events["focus_loss"] >= 3:
         patterns.append("Possible Note Referencing")
 
     return patterns

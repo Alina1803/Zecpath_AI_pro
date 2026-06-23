@@ -7,24 +7,16 @@ class ThresholdOptimizer:
             if score >= 80:
                 return {
                     "decision": "Hold / Review",
-                    "reason": "High integrity risk detected"
+                    "reason": "High integrity risk detected",
                 }
 
         if score >= 85:
-            return {
-                "decision": "Strong Hire"
-            }
+            return {"decision": "Strong Hire"}
 
         elif score >= 70:
-            return {
-                "decision": "Hire"
-            }
+            return {"decision": "Hire"}
 
         elif score >= 55:
-            return {
-                "decision": "Hold"
-            }
+            return {"decision": "Hold"}
 
-        return {
-            "decision": "Reject"
-        }
+        return {"decision": "Reject"}

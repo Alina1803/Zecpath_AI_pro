@@ -5,35 +5,30 @@ Defines expected behavioral patterns for different HR scenarios.
 Used by scenario_evaluator.py
 """
 
-
 # ===============================
 # 🎯 IDEAL PATTERN DEFINITIONS
 # ===============================
 IDEAL_PATTERNS = {
     "team_conflict": {
         "keywords": ["communicate", "understand", "resolve"],
-        "description": "Candidate should focus on communication and resolution"
+        "description": "Candidate should focus on communication and resolution",
     },
-
     "deadline_pressure": {
         "keywords": ["prioritize", "plan", "execute"],
-        "description": "Candidate should show time management and execution"
+        "description": "Candidate should show time management and execution",
     },
-
     "learning": {
         "keywords": ["research", "practice", "apply"],
-        "description": "Candidate should demonstrate learning process"
+        "description": "Candidate should demonstrate learning process",
     },
-
     "decision_making": {
         "keywords": ["analyze", "consider", "decide"],
-        "description": "Candidate should evaluate options before decision"
+        "description": "Candidate should evaluate options before decision",
     },
-
     "problem_solving": {
         "keywords": ["identify", "analyze", "solve"],
-        "description": "Candidate should follow structured problem solving"
-    }
+        "description": "Candidate should follow structured problem solving",
+    },
 }
 
 

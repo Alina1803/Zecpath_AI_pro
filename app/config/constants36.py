@@ -7,5 +7,5 @@ STRESS_WORDS = ["nervous", "anxious", "pressure", "worried"]
 
 CONTRADICTIONS = [
     ("i am confident", "i am not confident"),
-    ("i have experience", "i have no experience")
+    ("i have experience", "i have no experience"),
 ]

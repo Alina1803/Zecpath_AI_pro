@@ -2,6 +2,7 @@
 # Final Hiring Decision
 # -----------------------------------
 
+
 def hiring_decision(score):
 
     if score >= 75:

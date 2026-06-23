@@ -11,11 +11,4 @@ class SpeedOptimizer:
 
         end = time.time()
 
-        return {
-
-            "execution_time":
-                round(end - start, 4),
-
-            "status":
-                "Optimized"
-        }
+        return {"execution_time": round(end - start, 4), "status": "Optimized"}

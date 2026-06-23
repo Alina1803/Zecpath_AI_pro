@@ -16,11 +16,13 @@ def experience_relevance(experience_data, job_description):
 
         total_score += weighted_score
 
-        detailed_scores.append({
-            "role": role_text,
-            "company": exp["company"],
-            "score": round(score * 100, 2)
-        })
+        detailed_scores.append(
+            {
+                "role": role_text,
+                "company": exp["company"],
+                "score": round(score * 100, 2),
+            }
+        )
 
     total_exp = experience_data["total_experience_months"]
 
@@ -29,7 +31,4 @@ def experience_relevance(experience_data, job_description):
 
     final_score = (total_score / total_exp) * 100
 
-    return {
-        "relevance_score": round(final_score, 2),
-        "details": detailed_scores
-    }
+    return {"relevance_score": round(final_score, 2), "details": detailed_scores}

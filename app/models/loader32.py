@@ -1,5 +1,6 @@
 import joblib
 
+
 def load_model(path: str):
     try:
         model = joblib.load(path)

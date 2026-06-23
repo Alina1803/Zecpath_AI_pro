@@ -4,5 +4,5 @@ WEIGHTS = {
     "completeness": 0.2,
     "consistency": 0.15,
     "semantic": 0.1,
-    "domain": 0.1
+    "domain": 0.1,
 }

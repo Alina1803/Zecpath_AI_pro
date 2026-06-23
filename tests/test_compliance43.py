@@ -34,12 +34,7 @@ def test_retention_exceeded():
 # Test Bias Removal
 # -------------------------------
 def test_remove_bias_features():
-    candidate = {
-        "name": "John",
-        "gender": "Male",
-        "age": 25,
-        "score": 80
-    }
+    candidate = {"name": "John", "gender": "Male", "age": 25, "score": 80}
 
     result = remove_bias_features(candidate)
 
@@ -53,10 +48,7 @@ def test_remove_bias_features():
 # Test Data Masking
 # -------------------------------
 def test_mask_data():
-    data = {
-        "email": "test@mail.com",
-        "phone": "1234567890"
-    }
+    data = {"email": "test@mail.com", "phone": "1234567890"}
 
     masked = mask_data(data)
 

@@ -2,6 +2,7 @@
 # Behavioral Risk Detection
 # -----------------------------------
 
+
 def detect_behavior_risk(score):
 
     if score < 50:

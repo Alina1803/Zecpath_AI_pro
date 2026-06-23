@@ -29,13 +29,10 @@ async def score_candidate(request: HRRequest):
 
     result = hr_scoring_pipeline(
         answers=[a.dict() for a in request.answers],
-        candidate_type=request.candidate_type
+        candidate_type=request.candidate_type,
     )
 
-    output = {
-        "candidate_id": request.candidate_id,
-        **result
-    }
+    output = {"candidate_id": request.candidate_id, **result}
 
     save_output(output)
 

@@ -1,6 +1,7 @@
 POSITIVE = ["confident", "clearly", "definitely", "accurate"]
 NEGATIVE = ["not sure", "confused", "difficult", "maybe"]
 
+
 def analyze_sentiment(text):
     text = text.lower()
 

@@ -1,7 +1,9 @@
 from app.services.stress_conf_analyzer36.confidence_analyzer import calculate_confidence
 from app.services.stress_conf_analyzer36.sentiment_engine import sentiment_score
 from app.services.stress_conf_analyzer36.stress_detector import stress_score
-from app.services.stress_conf_analyzer36.contradiction_detector import detect_contradiction
+from app.services.stress_conf_analyzer36.contradiction_detector import (
+    detect_contradiction,
+)
 
 from app.config.weights36 import *
 
@@ -10,10 +12,8 @@ import json
 from datetime import datetime
 
 
-
 def normalize(value):
     return max(0, min(value / 100, 1))
-
 
 
 def save_output(data):
@@ -38,23 +38,20 @@ def analyze_behavior(text, duration, save=True):
     contradiction = detect_contradiction(text)
 
     final_score = (
-        normalize(confidence) * CONFIDENCE_WEIGHT +
-        normalize(sentiment) * SENTIMENT_WEIGHT +
-        normalize(stress) * STRESS_WEIGHT +
-        normalize(contradiction) * CONTRADICTION_WEIGHT
+        normalize(confidence) * CONFIDENCE_WEIGHT
+        + normalize(sentiment) * SENTIMENT_WEIGHT
+        + normalize(stress) * STRESS_WEIGHT
+        + normalize(contradiction) * CONTRADICTION_WEIGHT
     )
 
     result = {
-        "input": {
-            "text": text,
-            "duration": duration
-        },
+        "input": {"text": text, "duration": duration},
         "confidence": confidence,
         "sentiment": sentiment,
         "stress": stress,
         "contradiction": contradiction,
         "behavioral_score": round(final_score * 100, 2),
-        "timestamp": datetime.now().isoformat()
+        "timestamp": datetime.now().isoformat(),
     }
 
     # Save result

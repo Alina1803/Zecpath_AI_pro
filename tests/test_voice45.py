@@ -4,51 +4,30 @@ import shutil
 
 from datetime import datetime
 
-from app.services.voice_ai_45.voice_pipeline import (
-    VoiceInterviewPipeline
-)
+from app.services.voice_ai_45.voice_pipeline import VoiceInterviewPipeline
 
 # =====================================================
 # OUTPUT CONFIG
 # =====================================================
 
-OUTPUT_DIR = os.path.join(
-    "data",
-    "processed",
-    "output","output_test")
+OUTPUT_DIR = os.path.join("data", "processed", "output", "output_test")
 
-os.makedirs(
-    OUTPUT_DIR,
-    exist_ok=True
-)
+os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 # =====================================================
 # SAVE RESULT JSON
 # =====================================================
 
+
 def save_result(data):
 
-    timestamp = datetime.now().strftime(
-        "%Y%m%d_%H%M%S"
-    )
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 
-    output_path = os.path.join(
-        OUTPUT_DIR,
-        f"voice_pipeline_test_{timestamp}.json"
-    )
+    output_path = os.path.join(OUTPUT_DIR, f"voice_pipeline_test_{timestamp}.json")
 
-    with open(
-        output_path,
-        "w",
-        encoding="utf-8"
-    ) as f:
+    with open(output_path, "w", encoding="utf-8") as f:
 
-        json.dump(
-            data,
-            f,
-            indent=4,
-            ensure_ascii=False
-        )
+        json.dump(data, f, indent=4, ensure_ascii=False)
 
     print("\n=================================")
     print("RESULT SAVED")
@@ -63,30 +42,19 @@ def save_result(data):
 # COPY AUDIO TO OUTPUT FOLDER
 # =====================================================
 
+
 def save_audio_copy(audio_path):
 
-    if (
-        not audio_path
-        or
-        not os.path.exists(audio_path)
-    ):
+    if not audio_path or not os.path.exists(audio_path):
 
         print("\nAudio file not found")
         return None
 
-    timestamp = datetime.now().strftime(
-        "%Y%m%d_%H%M%S"
-    )
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 
-    copied_audio = os.path.join(
-        OUTPUT_DIR,
-        f"recorded_intro_{timestamp}.wav"
-    )
+    copied_audio = os.path.join(OUTPUT_DIR, f"recorded_intro_{timestamp}.wav")
 
-    shutil.copy(
-        audio_path,
-        copied_audio
-    )
+    shutil.copy(audio_path, copied_audio)
 
     print("\n=================================")
     print("AUDIO SAVED")
@@ -100,6 +68,7 @@ def save_audio_copy(audio_path):
 # =====================================================
 # SAFE AUDIO PLAY
 # =====================================================
+
 
 def play_audio(audio_path):
 
@@ -141,6 +110,7 @@ def play_audio(audio_path):
 # TEST VOICE PIPELINE
 # =====================================================
 
+
 def run_test():
 
     print("\n=================================")
@@ -158,16 +128,13 @@ def run_test():
     # =================================================
 
     result = pipeline.process_question(
-
         question=(
             "Please introduce yourself. "
             "Tell me about your background, "
             "skills, and experience."
         ),
-
         question_id="self_intro",
-
-        duration=60
+        duration=60,
     )
 
     # =================================================
@@ -178,12 +145,7 @@ def run_test():
     print("FINAL RESULT")
     print("=================================")
 
-    print(
-        json.dumps(
-            result,
-            indent=4
-        )
-    )
+    print(json.dumps(result, indent=4))
 
     # =================================================
     # SAVE JSON OUTPUT
@@ -195,13 +157,9 @@ def run_test():
     # SAVE AUDIO COPY
     # =================================================
 
-    audio_path = result.get(
-        "audio_path"
-    )
+    audio_path = result.get("audio_path")
 
-    copied_audio = save_audio_copy(
-        audio_path
-    )
+    copied_audio = save_audio_copy(audio_path)
 
     # =================================================
     # PLAY AUDIO
@@ -213,10 +171,7 @@ def run_test():
     # VALIDATION
     # =================================================
 
-    transcript = result.get(
-        "transcript",
-        ""
-    )
+    transcript = result.get("transcript", "")
 
     print("\n=================================")
     print("TRANSCRIPT CHECK")
@@ -226,9 +181,7 @@ def run_test():
 
         print("\nSTT SUCCESS")
 
-        print(
-            f"\nTranscript:\n{transcript}"
-        )
+        print(f"\nTranscript:\n{transcript}")
 
     else:
 

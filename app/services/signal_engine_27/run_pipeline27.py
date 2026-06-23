@@ -4,22 +4,11 @@ from datetime import datetime
 
 from app.services.signal_engine_27.signal_engine import SignalEngine
 
-
 BASE_DIR = os.getcwd()
 
-INPUT_PATH = os.path.join(
-    BASE_DIR,
-    "data",
-    "processed",
-    "output_26"
-)
+INPUT_PATH = os.path.join(BASE_DIR, "data", "processed", "output_26")
 
-OUTPUT_DIR = os.path.join(
-    BASE_DIR,
-    "data",
-    "processed",
-    "output_27"
-)
+OUTPUT_DIR = os.path.join(BASE_DIR, "data", "processed", "output_27")
 
 
 def load_latest_output():
@@ -34,8 +23,7 @@ def save_output(data):
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
     file_path = os.path.join(
-        OUTPUT_DIR,
-        f"signal_results_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
+        OUTPUT_DIR, f"signal_results_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
     )
 
     with open(file_path, "w", encoding="utf-8") as f:
@@ -58,10 +46,7 @@ def run():
         item.update(signal)
         results.append(item)
 
-    final_output = {
-        "meta": data["meta"],
-        "results": results
-    }
+    final_output = {"meta": data["meta"], "results": results}
 
     path = save_output(final_output)
 

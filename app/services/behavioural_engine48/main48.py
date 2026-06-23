@@ -2,21 +2,15 @@ from fastapi import FastAPI
 
 from app.models.model48 import BehaviorRequest
 
-from app.services.behavioural_engine48.scoring_engine import (
-    behavioral_pipeline
-)
+from app.services.behavioural_engine48.scoring_engine import behavioral_pipeline
 
-app = FastAPI(
-    title="Behavioral AI API"
-)
+app = FastAPI(title="Behavioral AI API")
 
 
 @app.get("/")
 def home():
 
-    return {
-        "message": "Behavioral AI System Running"
-    }
+    return {"message": "Behavioral AI System Running"}
 
 
 @app.post("/analyze")

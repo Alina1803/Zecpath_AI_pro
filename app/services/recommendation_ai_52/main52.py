@@ -1,6 +1,8 @@
 from fastapi import FastAPI
 
-from app.services.recommendation_ai_52.recommendation_pipeline import recommendation_pipeline
+from app.services.recommendation_ai_52.recommendation_pipeline import (
+    recommendation_pipeline,
+)
 
 app = FastAPI()
 
@@ -13,14 +15,14 @@ def generate():
         "communication": 81,
         "behavior": 70,
         "integrity": 65,
-        "final_score": 84
+        "final_score": 84,
     }
 
     result = recommendation_pipeline(
         candidate_id="C1001",
         scores=scores,
         behavior_risk="Low Risk",
-        integrity_risk="Moderate Risk"
+        integrity_risk="Moderate Risk",
     )
 
     return result

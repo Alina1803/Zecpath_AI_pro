@@ -1,9 +1,10 @@
 import re
 
+
 class FluencyChecker:
 
     def evaluate(self, text: str) -> float:
-        sentences = re.split(r'[.!?]', text)
+        sentences = re.split(r"[.!?]", text)
         sentences = [s.strip() for s in sentences if s.strip()]
 
         if not sentences:

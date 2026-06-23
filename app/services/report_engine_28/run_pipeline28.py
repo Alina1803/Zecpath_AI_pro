@@ -44,10 +44,7 @@ def run_pipeline():
         with open(dataset_path, "r") as f:
             dataset = json.load(f)
 
-        dataset_map = {
-            item.get("candidate_id"): item
-            for item in dataset
-        }
+        dataset_map = {item.get("candidate_id"): item for item in dataset}
 
     # -------------------------------
     # INIT REPORT GENERATOR
@@ -72,11 +69,7 @@ def run_pipeline():
             # Merge dataset info
             extra = dataset_map.get(rec.get("candidate_id"), {})
 
-            combined = {
-                **rec,
-                **extra,
-                "overall_confidence": overall_conf
-            }
+            combined = {**rec, **extra, "overall_confidence": overall_conf}
 
             # Generate report
             report = report_generator.generate(combined)
@@ -86,11 +79,13 @@ def run_pipeline():
 
         except Exception as e:
             failed += 1
-            final_reports.append({
-                "candidate_id": rec.get("candidate_id", "UNKNOWN"),
-                "status": "failed",
-                "error": str(e)
-            })
+            final_reports.append(
+                {
+                    "candidate_id": rec.get("candidate_id", "UNKNOWN"),
+                    "status": "failed",
+                    "error": str(e),
+                }
+            )
 
     # -------------------------------
     # META INFO
@@ -102,16 +97,13 @@ def run_pipeline():
         "processed": processed,
         "failed": failed,
         "engine_version": "v3.0",
-        "stage": "Day28_Report_Generation"
+        "stage": "Day28_Report_Generation",
     }
 
     # -------------------------------
     # FINAL OUTPUT
     # -------------------------------
-    output = {
-        "meta": meta,
-        "reports": final_reports
-    }
+    output = {"meta": meta, "reports": final_reports}
 
     # -------------------------------
     # SAVE OUTPUT (FIXED )

@@ -15,12 +15,14 @@ class TestEvaluator:
             if candidate_answers.get(question_id) == correct_answer:
                 correct_count += 1
 
-        score_percentage = (correct_count / total_questions) * 100 if total_questions > 0 else 0
+        score_percentage = (
+            (correct_count / total_questions) * 100 if total_questions > 0 else 0
+        )
 
         return {
             "total_questions": total_questions,
             "correct_answers": correct_count,
-            "score_percentage": round(score_percentage, 2)
+            "score_percentage": round(score_percentage, 2),
         }
 
     # ------------------------------
@@ -47,7 +49,7 @@ class TestEvaluator:
                     "passed": 0,
                     "total": len(test_cases),
                     "score_percentage": 0,
-                    "error": "Function 'solution' not defined"
+                    "error": "Function 'solution' not defined",
                 }
 
             solution_func = local_env["solution"]
@@ -59,19 +61,21 @@ class TestEvaluator:
                 if is_correct:
                     passed += 1
 
-                results.append({
-                    "input": case["input"],
-                    "expected": case["expected_output"],
-                    "output": output,
-                    "passed": is_correct
-                })
+                results.append(
+                    {
+                        "input": case["input"],
+                        "expected": case["expected_output"],
+                        "output": output,
+                        "passed": is_correct,
+                    }
+                )
 
         except Exception as e:
             return {
                 "passed": 0,
                 "total": len(test_cases),
                 "score_percentage": 0,
-                "error": traceback.format_exc()
+                "error": traceback.format_exc(),
             }
 
         total_cases = len(test_cases)
@@ -81,7 +85,7 @@ class TestEvaluator:
             "passed": passed,
             "total": total_cases,
             "score_percentage": round(score_percentage, 2),
-            "details": results
+            "details": results,
         }
 
     # ------------------------------
@@ -92,19 +96,19 @@ class TestEvaluator:
         mcq_answers: Dict,
         mcq_correct: Dict,
         submitted_code: str,
-        coding_test_cases: List[Dict]
+        coding_test_cases: List[Dict],
     ) -> Dict:
 
         mcq_result = self.evaluate_mcq(mcq_answers, mcq_correct)
         coding_result = self.evaluate_coding(submitted_code, coding_test_cases)
 
         final_score = (
-            0.4 * mcq_result["score_percentage"] +
-            0.6 * coding_result["score_percentage"]
+            0.4 * mcq_result["score_percentage"]
+            + 0.6 * coding_result["score_percentage"]
         )
 
         return {
             "mcq_result": mcq_result,
             "coding_result": coding_result,
-            "final_test_score": round(final_score, 2)
+            "final_test_score": round(final_score, 2),
         }

@@ -6,11 +6,10 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from app.services.experience_parser import (
     extract_experience_entries,
     calculate_total_experience,
-    detect_experience_gaps
+    detect_experience_gaps,
 )
 
 from app.services.experience_relevance import compute_experience_relevance
-
 
 resume_text = """
 Software Engineer

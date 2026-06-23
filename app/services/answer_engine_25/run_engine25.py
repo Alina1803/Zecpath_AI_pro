@@ -4,7 +4,6 @@ from datetime import datetime
 
 from app.services.answer_engine_25.answer_engine import AnswerEngine
 
-
 BASE_DIR = os.getcwd()
 
 INPUT_DIR = os.path.join(BASE_DIR, "Data", "processed", "output_24_Audio")
@@ -75,7 +74,7 @@ def run():
         result = {
             "audio_file": data.get("audio_file"),
             "clean_text": clean_text,
-            "analysis": analysis
+            "analysis": analysis,
         }
 
         save_output(result, file_name)

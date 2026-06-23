@@ -22,9 +22,7 @@ def semantic_match(resume_text, job_description):
     if vec1 is None or vec2 is None:
         return {"semantic_similarity": 0.0}
 
-    return {
-        "semantic_similarity": round(compute_similarity(vec1, vec2), 3)
-    }
+    return {"semantic_similarity": round(compute_similarity(vec1, vec2), 3)}
 
 
 # -----------------------------
@@ -40,10 +38,10 @@ def match_skills(resume_skills, jd_skills):
         jd_skills = sum(jd_skills.values(), [])
 
     if not jd_skills:
-        return 0.0   # ✅ correct
+        return 0.0  # ✅ correct
 
     if not resume_skills:
-        return 0.0   # ✅ important fix
+        return 0.0  # ✅ important fix
 
     matched = set(resume_skills) & set(jd_skills)
 
@@ -85,10 +83,8 @@ def match_education(resume_edu, jd_education):
     if isinstance(jd_education, list):
         jd_education = " ".join(jd_education)
 
-    return compute_similarity(
-        get_embedding(resume_edu),
-        get_embedding(jd_education)
-    )
+    return compute_similarity(get_embedding(resume_edu), get_embedding(jd_education))
+
 
 # -----------------------------
 # PROJECT MATCH

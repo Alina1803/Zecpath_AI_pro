@@ -3,6 +3,7 @@ class ReportGenerator:
     Generates recruiter-ready screening reports
     from combined technical + behavioral evaluation data.
     """
+
     # -------------------------------
     # CONFIDENCE BAND
     # -------------------------------
@@ -115,7 +116,6 @@ class ReportGenerator:
 
         return {
             "candidate_id": combined_results.get("candidate_id", "UNKNOWN"),
-
             # -------------------------------
             # OVERALL SUMMARY
             # -------------------------------
@@ -123,9 +123,8 @@ class ReportGenerator:
                 "final_score": combined_results.get("final_score", 0),
                 "overall_confidence": overall,
                 "confidence_band": self._band(overall),
-                "recommendation": self._recommendation(overall)
+                "recommendation": self._recommendation(overall),
             },
-
             # -------------------------------
             # TECHNICAL EVALUATION
             # -------------------------------
@@ -134,23 +133,23 @@ class ReportGenerator:
                 "semantic_score": combined_results.get("semantic_score", 0),
                 "domain_score": combined_results.get("domain_score", 0),
                 "key_strengths": self._extract_strengths(combined_results),
-                "gaps": self._extract_gaps(combined_results)
+                "gaps": self._extract_gaps(combined_results),
             },
-
             # -------------------------------
             # BEHAVIORAL EVALUATION
             # -------------------------------
             "behavioral_evaluation": {
                 "behavioral_confidence": beh,
-                "communication_strength": combined_results.get("communication_strength", 0),
+                "communication_strength": combined_results.get(
+                    "communication_strength", 0
+                ),
                 "sentiment_score": combined_results.get("sentiment_score", 0),
-                "risk_flags": combined_results.get("flags", [])
+                "risk_flags": combined_results.get("flags", []),
             },
-
             # -------------------------------
             # INSIGHTS
             # -------------------------------
             "highlights": self._extract_highlights(combined_results),
             "risks": self._generate_risks(combined_results),
-            "missing_data": self._missing_data(combined_results)
+            "missing_data": self._missing_data(combined_results),
         }

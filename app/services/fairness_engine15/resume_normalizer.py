@@ -10,5 +10,5 @@ def normalize_candidate(candidate):
         "certifications": candidate.get("certifications", []),
         "scores": candidate.get("scores", {}),
         "rank": candidate.get("rank", None),
-        "decision": candidate.get("decision", None)
+        "decision": candidate.get("decision", None),
     }

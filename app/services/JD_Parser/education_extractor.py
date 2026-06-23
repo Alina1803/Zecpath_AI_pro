@@ -1,10 +1,11 @@
-EDUCATION = [ "chartered accountant",
+EDUCATION = [
+    "chartered accountant",
     "ca",
     "ca inter",
     "ca intermediate",
     "ca final",
-    "icai"
-    ]
+    "icai",
+]
 
 
 def extract_education(text):

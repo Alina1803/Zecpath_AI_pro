@@ -5,7 +5,6 @@ from app.services.dashboard_engine16.dashboard_data import prepare_dashboard_row
 from app.services.dashboard_engine16.explainability_engine import explain_candidate
 from app.services.dashboard_engine16.fairness_dashboard import fairness_metrics
 
-
 INPUT_FILE = "data/processed/output_15/fair_candidates.json"
 OUTPUT_FILE = "data/processed/output_16/dashboard_data.json"
 
@@ -30,15 +29,12 @@ def main():
     dashboard_rows = prepare_dashboard_rows(candidates)
     fairness = fairness_metrics(candidates)
 
-    explainability = [
-        explain_candidate(c)
-        for c in candidates[:5]
-    ]
+    explainability = [explain_candidate(c) for c in candidates[:5]]
 
     final_output = {
         "dashboard_rows": dashboard_rows,
         "fairness_metrics": fairness,
-        "top_5_explanations": explainability
+        "top_5_explanations": explainability,
     }
 
     save_output(final_output)

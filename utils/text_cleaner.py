@@ -14,7 +14,7 @@ def remove_extra_whitespace(text: str) -> str:
     """
     Remove unnecessary spaces, tabs, and newlines.
     """
-    text = re.sub(r'\s+', ' ', text)
+    text = re.sub(r"\s+", " ", text)
     return text.strip()
 
 
@@ -22,21 +22,21 @@ def remove_urls(text: str) -> str:
     """
     Remove URLs from resume.
     """
-    return re.sub(r'https?://\S+|www\.\S+', '', text)
+    return re.sub(r"https?://\S+|www\.\S+", "", text)
 
 
 def remove_emails(text: str) -> str:
     """
     Remove email addresses.
     """
-    return re.sub(r'\S+@\S+', '', text)
+    return re.sub(r"\S+@\S+", "", text)
 
 
 def remove_phone_numbers(text: str) -> str:
     """
     Remove phone numbers (basic patterns).
     """
-    return re.sub(r'\+?\d[\d\-\s]{8,}\d', '', text)
+    return re.sub(r"\+?\d[\d\-\s]{8,}\d", "", text)
 
 
 def normalize_case(text: str) -> str:
@@ -50,7 +50,7 @@ def remove_special_characters(text: str) -> str:
     """
     Keep only alphabets, numbers, and basic punctuation.
     """
-    return re.sub(r'[^a-zA-Z0-9.,\n ]', '', text)
+    return re.sub(r"[^a-zA-Z0-9.,\n ]", "", text)
 
 
 def clean_text(text: str) -> str:

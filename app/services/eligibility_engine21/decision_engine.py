@@ -40,15 +40,15 @@ def evaluate_candidate(candidate: dict, rules: dict) -> dict:
     # ✅ Step 3: Validation
     # -----------------------------
     validation_result = validate_candidate(candidate, role, rule)
-# -----------------------------
-# 🔍 DEBUG (ADD HERE)
-# -----------------------------
+    # -----------------------------
+    # 🔍 DEBUG (ADD HERE)
+    # -----------------------------
     print("\nDEBUG:")
     print("Score:", validation_result["score"])
     print("Skills:", candidate.get("skills"))
     print("Experience:", candidate.get("experience"))
     print("Checks:", validation_result["checks"])
-    
+
     # -----------------------------
     # ✅ Step 4: Confidence
     # -----------------------------
@@ -82,5 +82,5 @@ def evaluate_candidate(candidate: dict, rules: dict) -> dict:
         "confidence": confidence,
         "score": score,
         "missing_skills": validation_result["missing_skills"],
-        "checks": validation_result["checks"]
+        "checks": validation_result["checks"],
     }

@@ -4,15 +4,16 @@ from datetime import datetime
 
 from app.utils.file_loader import load_file
 from app.utils.text_cleaner import clean_text
-from app.services.skill_engine9.skill_extractor import (extract_skills)
-from app.services.experience_engine.experience_parser import (extract_experience)
-from app.services.experience_engine.relevance_engine import (experience_relevance)
-from app.services.education_engine11.education_parser import (extract_education)
-from app.services.education_engine11.certification_parser import (extract_certifications)
-from app.services.education_engine11.education_relevance import (education_relevance)
-from app.services.semantic_engine12.similarity_engine import (semantic_similarity)
+from app.services.skill_engine9.skill_extractor import extract_skills
+from app.services.experience_engine.experience_parser import extract_experience
+from app.services.experience_engine.relevance_engine import experience_relevance
+from app.services.education_engine11.education_parser import extract_education
+from app.services.education_engine11.certification_parser import extract_certifications
+from app.services.education_engine11.education_relevance import education_relevance
+from app.services.semantic_engine12.similarity_engine import semantic_similarity
 
-from app.services.ats_engine13.ats_scorer import (calculate_score)
+from app.services.ats_engine13.ats_scorer import calculate_score
+
 
 # ==========================================
 # SAFE NUMBER HANDLER
@@ -21,8 +22,7 @@ def safe_number(value):
 
     if isinstance(value, dict):
 
-        return value.get(
-            "relevance_score",0)
+        return value.get("relevance_score", 0)
 
     if value is None:
 
@@ -30,10 +30,11 @@ def safe_number(value):
 
     return value
 
+
 # ==========================================
 # PIPELINE RUNNER
 # ==========================================
-def run_pipeline(resume_text,job_description,file_name="unknown"):
+def run_pipeline(resume_text, job_description, file_name="unknown"):
 
     cleaned_resume = clean_text(resume_text)
     cleaned_jd = clean_text(job_description)
@@ -41,84 +42,52 @@ def run_pipeline(resume_text,job_description,file_name="unknown"):
     skills = extract_skills(cleaned_resume)
     jd_skills = extract_skills(cleaned_jd)
     experience = extract_experience(cleaned_resume)
-    exp_relevance = experience_relevance(experience,cleaned_jd)
+    exp_relevance = experience_relevance(experience, cleaned_jd)
     education = extract_education(cleaned_resume)
     certifications = extract_certifications(cleaned_resume)
-    edu_relevance = education_relevance(education,cleaned_jd)
+    edu_relevance = education_relevance(education, cleaned_jd)
 
-    semantic_raw = semantic_similarity(cleaned_resume,cleaned_jd)
+    semantic_raw = semantic_similarity(cleaned_resume, cleaned_jd)
 
     resume_data = {
-
         "skills": skills,
-
         "experience": safe_number(experience),
-
         "education": education,
         "certifications": certifications,
-
         # 🔥 NEW
         "summary": cleaned_resume[:1000],
-
-        "experience_text": str(
-            experience)
+        "experience_text": str(experience),
     }
 
     # --------------------------------------
     # STRUCTURED JD DATA
     # --------------------------------------
     jd_data = {
-
         "skills": jd_skills,
-
-        "experience": safe_number(
-            exp_relevance),
-
+        "experience": safe_number(exp_relevance),
         "education": [],
-
         # 🔥 NEW
-        "job_description": cleaned_jd
+        "job_description": cleaned_jd,
     }
 
     # --------------------------------------
     # ATS SCORING
     # --------------------------------------
-    ats_result = calculate_score(
-
-        resume_data,
-        jd_data,
-
-        semantic_raw
-    )
+    ats_result = calculate_score(resume_data, jd_data, semantic_raw)
 
     # --------------------------------------
     # FINAL PIPELINE OUTPUT
     # --------------------------------------
     return {
-
-        "metadata": {
-
-            "file_name": file_name,
-
-            "processed_at": str(
-                datetime.now()
-            )
-        },
-
+        "metadata": {"file_name": file_name, "processed_at": str(datetime.now())},
         "extracted_data": {
-
             "skills": skills,
-
             "experience": experience,
-
             "education": education,
-
-            "certifications": certifications
+            "certifications": certifications,
         },
-
         "semantic_similarity": semantic_raw,
-
-        "scores": ats_result
+        "scores": ats_result,
     }
 
 
@@ -129,14 +98,9 @@ def main():
 
     input_folder = "data/raw"
 
-    output_folder = (
-        "data/processed/output_13"
-    )
+    output_folder = "data/processed/output_13"
 
-    os.makedirs(
-        output_folder,
-        exist_ok=True
-    )
+    os.makedirs(output_folder, exist_ok=True)
 
     # --------------------------------------
     # SAMPLE JD
@@ -160,75 +124,50 @@ def main():
     # --------------------------------------
     # PROCESS FILES
     # --------------------------------------
-    for file_name in os.listdir(
-        input_folder
-    ):
+    for file_name in os.listdir(input_folder):
 
-        if not file_name.endswith(
-            (".txt", ".pdf", ".docx")
-        ):
+        if not file_name.endswith((".txt", ".pdf", ".docx")):
 
             continue
 
-        input_path = os.path.join(
-            input_folder,
-            file_name
-        )
+        input_path = os.path.join(input_folder, file_name)
 
         try:
 
             # ----------------------------------
             # LOAD FILE
             # ----------------------------------
-            resume_text = load_file(
-                input_path
-            )
+            resume_text = load_file(input_path)
 
             # ----------------------------------
             # EMPTY CHECK
             # ----------------------------------
             if not resume_text.strip():
 
-                print(
-                    f"⚠ Empty File: {file_name}"
-                )
+                print(f"⚠ Empty File: {file_name}")
 
                 continue
 
             # ----------------------------------
             # RUN PIPELINE
             # ----------------------------------
-            result = run_pipeline(
-
-                resume_text,
-                job_description,
-
-                file_name=file_name
-            )
+            result = run_pipeline(resume_text, job_description, file_name=file_name)
 
             # ----------------------------------
             # OUTPUT FILE
             # ----------------------------------
-            output_file = (
-                file_name.rsplit(".", 1)[0]
-                + "_output.json")
+            output_file = file_name.rsplit(".", 1)[0] + "_output.json"
 
-            output_path = os.path.join(output_folder,output_file)
+            output_path = os.path.join(output_folder, output_file)
 
             # ----------------------------------
             # SAVE RESULT
             # ----------------------------------
-            with open(
+            with open(output_path, "w", encoding="utf-8") as f:
 
-                output_path,
-                "w",
+                json.dump(result, f, indent=4)
 
-                encoding="utf-8") as f:
-
-                json.dump(result,f,indent=4)
-
-            print(
-                f"✅ Processed: {file_name}")
+            print(f"✅ Processed: {file_name}")
 
             total_processed += 1
 
@@ -237,11 +176,9 @@ def main():
             print(f"❌ Error: {file_name}")
             print(f"Reason: {e}")
 
-
     print("\n======================")
 
-    print(f" Total Processed: "
-        f"{total_processed}")
+    print(f" Total Processed: " f"{total_processed}")
 
     print("======================")
 

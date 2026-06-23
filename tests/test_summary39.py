@@ -10,9 +10,9 @@ def test_summary():
         behavior={
             "confidence": {"confidence_score": 75},
             "behavioral_score": 78,
-            "contradiction": False
+            "contradiction": False,
         },
-        answers=["I worked in a team"]
+        answers=["I worked in a team"],
     )
 
     assert result["decision"] == "Strong Hire"

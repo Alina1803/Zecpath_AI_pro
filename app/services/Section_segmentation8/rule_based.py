@@ -4,8 +4,9 @@ SECTION_HEADERS = {
     "experience": ["experience", "work experience"],
     "projects": ["projects"],
     "certifications": ["certifications"],
-    "summary": ["summary", "objective"]
+    "summary": ["summary", "objective"],
 }
+
 
 def is_heading(line):
     if line.isupper():
@@ -13,6 +14,7 @@ def is_heading(line):
     if line.endswith(":"):
         return True
     return False
+
 
 def classify_heading(line):
     line = line.lower()

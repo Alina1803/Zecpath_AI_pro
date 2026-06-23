@@ -10,7 +10,4 @@ def evaluate_candidate(candidate: CandidateRequest):
 
     result = process_candidate(candidate.dict())
 
-    return {
-        "status": "success",
-        "result": result
-    }
+    return {"status": "success", "result": result}

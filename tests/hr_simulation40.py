@@ -15,14 +15,11 @@ def simulate_candidate(candidate_type):
     return {
         "candidate_type": candidate_type,
         "timestamp": datetime.now().isoformat(),
-
         # Interview Data
         "responses": result["responses"],
-
         # Scores
         "ai_score": ai_score,
         "human_score": human_score,
-
         # Decisions
         "decision_ai": result["decision"],
     }
@@ -36,9 +33,6 @@ def run_simulation(n=40, seed=42):
 
     types = ["Confident", "Hesitant", "Inexperienced", "Overqualified"]
 
-    results = [
-        simulate_candidate(random.choice(types))
-        for _ in range(n)
-    ]
+    results = [simulate_candidate(random.choice(types)) for _ in range(n)]
 
     return results

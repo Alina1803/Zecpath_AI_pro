@@ -2,6 +2,7 @@ import datetime
 
 RETENTION_DAYS = 90
 
+
 def check_retention(date_stored):
     today = datetime.datetime.now()
     diff = (today - date_stored).days

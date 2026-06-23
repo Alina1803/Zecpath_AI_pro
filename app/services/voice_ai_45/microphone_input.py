@@ -10,295 +10,180 @@ import sounddevice as sd
 
 class MicrophoneInput:
 
-    # =====================================================
-    # INIT
-    # =====================================================
-
     def __init__(self):
 
-        self.output_dir = (
-            "data/raw/Audios_45"
-        )
+        self.output_dir = "data/raw/Audios_45"
 
         os.makedirs(
             self.output_dir,
-            exist_ok=True
+            exist_ok=True,
         )
 
         print("✅ MicrophoneInput Ready")
 
-    # =====================================================
-    # LIST DEVICES
-    # =====================================================
-
-    def list_devices(self):
-
-        print("\n=================================")
-        print("AVAILABLE MICROPHONE DEVICES")
-        print("=================================\n")
-
-        devices = sd.query_devices()
-
-        for idx, device in enumerate(devices):
-
-            if device["max_input_channels"] > 0:
-
-                print(
-                    f"[{idx}] "
-                    f"{device['name']}"
-                )
-
-        return devices
-
-    # =====================================================
-    # SMART RECORDING
-    # =====================================================
+    # =================================================
+    # SMART DYNAMIC RECORDING
+    # =================================================
 
     def record_audio_dynamic(
-
         self,
-
         filename="output.wav",
-
-        duration=60,
-
+        duration=30,
         silence_limit=4,
-
         sample_rate=16000,
-
-        device=None
-
+        device=None,
     ):
-
-        print("\n=================================")
-        print("SMART RECORDING STARTED")
-        print("=================================")
 
         filepath = os.path.join(
             self.output_dir,
-            filename
+            filename,
         )
 
-        audio_queue = queue.Queue()
+        audio_queue = queue.Queue(maxsize=100)
 
-        audio_chunks = []
+        frames = []
 
-        # =================================================
-        # IMPROVED SETTINGS
-        # =================================================
+        threshold = 0.005
 
-        silence_threshold = 0.0015
+        speech_started = False
 
-        block_duration = 0.2
+        silence_time = 0
 
-        silence_counter = 0
+        min_record_time = 3
 
-        speech_detected = False
+        min_audio_size = 12000
 
-        speech_frames = 0
+        block = 1024
 
-        min_speech_frames = 5
-
-        # =================================================
-        # CALLBACK
-        # =================================================
+        block_duration = block / sample_rate
 
         def callback(
-
             indata,
-            frames,
+            frame_count,
             time_info,
-            status
-
+            status,
         ):
 
             if status:
+                print("Stream:", status)
 
-                print(status)
+            try:
 
-            audio_queue.put(
-                indata.copy()
-            )
+                if not audio_queue.full():
+
+                    audio_queue.put_nowait(indata.copy())
+
+            except Exception:
+                pass
 
         try:
 
-            # =============================================
-            # START STREAM
-            # =============================================
+            print("\n=================================")
+            print("SMART RECORDING STARTED")
+            print("=================================")
+
+            sd.stop()
+
+            time.sleep(0.5)
 
             with sd.InputStream(
-
                 samplerate=sample_rate,
-
                 channels=1,
-
                 dtype="float32",
-
-                blocksize=int(
-                    sample_rate * block_duration
-                ),
-
+                blocksize=block,
+                callback=callback,
+                latency="low",
                 device=device,
-
-                callback=callback
-
             ):
 
-                print("\n🎤 Recording Started...")
-                print("Speak naturally...")
-                print(
-                    f"Max Duration : {duration} sec"
-                )
+                print("\n🎤 Recording...")
+                print("Speak now")
 
-                start_time = time.time()
+                start = time.time()
 
                 while True:
 
-                    # =====================================
-                    # MAX DURATION
-                    # =====================================
-
-                    elapsed = (
-                        time.time() - start_time
-                    )
+                    elapsed = time.time() - start
 
                     if elapsed >= duration:
 
-                        print(
-                            "\n⏰ Max duration reached"
-                        )
+                        print("\n⏰ Duration Finished")
 
                         break
 
-                    # =====================================
-                    # GET AUDIO DATA
-                    # =====================================
-
                     try:
 
-                        data = audio_queue.get(
-                            timeout=1
-                        )
+                        data = audio_queue.get(timeout=1)
 
                     except queue.Empty:
 
                         continue
 
-                    audio_chunks.append(data)
-
-                    # =====================================
-                    # BETTER VOLUME CALCULATION
-                    # =====================================
-
-                    volume = float(
-
-                        np.sqrt(
-                            np.mean(
-                                np.square(data)
-                            )
-                        )
-                    )
+                    volume = float(np.sqrt(np.mean(np.square(data))))
 
                     print(
-                        f"Volume : {volume:.5f}",
-                        end="\r"
+                        f"Volume={volume:.5f}",
+                        end="\r",
                     )
 
-                    # =====================================
-                    # SPEECH DETECTION
-                    # =====================================
+                    frames.append(data)
 
-                    if volume > silence_threshold:
+                    if volume > threshold:
 
-                        speech_frames += 1
+                        if not speech_started:
 
-                        silence_counter = 0
+                            print("\n✅ Speech Detected")
 
-                        if (
-                            speech_frames >=
-                            min_speech_frames
-                        ):
+                        speech_started = True
 
-                            speech_detected = True
+                        silence_time = 0
 
-                    else:
+                    elif speech_started:
 
-                        # only track silence
-                        # AFTER speech begins
+                        silence_time += block_duration
 
-                        if speech_detected:
-
-                            silence_counter += (
-                                block_duration
-                            )
-
-                    # =====================================
-                    # STOP ON SILENCE
-                    # =====================================
+                    recorded_time = len(frames) * block_duration
 
                     if (
-
-                        speech_detected
-
-                        and
-
-                        silence_counter >=
-                        silence_limit
-
+                        speech_started
+                        and recorded_time >= min_record_time
+                        and silence_time >= silence_limit
                     ):
 
-                        print(
-                            "\n🔇 Silence detected"
-                        )
+                        print("\n🔇 Silence Detected")
 
                         break
 
-            # =============================================
-            # NO AUDIO CHECK
-            # =============================================
+            sd.stop()
 
-            if len(audio_chunks) == 0:
+            if len(frames) == 0:
 
-                raise Exception(
-                    "No audio chunks captured"
-                )
-
-            # =============================================
-            # MERGE AUDIO
-            # =============================================
+                raise Exception("No audio captured")
 
             audio = np.concatenate(
-                audio_chunks,
-                axis=0
+                frames,
+                axis=0,
             )
 
-            # =============================================
-            # AUTO NORMALIZATION
-            # =============================================
+            energy = float(np.mean(np.abs(audio)))
 
-            max_amp = np.max(
-                np.abs(audio)
-            )
+            print(f"\nEnergy={energy}")
 
-            if max_amp > 0:
+            if energy < 0.002:
 
-                audio = audio / max_amp
+                raise Exception("Audio energy too low")
 
-            # =============================================
-            # CONVERT TO INT16
-            # =============================================
+            peak = np.max(np.abs(audio))
 
-            audio_int16 = np.int16(
-                audio * 32767
-            )
+            if peak > 0:
 
-            # =============================================
-            # SAVE WAV
-            # =============================================
+                audio = audio / peak
+
+            audio = (audio * 32767).astype(np.int16)
 
             with wave.open(
                 filepath,
-                "wb"
+                "wb",
             ) as wf:
 
                 wf.setnchannels(1)
@@ -307,50 +192,37 @@ class MicrophoneInput:
 
                 wf.setframerate(sample_rate)
 
-                wf.writeframes(
-                    audio_int16.tobytes()
-                )
+                wf.writeframes(audio.tobytes())
 
-            # =============================================
-            # VALIDATE FILE
-            # =============================================
+            size = os.path.getsize(filepath)
 
-            if not os.path.exists(filepath):
+            print("\n✅ Saved")
+            print(filepath)
+            print(f"Size={size}")
 
-                raise Exception(
-                    "Audio file not created"
-                )
+            if size < min_audio_size:
 
-            file_size = os.path.getsize(
-                filepath
-            )
-
-            print(
-                f"\n✅ Audio Saved : {filepath}"
-            )
-
-            print(
-                f"📦 File Size : "
-                f"{file_size} bytes"
-            )
-
-            # =============================================
-            # VERY SMALL AUDIO CHECK
-            # =============================================
-
-            if file_size < 5000:
-
-                print(
-                    "\n⚠ Warning:"
-                    " Very small audio detected"
-                )
+                raise Exception(f"Audio too small ({size})")
 
             return filepath
 
         except Exception as e:
 
-            print("\n⚠ RECORDING ERROR")
+            sd.stop()
+
+            print("\n⚠ RECORD FAILED")
+
             print(str(e))
+
             print(traceback.format_exc())
+
+            try:
+
+                if os.path.exists(filepath):
+
+                    os.remove(filepath)
+
+            except Exception:
+                pass
 
             return None

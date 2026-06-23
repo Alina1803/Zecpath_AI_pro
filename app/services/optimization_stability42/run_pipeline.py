@@ -1,9 +1,15 @@
 import os
 import json
 
-from app.services.optimization_stability42.interview_ai.stable_hr_ai import stable_hr_evaluation
-from app.services.optimization_stability42.interview_ai.refined_scoring import refined_score_pipeline
-from app.services.optimization_stability42.screening_ai.optimized_cleaner import advanced_clean
+from app.services.optimization_stability42.interview_ai.stable_hr_ai import (
+    stable_hr_evaluation,
+)
+from app.services.optimization_stability42.interview_ai.refined_scoring import (
+    refined_score_pipeline,
+)
+from app.services.optimization_stability42.screening_ai.optimized_cleaner import (
+    advanced_clean,
+)
 from app.utils.batch_processing import batch_process
 
 OUTPUT_DIR = "data/processed/output_42"
@@ -31,7 +37,7 @@ def process_candidate(candidate):
     return {
         "cleaned_transcript": clean_text,
         "refined_scores": refined_scores,
-        "evaluation": result
+        "evaluation": result,
     }
 
 
@@ -45,13 +51,13 @@ def run_pipeline():
         {
             "scores": [50, 60, 90, 30],
             "confidence": [60, 70, 80, 50],
-            "transcript": "Um I think I I can do this job, you know..."
+            "transcript": "Um I think I I can do this job, you know...",
         },
         {
             "scores": [70, 75, 80, 65],
             "confidence": [80, 85, 90, 70],
-            "transcript": "Uh I have strong experience in backend development..."
-        }
+            "transcript": "Uh I have strong experience in backend development...",
+        },
     ]
 
     # ✅ Batch processing

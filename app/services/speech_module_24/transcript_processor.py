@@ -1,7 +1,7 @@
 class TranscriptProcessor:
 
     def remove_silence_segments(self, segments, threshold=0.5):
-        return [seg for seg in segments if seg['end'] - seg['start'] > threshold]
+        return [seg for seg in segments if seg["end"] - seg["start"] > threshold]
 
     def merge_segments(self, segments):
         text = " ".join([seg["text"] for seg in segments])
@@ -15,7 +15,7 @@ class TranscriptProcessor:
 
     def process(self, stt_output):
         segments = stt_output["segments"]
-        
+
         segments = self.remove_silence_segments(segments)
         text = self.merge_segments(segments)
         text = self.handle_partial_answers(text)

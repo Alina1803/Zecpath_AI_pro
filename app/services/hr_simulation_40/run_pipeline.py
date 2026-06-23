@@ -21,7 +21,7 @@ def save_results(results, accuracy, bias):
         "timestamp": timestamp,
         "accuracy": accuracy,
         "bias": bias,
-        "results": results
+        "results": results,
     }
 
     filename = f"hr_simulation_{timestamp}.json"

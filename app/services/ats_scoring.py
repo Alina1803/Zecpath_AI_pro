@@ -31,5 +31,5 @@ def calculate_ats_score(parsed_resume: Dict, job_requirements: Dict) -> Dict:
     return {
         "skill_match_score": round(skill_score * 100, 2),
         "experience_score": round(experience_score * 100, 2),
-        "final_ats_score": round(final_score * 100, 2)
+        "final_ats_score": round(final_score * 100, 2),
     }

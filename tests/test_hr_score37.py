@@ -14,7 +14,7 @@ def test_valid_candidate():
             "communication_score": 85,
             "confidence_score": 80,
             "contradiction": False,
-            "is_vague": False
+            "is_vague": False,
         }
     ]
 

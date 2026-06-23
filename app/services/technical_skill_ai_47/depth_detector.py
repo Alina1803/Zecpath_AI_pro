@@ -2,6 +2,7 @@
 # Depth Detection Engine
 # -------------------------------
 
+
 def detect_depth(text):
     keywords = [
         "because",
@@ -10,7 +11,7 @@ def detect_depth(text):
         "scalable",
         "tradeoff",
         "performance",
-        "design"
+        "design",
     ]
 
     count = sum(word in text.lower() for word in keywords)

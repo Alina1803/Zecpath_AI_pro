@@ -1,5 +1,6 @@
 from docx import Document
 
+
 def extract_text_from_docx(file_path):
     text = ""
 

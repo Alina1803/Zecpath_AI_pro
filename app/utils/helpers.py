@@ -12,8 +12,10 @@ def generate_job_id() -> str:
 def normalize_text(text: str) -> str:
     return text.strip().lower()
 
+
 def clean_input(text: str):
     return text.strip()
+
 
 def preprocess_input(data: list):
     return data

@@ -1,38 +1,43 @@
 STACKS = {
     "core_ca": [
-        "accounting", "financial reporting", "gst",
-        "taxation", "auditing", "bookkeeping"
+        "accounting",
+        "financial reporting",
+        "gst",
+        "taxation",
+        "auditing",
+        "bookkeeping",
     ],
-
     "tax_specialist": [
-        "gst", "income tax", "direct tax",
-        "indirect tax", "tax compliance", "filing"
+        "gst",
+        "income tax",
+        "direct tax",
+        "indirect tax",
+        "tax compliance",
+        "filing",
     ],
-
     "audit_stack": [
-        "auditing", "internal audit", "statutory audit",
-        "risk management", "compliance", "sox"
+        "auditing",
+        "internal audit",
+        "statutory audit",
+        "risk management",
+        "compliance",
+        "sox",
     ],
-
     "finance_analyst": [
-        "financial analysis", "forecasting", "budgeting",
-        "cost accounting", "management accounting"
+        "financial analysis",
+        "forecasting",
+        "budgeting",
+        "cost accounting",
+        "management accounting",
     ],
-
     "data_driven_ca": [
-        "advanced excel", "power bi", "data analysis",
-        "financial modeling"
+        "advanced excel",
+        "power bi",
+        "data analysis",
+        "financial modeling",
     ],
-
-    "erp_stack": [
-        "sap fico", "sap", "oracle erp",
-        "netsuite", "erp systems"
-    ],
-
-    "automation_stack": [
-        "excel vba", "python", "sql",
-        "automation", "rpa", "uipath"
-    ]
+    "erp_stack": ["sap fico", "sap", "oracle erp", "netsuite", "erp systems"],
+    "automation_stack": ["excel vba", "python", "sql", "automation", "rpa", "uipath"],
 }
 
 

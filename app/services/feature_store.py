@@ -1,5 +1,12 @@
 def extract_features(parsed_data: dict) -> dict:
-    return {
+
+    features = {
         "skill_count": len(parsed_data.get("skills", [])),
-        "experience": int(parsed_data.get("experience", 0))
+        "experience": int(parsed_data.get("experience_years", 0)),
     }
+
+    print("\n===== FEATURE STORE =====")
+    print("PARSED DATA:", parsed_data)
+    print("FEATURES:", features)
+
+    return features

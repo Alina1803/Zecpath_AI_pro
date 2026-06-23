@@ -7,14 +7,14 @@ ROLE_WEIGHTS = {
         "relevance": 0.25,
         "communication": 0.30,
         "confidence": 0.25,
-        "consistency": 0.20
+        "consistency": 0.20,
     },
     "experienced": {
         "relevance": 0.35,
         "communication": 0.20,
         "confidence": 0.25,
-        "consistency": 0.20
-    }
+        "consistency": 0.20,
+    },
 }
 
 

@@ -3,5 +3,5 @@ def build_question_object(q):
         "id": q["question_id"],
         "text": q["question"],
         "type": q["answer_type"],
-        "mandatory": q["mandatory"]
+        "mandatory": q["mandatory"],
     }

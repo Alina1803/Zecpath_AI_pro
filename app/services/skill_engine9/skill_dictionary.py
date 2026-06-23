@@ -20,9 +20,8 @@ MASTER_SKILLS = {
         "gaap": ["gaap", "generally accepted accounting principles"],
         "sap fico": ["sap fico"],
         "quickbooks": ["quickbooks"],
-        "excel": ["excel", "ms excel", "advanced excel"]
+        "excel": ["excel", "ms excel", "advanced excel"],
     },
-
     "technical": {
         "excel advanced": ["advanced excel", "pivot tables", "vlookup", "hlookup"],
         "power bi": ["power bi", "power bi dashboard"],
@@ -31,9 +30,8 @@ MASTER_SKILLS = {
         "data analysis": ["data analysis", "financial analysis"],
         "erp systems": ["erp", "erp systems"],
         "sap": ["sap"],
-        "automation": ["automation", "process automation"]
+        "automation": ["automation", "process automation"],
     },
-
     "soft_skills": {
         "communication": ["communication", "verbal communication"],
         "analytical thinking": ["analytical thinking", "problem solving"],
@@ -41,6 +39,6 @@ MASTER_SKILLS = {
         "time management": ["time management"],
         "teamwork": ["teamwork", "collaboration"],
         "leadership": ["leadership"],
-        "decision making": ["decision making"]
-    }
+        "decision making": ["decision making"],
+    },
 }

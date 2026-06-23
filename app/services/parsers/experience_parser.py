@@ -2,7 +2,6 @@ import re
 from datetime import datetime
 from typing import List, Dict, Any
 
-
 CURRENT_YEAR = datetime.now().year
 
 
@@ -28,12 +27,10 @@ class AdvancedExperienceParser:
     def __init__(self):
 
         self.date_patterns = [
-
             # 2019 - 2022
-            r'(?P<start>\d{4})\s*[-–to]+\s*(?P<end>\d{4}|present|Present)',
-
+            r"(?P<start>\d{4})\s*[-–to]+\s*(?P<end>\d{4}|present|Present)",
             # Jan 2020 - Feb 2023
-            r'(?P<start_month>[A-Za-z]{3,9})\s*(?P<start_year>\d{4})\s*[-–to]+\s*(?P<end_month>[A-Za-z]{3,9}|present|Present)\s*(?P<end_year>\d{4}|present|Present)?'
+            r"(?P<start_month>[A-Za-z]{3,9})\s*(?P<start_year>\d{4})\s*[-–to]+\s*(?P<end_month>[A-Za-z]{3,9}|present|Present)\s*(?P<end_year>\d{4}|present|Present)?",
         ]
 
         self.role_keywords = [
@@ -47,17 +44,14 @@ class AdvancedExperienceParser:
             "intern",
             "specialist",
             "scientist",
-            "designer"
+            "designer",
         ]
 
     # ---------------------------------------------------
     # EXTRACT EXPERIENCE BLOCKS
     # ---------------------------------------------------
 
-    def extract_experience_blocks(
-        self,
-        text: str
-    ) -> List[Dict]:
+    def extract_experience_blocks(self, text: str) -> List[Dict]:
 
         lines = text.split("\n")
 
@@ -67,11 +61,7 @@ class AdvancedExperienceParser:
 
             for pattern in self.date_patterns:
 
-                match = re.search(
-                    pattern,
-                    line,
-                    re.IGNORECASE
-                )
+                match = re.search(pattern, line, re.IGNORECASE)
 
                 if match:
 
@@ -87,39 +77,24 @@ class AdvancedExperienceParser:
                         else match.group("end_year")
                     )
 
-                    if (
-                        not end_value or
-                        str(end_value).lower() == "present"
-                    ):
+                    if not end_value or str(end_value).lower() == "present":
                         end_year = CURRENT_YEAR
                     else:
                         end_year = int(end_value)
 
-                    role = self.extract_role(
-                        lines,
-                        i
+                    role = self.extract_role(lines, i)
+
+                    company = self.extract_company(lines, i)
+
+                    experiences.append(
+                        {
+                            "start_year": start_year,
+                            "end_year": end_year,
+                            "duration": max(end_year - start_year, 0),
+                            "role": role,
+                            "company": company,
+                        }
                     )
-
-                    company = self.extract_company(
-                        lines,
-                        i
-                    )
-
-                    experiences.append({
-
-                        "start_year": start_year,
-
-                        "end_year": end_year,
-
-                        "duration": max(
-                            end_year - start_year,
-                            0
-                        ),
-
-                        "role": role,
-
-                        "company": company
-                    })
 
         return experiences
 
@@ -127,11 +102,7 @@ class AdvancedExperienceParser:
     # ROLE EXTRACTION
     # ---------------------------------------------------
 
-    def extract_role(
-        self,
-        lines,
-        index
-    ) -> str:
+    def extract_role(self, lines, index) -> str:
 
         search_range = max(0, index - 2)
 
@@ -150,11 +121,7 @@ class AdvancedExperienceParser:
     # COMPANY EXTRACTION
     # ---------------------------------------------------
 
-    def extract_company(
-        self,
-        lines,
-        index
-    ) -> str:
+    def extract_company(self, lines, index) -> str:
 
         if index == 0:
             return "Unknown Company"
@@ -170,10 +137,7 @@ class AdvancedExperienceParser:
     # REMOVE DUPLICATES
     # ---------------------------------------------------
 
-    def remove_duplicate_experience(
-        self,
-        experiences
-    ):
+    def remove_duplicate_experience(self, experiences):
 
         unique = []
 
@@ -181,11 +145,7 @@ class AdvancedExperienceParser:
 
         for exp in experiences:
 
-            key = (
-                exp["start_year"],
-                exp["end_year"],
-                exp["role"]
-            )
+            key = (exp["start_year"], exp["end_year"], exp["role"])
 
             if key not in seen:
 
@@ -199,18 +159,12 @@ class AdvancedExperienceParser:
     # MERGE OVERLAPS
     # ---------------------------------------------------
 
-    def merge_overlapping_experience(
-        self,
-        experiences
-    ):
+    def merge_overlapping_experience(self, experiences):
 
         if not experiences:
             return []
 
-        experiences = sorted(
-            experiences,
-            key=lambda x: x["start_year"]
-        )
+        experiences = sorted(experiences, key=lambda x: x["start_year"])
 
         merged = [experiences[0]]
 
@@ -218,15 +172,9 @@ class AdvancedExperienceParser:
 
             previous = merged[-1]
 
-            if (
-                current["start_year"] <=
-                previous["end_year"]
-            ):
+            if current["start_year"] <= previous["end_year"]:
 
-                previous["end_year"] = max(
-                    previous["end_year"],
-                    current["end_year"]
-                )
+                previous["end_year"] = max(previous["end_year"], current["end_year"])
 
             else:
                 merged.append(current)
@@ -237,19 +185,13 @@ class AdvancedExperienceParser:
     # TOTAL EXPERIENCE
     # ---------------------------------------------------
 
-    def calculate_total_experience(
-        self,
-        experiences
-    ) -> int:
+    def calculate_total_experience(self, experiences) -> int:
 
         total = 0
 
         for exp in experiences:
 
-            total += (
-                exp["end_year"] -
-                exp["start_year"]
-            )
+            total += exp["end_year"] - exp["start_year"]
 
         return total
 
@@ -257,42 +199,30 @@ class AdvancedExperienceParser:
     # GAP ANALYSIS
     # ---------------------------------------------------
 
-    def analyze_career_gaps(
-        self,
-        experiences
-    ):
+    def analyze_career_gaps(self, experiences):
 
         gaps = []
 
         if len(experiences) <= 1:
             return gaps
 
-        experiences = sorted(
-            experiences,
-            key=lambda x: x["start_year"]
-        )
+        experiences = sorted(experiences, key=lambda x: x["start_year"])
 
         for i in range(1, len(experiences)):
 
             previous = experiences[i - 1]
             current = experiences[i]
 
-            gap = (
-                current["start_year"] -
-                previous["end_year"]
-            )
+            gap = current["start_year"] - previous["end_year"]
 
             if gap > 1:
 
-                gaps.append({
-
-                    "gap_years": gap,
-
-                    "between": (
-                        previous["end_year"],
-                        current["start_year"]
-                    )
-                })
+                gaps.append(
+                    {
+                        "gap_years": gap,
+                        "between": (previous["end_year"], current["start_year"]),
+                    }
+                )
 
         return gaps
 
@@ -300,10 +230,7 @@ class AdvancedExperienceParser:
     # EXPERIENCE LEVEL
     # ---------------------------------------------------
 
-    def classify_experience_level(
-        self,
-        years
-    ) -> str:
+    def classify_experience_level(self, years) -> str:
 
         if years == 0:
             return "Fresher"
@@ -326,10 +253,7 @@ class AdvancedExperienceParser:
     # EXPERIENCE SCORE
     # ---------------------------------------------------
 
-    def calculate_experience_score(
-        self,
-        years
-    ) -> int:
+    def calculate_experience_score(self, years) -> int:
 
         return min(years * 10, 100)
 
@@ -337,10 +261,7 @@ class AdvancedExperienceParser:
     # STABILITY SCORE
     # ---------------------------------------------------
 
-    def calculate_stability_score(
-        self,
-        gaps
-    ) -> int:
+    def calculate_stability_score(self, gaps) -> int:
 
         if len(gaps) == 0:
             return 100
@@ -357,98 +278,40 @@ class AdvancedExperienceParser:
     # MAIN PARSER
     # ---------------------------------------------------
 
-    def parse(
-        self,
-        resume_text: str
-    ) -> Dict[str, Any]:
+    def parse(self, resume_text: str) -> Dict[str, Any]:
 
-        raw_experience = self.extract_experience_blocks(
-            resume_text
-        )
+        raw_experience = self.extract_experience_blocks(resume_text)
 
-        unique_experience = (
-            self.remove_duplicate_experience(
-                raw_experience
-            )
-        )
+        unique_experience = self.remove_duplicate_experience(raw_experience)
 
-        processed_experience = (
-            self.merge_overlapping_experience(
-                unique_experience
-            )
-        )
+        processed_experience = self.merge_overlapping_experience(unique_experience)
 
-        total_experience = (
-            self.calculate_total_experience(
-                processed_experience
-            )
-        )
+        total_experience = self.calculate_total_experience(processed_experience)
 
-        career_gaps = (
-            self.analyze_career_gaps(
-                processed_experience
-            )
-        )
+        career_gaps = self.analyze_career_gaps(processed_experience)
 
-        experience_level = (
-            self.classify_experience_level(
-                total_experience
-            )
-        )
+        experience_level = self.classify_experience_level(total_experience)
 
-        experience_score = (
-            self.calculate_experience_score(
-                total_experience
-            )
-        )
+        experience_score = self.calculate_experience_score(total_experience)
 
-        stability_score = (
-            self.calculate_stability_score(
-                career_gaps
-            )
-        )
+        stability_score = self.calculate_stability_score(career_gaps)
 
         return {
-
-            "total_experience_years":
-            total_experience,
-
-            "experience_level":
-            experience_level,
-
-            "experience_score":
-            experience_score,
-
-            "stability_score":
-            stability_score,
-
-            "career_gaps":
-            career_gaps,
-
-            "experience_timeline":
-            processed_experience,
-
-            "positions_detected":
-            len(processed_experience),
-
+            "total_experience_years": total_experience,
+            "experience_level": experience_level,
+            "experience_score": experience_score,
+            "stability_score": stability_score,
+            "career_gaps": career_gaps,
+            "experience_timeline": processed_experience,
+            "positions_detected": len(processed_experience),
             "analysis": {
-
-                "candidate_seniority":
-                experience_level,
-
-                "career_stability":
-                "High"
-                if stability_score >= 80
-                else "Moderate",
-
-                "gap_count":
-                len(career_gaps),
-
-                "ats_recommendation":
-                "Recommended"
-                if experience_score >= 60
-                else "Needs Review"
-            }
+                "candidate_seniority": experience_level,
+                "career_stability": "High" if stability_score >= 80 else "Moderate",
+                "gap_count": len(career_gaps),
+                "ats_recommendation": (
+                    "Recommended" if experience_score >= 60 else "Needs Review"
+                ),
+            },
         }
 
 

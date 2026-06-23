@@ -6,11 +6,7 @@ from pydub import AudioSegment
 
 class WAVConverter:
 
-    def convert_to_wav(
-        self,
-        input_file,
-        output_file=None
-    ):
+    def convert_to_wav(self, input_file, output_file=None):
 
         try:
 
@@ -24,13 +20,9 @@ class WAVConverter:
 
             if input_file is None:
 
-                raise ValueError(
-                    "input_file is None"
-                )
+                raise ValueError("input_file is None")
 
-            input_file = os.path.abspath(
-                input_file
-            )
+            input_file = os.path.abspath(input_file)
 
             print(f"Input File : {input_file}")
 
@@ -42,20 +34,13 @@ class WAVConverter:
 
                 if input_file.endswith(".wav"):
 
-                    output_file = input_file.replace(
-                        ".wav",
-                        "_converted.wav"
-                    )
+                    output_file = input_file.replace(".wav", "_converted.wav")
 
                 else:
 
-                    output_file = (
-                        input_file + ".wav"
-                    )
+                    output_file = input_file + ".wav"
 
-            output_file = os.path.abspath(
-                output_file
-            )
+            output_file = os.path.abspath(output_file)
 
             print(f"Output File : {output_file}")
 
@@ -65,38 +50,31 @@ class WAVConverter:
 
             if not os.path.exists(input_file):
 
-                raise FileNotFoundError(
-                    f"Input file not found: {input_file}"
-                    )
+                raise FileNotFoundError(f"Input file not found: {input_file}")
 
             # ======================================
             # CHECK INPUT SIZE
             # ======================================
 
-            file_size = os.path.getsize(
-                input_file)
+            file_size = os.path.getsize(input_file)
 
             print(f"Input Size : {file_size} bytes")
 
             if file_size <= 100:
 
-                raise Exception(
-                    "Input file is empty")
+                raise Exception("Input file is empty")
 
             # ======================================
             # LOAD AUDIO
             # ======================================
 
-            audio = AudioSegment.from_file(
-                input_file)
+            audio = AudioSegment.from_file(input_file)
 
             # ======================================
             # EXPORT WAV
             # ======================================
 
-            audio.export(
-                output_file,
-                format="wav")
+            audio.export(output_file, format="wav")
 
             # ======================================
             # VERIFY OUTPUT
@@ -104,18 +82,15 @@ class WAVConverter:
 
             if not os.path.exists(output_file):
 
-                raise FileNotFoundError(
-                    f"WAV output missing: {output_file}")
+                raise FileNotFoundError(f"WAV output missing: {output_file}")
 
-            output_size = os.path.getsize(
-                output_file)
+            output_size = os.path.getsize(output_file)
 
             print(f"Output Size : {output_size} bytes")
 
             if output_size <= 100:
 
-                raise Exception(
-                    "Generated WAV file corrupted")
+                raise Exception("Generated WAV file corrupted")
 
             print("\n=================================")
             print("WAV CONVERSION SUCCESS")

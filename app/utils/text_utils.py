@@ -5,6 +5,7 @@ import string
 # 🔹 Basic Text Cleaning
 # ----------------------------------------
 
+
 def clean_text(text: str) -> str:
     """
     Clean raw text from resumes/JDs
@@ -25,6 +26,7 @@ def clean_text(text: str) -> str:
 # 🔹 Advanced Preprocessing
 # ----------------------------------------
 
+
 def preprocess_text(text: str) -> str:
     """
     Full preprocessing pipeline
@@ -40,9 +42,27 @@ def preprocess_text(text: str) -> str:
 # ----------------------------------------
 
 STOPWORDS = {
-    "the", "is", "in", "and", "to", "of", "a", "for", "on", "with",
-    "as", "by", "an", "at", "from", "or", "that", "this", "it"
+    "the",
+    "is",
+    "in",
+    "and",
+    "to",
+    "of",
+    "a",
+    "for",
+    "on",
+    "with",
+    "as",
+    "by",
+    "an",
+    "at",
+    "from",
+    "or",
+    "that",
+    "this",
+    "it",
 }
+
 
 def remove_stopwords(text: str) -> str:
     words = text.split()
@@ -54,6 +74,7 @@ def remove_stopwords(text: str) -> str:
 # 🔹 Normalize Text
 # ----------------------------------------
 
+
 def normalize_text(text: str) -> str:
     """
     Normalize common variations
@@ -63,7 +84,7 @@ def normalize_text(text: str) -> str:
         "m.tech": "mtech",
         "e-mail": "email",
         "machine learning": "ml",
-        "artificial intelligence": "ai"
+        "artificial intelligence": "ai",
     }
 
     for k, v in replacements.items():
@@ -76,6 +97,7 @@ def normalize_text(text: str) -> str:
 # 🔹 Tokenization
 # ----------------------------------------
 
+
 def tokenize(text: str) -> list:
     return text.split()
 
@@ -83,6 +105,7 @@ def tokenize(text: str) -> list:
 # ----------------------------------------
 # 🔹 Keyword Matching
 # ----------------------------------------
+
 
 def keyword_match(text: str, keywords: list) -> list:
     """
@@ -96,6 +119,7 @@ def keyword_match(text: str, keywords: list) -> list:
 # ----------------------------------------
 # 🔹 Similarity (Basic)
 # ----------------------------------------
+
 
 def jaccard_similarity(text1: str, text2: str) -> float:
     """
@@ -117,6 +141,7 @@ def jaccard_similarity(text1: str, text2: str) -> float:
 # 🔹 Extract Numbers (Experience, Years)
 # ----------------------------------------
 
+
 def extract_numbers(text: str) -> list:
     return re.findall(r"\d+", text)
 
@@ -125,6 +150,7 @@ def extract_numbers(text: str) -> list:
 # 🔹 Extract Emails
 # ----------------------------------------
 
+
 def extract_emails(text: str) -> list:
     return re.findall(r"[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+", text)
 
@@ -132,6 +158,7 @@ def extract_emails(text: str) -> list:
 # ----------------------------------------
 # 🔹 Extract Phone Numbers
 # ----------------------------------------
+
 
 def extract_phone_numbers(text: str) -> list:
     return re.findall(r"\+?\d[\d\s\-]{8,15}\d", text)

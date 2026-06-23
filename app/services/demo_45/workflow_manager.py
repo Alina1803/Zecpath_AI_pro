@@ -1,16 +1,16 @@
-from app.services.hr_interview_engine_33.run_interview import (LegacyInterviewEngine)
-from app.services.followup_engine34.run_pipeline34 import (LegacyFollowupPipeline)
-from app.services.voice_ai_45.voice_pipeline import (VoiceInterviewPipeline)
-from app.services.communication_engine35.communication_engine import (CommunicationEngine)
-from app.services.stress_conf_analyzer36.run_analyzer import (analyze_behavior)
-from app.services.summary_39.summary_generator import (generate_interview_summary)
+from app.services.hr_interview_engine_33.run_interview import LegacyInterviewEngine
+from app.services.followup_engine34.run_pipeline34 import LegacyFollowupPipeline
+from app.services.voice_ai_45.voice_pipeline import VoiceInterviewPipeline
+from app.services.communication_engine35.communication_engine import CommunicationEngine
+from app.services.stress_conf_analyzer36.run_analyzer import analyze_behavior
+from app.services.summary_39.summary_generator import generate_interview_summary
 
 import traceback
-
 
 # =====================================================
 # WORKFLOW MANAGER
 # =====================================================
+
 
 class WorkflowManager:
 
@@ -24,13 +24,13 @@ class WorkflowManager:
         # CORE ENGINES
         # =================================================
 
-        self.legacy_engine = (LegacyInterviewEngine())
+        self.legacy_engine = LegacyInterviewEngine()
 
-        self.followup_engine = (LegacyFollowupPipeline())
+        self.followup_engine = LegacyFollowupPipeline()
 
-        self.voice_pipeline = (VoiceInterviewPipeline())
+        self.voice_pipeline = VoiceInterviewPipeline()
 
-        self.communication = (CommunicationEngine())
+        self.communication = CommunicationEngine()
 
         print("Workflow Manager Ready")
 
@@ -56,9 +56,7 @@ class WorkflowManager:
 
                 return transcripts
 
-            responses = results.get(
-                "responses",
-                [])
+            responses = results.get("responses", [])
 
             for item in responses:
 
@@ -66,38 +64,31 @@ class WorkflowManager:
 
                     continue
 
-                transcript = item.get("transcript","")
+                transcript = item.get("transcript", "")
 
-                answer = item.get("answer","")
+                answer = item.get("answer", "")
 
                 # =====================================
                 # PRIORITY TO TRANSCRIPT
                 # =====================================
 
-                if (
-                    transcript and
-                    isinstance(transcript, str)):
+                if transcript and isinstance(transcript, str):
 
-                    transcripts.append(
-                        transcript.strip())
+                    transcripts.append(transcript.strip())
 
                 # =====================================
                 # FALLBACK TO ANSWER
                 # =====================================
 
-                elif (
-                    answer and
-                    isinstance(answer, str)):
+                elif answer and isinstance(answer, str):
 
                     if "STT Error" not in answer:
 
-                        transcripts.append(
-                            answer.strip())
+                        transcripts.append(answer.strip())
 
         except Exception as e:
 
-            self._log(
-                f"Transcript Extraction Failed: {e}")
+            self._log(f"Transcript Extraction Failed: {e}")
 
         return transcripts
 
@@ -113,9 +104,7 @@ class WorkflowManager:
 
                 return 0
 
-            responses = results.get(
-                "responses",
-                [])
+            responses = results.get("responses", [])
 
             scores = []
 
@@ -125,8 +114,7 @@ class WorkflowManager:
 
                     continue
 
-                score = item.get(
-                    "final_score",0)
+                score = item.get("final_score", 0)
 
                 if isinstance(score, (int, float)):
 
@@ -136,13 +124,11 @@ class WorkflowManager:
 
                 return 0
 
-            return round(
-                sum(scores) / len(scores),2)
+            return round(sum(scores) / len(scores), 2)
 
         except Exception as e:
 
-            self._log(
-                f"Score Calculation Failed: {e}")
+            self._log(f"Score Calculation Failed: {e}")
 
             return 0
 
@@ -154,7 +140,7 @@ class WorkflowManager:
         self,
         role="backend developer",
         experience="experienced",
-        candidate_id="CAND_001"
+        candidate_id="CAND_001",
     ):
 
         self._log("===== WORKFLOW MANAGER STARTED =====")
@@ -185,17 +171,13 @@ class WorkflowManager:
 
             self._log("STARTING INTERVIEW ENGINE")
 
-            results = (
-                self.legacy_engine.run(
-                    role=role,
-                    experience=experience))
+            results = self.legacy_engine.run(role=role, experience=experience)
 
             self._log("INTERVIEW ENGINE COMPLETED")
 
         except Exception as e:
 
-            self._log(
-                f"Interview Engine Failed: {e}")
+            self._log(f"Interview Engine Failed: {e}")
 
             print(traceback.format_exc())
 
@@ -223,11 +205,9 @@ class WorkflowManager:
 
             self._log("STARTING VOICE PIPELINE")
 
-            voice_result = (
-                self.voice_pipeline.process_question(
-                    question="Tell me about yourself",
-                    question_id=1,
-                    duration=10))
+            voice_result = self.voice_pipeline.process_question(
+                question="Tell me about yourself", question_id=1, duration=10
+            )
 
             self._log("VOICE PIPELINE RESULT")
 
@@ -245,9 +225,7 @@ class WorkflowManager:
 
         try:
 
-            transcripts = (
-                self._extract_transcripts(
-                    results))
+            transcripts = self._extract_transcripts(results)
 
             sample_text = " ".join(transcripts)
 
@@ -271,9 +249,7 @@ class WorkflowManager:
 
                 self._log("RUNNING COMMUNICATION ANALYSIS")
 
-                communication_result = (
-                    self.communication.evaluate(
-                        sample_text))
+                communication_result = self.communication.evaluate(sample_text)
 
                 self._log("COMMUNICATION ANALYSIS RESULT")
 
@@ -282,13 +258,12 @@ class WorkflowManager:
             else:
 
                 self._log(
-                    "Skipping Communication Analysis "
-                    "(No Transcript Available)")
+                    "Skipping Communication Analysis " "(No Transcript Available)"
+                )
 
         except Exception as e:
 
-            self._log(
-                f"Communication Analysis Failed: {e}")
+            self._log(f"Communication Analysis Failed: {e}")
 
             print(traceback.format_exc())
 
@@ -300,30 +275,23 @@ class WorkflowManager:
 
             if sample_text.strip():
 
-                self._log(
-                    "RUNNING BEHAVIOR ANALYSIS")
+                self._log("RUNNING BEHAVIOR ANALYSIS")
 
-                behavior_result = (
-                    analyze_behavior(
-                        text=sample_text,
-                        duration=60,
-                        save=True))
+                behavior_result = analyze_behavior(
+                    text=sample_text, duration=60, save=True
+                )
 
-                self._log(
-                    "BEHAVIOR ANALYSIS RESULT")
+                self._log("BEHAVIOR ANALYSIS RESULT")
 
                 print(behavior_result)
 
             else:
 
-                self._log(
-                    "Skipping Behavior Analysis "
-                    "(No Transcript Available)")
+                self._log("Skipping Behavior Analysis " "(No Transcript Available)")
 
         except Exception as e:
 
-            self._log(
-                f"Behavior Analysis Failed: {e}")
+            self._log(f"Behavior Analysis Failed: {e}")
 
             print(traceback.format_exc())
 
@@ -331,9 +299,7 @@ class WorkflowManager:
         # OVERALL SCORE
         # =================================================
 
-        overall_score = (
-            self._calculate_overall_score(
-                results))
+        overall_score = self._calculate_overall_score(results)
 
         self._log(f"OVERALL SCORE : {overall_score}")
 
@@ -345,11 +311,9 @@ class WorkflowManager:
 
             self._log("GENERATING INTERVIEW SUMMARY")
 
-            summary = (
-                generate_interview_summary(
-                    candidate_id=candidate_id,
-                    role=role,
-                    final_score=overall_score))
+            summary = generate_interview_summary(
+                candidate_id=candidate_id, role=role, final_score=overall_score
+            )
 
         except Exception as e:
 
@@ -362,24 +326,15 @@ class WorkflowManager:
         # =================================================
 
         final_output = {
-
             "candidate_id": candidate_id,
-
             "role": role,
-
             "experience": experience,
-
             "overall_score": overall_score,
-
             "interview_results": results,
-
             "voice_pipeline": voice_result,
-
             "communication_analysis": (communication_result),
-
             "behavior_analysis": (behavior_result),
-
-            "summary": summary
+            "summary": summary,
         }
 
         self._log("===== WORKFLOW COMPLETED =====")

@@ -1,15 +1,20 @@
 import re
 
 CERT_KEYWORDS = [
-    "certified", "certification", "course", "training",
-    "diploma", "license","cfa",
+    "certified",
+    "certification",
+    "course",
+    "training",
+    "diploma",
+    "license",
+    "cfa",
     "chartered financial analyst",
     "cpa",
     "certified public accountant",
     "acca",
     "association of chartered certified accountants",
     "cma",
-    "certified management accountant"
+    "certified management accountant",
 ]
 
 

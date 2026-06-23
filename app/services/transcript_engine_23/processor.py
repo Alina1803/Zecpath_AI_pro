@@ -1,6 +1,7 @@
 from .normalizer import normalize_text
 from .finance_extractor import extract_ca_skills
 
+
 def process_transcript(transcript):
     full_text = ""
     all_topics = []

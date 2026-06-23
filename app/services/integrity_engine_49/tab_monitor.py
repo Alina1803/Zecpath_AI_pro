@@ -2,6 +2,7 @@
 # Browser Tab Switching Monitor
 # ----------------------------------------
 
+
 def detect_tab_switches(count):
 
     if count >= 5:

@@ -8,10 +8,6 @@ class ExportManager:
 
         with open(filename, "w") as file:
 
-            json.dump(
-                report,
-                file,
-                indent=4
-            )
+            json.dump(report, file, indent=4)
 
         return filename

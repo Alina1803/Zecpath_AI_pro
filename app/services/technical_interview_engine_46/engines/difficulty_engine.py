@@ -1,6 +1,4 @@
-from app.services.followup_engine34.difficulty__adapter import (
-    DifficultyAdapter
-)
+from app.services.followup_engine34.difficulty__adapter import DifficultyAdapter
 
 
 class DifficultyEngine:

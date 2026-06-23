@@ -28,7 +28,7 @@ def run_pipeline(resume_text, job_description):
     cleaned_jd = clean_text(job_description)
 
     # 🔹 Skills
-   
+
     skills = extract_skills(cleaned_text)
 
     # 🔹 Experience
@@ -50,7 +50,7 @@ def run_pipeline(resume_text, job_description):
         "education": education,
         "certifications": certifications,
         "education_relevance": edu_score,
-        "semantic_match": semantic_score
+        "semantic_match": semantic_score,
     }
 
 

@@ -13,6 +13,4 @@ def education_relevance(education, job_description):
             if "finance" in jd:
                 score += 30
 
-    return {
-        "education_score": min(score, 100)
-    }
+    return {"education_score": min(score, 100)}

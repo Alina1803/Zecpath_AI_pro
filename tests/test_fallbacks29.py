@@ -1,4 +1,6 @@
-from app.services.ai_conversation_system_29.flows.fallback_handler import fallback_response
+from app.services.ai_conversation_system_29.flows.fallback_handler import (
+    fallback_response,
+)
 
 
 def test_fallback():

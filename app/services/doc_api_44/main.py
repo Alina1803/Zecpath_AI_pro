@@ -7,7 +7,7 @@ from app.api.routes import interview44, report44
 app = FastAPI(
     title="HR Interview AI API",
     description="API for AI-powered HR interview system",
-    version="1.0.0"
+    version="1.0.0",
 )
 
 # Enable CORS (important for frontend integration)

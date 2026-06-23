@@ -1,0 +1,166 @@
+{
+    "candidate_id": "18f110fe-0185-4db8-b809-65b1749ff54d",
+    "timestamp": "2026-06-23T11:27:16.794390",
+    "status": "ATS_PASSED",
+    "ats": {
+        "overall_score": 80,
+        "skill_count": 5,
+        "experience": 3,
+        "matched_keywords": [
+            "work",
+            "with",
+            "years"
+        ]
+    },
+    "screening": {
+        "score": 78,
+        "status": "Passed"
+    },
+    "hr": {
+        "overall_score": 0.0,
+        "decision": "REJECT"
+    },
+    "technical": {
+        "candidate_id": "18f110fe-0185-4db8-b809-65b1749ff54d",
+        "candidate_name": "Simulation Candidate",
+        "role": "accountant",
+        "experience_level": "junior",
+        "question": "What is GIL in Python?",
+        "followup_question": "Can you explain that in more detail?",
+        "technical_score": 0,
+        "coding_score": 30,
+        "communication_score": 51.75,
+        "confidence_score": 90.13,
+        "system_design_score": 75,
+        "semantic_score": 82,
+        "domain_score": 80,
+        "final_score": 37.63,
+        "performance": "Poor",
+        "recommendation": "Reject",
+        "decision": "Reject Application",
+        "strengths": [
+            "Confident problem solving",
+            "Good architecture understanding"
+        ],
+        "weaknesses": [
+            "Weak technical depth",
+            "Coding performance needs improvement",
+            "Communication clarity is low"
+        ],
+        "risks": [],
+        "generated_at": "2026-06-23 16:57:38"
+    },
+    "machine_test": {
+        "candidate_id": "UNKNOWN",
+        "final_score": 56.0,
+        "decision": "Needs Improvement",
+        "score_breakdown": {
+            "task_score": 60.0,
+            "breakdown": {
+                "correctness": 0.0,
+                "efficiency": 1.0,
+                "code_quality": 1.0,
+                "problem_solving": 1.0
+            }
+        }
+    },
+    "behavior": {
+        "behavior_score": 6610.0,
+        "signals": {
+            "eye_focus": 85,
+            "head_stability": 80,
+            "engagement": 88,
+            "distraction": 10
+        },
+        "risk": "Low Risk",
+        "insights": {
+            "focus_level": "Highly Focused",
+            "engagement": "Excellent",
+            "risk": "Low"
+        }
+    },
+    "integrity": {
+        "score": 88,
+        "risk": "Low"
+    },
+    "unified_score": {
+        "final_score": 50.33
+    },
+    "final_score": 50.33,
+    "decision": "Rejected",
+    "recruiter_report": {
+        "candidate_id": "18f110fe-0185-4db8-b809-65b1749ff54d",
+        "overall_summary": {
+            "final_score": 50.33,
+            "overall_confidence": 0,
+            "confidence_band": "Low",
+            "recommendation": "Reject"
+        },
+        "technical_evaluation": {
+            "technical_confidence": 0,
+            "semantic_score": 0,
+            "domain_score": 0,
+            "key_strengths": [],
+            "gaps": [
+                "Weak domain knowledge",
+                "Poor conceptual clarity",
+                "Weak communication"
+            ]
+        },
+        "behavioral_evaluation": {
+            "behavioral_confidence": 0,
+            "communication_strength": 0,
+            "sentiment_score": 0,
+            "risk_flags": []
+        },
+        "highlights": [],
+        "risks": [
+            "High training requirement",
+            "Communication risk"
+        ],
+        "missing_data": [
+            "Salary expectation not provided",
+            "Experience not mentioned"
+        ]
+    },
+    "candidate_generation": {
+        "generated": 50
+    },
+    "ai_human_comparison": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+    },
+    "consistency": [],
+    "performance": {
+        "execution_time": 21.678
+    },
+    "drift": {
+        "scores": [
+            80,
+            78,
+            0.0,
+            50.33
+        ],
+        "std_dev": 37.27,
+        "drift_detected": true
+    },
+    "production_validation": {
+        "logging": true,
+        "reports": true,
+        "retry_handler": false,
+        "ready": false
+    },
+    "funnel": {
+        "applied": 1,
+        "ats_passed": 1,
+        "screening_passed": 1,
+        "hr_passed": 0,
+        "technical_passed": 0,
+        "selected": 0
+    },
+    "recommendations": [
+        "System performing well"
+    ]
+}

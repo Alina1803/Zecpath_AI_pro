@@ -34,7 +34,7 @@ def process_user_input(user_input, ai_function):
             "issues_detected": [],
             "status": "Processed",
             "ai_response": response,
-            "language": language
+            "language": language,
         }
 
     except Exception as e:

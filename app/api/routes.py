@@ -8,8 +8,10 @@ router = APIRouter()
 # Load model once
 model = load_model("app/models/model32.pkl")
 
+
 class Candidate(BaseModel):
     features: list
+
 
 @router.post("/screen")
 def screen(candidate: Candidate):

@@ -1,10 +1,13 @@
 import json
 import os
 from datetime import datetime
-from app.services.unified_scoring_engine_41.pipeline.unified_pipeline import unified_pipeline
+from app.services.unified_scoring_engine_41.pipeline.unified_pipeline import (
+    unified_pipeline,
+)
 
 INPUT_FILE = "data/sample_candidates41.json"
 OUTPUT_DIR = "data/processed"
+
 
 def load_candidates(file_path):
     try:
@@ -13,6 +16,7 @@ def load_candidates(file_path):
     except Exception as e:
         print(f" Error loading input file: {e}")
         return []
+
 
 def process_candidates(candidates):
     results = []
@@ -25,17 +29,15 @@ def process_candidates(candidates):
                 ats=c.get("ats", 0),
                 screening=c.get("screening", 0),
                 hr=c.get("hr", 0),
-                role=c.get("role", "fresher")
+                role=c.get("role", "fresher"),
             )
             results.append(result)
 
         except Exception as e:
-            errors.append({
-                "candidate": c,
-                "error": str(e)
-            })
+            errors.append({"candidate": c, "error": str(e)})
 
     return results, errors
+
 
 def save_output(results):
     os.makedirs(OUTPUT_DIR, exist_ok=True)
@@ -47,6 +49,7 @@ def save_output(results):
         json.dump(results, f, indent=4)
 
     return output_file
+
 
 if __name__ == "__main__":
 
@@ -63,7 +66,7 @@ if __name__ == "__main__":
     output_path = save_output(results)
 
     print(f"\n Successfully processed: {len(results)} candidates")
-    
+
     if errors:
         print(f" Failed records: {len(errors)}")
 

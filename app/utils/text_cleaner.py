@@ -1,5 +1,6 @@
 import re
 
+
 def clean_text(text):
     if not text:
         return ""
@@ -15,14 +16,13 @@ def clean_text(text):
 
     return text.strip()
 
+
 def normalize_text(text):
     return text.lower().strip()
 
 
 def remove_stopwords(text):
-    STOPWORDS = {
-        "and", "or", "the", "a", "an", "in", "on", "at", "for", "to", "of"
-    }
+    STOPWORDS = {"and", "or", "the", "a", "an", "in", "on", "at", "for", "to", "of"}
 
     words = text.split()
     filtered = [w for w in words if w.lower() not in STOPWORDS]

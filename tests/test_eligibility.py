@@ -2,7 +2,6 @@ import pytest
 
 from app.services.eligibility_engine21.decision_engine import evaluate_candidate
 
-
 # -----------------------------
 # 🔧 SAMPLE RULES (MOCK CONFIG)
 # -----------------------------
@@ -10,13 +9,9 @@ rules = {
     "chartered_accountant": {
         "min_score": 75,
         "mandatory_skills": ["accounting", "gst"],
-        "min_experience": 2
+        "min_experience": 2,
     },
-    "default": {
-        "min_score": 60,
-        "mandatory_skills": [],
-        "min_experience": 0
-    }
+    "default": {"min_score": 60, "mandatory_skills": [], "min_experience": 0},
 }
 
 
@@ -30,7 +25,7 @@ def test_eligible_candidate():
         "score": 85,
         "skills": ["accounting", "gst", "audit"],
         "experience": 3,
-        "certifications": ["CA"]
+        "certifications": ["CA"],
     }
 
     result = evaluate_candidate(candidate, rules)
@@ -48,7 +43,7 @@ def test_review_candidate():
         "score": 78,  # passes score
         "skills": ["accounting"],  # missing GST
         "experience": 1,  # low experience
-        "certifications": ["CA"]
+        "certifications": ["CA"],
     }
 
     result = evaluate_candidate(candidate, rules)
@@ -66,7 +61,7 @@ def test_rejected_candidate():
         "score": 50,  # low score
         "skills": ["excel"],
         "experience": 0,
-        "certifications": []
+        "certifications": [],
     }
 
     result = evaluate_candidate(candidate, rules)
@@ -84,7 +79,7 @@ def test_certification_required():
         "score": 90,
         "skills": ["accounting", "gst"],
         "experience": 5,
-        "certifications": ["b.com"]  # ❌ not CA
+        "certifications": ["b.com"],  # ❌ not CA
     }
 
     result = evaluate_candidate(candidate, rules)
@@ -102,7 +97,7 @@ def test_default_role():
         "score": 65,
         "skills": [],
         "experience": 0,
-        "certifications": []
+        "certifications": [],
     }
 
     result = evaluate_candidate(candidate, rules)

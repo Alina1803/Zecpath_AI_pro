@@ -5,7 +5,6 @@ import traceback
 
 from app.services.communication_engine35.communication_engine import CommunicationEngine
 
-
 OUTPUT_DIR = os.path.join("data", "processed", "output_35")
 
 
@@ -47,11 +46,7 @@ def safe_evaluate(engine, answer):
         traceback.print_exc()
 
         # fallback structure
-        return {
-            "final_score": 0,
-            "component_scores": {},
-            "error": str(e)
-        }
+        return {"final_score": 0, "component_scores": {}, "error": str(e)}
 
 
 if __name__ == "__main__":
@@ -80,7 +75,7 @@ if __name__ == "__main__":
     output = {
         "timestamp": datetime.now().isoformat(),
         "input_answer": answer.strip(),
-        "evaluation": result
+        "evaluation": result,
     }
 
     saved_path = save_result(output)

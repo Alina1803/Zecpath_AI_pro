@@ -2,6 +2,7 @@
 # Head Stability Analysis
 # -----------------------------------
 
+
 def analyze_head_movement(stability):
 
     if stability > 0.8:

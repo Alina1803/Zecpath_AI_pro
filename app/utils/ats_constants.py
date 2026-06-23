@@ -3,12 +3,7 @@
 # ==============================
 
 # Default weights (must sum to 1.0)
-WEIGHTS = {
-    "skills": 0.30,
-    "experience": 0.30,
-    "education": 0.15,
-    "semantic": 0.25
-}
+WEIGHTS = {"skills": 0.30, "experience": 0.30, "education": 0.15, "semantic": 0.25}
 
 
 # ==============================
@@ -20,20 +15,20 @@ ROLE_BASED_WEIGHTS = {
         "skills": 0.40,
         "experience": 0.25,
         "education": 0.15,
-        "semantic": 0.20
+        "semantic": 0.20,
     },
     "software engineer": {
         "skills": 0.35,
         "experience": 0.30,
         "education": 0.10,
-        "semantic": 0.25
+        "semantic": 0.25,
     },
     "chartered accountant": {
         "skills": 0.25,
         "experience": 0.35,
         "education": 0.20,
-        "semantic": 0.20
-    }
+        "semantic": 0.20,
+    },
 }
 
 
@@ -41,27 +36,20 @@ ROLE_BASED_WEIGHTS = {
 # 🎯 SCORE THRESHOLDS
 # ==============================
 
-THRESHOLDS = {
-    "excellent": 80,
-    "good": 60,
-    "average": 40,
-    "poor": 0
-}
+THRESHOLDS = {"excellent": 80, "good": 60, "average": 40, "poor": 0}
 
 
 # ==============================
 # 🎯 MINIMUM REQUIREMENTS
 # ==============================
 
-MIN_REQUIREMENTS = {
-    "min_skills_required": 2,
-    "min_experience_months": 6
-}
+MIN_REQUIREMENTS = {"min_skills_required": 2, "min_experience_months": 6}
 
 
 # ==============================
 # 🎯 HELPER FUNCTION
 # ==============================
+
 
 def get_weights(job_description: str):
     """

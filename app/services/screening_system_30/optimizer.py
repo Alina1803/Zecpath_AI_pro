@@ -5,7 +5,7 @@ def optimize_threshold(results):
     for t in range(1, 5):
         correct = 0
         for r in results:
-            if r['score'] >= t:
+            if r["score"] >= t:
                 correct += 1
 
         acc = correct / len(results)

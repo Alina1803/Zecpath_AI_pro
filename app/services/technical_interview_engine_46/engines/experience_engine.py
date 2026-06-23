@@ -1,7 +1,7 @@
 from app.services.experience_engine.experience_parser import (
     extract_experience,
     detect_gaps,
-    detect_overlaps
+    detect_overlaps,
 )
 
 
@@ -36,5 +36,5 @@ class ExperienceEngine:
             "level": level,
             "gaps": gaps,
             "overlaps": overlaps,
-            "experiences": experiences
+            "experiences": experiences,
         }

@@ -2,6 +2,7 @@
 # Integrity Score Calculation
 # ----------------------------------------
 
+
 def calculate_integrity_score(events):
 
     score = 100

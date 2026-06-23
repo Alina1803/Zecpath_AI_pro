@@ -3,6 +3,7 @@ from app.services.doc_api_44.main import app
 
 client = TestClient(app)
 
+
 def test_root():
     response = client.get("/")
     assert response.status_code == 200
@@ -14,7 +15,7 @@ def test_start_interview():
         "candidate_id": "C101",
         "job_id": "J501",
         "role_type": "technical",
-        "experience_level": "fresher"
+        "experience_level": "fresher",
     }
 
     response = client.post("/api/v1/start", json=payload)
@@ -32,7 +33,7 @@ def test_submit_answer():
         "session_id": "S123",
         "question_id": "Q1",
         "answer": "I have experience in Python",
-        "duration": 5
+        "duration": 5,
     }
 
     response = client.post("/api/v1/answer", json=payload)

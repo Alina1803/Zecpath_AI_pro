@@ -38,9 +38,7 @@ def test_run_pipeline():
     text = "First I analyze, then plan and execute the solution"
 
     result = run_pipeline(
-        answer=text,
-        scenario_type="deadline_pressure",
-        save_output=False
+        answer=text, scenario_type="deadline_pressure", save_output=False
     )
 
     assert "aptitude_score" in result
@@ -55,9 +53,7 @@ def test_output_saved():
     text = "First I analyze, then plan and execute the solution"
 
     result = run_pipeline(
-        answer=text,
-        scenario_type="deadline_pressure",
-        save_output=True
+        answer=text, scenario_type="deadline_pressure", save_output=True
     )
 
     assert "saved_to" in result

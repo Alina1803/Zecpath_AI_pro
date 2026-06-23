@@ -21,17 +21,28 @@ os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 ALLOWED_EXTENSIONS = {".pdf", ".docx"}
 
 DEFAULT_ROLES = [
-    "Chartered Accountant", "Senior Chartered Accountant",
-    "Tax Consultant", "Tax Manager", "Audit Manager",
-    "Internal Auditor", "Financial Controller",
-    "Finance Manager", "MIS Analyst", "FP&A Analyst",
-    "Accounts Manager", "Cost Accountant",
-    "Forensic Auditor", "Compliance Manager",
-    "Treasury Manager", "Risk Analyst",
+    "Chartered Accountant",
+    "Senior Chartered Accountant",
+    "Tax Consultant",
+    "Tax Manager",
+    "Audit Manager",
+    "Internal Auditor",
+    "Financial Controller",
+    "Finance Manager",
+    "MIS Analyst",
+    "FP&A Analyst",
+    "Accounts Manager",
+    "Cost Accountant",
+    "Forensic Auditor",
+    "Compliance Manager",
+    "Treasury Manager",
+    "Risk Analyst",
     "Financial Reporting Manager",
     "Business Finance Manager",
-    "Virtual CFO", "Chief Financial Officer"
+    "Virtual CFO",
+    "Chief Financial Officer",
 ]
+
 
 # ----------------------------------------
 # 🛠️ Utility: Safe File Save
@@ -56,10 +67,7 @@ def save_file(file: UploadFile):
 # ----------------------------------------
 @app.post("/process")
 @track_time
-async def process_resume_api(
-    file: UploadFile = File(...),
-    jd_text: str = Form(...)
-):
+async def process_resume_api(file: UploadFile = File(...), jd_text: str = Form(...)):
     try:
         file_path = save_file(file)
 
@@ -70,11 +78,7 @@ async def process_resume_api(
 
         score = calculate_skill_score(resume_data, jd_data)
 
-        return {
-            "filename": file.filename,
-            "score": score,
-            "status": "success"
-        }
+        return {"filename": file.filename, "score": score, "status": "success"}
 
     except Exception as e:
         print("PROCESS ERROR:", e)
@@ -87,8 +91,7 @@ async def process_resume_api(
 @app.post("/process-batch")
 @track_time
 async def process_batch_api(
-    files: list[UploadFile] = File(...),
-    jd_text: str = Form(...)
+    files: list[UploadFile] = File(...), jd_text: str = Form(...)
 ):
     try:
         jd_data = parse_jd(jd_text, DEFAULT_ROLES)
@@ -102,10 +105,7 @@ async def process_batch_api(
 
             score = calculate_skill_score(resume_data, jd_data)
 
-            results.append({
-                "filename": file.filename,
-                "score": score
-            })
+            results.append({"filename": file.filename, "score": score})
 
         results = sorted(results, key=lambda x: x["score"], reverse=True)
 
@@ -114,7 +114,7 @@ async def process_batch_api(
         return {
             "total_resumes": len(results),
             "ranked_results": results,
-            "status": "success"
+            "status": "success",
         }
 
     except Exception as e:

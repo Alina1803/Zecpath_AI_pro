@@ -7,7 +7,7 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 
 def save_transcript(candidate_id, data):
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S") 
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     file_name = f"{candidate_id}_{timestamp}.json"
     file_path = os.path.join(OUTPUT_DIR, file_name)
 

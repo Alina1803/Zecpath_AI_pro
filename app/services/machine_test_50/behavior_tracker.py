@@ -2,6 +2,7 @@
 # Candidate Behavior Tracking
 # --------------------------------------
 
+
 def behavior_analysis(edit_count):
 
     if edit_count > 30:

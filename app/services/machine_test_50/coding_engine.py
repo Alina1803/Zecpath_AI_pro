@@ -2,6 +2,7 @@
 # Coding Task Evaluation Engine
 # --------------------------------------
 
+
 def coding_task_analysis(code):
 
     lines = len(code.splitlines())

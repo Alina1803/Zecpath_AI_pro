@@ -18,13 +18,12 @@ def detect_roles(text, roles):
         score = fuzz.partial_ratio(role.lower(), text.lower())
 
         if score > 85:
-            detected.append({
-                "role": role,
-                "confidence": score,
-                "matched_keywords": [role]
-            })
+            detected.append(
+                {"role": role, "confidence": score, "matched_keywords": [role]}
+            )
 
     return detected
+
 
 # -------------------------------
 # JD Parser (FINAL)
@@ -37,10 +36,10 @@ def parse_jd(jd_text, roles):
 
     # Combine text for skill extraction
     skills_text = (
-        sections.get("skills", "") +
-        sections.get("experience", "") +
-        sections.get("responsibilities", "") +
-        text
+        sections.get("skills", "")
+        + sections.get("experience", "")
+        + sections.get("responsibilities", "")
+        + text
     )
 
     skills = extract_skills(skills_text)
@@ -79,8 +78,7 @@ def parse_jd(jd_text, roles):
         "education": education,
         "experience": experience,
         "sections": sections,
-
         "role_summary": role_summary.strip(),
         "responsibilities": responsibilities.strip(),
-        "qualifications": qualifications.strip()
+        "qualifications": qualifications.strip(),
     }

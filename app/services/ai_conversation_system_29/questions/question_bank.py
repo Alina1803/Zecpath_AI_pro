@@ -3,5 +3,5 @@ def get_questions():
         "Tell me about yourself",
         "What is Python?",
         "Explain OOP concepts",
-        "What are your strengths?"
+        "What are your strengths?",
     ]

@@ -1,0 +1,30 @@
+{
+    "candidate_id": "f71a2afc-d86b-4152-ad16-cd688b0235d6",
+    "candidate_name": "Simulation Candidate",
+    "role": "Python Developer",
+    "experience_level": "junior",
+    "question": "Explain generators.",
+    "followup_question": "Can you explain that in more detail?",
+    "technical_score": 0,
+    "coding_score": 30,
+    "communication_score": 51.75,
+    "confidence_score": 90.13,
+    "system_design_score": 75,
+    "semantic_score": 82,
+    "domain_score": 80,
+    "final_score": 37.63,
+    "performance": "Poor",
+    "recommendation": "Reject",
+    "decision": "Reject Application",
+    "strengths": [
+        "Confident problem solving",
+        "Good architecture understanding"
+    ],
+    "weaknesses": [
+        "Weak technical depth",
+        "Coding performance needs improvement",
+        "Communication clarity is low"
+    ],
+    "risks": [],
+    "generated_at": "2026-06-09 17:47:33"
+}

@@ -11,7 +11,7 @@ def normalize_text_list(items):
 def check_score(score: float, min_score: float) -> bool:
     return score >= min_score
 
- 
+
 # -----------------------------
 # ✅ 2. EXPERIENCE CHECK
 # -----------------------------
@@ -27,9 +27,10 @@ def check_mandatory_skills(candidate_skills, mandatory_skills):
     mandatory_skills = normalize_text_list(mandatory_skills)
 
     missing_skills = [
-    skill for skill in mandatory_skills
-    if not any(skill in c for c in candidate_skills)
-]
+        skill
+        for skill in mandatory_skills
+        if not any(skill in c for c in candidate_skills)
+    ]
 
     return len(missing_skills) == 0, missing_skills
 
@@ -47,8 +48,7 @@ def check_certification(candidate, role):
         keywords = ["ca", "chartered accountant", "aca", "icai"]
 
         return any(
-            any(keyword in cert for keyword in keywords)
-            for cert in certifications
+            any(keyword in cert for keyword in keywords) for cert in certifications
         )
 
     # 🔥 Auditor
@@ -56,8 +56,7 @@ def check_certification(candidate, role):
         keywords = ["ca", "cpa", "audit"]
 
         return any(
-            any(keyword in cert for keyword in keywords)
-            for cert in certifications
+            any(keyword in cert for keyword in keywords) for cert in certifications
         )
 
     # 🔥 Default → no strict certification required
@@ -88,8 +87,7 @@ def validate_candidate(candidate: dict, role: str, rule: dict) -> dict:
     exp_ok = check_experience(experience, rule.get("min_experience", 0))
 
     skills_ok, missing_skills = check_mandatory_skills(
-        skills,
-        rule.get("mandatory_skills", [])
+        skills, rule.get("mandatory_skills", [])
     )
 
     cert_ok = check_certification(candidate, role)
@@ -115,6 +113,6 @@ def validate_candidate(candidate: dict, role: str, rule: dict) -> dict:
             "score_ok": score_ok,
             "experience_ok": exp_ok,
             "skills_ok": skills_ok,
-            "certification_ok": cert_ok
-        }
+            "certification_ok": cert_ok,
+        },
     }

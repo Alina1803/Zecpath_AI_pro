@@ -21,13 +21,10 @@ def run_demo(data: DemoRequest):
     - hiring decision
     """
 
-    result = run_hr_interview(
-        candidate_id=data.candidate_id,
-        answers=data.answers
-    )
+    result = run_hr_interview(candidate_id=data.candidate_id, answers=data.answers)
 
     return {
         "status": "success",
         "message": "Demo interview processed successfully",
-        "data": result
+        "data": result,
     }

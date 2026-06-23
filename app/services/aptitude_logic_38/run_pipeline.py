@@ -5,7 +5,6 @@ from datetime import datetime
 from app.services.aptitude_logic_38.aptitude_scoring import calculate_aptitude_score
 from app.services.aptitude_logic_38.scenario_evaluator import evaluate_scenario
 
-
 OUTPUT_DIR = os.path.join("data", "processed", "output_38")
 
 
@@ -52,13 +51,10 @@ def run_pipeline(answer: str, scenario_type: str = None, save_output: bool = Tru
         # Step 4: Build result
         result = {
             "timestamp": datetime.now().isoformat(),
-            "input": {
-                "answer": answer,
-                "scenario_type": scenario_type
-            },
+            "input": {"answer": answer, "scenario_type": scenario_type},
             "aptitude_score": round(final_score, 2),
             "details": score["breakdown"],
-            "scenario_score": scenario_score
+            "scenario_score": scenario_score,
         }
 
         # Step 5: Save output
@@ -69,10 +65,7 @@ def run_pipeline(answer: str, scenario_type: str = None, save_output: bool = Tru
         return result
 
     except Exception as e:
-        return {
-            "error": str(e),
-            "timestamp": datetime.now().isoformat()
-        }
+        return {"error": str(e), "timestamp": datetime.now().isoformat()}
 
 
 # ===============================
@@ -88,7 +81,7 @@ def run():
     result = run_pipeline(
         answer=text,
         scenario_type="deadline_pressure",  # try: team_conflict / learning
-        save_output=True
+        save_output=True,
     )
 
     # Print result

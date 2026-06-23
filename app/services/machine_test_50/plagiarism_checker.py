@@ -2,6 +2,7 @@
 # Plagiarism Detection Logic
 # --------------------------------------
 
+
 def plagiarism_risk(similarity):
 
     if similarity > 80:

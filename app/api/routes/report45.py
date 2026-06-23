@@ -5,10 +5,7 @@ from app.models.schemas45 import ReportResponse
 router = APIRouter()
 
 
-@router.get(
-    "/report/{candidate_id}",
-    response_model=ReportResponse
-)
+@router.get("/report/{candidate_id}", response_model=ReportResponse)
 def get_report(candidate_id: str):
     """
     Generate final HR interview report
@@ -23,5 +20,5 @@ def get_report(candidate_id: str):
     return {
         "candidate_id": candidate_id,
         "status": "Completed",
-        "message": "Final HR interview report generated successfully"
+        "message": "Final HR interview report generated successfully",
     }

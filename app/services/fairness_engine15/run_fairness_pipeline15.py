@@ -6,7 +6,6 @@ from app.services.fairness_engine15.score_normalizer import normalize_scores
 from app.services.fairness_engine15.bias_masking import mask_sensitive_fields
 from app.services.fairness_engine15.fairness_audit import generate_fairness_report
 
-
 INPUT_FILE = "data/processed/output_14/ranked_candidates.json"
 OUTPUT_FILE = "data/processed/output_15/fair_candidates.json"
 
@@ -34,10 +33,7 @@ def main():
 
     fairness_report = generate_fairness_report(candidates)
 
-    final_output = {
-        "fairness_report": fairness_report,
-        "fair_candidates": candidates
-    }
+    final_output = {"fairness_report": fairness_report, "fair_candidates": candidates}
 
     save_output(final_output)
 

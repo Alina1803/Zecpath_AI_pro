@@ -2,6 +2,7 @@
 # Distraction Detection
 # -----------------------------------
 
+
 def detect_distraction(value):
 
     if value > 0.7:

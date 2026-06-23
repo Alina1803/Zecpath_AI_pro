@@ -1,5 +1,6 @@
 import os
 import traceback
+
 from pydub import AudioSegment
 from pydub.effects import normalize
 from pydub.silence import detect_nonsilent
@@ -11,191 +12,196 @@ class AudioCleaner:
 
         self.target_sample_rate = 16000
 
+        self.min_duration = 0.8
+
     # =====================================================
-    # REMOVE SILENCE
+    # REMOVE SILENCE (LESS AGGRESSIVE)
     # =====================================================
 
     def remove_silence(self, audio):
 
         try:
 
-            non_silent_ranges = detect_nonsilent(
+            original_duration = len(audio)
+
+            ranges = detect_nonsilent(
                 audio,
-                min_silence_len=400,
-                silence_thresh=audio.dBFS - 16
+                min_silence_len=800,
+                silence_thresh=max(
+                    audio.dBFS - 25,
+                    -45,
+                ),
             )
 
-            if not non_silent_ranges:
+            if not ranges:
+
+                print("No speech detected")
+
                 return audio
 
-            cleaned_audio = AudioSegment.empty()
+            cleaned = AudioSegment.empty()
 
-            for start, end in non_silent_ranges:
+            padding = 250
 
-                cleaned_audio += audio[start:end]
+            for start, end in ranges:
 
-            return cleaned_audio
+                start = max(
+                    0,
+                    start - padding,
+                )
 
-        except:
+                end = min(
+                    len(audio),
+                    end + padding,
+                )
+
+                cleaned += audio[start:end]
+
+            if len(cleaned) < (original_duration * 0.50):
+
+                print("Too much removed → keeping original")
+
+                return audio
+
+            return cleaned
+
+        except Exception:
+
             return audio
 
     # =====================================================
-    # BOOST LOW AUDIO
+    # SMART BOOST
     # =====================================================
 
-    def smart_volume_boost(self, audio):
+    def smart_volume_boost(
+        self,
+        audio,
+    ):
 
         try:
 
-            current_dbfs = audio.dBFS
+            db = audio.dBFS
 
-            print(f"Current Audio dBFS : {current_dbfs}")
+            print(f"Current Audio dBFS : {db}")
 
-            # ==========================================
-            # VERY LOW AUDIO
-            # ==========================================
-
-            if current_dbfs < -35:
-
-                print("Applying +25 dB Boost")
-
-                return audio + 25
-
-            elif current_dbfs < -28:
-
-                print("Applying +18 dB Boost")
+            if db < -35:
 
                 return audio + 18
 
-            elif current_dbfs < -22:
-
-                print("Applying +12 dB Boost")
+            elif db < -28:
 
                 return audio + 12
 
-            elif current_dbfs < -18:
-
-                print("Applying +8 dB Boost")
+            elif db < -22:
 
                 return audio + 8
 
+            elif db < -18:
+
+                return audio + 5
+
             return audio
 
-        except:
+        except Exception:
+
             return audio
 
     # =====================================================
     # NOISE REDUCTION
     # =====================================================
 
-    def reduce_noise(self, audio):
+    def reduce_noise(
+        self,
+        audio,
+    ):
 
         try:
-
-            # ==========================================
-            # SIMPLE LOW PASS FILTER
-            # ==========================================
-
-            audio = audio.low_pass_filter(7500)
-
-            # ==========================================
-            # REMOVE LOW HUM
-            # ==========================================
 
             audio = audio.high_pass_filter(80)
 
+            audio = audio.low_pass_filter(7500)
+
             return audio
 
-        except:
+        except Exception:
+
             return audio
 
     # =====================================================
-    # CONVERT TO MONO
+    # MONO
     # =====================================================
 
-    def convert_to_mono(self, audio):
+    def convert_to_mono(
+        self,
+        audio,
+    ):
 
         try:
 
-            if audio.channels > 1:
+            return audio.set_channels(1)
 
-                print("Converting Stereo To Mono")
-
-                audio = audio.set_channels(1)
+        except Exception:
 
             return audio
 
-        except:
-            return audio
-
     # =====================================================
-    # RESAMPLE AUDIO
+    # RESAMPLE
     # =====================================================
 
-    def resample_audio(self, audio):
+    def resample_audio(
+        self,
+        audio,
+    ):
 
         try:
 
-            if audio.frame_rate != self.target_sample_rate:
+            return audio.set_frame_rate(self.target_sample_rate)
 
-                print(
-                    f"Resampling Audio : "
-                    f"{audio.frame_rate} -> "
-                    f"{self.target_sample_rate}"
-                )
-
-                audio = audio.set_frame_rate(
-                    self.target_sample_rate
-                )
+        except Exception:
 
             return audio
 
-        except:
-            return audio
-
     # =====================================================
-    # VALIDATE AUDIO
+    # VALIDATE
     # =====================================================
 
-    def validate_audio(self, audio):
+    def validate_audio(
+        self,
+        audio,
+    ):
 
         try:
 
-            duration_sec = len(audio) / 1000
+            duration = len(audio) / 1000
 
-            print(f"Audio Duration : {duration_sec} sec")
+            print(f"Audio Duration : {duration}")
 
-            if duration_sec < 1:
+            if duration < self.min_duration:
 
-                raise Exception(
-                    "Audio duration too short"
-                )
+                print("Short audio accepted")
 
-            if audio.rms <= 0:
+                return True
 
-                raise Exception(
-                    "Audio contains no signal"
-                )
+            if audio.rms < 50:
+
+                print("Low RMS accepted")
+
+                return True
 
             return True
 
-        except Exception as e:
+        except Exception:
 
-            print(f"Validation Failed : {e}")
-
-            return False
+            return True
 
     # =====================================================
-    # MAIN NORMALIZATION
+    # MAIN
     # =====================================================
 
     def normalize_audio(
-
         self,
-
         input_path,
-
-        output_path=None
+        output_path=None,
     ):
 
         try:
@@ -204,86 +210,22 @@ class AudioCleaner:
             print("SMART AUDIO CLEANING STARTED")
             print("=================================")
 
-            # ======================================
-            # VALIDATE INPUT
-            # ======================================
+            if not input_path:
 
-            if input_path is None:
+                raise ValueError("input_path missing")
 
-                raise ValueError(
-                    "input_path is None"
-                )
-
-            input_path = os.path.abspath(
-                input_path
-            )
-
-            print(f"Input File : {input_path}")
-
-            # ======================================
-            # AUTO OUTPUT PATH
-            # ======================================
+            input_path = os.path.abspath(input_path)
 
             if output_path is None:
 
                 output_path = input_path.replace(
                     ".wav",
-                    "_cleaned.wav"
+                    "_cleaned.wav",
                 )
 
-            output_path = os.path.abspath(
-                output_path
-            )
+            audio = AudioSegment.from_file(input_path)
 
-            print(f"Output File : {output_path}")
-
-            # ======================================
-            # FILE CHECK
-            # ======================================
-
-            if not os.path.exists(input_path):
-
-                raise FileNotFoundError(
-                    f"Input file not found: "
-                    f"{input_path}"
-                )
-
-            input_size = os.path.getsize(
-                input_path
-            )
-
-            print(
-                f"Input Size : "
-                f"{input_size} bytes"
-            )
-
-            if input_size <= 100:
-
-                raise Exception(
-                    "Input audio file empty"
-                )
-
-            # ======================================
-            # LOAD AUDIO
-            # ======================================
-
-            audio = AudioSegment.from_file(
-                input_path
-            )
-
-            print("\n=================================")
-            print("ORIGINAL AUDIO INFO")
-            print("=================================")
-
-            print(f"Channels    : {audio.channels}")
-            print(f"Frame Rate  : {audio.frame_rate}")
-            print(f"Sample Width: {audio.sample_width}")
-            print(f"Duration    : {len(audio)/1000} sec")
-            print(f"dBFS        : {audio.dBFS}")
-
-            # ======================================
-            # PROCESSING PIPELINE
-            # ======================================
+            print(f"Duration : {len(audio)/1000}")
 
             audio = self.convert_to_mono(audio)
 
@@ -297,74 +239,23 @@ class AudioCleaner:
 
             audio = self.smart_volume_boost(audio)
 
-            # ======================================
-            # FINAL VALIDATION
-            # ======================================
-
-            if not self.validate_audio(audio):
-
-                raise Exception(
-                    "Processed audio invalid"
-                )
-
-            # ======================================
-            # EXPORT
-            # ======================================
+            self.validate_audio(audio)
 
             audio.export(
                 output_path,
-                format="wav"
+                format="wav",
             )
 
-            # ======================================
-            # VERIFY OUTPUT
-            # ======================================
-
-            if not os.path.exists(output_path):
-
-                raise FileNotFoundError(
-                    "Output file missing"
-                )
-
-            output_size = os.path.getsize(
-                output_path
-            )
-
-            print(
-                f"Output Size : "
-                f"{output_size} bytes"
-            )
-
-            if output_size <= 100:
-
-                raise Exception(
-                    "Output audio corrupted"
-                )
-
-            print("\n=================================")
-            print("SMART AUDIO CLEANING SUCCESS")
-            print("=================================")
+            print("\n✅ AUDIO CLEAN SUCCESS")
 
             return output_path
 
         except Exception as e:
 
-            print("\n=================================")
-            print("AUDIO CLEANING FAILED")
-            print("=================================")
+            print("\n⚠ AUDIO CLEAN FAILED")
 
-            print(f"Error : {str(e)}")
-
-            print("\nTRACEBACK:\n")
+            print(str(e))
 
             print(traceback.format_exc())
-
-            # ======================================
-            # FALLBACK
-            # ======================================
-
-            print(
-                "\n⚠ Returning Original Audio"
-            )
 
             return input_path

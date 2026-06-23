@@ -9,7 +9,6 @@ from app.services.ethics_ai_43.explainability import generate_explanation
 from app.services.ethics_ai_43.compliance import consent_check, check_retention
 from app.utils.data_masking43 import mask_data
 
-
 # -------------------------------
 # Logging Configuration
 # -------------------------------
@@ -60,7 +59,7 @@ def process_candidate(candidate: dict) -> dict:
             "ethics_valid": ethics_ok,
             "explanation": explanation,
             "retention": retention_status,
-            "timestamp": candidate["date"]
+            "timestamp": candidate["date"],
         }
 
     except Exception as e:
@@ -78,7 +77,7 @@ def run_pipeline():
         "gender": "Male",
         "email": "john@email.com",
         "score": 78,
-        "consent": True
+        "consent": True,
     }
 
     result = process_candidate(candidate)

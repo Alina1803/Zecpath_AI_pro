@@ -1,6 +1,7 @@
 from app.config.constants36 import FILLER_WORDS, UNCERTAINTY_PHRASES
 from utils.text_cleaner import clean_text
 
+
 def calculate_confidence(text, duration):
     text = clean_text(text)
     words = text.split()
@@ -28,14 +29,12 @@ def calculate_confidence(text, duration):
 
     # Weighted confidence (inverse because these reduce confidence)
     confidence = 1 - (
-        0.35 * hesitation_score +
-        0.25 * uncertainty_score +
-        0.20 * repetition_score +
-        0.20 * pause_score
+        0.35 * hesitation_score
+        + 0.25 * uncertainty_score
+        + 0.20 * repetition_score
+        + 0.20 * pause_score
     )
 
     confidence = max(0, min(confidence, 1))
 
-    return {
-        "confidence_score": round(confidence * 100, 2)
-    }
+    return {"confidence_score": round(confidence * 100, 2)}

@@ -8,9 +8,7 @@ class GrammarEvaluator:
 
     def __init__(self):
 
-        logger.info(
-            "✅ Lightweight GrammarEvaluator Loaded"
-        )
+        logger.info("✅ Lightweight GrammarEvaluator Loaded")
 
     # =====================================================
     # MAIN EVALUATION
@@ -50,12 +48,7 @@ class GrammarEvaluator:
         # REPETITION PENALTY
         # =================================================
 
-        repetition_ratio = (
-
-            (word_count - unique_words)
-
-            / max(word_count, 1)
-        )
+        repetition_ratio = (word_count - unique_words) / max(word_count, 1)
 
         if repetition_ratio > 0.3:
 
@@ -65,23 +58,11 @@ class GrammarEvaluator:
         # LONG SENTENCE PENALTY
         # =================================================
 
-        sentences = re.split(
-            r"[.!?]",
-            text
-        )
+        sentences = re.split(r"[.!?]", text)
 
-        sentences = [
-            s.strip()
-            for s in sentences
-            if s.strip()
-        ]
+        sentences = [s.strip() for s in sentences if s.strip()]
 
-        avg_sentence_length = (
-
-            word_count
-
-            / max(len(sentences), 1)
-        )
+        avg_sentence_length = word_count / max(len(sentences), 1)
 
         if avg_sentence_length > 25:
 
@@ -99,10 +80,7 @@ class GrammarEvaluator:
         # FINAL SCORE
         # =================================================
 
-        score = max(
-            min(score, 100),
-            40
-        )
+        score = max(min(score, 100), 40)
 
         return round(score, 2)
 
@@ -115,10 +93,7 @@ if __name__ == "__main__":
 
     evaluator = GrammarEvaluator()
 
-    sample = (
-        "I have worked with FastAPI, "
-        "Docker and scalable backend systems."
-    )
+    sample = "I have worked with FastAPI, " "Docker and scalable backend systems."
 
     result = evaluator.evaluate(sample)
 

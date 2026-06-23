@@ -1,0 +1,153 @@
+{
+    "candidate_id": "f71a2afc-d86b-4152-ad16-cd688b0235d6",
+    "timestamp": "2026-06-09T12:08:41.629984",
+    "status": "ATS_LOW_CONTINUED",
+    "ats": {
+        "overall_score": 5,
+        "skill_count": 0,
+        "experience": 0,
+        "matched_keywords": [
+            "years"
+        ]
+    },
+    "screening": {
+        "score": 78,
+        "status": "Passed"
+    },
+    "hr": {
+        "overall_score": 0.0,
+        "decision": "REJECT"
+    },
+    "technical": {
+        "candidate_id": "f71a2afc-d86b-4152-ad16-cd688b0235d6",
+        "candidate_name": "Simulation Candidate",
+        "role": "Python Developer",
+        "experience_level": "junior",
+        "question": "Explain generators.",
+        "followup_question": "Can you explain that in more detail?",
+        "technical_score": 0,
+        "coding_score": 30,
+        "communication_score": 51.75,
+        "confidence_score": 90.13,
+        "system_design_score": 75,
+        "semantic_score": 82,
+        "domain_score": 80,
+        "final_score": 37.63,
+        "performance": "Poor",
+        "recommendation": "Reject",
+        "decision": "Reject Application",
+        "strengths": [
+            "Confident problem solving",
+            "Good architecture understanding"
+        ],
+        "weaknesses": [
+            "Weak technical depth",
+            "Coding performance needs improvement",
+            "Communication clarity is low"
+        ],
+        "risks": [],
+        "generated_at": "2026-06-09 17:47:33"
+    },
+    "machine_test": {
+        "final_score": 85
+    },
+    "behavior": {
+        "behavior_score": 6610.0,
+        "signals": {
+            "eye_focus": 85,
+            "head_stability": 80,
+            "engagement": 88,
+            "distraction": 10
+        },
+        "risk": "Low Risk",
+        "insights": {
+            "focus_level": "Highly Focused",
+            "engagement": "Excellent",
+            "risk": "Low"
+        }
+    },
+    "integrity": {
+        "score": 88,
+        "risk": "Low"
+    },
+    "unified_score": {
+        "final_score": 41.13
+    },
+    "final_score": 41.13,
+    "decision": "Rejected",
+    "recruiter_report": {
+        "candidate_id": "f71a2afc-d86b-4152-ad16-cd688b0235d6",
+        "overall_summary": {
+            "final_score": 41.13,
+            "overall_confidence": 0,
+            "confidence_band": "Low",
+            "recommendation": "Reject"
+        },
+        "technical_evaluation": {
+            "technical_confidence": 0,
+            "semantic_score": 0,
+            "domain_score": 0,
+            "key_strengths": [],
+            "gaps": [
+                "Weak domain knowledge",
+                "Poor conceptual clarity",
+                "Weak communication"
+            ]
+        },
+        "behavioral_evaluation": {
+            "behavioral_confidence": 0,
+            "communication_strength": 0,
+            "sentiment_score": 0,
+            "risk_flags": []
+        },
+        "highlights": [],
+        "risks": [
+            "High training requirement",
+            "Communication risk"
+        ],
+        "missing_data": [
+            "Salary expectation not provided",
+            "Experience not mentioned"
+        ]
+    },
+    "candidate_generation": {
+        "generated": 50
+    },
+    "ai_human_comparison": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+    },
+    "consistency": [],
+    "performance": {
+        "execution_time": 550.518
+    },
+    "drift": {
+        "scores": [
+            5,
+            78,
+            0.0,
+            41.13
+        ],
+        "std_dev": 36.28,
+        "drift_detected": true
+    },
+    "production_validation": {
+        "logging": true,
+        "reports": true,
+        "retry_handler": false,
+        "ready": false
+    },
+    "funnel": {
+        "applied": 1,
+        "ats_passed": 0,
+        "screening_passed": 1,
+        "hr_passed": 0,
+        "technical_passed": 0,
+        "selected": 0
+    },
+    "recommendations": [
+        "System performing well"
+    ]
+}

@@ -5,11 +5,7 @@ from app.services.transcript_engine_23.scoring import score_ca_answer
 from app.services.transcript_engine_23.storage import save_transcript
 from app.services.transcript_engine_23.repository import save_to_db
 
-
-app = FastAPI(
-    title="CA Transcript Engine API",
-    version="1.0"
-)
+app = FastAPI(title="CA Transcript Engine API", version="1.0")
 
 
 # ==========================
@@ -35,7 +31,7 @@ def run_pipeline_data(transcript: dict):
         "saved_to": file_path,
         "topics": topics,
         "answer_score": processed["answer_score"],
-        "data": processed
+        "data": processed,
     }
 
 
@@ -60,7 +56,7 @@ def run_pipeline(input_file):
 def home():
     return {
         "message": "CA Transcript API running",
-        "module": "Day 23 Transcript Engine"
+        "module": "Day 23 Transcript Engine",
     }
 
 
@@ -71,10 +67,7 @@ def process_transcript_api(data: dict):
         return result
 
     except Exception as e:
-        return {
-            "status": "error",
-            "message": str(e)
-        }
+        return {"status": "error", "message": str(e)}
 
 
 # ==========================

@@ -2,8 +2,8 @@
 # Behavioral Signal Mapping Engine
 # -----------------------------------
 
-def calculate_behavior_score(signals):
 
+def calculate_behavior_score(signals):
     """
     signals = {
         "eye_focus": 0-1,
@@ -21,11 +21,6 @@ def calculate_behavior_score(signals):
 
     distraction = signals.get("distraction", 0.5)
 
-    score = (
-        focus * 0.30 +
-        head * 0.20 +
-        engagement * 0.30 +
-        (1 - distraction) * 0.20
-    )
+    score = focus * 0.30 + head * 0.20 + engagement * 0.30 + (1 - distraction) * 0.20
 
     return round(score * 100, 2)

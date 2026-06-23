@@ -1,7 +1,5 @@
-THRESHOLDS = {
-    "selected": 80,
-    "hold": 60
-}
+THRESHOLDS = {"selected": 80, "hold": 60}
+
 
 def generate_decision(score):
 

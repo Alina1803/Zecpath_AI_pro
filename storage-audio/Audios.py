@@ -21,7 +21,7 @@ scripts = [
     "I participated in GST audits.",
     "I prepared MIS reports.",
     "I performed bank reconciliation.",
-    "I worked on cost accounting techniques."
+    "I worked on cost accounting techniques.",
 ]
 
 for i, text in enumerate(scripts, 1):

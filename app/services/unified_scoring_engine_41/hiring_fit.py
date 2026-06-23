@@ -8,7 +8,4 @@ def calculate_hiring_fit(score):
     else:
         fit = "Low Fit"
 
-    return {
-        "hiring_fit_percentage": score,
-        "fit_category": fit
-    }
+    return {"hiring_fit_percentage": score, "fit_category": fit}

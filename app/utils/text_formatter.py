@@ -88,7 +88,7 @@ Inconsistencies:
 
 Cultural Fit: {culture}
 """
-    
+
 
 # ===============================
 # 🧪 DEBUG FORMATTER
@@ -99,7 +99,7 @@ if __name__ == "__main__":
         "weaknesses": ["Low confidence"],
         "risks": [],
         "inconsistencies": [],
-        "cultural_fit": "Good"
+        "cultural_fit": "Good",
     }
 
     print(format_summary_block(sample))

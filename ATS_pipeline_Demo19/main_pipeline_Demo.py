@@ -2,27 +2,31 @@ import os
 import json
 
 # ✅ IMPORT FROM UTILS
-from app.utils.file_loader import  load_file
+from app.utils.file_loader import load_file
 
 # ------------------------------
 # IMPORT SAME LOGIC (IMPORTANT)
 # -----------------------------
 from app.services.JD_Parser.jd_parser import (
-    clean_text, extract_skills,
-    extract_experience, extract_education, parse_jd
+    clean_text,
+    extract_skills,
+    extract_experience,
+    extract_education,
+    parse_jd,
 )
 from app.services.semantic_engine12.semantic_matcher import (
-    match_skills, match_experience,match_education)
-    
-from app.services.semantic_engine12.similarity_engine import semantic_similarity 
+    match_skills,
+    match_experience,
+    match_education,
+)
+
+from app.services.semantic_engine12.similarity_engine import semantic_similarity
 
 from app.services.scoring import calculate_score
 
-ROLES=["python developer",
-       "backend developer",
-       "data scientist", 
-       "software engineer" 
-       ]
+ROLES = ["python developer", "backend developer", "data scientist", "software engineer"]
+
+
 # -----------------------------
 # MAIN PIPELINE
 # -----------------------------
@@ -33,7 +37,7 @@ def process_pipeline(resume_path, jd_path):
 
     resume_clean = clean_text(resume_raw)
 
-    # ✅ DEBUG BLOCK 
+    # ✅ DEBUG BLOCK
     print("\n==============================")
     print(f" Processing: {os.path.basename(resume_path)}")
     print(" Resume Text Sample:\n", resume_clean[:300])
@@ -61,27 +65,28 @@ def process_pipeline(resume_path, jd_path):
         "skills": resume_skills,
         "experience": resume_exp,
         "education": resume_edu,
-        "text": resume_clean
+        "text": resume_clean,
     }
 
     # Final Score
-    final_score = calculate_score(candidate_data,jd_data)
+    final_score = calculate_score(candidate_data, jd_data)
 
     return {
         "resume": os.path.basename(resume_path),
         "extracted": {
             "skills": resume_skills,
             "experience": resume_exp,
-            "education": resume_edu
+            "education": resume_edu,
         },
         "scores": {
             "skill_score": round(skill_score * 100, 2),
             "experience_score": round(exp_score * 100, 2),
             "education_score": round(edu_score * 100, 2),
             "semantic_score": round(semantic_score * 100, 2),
-            "final_score": round(final_score, 2)
-        }
+            "final_score": round(final_score, 2),
+        },
     }
+
 
 # -----------------------------
 # RUN PIPELINE
@@ -102,11 +107,7 @@ if __name__ == "__main__":
         results.append(result)
 
     # Ranking
-    ranked = sorted(
-        results,
-        key=lambda x: x["scores"]["final_score"],
-        reverse=True
-    )
+    ranked = sorted(results, key=lambda x: x["scores"]["final_score"], reverse=True)
 
     # Save output
     output_path = os.path.join(output_folder, "results.json")

@@ -8,7 +8,8 @@ from app.database import SessionLocal
 
 from fastapi import FastAPI
 
-app=FastAPI()
+app = FastAPI()
+
 
 def main():
 
@@ -16,8 +17,10 @@ def main():
     ensure_directories()
 
     # Simulated DB session placeholder
-    db = SessionLocal() # Replace with real DB session later
-if __name__=="__main__":
+    db = SessionLocal()  # Replace with real DB session later
+
+
+if __name__ == "__main__":
     orchestrator = Orchestrator()
     orchestrator.run()
     candidate_id = generate_candidate_id()
@@ -30,9 +33,9 @@ if __name__=="__main__":
         job_id="JOB_001",
         job_requirements={
             "required_skills": ["python", "django"],
-            "min_experience_years": 2
+            "min_experience_years": 2,
         },
-        interview_transcript="I confidently developed scalable APIs using Python."
+        interview_transcript="I confidently developed scalable APIs using Python.",
     )
 
     print("\nFinal Hiring Decision Output:\n")

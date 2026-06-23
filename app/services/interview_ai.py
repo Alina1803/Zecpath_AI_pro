@@ -20,8 +20,7 @@ def evaluate_interview(transcript: str) -> dict:
     """
 
     response = openai.ChatCompletion.create(
-        model="gpt-4o-mini",
-        messages=[{"role": "user", "content": prompt}]
+        model="gpt-4o-mini", messages=[{"role": "user", "content": prompt}]
     )
 
     content = response["choices"][0]["message"]["content"]

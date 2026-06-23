@@ -2,6 +2,7 @@
 # Eye Tracking Analysis
 # -----------------------------------
 
+
 def analyze_eye_focus(gaze_stability):
 
     if gaze_stability > 0.8:

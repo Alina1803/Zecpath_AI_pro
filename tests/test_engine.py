@@ -9,10 +9,6 @@ def test_technical_engine():
         "real-world systems require efficiency."
     )
 
-    result = calculate_technical_score(
-        text,
-        "advanced",
-        True
-    )
+    result = calculate_technical_score(text, "advanced", True)
 
     assert result["technical_score"] > 0

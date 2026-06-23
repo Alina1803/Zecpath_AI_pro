@@ -1,0 +1,14 @@
+[
+    {
+        "candidate_id": "C001",
+        "decision": "Selected"
+    },
+    {
+        "candidate_id": "C002",
+        "decision": "Rejected"
+    },
+    {
+        "candidate_id": "C003",
+        "decision": "Selected"
+    }
+]

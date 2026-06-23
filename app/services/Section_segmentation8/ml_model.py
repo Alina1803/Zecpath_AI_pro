@@ -1,7 +1,7 @@
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 import json
-import joblib   
+import joblib
 
 
 class SectionClassifier:
@@ -47,6 +47,7 @@ class SectionClassifier:
     # 🔥 OPTIONAL (VERY USEFUL)
     def save(self, path="models/section_model.pkl"):
         import os
+
         os.makedirs(os.path.dirname(path), exist_ok=True)
         joblib.dump((self.vectorizer, self.model), path)
 
