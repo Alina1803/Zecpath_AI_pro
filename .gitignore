@@ -1,61 +1,75 @@
-# ----------------------
+# ======================
 # Virtual Environment
-# ----------------------
+# ======================
 .venv/
 venv/
 env/
 
-# ----------------------
+# ======================
+# Environment Variables
+# ======================
+.env
+.env.*
+
+# ======================
 # Python Cache
-# ----------------------
+# ======================
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
 *.pyc.*
 
-# ----------------------
+# ======================
 # Build / Distribution
-# ----------------------
+# ======================
 build/
 dist/
 *.egg-info/
 
-# ----------------------
-# Logs & Temp Files
-# ----------------------
+# ======================
+# Logs / Temp
+# ======================
 *.log
 *.tmp
 
-# ----------------------
-# Data Files (IMPORTANT)
-# ----------------------
+# ======================
+# Data Outputs
+# ======================
+data/raw/
+data/processed/
+
+# Optional generated outputs
+reports/output/
+reports/generated/
+
+# ======================
+# Large Files
+# ======================
 *.pdf
 *.csv
 *.xlsx
 *.db
 
-# Keep JSON if needed, but ignore outputs
+# Keep config JSON if needed
+# data/*.json
+
+# Ignore generated JSON
 data/output_jds.json
 
-# ----------------------
-# IDE / Editor
-# ----------------------
+# ======================
+# IDE
+# ======================
 .vscode/
 .idea/
 
-# ----------------------
-# OS Files
-# ----------------------
-.DS_Store
-Thumbs.db
-
-# ----------------------
-# Jupyter Notebooks
-# ----------------------
+# ======================
+# Jupyter
+# ======================
 .ipynb_checkpoints/
 
-# ----------------------
-# Environment Variables
-# ----------------------
-.env
+# ======================
+# OS
+# ======================
+.DS_Store
+Thumbs.db
