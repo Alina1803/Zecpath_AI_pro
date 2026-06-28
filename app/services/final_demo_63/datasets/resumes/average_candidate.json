@@ -1,0 +1,13 @@
+{
+    "candidate_id": "C002",
+    "name": "Rahul Kumar",
+    "skills": [
+        "Python",
+        "Flask"
+    ],
+    "experience": 2,
+    "projects": [
+        "Blog API"
+    ],
+    "education": "B.Sc Computer Science"
+}

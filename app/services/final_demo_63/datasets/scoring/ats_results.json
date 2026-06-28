@@ -1,0 +1,14 @@
+[
+    {
+        "candidate_id": "C001",
+        "ats_score": 85
+    },
+    {
+        "candidate_id": "C002",
+        "ats_score": 65
+    },
+    {
+        "candidate_id": "C003",
+        "ats_score": 40
+    }
+]

@@ -1,0 +1,12 @@
+{
+    "job_id": "J101",
+    "role": "Backend Developer",
+    "skills_required": [
+        "Python",
+        "Django",
+        "REST API",
+        "SQL"
+    ],
+    "experience_required": "2-5 years",
+    "education": "B.Tech / B.E Computer Science"
+}

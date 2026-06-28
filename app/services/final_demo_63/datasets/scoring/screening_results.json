@@ -1,0 +1,14 @@
+[
+    {
+        "candidate_id": "C001",
+        "screening_score": 80
+    },
+    {
+        "candidate_id": "C002",
+        "screening_score": 68
+    },
+    {
+        "candidate_id": "C003",
+        "screening_score": 50
+    }
+]

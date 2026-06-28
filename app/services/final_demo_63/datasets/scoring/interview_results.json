@@ -1,0 +1,14 @@
+[
+    {
+        "candidate_id": "C001",
+        "interview_score": 88
+    },
+    {
+        "candidate_id": "C002",
+        "interview_score": 72
+    },
+    {
+        "candidate_id": "C003",
+        "interview_score": 45
+    }
+]

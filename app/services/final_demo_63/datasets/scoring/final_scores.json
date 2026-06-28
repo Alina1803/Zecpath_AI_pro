@@ -1,0 +1,17 @@
+[
+    {
+        "candidate_id": "C001",
+        "final_score": 85,
+        "decision": "Selected"
+    },
+    {
+        "candidate_id": "C002",
+        "final_score": 68,
+        "decision": "Hold / Review"
+    },
+    {
+        "candidate_id": "C003",
+        "final_score": 45,
+        "decision": "Rejected"
+    }
+]

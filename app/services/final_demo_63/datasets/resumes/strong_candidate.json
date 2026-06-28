@@ -1,0 +1,16 @@
+{
+    "candidate_id": "C001",
+    "name": "Arjun Nair",
+    "skills": [
+        "Python",
+        "Django",
+        "REST API",
+        "PostgreSQL"
+    ],
+    "experience": 3,
+    "projects": [
+        "E-commerce Backend",
+        "Payment Gateway"
+    ],
+    "education": "B.Tech Computer Science"
+}

@@ -1,0 +1,11 @@
+{
+    "candidate_id": "AI001",
+    "final_score": 85,
+    "decision": "Selected",
+    "report": {
+        "candidate": "Alina",
+        "score": 85,
+        "decision": "Selected",
+        "summary": "Production review completed"
+    }
+}
