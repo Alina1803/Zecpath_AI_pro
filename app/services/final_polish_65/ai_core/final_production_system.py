@@ -11,7 +11,9 @@ class FinalProductionSystem:
 
         def run():
 
-            refined = normalize_score(candidate["score"])
+            score = candidate.get("score", 0)
+
+            refined = normalize_score(score)
 
             decision = decide(refined)
 
@@ -22,7 +24,8 @@ class FinalProductionSystem:
             )
 
             return {
-                "candidate_id": candidate["candidate_id"],
+                "status": "success",
+                "candidate_id": candidate.get("candidate_id", "UNKNOWN"),
                 "final_score": refined,
                 "decision": decision,
                 "report": report,
